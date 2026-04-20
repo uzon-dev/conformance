@@ -1,0 +1,22 @@
+_layer is {
+    @type is ""
+    size is null
+    activation is null
+    rate is null
+} called Layer
+
+network is {
+    layers is [
+        _layer with { @type is "input", size is 784 as u16 },
+        _layer with { @type is "dense", size is 256 as u16, activation is "relu" },
+        _layer with { @type is "dropout", rate is 0.3 },
+        _layer with { @type is "dense", size is 128 as u16, activation is "relu" },
+        _layer with { @type is "dropout", rate is 0.2 },
+        _layer with { @type is "dense", size is 10 as u16, activation is "softmax" }
+    ] as [Layer]
+    optimizer is { name is "adam", lr is 0.001, beta1 is 0.9, beta2 is 0.999 }
+    loss is "categorical_crossentropy"
+    metrics is [ "accuracy", "precision", "recall" ]
+    epochs is 50 as u16
+    batch_size is 32 as u16
+}

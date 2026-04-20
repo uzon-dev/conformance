@@ -1,0 +1,5 @@
+// std.hasKey — struct key existence only
+a is std.hasKey({ name is "UZON" }, "name")
+b is std.hasKey({ name is "UZON" }, "port")
+c is std.hasKey({ port is 8080, host is "localhost" }, "port")
+d is std.hasKey({ port is 8080, host is "localhost" }, "tls")

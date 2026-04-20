@@ -1,0 +1,5 @@
+@type is "pageview"
+timestamp is 1765987872
+source is "config"
+url is "https://pi.example.com/server"
+session_id is "sigma_1824"

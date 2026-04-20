@@ -1,0 +1,26 @@
+// Comprehensive standalone type declaration example
+Gesture is enum swipe, pinch
+GestureDirection is enum left, right, up, down, inward, outward
+Direction is enum forward, reverse
+
+FocusIterArgs is struct { direction is forward as Direction }
+ToggleFullscreenArgs is struct { in_window is false }
+ShiftTagArgs is struct { direction is forward as Direction }
+ZoomArgs is struct { swap is true }
+
+Action is tagged union
+    toggle_floating as null,
+    focus_iter as FocusIterArgs,
+    toggle_fullscreen as ToggleFullscreenArgs,
+    shift_tag as ShiftTagArgs,
+    zoom as ZoomArgs
+
+// Use the types
+bindings is [
+    { gesture is swipe as Gesture, fingers is 3,
+      direction is left as GestureDirection,
+      event is { direction is reverse as Direction } as Action named focus_iter },
+    { gesture is pinch as Gesture, fingers is 3,
+      direction is inward as GestureDirection,
+      event is { swap is false } as Action named zoom }
+]

@@ -1,0 +1,8 @@
+// Service configuration #70
+@type is "http"
+name is "kappa_70"
+port is 41743 as u16
+enabled is false
+max_connections is 7768 as i32
+timeout_ms is 22036 as i32
+tls is false

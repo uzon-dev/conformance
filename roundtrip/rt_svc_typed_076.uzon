@@ -1,0 +1,8 @@
+// Service configuration #76
+@type is "postgres"
+name is "sigma_76"
+port is 64297 as u16
+enabled is true
+max_connections is 8827 as i32
+timeout_ms is 25483 as i32
+tls is true

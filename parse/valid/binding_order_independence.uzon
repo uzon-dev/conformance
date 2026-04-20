@@ -1,0 +1,6 @@
+// §5.12 Declarative evaluation — binding order does not matter
+result is a + b
+a is 10
+b is c * 2
+c is 5
+// result = 10 + (5 * 2) = 20

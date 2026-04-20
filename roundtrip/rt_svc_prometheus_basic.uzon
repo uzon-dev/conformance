@@ -1,0 +1,9 @@
+service is {
+    name is "prometheus"
+    version is "6.1.1"
+    port is 8016 as u16
+    health is "/health"
+    replicas is 1 as u8
+    resources is { cpu_m is 200 as u16, memory_mb is 128 as u16 }
+    labels is { app is "prometheus", tier is "backend" }
+}

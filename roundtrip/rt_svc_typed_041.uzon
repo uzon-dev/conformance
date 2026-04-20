@@ -1,0 +1,8 @@
+// Service configuration #41
+@type is "http"
+name is "port_41"
+port is 59935 as u16
+enabled is false
+max_connections is 4098 as i32
+timeout_ms is 21954 as i32
+tls is true

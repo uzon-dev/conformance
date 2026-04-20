@@ -1,0 +1,12 @@
+metric is {
+    name is "thread_count"
+    host is "server-07"
+    timestamp is 1712808820 as u64
+    value is 49.9
+    unit is "count"
+    tags is {
+        environment is "production"
+        region is "ap-east"
+        service is "svc-07"
+    }
+}

@@ -1,0 +1,3 @@
+// §6.4: types MUST NOT reference themselves. This is the invalid
+// example given verbatim in §6.4 of the spec.
+Tree is struct { value is 0 as i32, children is [] as [Tree] }

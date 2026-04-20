@@ -1,0 +1,21 @@
+_state is idle from idle, connecting, connected, authenticating, authenticated, streaming, error, disconnecting, disconnected called State
+
+machine is {
+    initial is idle as State
+    current is idle as State
+    context is { retries is 0 as u8, last_error is null, session_id is null }
+    transitions is [
+        { @from is idle as State, event is "connect", @to is connecting as State, actions is [ "start_timer" ] },
+        { @from is connecting as State, event is "connected", @to is connected as State, actions is [ "stop_timer" ] },
+        { @from is connecting as State, event is "timeout", @to is error as State, actions is [ "log_error", "increment_retries" ] },
+        { @from is connected as State, event is "authenticate", @to is authenticating as State, actions is [ "send_credentials" ] },
+        { @from is authenticating as State, event is "auth_success", @to is authenticated as State, actions is [ "store_session" ] },
+        { @from is authenticating as State, event is "auth_failure", @to is error as State, actions is [ "log_error" ] },
+        { @from is authenticated as State, event is "start_stream", @to is streaming as State, actions is [ "open_channel" ] },
+        { @from is streaming as State, event is "data", @to is streaming as State, actions is [ "process_data" ] },
+        { @from is streaming as State, event is "disconnect", @to is disconnecting as State, actions is [ "close_channel" ] },
+        { @from is error as State, event is "retry", @to is connecting as State, actions is [ "increment_retries" ] },
+        { @from is error as State, event is "give_up", @to is disconnected as State, actions is [ "cleanup" ] },
+        { @from is disconnecting as State, event is "closed", @to is disconnected as State, actions is [ "cleanup" ] }
+    ]
+}

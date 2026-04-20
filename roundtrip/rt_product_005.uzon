@@ -1,0 +1,14 @@
+product is {
+    sku is "SKU-TOY-0005"
+    name is "Toys Item 5"
+    category is "toys"
+    price is 12.49
+    currency is "USD"
+    stock is 15 as u16
+    weight_g is 150 as u32
+    dimensions is (15.0, 10.0, 7.0)
+    rating is 3.5
+    reviews is 35 as u16
+    active is false
+    tags is [ "toys", "featured" ]
+}

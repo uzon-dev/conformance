@@ -1,0 +1,11 @@
+// §3.2.1 + §3.2.2: plus produces new type, then with on result
+base is { x is 1 as i32, y is 2 as i32 } called Point
+
+// plus adds z — result is NOT Point (new type)
+point3d is base plus { z is 3 as i32 }
+
+// with on extended struct — preserves extended shape
+moved is point3d with { x is 10 as i32 }
+
+// with on original — preserves Point type
+shifted is base with { x is 5 as i32 }

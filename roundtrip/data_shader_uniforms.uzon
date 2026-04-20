@@ -1,0 +1,19 @@
+shader is {
+    name is "pbr_standard"
+    @type is "fragment"
+    uniforms is [
+        { name is "u_model", @type is "mat4", location is 0 as u8 },
+        { name is "u_view", @type is "mat4", location is 1 as u8 },
+        { name is "u_projection", @type is "mat4", location is 2 as u8 },
+        { name is "u_albedo", @type is "sampler2D", location is 3 as u8 },
+        { name is "u_normal_map", @type is "sampler2D", location is 4 as u8 },
+        { name is "u_metallic", @type is "float", location is 5 as u8 },
+        { name is "u_roughness", @type is "float", location is 6 as u8 },
+        { name is "u_ao", @type is "float", location is 7 as u8 },
+        { name is "u_light_pos", @type is "vec3", location is 8 as u8 },
+        { name is "u_light_color", @type is "vec3", location is 9 as u8 },
+        { name is "u_camera_pos", @type is "vec3", location is 10 as u8 }
+    ]
+    varyings is [ "v_position", "v_normal", "v_texcoord", "v_tangent" ]
+    outputs is [ { name is "frag_color", @type is "vec4", location is 0 as u8 } ]
+}

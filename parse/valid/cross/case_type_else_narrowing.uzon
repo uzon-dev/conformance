@@ -1,0 +1,7 @@
+// §5.10: else branch narrowed to remaining types
+u is "hello" from union i32, f64, string
+
+msg is case type u
+    when i32 then (u + 1) to string       // u narrowed to i32
+    when f64 then (u * 2.0) to string     // u narrowed to f64
+    else u ++ "!"                          // u narrowed to string (remaining type)

@@ -1,0 +1,5 @@
+// §5.7 + §7.3: or else operands from different files with same-name
+// types are distinct nominal types → type error.
+a is struct "./a"
+b is struct "./b"
+bad is a.val or else b.val

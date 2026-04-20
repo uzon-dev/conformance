@@ -1,0 +1,8 @@
+// Typed record #75
+id is 901936
+backup_0 is null
+node_1 is -640.40525
+dev_2 is 640.1428
+omicron_3 is -150.5 as f32
+enabled_4 is "pi"
+debug_5 is false

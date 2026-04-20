@@ -1,0 +1,15 @@
+track is {
+    name is "Piano"
+    tempo_bpm is 120 as u16
+    time_signature is (4, 4)
+    events is [
+        { tick is 0 as u32, @type is "note_on", note is 60 as u8, velocity is 80 as u8 },
+        { tick is 480 as u32, @type is "note_off", note is 60 as u8, velocity is 0 as u8 },
+        { tick is 480 as u32, @type is "note_on", note is 64 as u8, velocity is 90 as u8 },
+        { tick is 960 as u32, @type is "note_off", note is 64 as u8, velocity is 0 as u8 },
+        { tick is 960 as u32, @type is "note_on", note is 67 as u8, velocity is 85 as u8 },
+        { tick is 1440 as u32, @type is "note_off", note is 67 as u8, velocity is 0 as u8 },
+        { tick is 1440 as u32, @type is "note_on", note is 72 as u8, velocity is 100 as u8 },
+        { tick is 1920 as u32, @type is "note_off", note is 72 as u8, velocity is 0 as u8 }
+    ]
+}

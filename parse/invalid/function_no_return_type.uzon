@@ -1,0 +1,2 @@
+// §3.8 Function must have returns clause
+bad is function n as i32 { n + 1 }

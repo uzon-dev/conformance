@@ -1,0 +1,28 @@
+// §3.5 + §3.7 v0.10 — Context inference in mathematical operations
+// A numeric system where operations yield different result types.
+Operation is tagged union
+    exact as i64,
+    rational as (i64, i64),
+    approximate as f64,
+    undefined_val as null
+
+ComputeResult is struct {
+    operation is "" as string
+    result is undefined_val as Operation
+    iterations is 0 as u32
+}
+
+divide is function num as i64, denom as i64 returns Operation {
+    if denom is 0
+    then undefined_val
+    else if num % denom is 0
+    then exact (num / denom)
+    else rational (num, denom)
+}
+
+computations are
+    { operation is "3 / 1", result is exact 3, iterations is 1 },
+    { operation is "22 / 7", result is rational (22, 7), iterations is 1 },
+    { operation is "pi", result is approximate 3.14159, iterations is 100 },
+    { operation is "1 / 0", result is undefined_val, iterations is 0 }
+    as [ComputeResult]

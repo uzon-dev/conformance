@@ -1,0 +1,11 @@
+// Resource #43
+@type is "monitor"
+name is "monitor_43"
+region is "us-west-2"
+config is {
+    @type is "monitor_config"
+    capacity is 9502 as i32
+    priority is 0 as u8
+}
+tags are "value", "omicron"
+active is false

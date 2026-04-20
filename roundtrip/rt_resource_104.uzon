@@ -1,0 +1,11 @@
+// Resource #104
+@type is "cache"
+name is "cache_104"
+region is "us-west-2"
+config is {
+    @type is "cache_config"
+    backend is "redis"
+    ttl_seconds is 36335 as i32
+    max_memory_mb is 327 as u16
+}
+active is true

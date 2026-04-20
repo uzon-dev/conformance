@@ -1,0 +1,8 @@
+// active: Widget(25), Doohickey(50), Thingamajig(10), Gizmo(100)
+// sorted desc by value: Gizmo(100), Doohickey(50), Widget(25), Thingamajig(10)
+// names: ["Gizmo", "Doohickey", "Widget", "Thingamajig"]
+// total: 25 + 50 + 10 + 100 = 185
+listing is "Gizmo, Doohickey, Widget, Thingamajig"
+count is 4
+total_value is 185 as i32
+report is "4 items: Gizmo, Doohickey, Widget, Thingamajig (total: 185)"

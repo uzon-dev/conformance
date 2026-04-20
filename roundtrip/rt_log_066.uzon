@@ -1,0 +1,14 @@
+entry is {
+    id is 100066 as u64
+    timestamp is "2026-04-11T18:06:42.118Z"
+    level is "WARN"
+    component is "db"
+    message is "Event 66: db warn condition detected"
+    context is {
+        request_id is "req-000066"
+        duration_ms is 199 as u32
+        status_code is 400 as u16
+        user_id is "usr_0066"
+    }
+    tags is [ "db", "warn" ]
+}

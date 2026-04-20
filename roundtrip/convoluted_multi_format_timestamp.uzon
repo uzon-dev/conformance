@@ -1,0 +1,20 @@
+timestamps is {
+    unix_epoch is 0
+    unix_now is 1744329600
+    iso8601 is "2026-04-11T00:00:00Z"
+    iso8601_offset is "2026-04-11T09:00:00+09:00"
+    rfc2822 is "Sat, 11 Apr 2026 00:00:00 +0000"
+    components is {
+        year is 2026 as u16
+        month is 4 as u8
+        day is 11 as u8
+        hour is 0 as u8
+        minute is 0 as u8
+        second is 0 as u8
+        day_of_week is 6 as u8
+        day_of_year is 101 as u16
+        week is 15 as u8
+        quarter is 2 as u8
+        is_leap_year is false
+    }
+}

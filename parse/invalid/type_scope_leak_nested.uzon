@@ -1,0 +1,8 @@
+// §6.2: Type inside nested struct — requires full qualified path
+wrapper is {
+    data is {
+        item is { name is "", level is 0 as u8 } called Item
+    }
+}
+// Item is inside wrapper.data — must use wrapper.data.Item
+x is { name is "alpha", level is 3 as u8 } as Item

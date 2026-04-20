@@ -1,0 +1,9 @@
+// §3.2 v0.10 — Struct field defaults
+Modifiers is struct {
+    mod4 is false
+    shift is false
+    ctrl is false
+}
+plain is {} as Modifiers
+super is { mod4 is true } as Modifiers
+super_shift is { mod4 is true, shift is true } as Modifiers

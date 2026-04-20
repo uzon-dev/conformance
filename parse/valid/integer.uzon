@@ -1,0 +1,10 @@
+// §4.2 Integer literals
+zero is 0
+positive is 42
+negative is -17
+typed_u8 is 255 as u8
+typed_i32 is -100 as i32
+underscore is 1_000_000
+hex is 0xFF
+binary is 0b1010_0101
+octal is 0o755

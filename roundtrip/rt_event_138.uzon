@@ -1,0 +1,6 @@
+@type is "deploy"
+timestamp is 1775942072
+source is "kappa"
+version is "8.45.41"
+environment is "prod"
+rollback is true

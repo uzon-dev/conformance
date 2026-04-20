@@ -1,0 +1,11 @@
+endpoint is {
+    name is "delete_user"
+    method is "DELETE"
+    path is "/api/v1/delete/user"
+    auth_required is true
+    rate_limit is 50 as u32
+    timeout_ms is 30000 as u32
+    cache_ttl_sec is 0 as u32
+    request_body is false
+    response_codes is [ 200 as u16, 400 as u16, 401 as u16, 500 as u16 ]
+}

@@ -1,0 +1,7 @@
+// §3.4 + §4.5 Null in list — various patterns
+with_values is [ 1, null, 3 ]
+all_null is [ null, null ] as [i32]
+null_first is [ null, "hello" ]
+null_last is [ "hello", null ]
+has_null is null in with_values    // true
+has_no_null is null in [ 1, 2, 3 ]     // false

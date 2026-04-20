@@ -1,0 +1,5 @@
+sample is [
+    { id is 1701 as u64, value is "row_1_tokens", active is true, score is 67.17 },
+    { id is 1702 as u64, value is "row_2_tokens", active is false, score is 77.18 },
+    { id is 1703 as u64, value is "row_3_tokens", active is true, score is 87.19 }
+]

@@ -1,0 +1,9 @@
+// §5.2: is type with compound RHS (list type, tuple type, nested).
+xs is [1 as i32, 2 as i32, 3 as i32]
+is_list_i32 is xs is type [i32]
+
+pair is (1 as i32, "hello") 
+is_tuple is pair is type (i32, string)
+
+nested is [[1 as i32], [2 as i32]]
+is_nested is nested is type [[i32]]

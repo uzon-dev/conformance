@@ -1,0 +1,10 @@
+forecast is {
+    location is { city is "Seoul", country is "KR", lat is 37.5665, lon is 126.9780 }
+    days is [
+        { date is "2026-04-11", high is 18.0, low is 8.0, condition is "sunny", humidity is 45 as u8, wind_kph is 12.5 },
+        { date is "2026-04-12", high is 16.0, low is 9.0, condition is "partly cloudy", humidity is 55 as u8, wind_kph is 8.0 },
+        { date is "2026-04-13", high is 14.0, low is 10.0, condition is "rain", humidity is 80 as u8, wind_kph is 20.0 },
+        { date is "2026-04-14", high is 12.0, low is 7.0, condition is "rain", humidity is 85 as u8, wind_kph is 25.5 },
+        { date is "2026-04-15", high is 17.0, low is 6.0, condition is "sunny", humidity is 40 as u8, wind_kph is 10.0 }
+    ]
+}

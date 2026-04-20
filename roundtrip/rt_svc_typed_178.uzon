@@ -1,0 +1,7 @@
+// Service configuration #178
+@type is "redis"
+name is "tau_178"
+port is 31280 as u16
+enabled is true
+max_connections is 8249 as i32
+timeout_ms is 17383 as i32

@@ -1,0 +1,4 @@
+a is std.split("a:b:c", ":")
+b is std.split("hello", ":")
+c is std.split("", ":")
+d is std.split("one--two--three", "--")

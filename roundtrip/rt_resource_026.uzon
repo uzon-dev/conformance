@@ -1,0 +1,11 @@
+// Resource #26
+@type is "storage"
+name is "storage_26"
+region is "ap-northeast-1"
+config is {
+    @type is "storage_config"
+    capacity is 2856 as i32
+    priority is 5 as u8
+}
+tags are "mu", "nu"
+active is false

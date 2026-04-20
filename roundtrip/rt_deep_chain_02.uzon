@@ -1,0 +1,9 @@
+chain is {
+    head is {
+        next is {
+            data is 200
+            label is "node_2"
+            tail is null
+        }
+    }
+}

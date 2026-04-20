@@ -1,0 +1,3 @@
+_color is red from red, green, blue called Color
+_size is small from small, medium, large called Size
+combo is (red as Color, large as Size, true, "label")

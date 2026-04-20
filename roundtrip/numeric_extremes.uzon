@@ -1,0 +1,13 @@
+// Roundtrip: numeric edge cases
+max_u8 is 255 as u8
+min_i8 is -128 as i8
+max_i32 is 2147483647 as i32
+min_i32 is -2147483648 as i32
+large is 999999999999999
+small_float is 1.0e-300
+large_float is 1.0e300
+neg_zero is -0.0
+pos_inf is inf
+neg_inf is -inf
+not_num is nan
+precise is 0.1 as f64

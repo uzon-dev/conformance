@@ -1,0 +1,2 @@
+x is (function n as i32 returns i32 { n + 1 })(10)
+y is (function returns string { "hello" })()

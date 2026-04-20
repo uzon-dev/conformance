@@ -1,0 +1,9 @@
+// §5.16.2 Collection Query
+data is { a is 1, b is 2, c is 3 }
+items are 10, 20, 30
+
+g is std.get(items, 1)                // 20
+h is std.hasKey(data, "a")            // true
+k is std.keys(data)                   // [ "a", "b", "c" ]
+l is std.len(items)                   // 3
+v is std.values(data)                 // (1, 2, 3)

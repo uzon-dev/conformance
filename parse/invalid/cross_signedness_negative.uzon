@@ -1,0 +1,3 @@
+// §5.11.0: negative signed to unsigned is a runtime error.
+a is -1 as i32
+bad is a to u32

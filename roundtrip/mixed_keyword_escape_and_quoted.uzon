@@ -1,0 +1,10 @@
+@type is "document"
+@default is false
+@null is "placeholder"
+'Content-Type' is "text/uzon"
+'X-Version' is "0.5"
+normal is "just a regular binding"
+@if is "not a conditional"
+@function is "not a function"
+'with-dashes' is "dashed"
+'with.dots' is "dotted"

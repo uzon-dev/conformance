@@ -1,0 +1,14 @@
+// §5.13 + §5.16.4 + §5.16.2 + §5.7
+// env → split → trim each → filter empty → join → replace
+raw_tags is env.TAGS or else "  alpha , , beta ,  gamma  , "
+
+// split by comma, trim whitespace, filter empty strings, rejoin
+parsed is std.split(raw_tags, ",")
+trimmed is std.map(parsed, function s as string returns string { std.trim(s) })
+non_empty is std.filter(
+    trimmed,
+    function s as string returns bool { std.len(s) > 0 }
+)
+normalized is std.join(non_empty, ",")
+display is std.replace(normalized, ",", " | ")
+count is std.len(non_empty)

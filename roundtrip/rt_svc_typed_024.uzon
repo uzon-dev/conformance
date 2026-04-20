@@ -1,0 +1,8 @@
+// Service configuration #24
+@type is "amqp"
+name is "server_24"
+port is 48748 as u16
+enabled is true
+max_connections is 1800 as i32
+timeout_ms is 8247 as i32
+tls is false

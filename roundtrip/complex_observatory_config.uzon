@@ -1,0 +1,58 @@
+_instrument is {
+    name is ""
+    fov_arcmin is null
+    resolution_arcsec is null
+    filters is null
+    range_nm is null
+    resolution is null
+    fibers is null
+} called Instrument
+
+_telescope is {
+    id is ""
+    name is ""
+    aperture_mm is 0 as u16
+    focal_length_mm is 0 as u32
+    mount is ""
+    instruments is [] as [Instrument]
+} called Telescope
+
+observatory is {
+    name is "UZON Deep Space Observatory"
+    location is { lat is 30.6714, lon is -104.0217, elevation_m is 2070 as u16 }
+    telescopes is [
+        _telescope with {
+            id is "T1"
+            name is "Primary Reflector"
+            aperture_mm is 4000 as u16
+            focal_length_mm is 16000 as u32
+            mount is "alt-azimuth"
+            instruments is [
+                _instrument with { name is "Wide-field Camera", fov_arcmin is 30.0, resolution_arcsec is 0.15, filters is [ "u", "g", "r", "i", "z" ] },
+                _instrument with { name is "Spectrograph", range_nm is (380.0, 950.0), resolution is 50000 as u32, fibers is 640 as u16 }
+            ] as [Instrument]
+        },
+        _telescope with {
+            id is "T2"
+            name is "Survey Telescope"
+            aperture_mm is 1200 as u16
+            focal_length_mm is 4800 as u32
+            mount is "equatorial"
+            instruments is [
+                _instrument with { name is "Survey Camera", fov_arcmin is 120.0, resolution_arcsec is 0.5, filters is [ "g", "r", "i" ] }
+            ] as [Instrument]
+        }
+    ] as [Telescope]
+    observing_conditions is {
+        seeing_arcsec is 0.8
+        transparency is "photometric"
+        humidity_pct is 25 as u8
+        wind_speed_kph is 12.0
+        moon_phase is 0.15
+    }
+    schedule is [
+        { target is "NGC 1234", ra_hours is 3.5, dec_deg is -27.3, exposure_sec is 1800 as u32, filter is "r", priority is 1 as u8 },
+        { target is "M31", ra_hours is 0.712, dec_deg is 41.27, exposure_sec is 600 as u32, filter is "g", priority is 2 as u8 },
+        { target is "GRB 260411A", ra_hours is 12.45, dec_deg is -5.67, exposure_sec is 300 as u32, filter is "i", priority is 0 as u8 }
+    ]
+}

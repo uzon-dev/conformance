@@ -1,0 +1,10 @@
+// Resource #197
+@type is "storage"
+name is "storage_197"
+region is "us-west-2"
+config is {
+    @type is "storage_config"
+    capacity is 2551 as i32
+    priority is 7 as u8
+}
+active is true

@@ -1,0 +1,3 @@
+names are "alfa", "bravo", "charlie"
+count is std.len(names)
+has_bravo is "bravo" in names

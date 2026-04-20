@@ -1,0 +1,7 @@
+// Schema definition #116
+@type is "schema"
+version is 2 as u8
+name is "main_schema_116"
+fields are
+        { name is "field_0", @type is "f64", required is false },
+        { name is "field_1", @type is "i32", required is false }

@@ -1,0 +1,3 @@
+// §5.13 — accept multiple truthy string values
+_raw is env.DEBUG or else "false"
+debug is _raw is "true" or _raw is "1" or _raw is "yes"

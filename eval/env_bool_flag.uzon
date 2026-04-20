@@ -1,0 +1,5 @@
+// §5.13 — boolean flag pattern: unset env → fallback → "false" → false
+debug is (env.UZON_TEST_UNSET_FLAG or else "false") is "true"
+
+_raw is env.UZON_TEST_UNSET_FLAG or else "false"
+verbose is _raw is "true" or _raw is "1" or _raw is "yes"

@@ -1,0 +1,342 @@
+// ══════════════════════════════════════════════════════════════════════
+//   starship.uzon — Full integration test: all keywords, all std,
+//   all feature interactions in a single cohesive document
+//   Diamond import: both this file and crew.uzon import shared.uzon
+// ══════════════════════════════════════════════════════════════════════
+
+// ── import (struct keyword) ─────────────────────────────────────────
+
+_shared is struct "./shared"                               // struct
+crew is struct "./crew"
+
+// ── field extraction (of) ───────────────────────────────────────────
+
+separator is of _shared
+divider is of _shared
+
+// ── identity (is, true, false) ──────────────────────────────────────
+
+vessel is {
+    name is "Wanderer"
+    registry is "DSV-2049"
+    commissioned is true
+    decommissioned is false
+    motto is "per aspera ad astra"
+    epoch is 7 as u8
+}
+
+callsign is vessel.name ++ " (" ++ vessel.registry ++ ")"
+
+// ── environment + conversion + or else (env, to, or else) ───────────
+
+status is env.STATUS to _shared.ShipStatus
+    or else cruising as _shared.ShipStatus
+operational is env.SHUTDOWN is undefined                    // undefined
+
+// ── enum + case/when + as (case, when, from, as, called) ────────────
+
+alert is case status
+    when emergency then red as _shared.AlertLevel
+    when docked then green as _shared.AlertLevel
+    else yellow as _shared.AlertLevel
+
+// ── membership (in) + logic (and, or, not) ──────────────────────────
+
+is_emergency is alert
+    in [ yellow, red ] as [_shared.AlertLevel]             // in
+is_docked is status is docked as _shared.ShipStatus
+clear is operational and not is_emergency        // and, not
+check is is_docked or operational                // or
+
+// ── tagged union (named, from, called) + conditional (if, then, else)
+
+mission is "explore sector 7G" named active from           // named
+    active as string, paused as string,
+    completed as null, aborted as null                      // null
+    called MissionState
+
+summary is if mission is named active                 // if, then, else
+    then "IN PROGRESS: {mission}"
+    else if mission is named paused
+    then "PAUSED: {mission}"
+    else if mission is named aborted
+    then "ABORTED"
+    else "COMPLETED"
+
+standby is "await" as MissionState named paused
+
+is_active is mission is not named completed
+should_continue is is_active
+    and mission is not named aborted
+
+// ── special values (inf, nan) + std numeric ─────────────────────────
+
+sensor_reading is nan                                      // nan
+horizon is inf                                             // inf
+reading_ok is std.isFinite(42.0 as f64)
+reading_nan is std.isNan(sensor_reading)
+horizon_inf is std.isInf(horizon)
+
+// ── struct (is) + with + plus + called ───────────────────────────
+
+modules are
+    _shared.bridge,
+    _shared.base_module with { purpose is science as _shared.base_module.ModulePurpose },
+    _shared.base_module with { shielded is true }
+
+cargo is _shared.base_module plus {                // plus
+    capacity_tons is 200 as u16
+    pressurized is true
+    manifest are "supplies", "equipment" as [string]       // are
+}
+
+// ── navigation + arithmetic ─────────────────────────────────────────
+
+position is { x is 147.3 as f64, y is -38.91 as f64, z is 0.0 as f64 }
+destination is position with { x is 900.0 as f64, y is 42.0 as f64 }
+
+delta_x is destination.x - position.x
+delta_y is destination.y - position.y
+distance is (delta_x ^ 2.0 + delta_y ^ 2.0) ^ 0.5
+
+velocity is _shared.typed_speed to f64 * 0.075
+eta_hours is distance / velocity / 3600.0
+
+// ── tuples ──────────────────────────────────────────────────────────
+
+heading is (270.0, -5.0, 0.0)
+bearing is heading.first
+waypoints are (0.0, 0.0), (100.0, 50.0), (900.0, 42.0)
+next_wp is waypoints.second
+
+// ── untagged union ──────────────────────────────────────────────────
+
+flexible_port is 8080 from union i32, string               // union
+
+// ── null + undefined handling ───────────────────────────────────────
+
+black_box is null
+last_distress is black_box or else "no distress"      // null passes → null
+deep_missing is vessel.nonexistent.deep or else "safe" // undefined → "safe"
+undef_to_str is vessel.nonexistent to string or else "default"
+
+// ── self-exclusion ──────────────────────────────────────────────────
+
+default_throttle is default_throttle or else 0.75 as f64
+
+// ── numeric bases ───────────────────────────────────────────────────
+
+hull_color is 0x2A4B7C
+sys_mask is 0b1111_0000
+perms is 0o755
+big_num is 99_999_999
+
+// ── function: zero-param (function, returns) ────────────────────────
+
+currentRegion is function returns string {                  // function, returns
+    env.REGION or else "sol-sector"
+}
+
+// ── function: with default (default) ────────────────────────────────
+
+formatModule is function m as _shared.BaseModule,
+    label as string default "MODULE" returns string {       // default
+    online is if m.online then "ON" else "OFF"
+    "{label}: {m.power_kw}kW [{online}]"
+}
+
+// ── function: named type (called, as) ───────────────────────────────
+
+formatModuleAlt is function m as _shared.BaseModule,
+    label as string default "ALT" returns string {
+    "{label}: {m.capacity} crew"
+} called ModuleFormatter
+
+formatModuleVerbose is function m as _shared.BaseModule,
+    label as string default "DETAIL" returns string {
+    "{label}: {m.power_kw}kW, {m.capacity} crew, shielded={m.shielded}"
+} as ModuleFormatter
+
+// ── function calling function ───────────────────────────────────────
+
+describeBridge is function returns string {
+    formatModule(_shared.bridge, "BRIDGE")
+}
+
+bridge_desc is describeBridge()
+
+// ── function with I32Predicate type from shared ─────────────────────
+
+isPowerHigh is function n as i32 returns bool {
+    n > 400
+} as _shared.I32Predicate
+
+// ── all 15 std functions ────────────────────────────────────────────
+
+// std.len
+module_count is std.len(modules)
+
+// in operator (value membership)
+has_bridge is _shared.bridge in modules
+
+// std.get
+first_module is std.get(modules, 0)
+missing_module is std.get(modules, 99) or else _shared.base_module
+
+// std.keys
+vessel_fields is std.keys(vessel)
+
+// std.values (returns tuple — mixed types OK)
+vessel_snapshot is std.values(vessel)
+
+// std.map
+module_powers is std.map(
+    modules,
+    function m as _shared.BaseModule returns i32 { m.power_kw to i32 }
+)
+
+// std.filter
+shielded is std.filter(
+    modules,
+    function m as _shared.BaseModule returns bool { m.shielded }
+)
+
+// std.reduce
+total_power is std.reduce(
+    module_powers,
+    0 as i32,
+    function acc as i32, p as i32 returns i32 { acc + p }
+)
+
+// std.split
+search_paths is std.split(env.PATH or else "/usr/bin:/bin", ":")
+
+// std.join
+path_display is std.join(search_paths, " → ")
+
+// std.trim
+clean_region is std.trim(env.REGION or else "  sol-sector  ")
+
+// std.lower, std.upper
+region_lower is std.lower(clean_region)
+ship_id is std.upper(vessel.registry)
+
+// std.replace
+normalized is std.replace(
+    env.WIN_PATH or else "C:\\Users\\crew",
+    "\\",
+    "/"
+)
+
+// std.isNan (already used above)
+// std.isInf (already used above)
+// std.isFinite (already used above)
+
+// ── chained std operations ──────────────────────────────────────────
+
+// split → trim → filter → join → replace
+raw_env is env.SUBSYSTEMS or else "  nav , , helm ,  comms  "
+sub_parts is std.split(raw_env, ",")
+sub_trimmed is std.map(sub_parts, function s as string returns string { std.trim(s) })
+sub_clean is std.filter(sub_trimmed, function s as string returns bool { std.len(s) > 0 })
+sub_line is std.join(sub_clean, " | ")
+sub_display is std.replace(sub_line, "|", "→")
+
+// map → filter → reduce
+high_power is std.reduce(
+    std.map(
+        std.filter(
+            modules,
+            function m as _shared.BaseModule returns bool { m.power_kw to i32 > 200 }
+        ),
+        function m as _shared.BaseModule returns i32 { m.power_kw to i32 }
+    ),
+    0 as i32,
+    function acc as i32, p as i32 returns i32 { acc + p }
+)
+
+// std.sort — sort modules by power descending
+sorted_modules is std.sort(
+    modules,
+    function a as _shared.BaseModule, b as _shared.BaseModule returns bool {
+        a.power_kw to i32 > b.power_kw to i32
+    }
+)
+
+// ── keyword escape + quoted identifiers ─────────────────────────────
+
+meta is {
+    @type is "vessel_config"
+    @default is true
+    'Content-Type' is "application/uzon"
+    'X-Vessel-ID' is vessel.registry
+}
+
+// ── repetition + concatenation ──────────────────────────────────────
+
+banner is "═" ** 72
+warning is "⚠ " ** 5
+
+// ── log verbosity (enum + if + in) ──────────────────────────────────
+
+_log is info from trace, debug, info, warn, error called LogLevel
+verbosity is if _shared.env_check
+    then trace as LogLevel
+    else info as LogLevel
+is_verbose is verbosity in [ trace, debug ] as [LogLevel]
+
+// ── speculative evaluation ──────────────────────────────────────────
+
+safe_div is if true then 42 else (1 / 0)
+
+// ── case on tagged union ────────────────────────────────────────────
+
+scan is "anomaly at bearing 270" named found from
+    found as string, empty as null
+    called ScanResult
+
+scan_report is case named scan
+    when found then "DETECTED: {scan}"
+    when empty then "sector clear"
+    else "inconclusive"
+
+// ── plus + function + interpolation ──────────────────────────────
+
+detailed_cargo is cargo plus {
+    inspector is "Rao"
+    inspected is true
+}
+
+// ── crew integration ────────────────────────────────────────────────
+
+captain_name is crew.captain_name
+crew_count is crew.crew_count
+crew_available is crew.is_finite and should_continue
+all_clear is not is_emergency and operational and should_continue
+
+// ── final report ────────────────────────────────────────────────────
+
+report is "{banner}"
+          "DSV WANDERER — STATUS REPORT"
+          "{banner}"
+          "Callsign: {callsign}"
+          "Region:   {currentRegion()}"
+          "Status:   {status} | Alert: {alert}"
+          "Mission:  {summary}"
+          "{divider}"
+          "Position:    ({position.x}, {position.y})"
+          "Distance:    {distance}"
+          "Velocity:    {velocity}"
+          "ETA:         {eta_hours} hours"
+          "{divider}"
+          "Modules:  {module_count} | Power: {total_power} kW"
+          "Bridge:   {bridge_desc}"
+          "Paths:    {path_display}"
+          "Scan:     {scan_report}"
+          "Sensor:   nan={reading_nan} inf={horizon_inf}"
+          "{divider}"
+          "Crew:     {captain_name} + {crew_count} aboard"
+          "Ready:    {all_clear}"
+          "Verbose:  {is_verbose}"
+          "{banner}"
+          "{vessel.motto}"

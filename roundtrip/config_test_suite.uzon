@@ -1,0 +1,29 @@
+suite is {
+    name is "Integration Tests"
+    timeout_sec is 300 as u32
+    parallel is true
+    max_workers is 4 as u8
+    groups is [
+        {
+            name is "auth"
+            tests is [
+                { name is "login_success", expected_status is 200 as u16, method is "POST", path is "/auth/login" },
+                { name is "login_invalid", expected_status is 401 as u16, method is "POST", path is "/auth/login" },
+                { name is "refresh_token", expected_status is 200 as u16, method is "POST", path is "/auth/refresh" }
+            ]
+            setup is "seed_users.sql"
+            teardown is "cleanup_sessions.sql"
+        },
+        {
+            name is "api"
+            tests is [
+                { name is "list_items", expected_status is 200 as u16, method is "GET", path is "/api/items" },
+                { name is "create_item", expected_status is 201 as u16, method is "POST", path is "/api/items" },
+                { name is "delete_item", expected_status is 204 as u16, method is "DELETE", path is "/api/items/1" },
+                { name is "not_found", expected_status is 404 as u16, method is "GET", path is "/api/items/99999" }
+            ]
+            setup is "seed_items.sql"
+            teardown is "cleanup_items.sql"
+        }
+    ]
+}

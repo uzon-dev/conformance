@@ -1,0 +1,5 @@
+u1 is 42 from union i32, string
+u2 is "hello" from union i32, string
+
+r1 is "number"
+r2 is "text"

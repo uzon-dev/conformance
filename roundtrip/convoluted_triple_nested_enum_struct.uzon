@@ -1,0 +1,20 @@
+_status is pending from pending, active, done called Status
+_priority is low from low, high called Priority
+_category is bug from bug, feature, task called Category
+
+board is {
+    columns is {
+        pending is [
+            { id is 1 as u32, cat is bug as Category, pri is high as Priority, status is pending as Status, tags is [ "urgent" ], sub is [
+                { id is 11 as u32, cat is task as Category, pri is low as Priority, status is pending as Status, tags is [] as [string], sub is [] as [string] }
+            ] }
+        ]
+        active is [
+            { id is 2 as u32, cat is feature as Category, pri is low as Priority, status is active as Status, tags is [ "v2", "api" ], sub is [
+                { id is 21 as u32, cat is task as Category, pri is high as Priority, status is active as Status, tags is [ "backend" ], sub is [] as [string] },
+                { id is 22 as u32, cat is task as Category, pri is low as Priority, status is pending as Status, tags is [ "frontend" ], sub is [] as [string] }
+            ] }
+        ]
+        done is [] as [string]
+    }
+}

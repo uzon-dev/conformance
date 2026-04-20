@@ -1,0 +1,32 @@
+protocol is {
+    name is "xdg_shell"
+    version is 6 as u8
+    interfaces is [
+        {
+            name is "xdg_wm_base"
+            version is 6 as u8
+            requests is [
+                { name is "destroy", opcode is 0 as u8, args is [] as [string] },
+                { name is "create_positioner", opcode is 1 as u8, args is [ { name is "id", @type is "new_id" } ] },
+                { name is "get_xdg_surface", opcode is 2 as u8, args is [ { name is "id", @type is "new_id" }, { name is "surface", @type is "object" } ] },
+                { name is "pong", opcode is 3 as u8, args is [ { name is "serial", @type is "uint" } ] }
+            ]
+            events is [
+                { name is "ping", opcode is 0 as u8, args is [ { name is "serial", @type is "uint" } ] }
+            ]
+        },
+        {
+            name is "xdg_surface"
+            version is 6 as u8
+            requests is [
+                { name is "destroy", opcode is 0 as u8, args is [] as [string] },
+                { name is "get_toplevel", opcode is 1 as u8, args is [ { name is "id", @type is "new_id" } ] },
+                { name is "set_window_geometry", opcode is 3 as u8, args is [ { name is "x", @type is "int" }, { name is "y", @type is "int" }, { name is "width", @type is "int" }, { name is "height", @type is "int" } ] },
+                { name is "ack_configure", opcode is 4 as u8, args is [ { name is "serial", @type is "uint" } ] }
+            ]
+            events is [
+                { name is "configure", opcode is 0 as u8, args is [ { name is "serial", @type is "uint" } ] }
+            ]
+        }
+    ]
+}

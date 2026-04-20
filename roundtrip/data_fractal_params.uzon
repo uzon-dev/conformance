@@ -1,0 +1,19 @@
+mandelbrot is {
+    center is (-0.5, 0.0)
+    zoom is 1.0
+    max_iter is 1000 as u32
+    escape_radius is 4.0
+    palette is [
+        (0 as u8, 0 as u8, 0 as u8),
+        (66 as u8, 30 as u8, 15 as u8),
+        (25 as u8, 7 as u8, 26 as u8),
+        (9 as u8, 1 as u8, 47 as u8),
+        (4 as u8, 4 as u8, 73 as u8),
+        (0 as u8, 7 as u8, 100 as u8),
+        (12 as u8, 44 as u8, 138 as u8),
+        (24 as u8, 82 as u8, 177 as u8),
+        (57 as u8, 125 as u8, 209 as u8)
+    ]
+    resolution is (1920 as u16, 1080 as u16)
+    anti_aliasing is 4 as u8
+}

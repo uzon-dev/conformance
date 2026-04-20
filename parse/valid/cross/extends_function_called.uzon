@@ -1,0 +1,15 @@
+// §3.2.2 + §3.8 + §6.2: plus + function + named types
+base is { name is "unknown", score is 0 as i32 } called Entry
+
+enriched is base plus {
+    rank is "unranked"
+    active is true
+}
+
+// function operating on base type
+formatEntry is function e as Entry returns string {
+    "{e.name}: {e.score}"
+}
+
+// function works on base — not on extended (different type)
+report is formatEntry(base)

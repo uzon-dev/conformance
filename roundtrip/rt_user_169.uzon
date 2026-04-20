@@ -1,0 +1,16 @@
+user is {
+    id is 10169 as u32
+    username is "judy169"
+    email is "judy169@mock.dev"
+    display_name is "Judy #169"
+    city is "Paris"
+    age is 37 as u8
+    verified is true
+    created is "2026-02-02T12:00:00Z"
+    login_count is 2197 as u32
+    preferences is {
+        theme is "light"
+        language is "ko"
+        notifications is false
+    }
+}

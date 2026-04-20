@@ -1,0 +1,9 @@
+// Schema definition #186
+@type is "schema"
+version is 4 as u8
+name is "prod_schema_186"
+fields are
+        { name is "field_0", @type is "f64", required is false },
+        { name is "field_1", @type is "f64", required is false },
+        { name is "field_2", @type is "u8", required is false },
+        { name is "field_3", @type is "bool", required is false }

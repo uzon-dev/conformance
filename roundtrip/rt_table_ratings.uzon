@@ -1,0 +1,16 @@
+table is {
+    name is "ratings"
+    schema is "public"
+    columns is [
+        { name is "id", @type is "bigint", nullable is false, primary is true },
+        { name is "created_at", @type is "timestamptz", nullable is false, primary is false },
+        { name is "updated_at", @type is "timestamptz", nullable is true, primary is false },
+        { name is "data_rat", @type is "jsonb", nullable is true, primary is false }
+    ]
+    row_count is 10000 as u64
+    size_mb is 50.9
+    indexes is [
+        { name is "idx_ratings_id", columns is [ "id" ], unique is true },
+        { name is "idx_ratings_created", columns is [ "created_at" ], unique is false }
+    ]
+}

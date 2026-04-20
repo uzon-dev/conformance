@@ -1,0 +1,6 @@
+@type is "error"
+timestamp is 1702267067
+source is "name"
+code is 572 as u16
+message is "theta failed"
+fatal is true

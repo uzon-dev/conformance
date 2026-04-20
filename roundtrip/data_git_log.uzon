@@ -1,0 +1,7 @@
+commits is [
+    { hash is "a1b2c3d", author is "Alice", date is "2026-04-11", message is "feat: add sort to std library", files is [ "src/std.zig", "test/std_test.zig" ] },
+    { hash is "e4f5g6h", author is "Bob", date is "2026-04-10", message is "fix: correct arithmetic precedence", files is [ "src/eval.zig" ] },
+    { hash is "i7j8k9l", author is "Alice", date is "2026-04-09", message is "docs: update spec to v0.5", files is [ "SPECIFICATION.md" ] },
+    { hash is "m0n1o2p", author is "Charlie", date is "2026-04-08", message is "test: add 200 roundtrip tests", files is [ "conformance/roundtrip/scalars.uzon", "conformance/roundtrip/struct_simple.uzon" ] },
+    { hash is "q3r4s5t", author is "Bob", date is "2026-04-07", message is "refactor: simplify parser state machine", files is [ "src/parser.zig", "src/tokenizer.zig", "src/ast.zig" ] }
+]

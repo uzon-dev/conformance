@@ -1,0 +1,11 @@
+// Resource #159
+@type is "proxy"
+name is "proxy_159"
+region is "us-east-1"
+config is {
+    @type is "proxy_config"
+    capacity is 6644 as i32
+    priority is 0 as u8
+}
+tags are "path"
+active is true

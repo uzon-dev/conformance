@@ -1,0 +1,42 @@
+recipe is {
+    name is "Bibimbap (비빔밥)"
+    origin is "Korea"
+    servings is 4 as u8
+    difficulty is "medium"
+    time is { prep_min is 30 as u16, cook_min is 20 as u16, total_min is 50 as u16 }
+    ingredients is {
+        rice is [ { item is "short-grain rice", amount is 2.0, unit is "cups" } ]
+        vegetables is [
+            { item is "spinach", amount is 200.0, unit is "g", prep is "blanched" },
+            { item is "bean sprouts", amount is 150.0, unit is "g", prep is "blanched" },
+            { item is "zucchini", amount is 1.0, unit is "medium", prep is "julienned and sautéed" },
+            { item is "carrots", amount is 1.0, unit is "medium", prep is "julienned and sautéed" },
+            { item is "shiitake mushrooms", amount is 100.0, unit is "g", prep is "sliced and sautéed" }
+        ]
+        protein is [ { item is "beef (bulgogi-style)", amount is 200.0, unit is "g", prep is "marinated and grilled" } ]
+        toppings is [
+            { item is "eggs", amount is 4.0, unit is "large", prep is "fried sunny-side up" },
+            { item is "gochujang", amount is 4.0, unit is "tbsp", prep is null },
+            { item is "sesame oil", amount is 2.0, unit is "tsp", prep is null },
+            { item is "sesame seeds", amount is 1.0, unit is "tbsp", prep is "toasted" }
+        ]
+    }
+    steps is [
+        "Cook rice according to package directions and keep warm",
+        "Season and blanch spinach and bean sprouts separately",
+        "Sauté zucchini, carrots, and mushrooms individually with sesame oil",
+        "Marinate beef in soy sauce, garlic, and sesame oil, then grill",
+        "Fry eggs sunny-side up",
+        "Arrange rice in bowls, top with vegetables, beef, and egg",
+        "Serve with gochujang and sesame seeds on the side",
+        "Mix thoroughly before eating"
+    ]
+    nutrition_per_serving is {
+        calories is 520 as u16
+        protein_g is 28.0
+        fat_g is 15.0
+        carbs_g is 65.0
+        fiber_g is 6.0
+        sodium_mg is 890 as u16
+    }
+}

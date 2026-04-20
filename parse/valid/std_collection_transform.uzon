@@ -1,0 +1,6 @@
+// §5.16.2 Collection Transform
+numbers are 1, 2, 3, 4, 5
+doubled is std.map(numbers, function n as i64 returns i64 { n * 2 })
+evens is std.filter(numbers, function n as i64 returns bool { n % 2 is 0 })
+total is std.reduce(numbers, 0, function acc as i64, n as i64 returns i64 { acc + n })
+sorted is std.sort(numbers, function a as i64, b as i64 returns bool { a < b })

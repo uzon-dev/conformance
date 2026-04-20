@@ -1,0 +1,7 @@
+// Service configuration #100
+@type is "amqp"
+name is "dev_100"
+port is 54341 as u16
+enabled is false
+max_connections is 1452 as i32
+timeout_ms is 10406 as i32

@@ -1,0 +1,10 @@
+// ERROR: §5.9 + §5.13 + §3.5
+// branches have different types — checked speculatively regardless of condition
+_shared is struct "./shared"
+
+status is env.STATUS to _shared.ShipStatus
+    or else cruising as _shared.ShipStatus
+
+bad is if status is docked as _shared.ShipStatus
+    then "docked"
+    else 42

@@ -1,0 +1,6 @@
+// §3.6 — standalone union type declaration
+Flexible is union i32, string
+NumberLike is union i32, f64
+
+// Reuse via as
+value is "hello" as Flexible

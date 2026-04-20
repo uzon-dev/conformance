@@ -1,0 +1,2 @@
+// §3.4 List elements must be same type
+bad is [ 1, "hello", true ]

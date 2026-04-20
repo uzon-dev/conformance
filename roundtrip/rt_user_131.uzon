@@ -1,0 +1,16 @@
+user is {
+    id is 10131 as u32
+    username is "laura131"
+    email is "laura131@test.org"
+    display_name is "Laura #131"
+    city is "Dubai"
+    age is 49 as u8
+    verified is true
+    created is "2026-12-20T12:00:00Z"
+    login_count is 1703 as u32
+    preferences is {
+        theme is "light"
+        language is "de"
+        notifications is false
+    }
+}

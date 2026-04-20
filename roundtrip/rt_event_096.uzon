@@ -1,0 +1,5 @@
+@type is "pageview"
+timestamp is 1767798790
+source is "lambda"
+url is "https://key.example.com/staging"
+session_id is "staging_7609"

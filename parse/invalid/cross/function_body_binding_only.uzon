@@ -1,0 +1,5 @@
+// §3.8 + §5.3: function body ends with binding — no return expression
+double is function n as i32 returns i32 {
+    result is n * 2
+}
+bad is double(5)

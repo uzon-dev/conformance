@@ -1,0 +1,5 @@
+// §3.4 + §3.2.1: Extra field in second element — type error
+items is [
+    { x is 1 },
+    { x is 2, y is 3 }
+]

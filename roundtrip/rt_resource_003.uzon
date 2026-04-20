@@ -1,0 +1,11 @@
+// Resource #3
+@type is "compute"
+name is "compute_3"
+region is "eu-west-1"
+config is {
+    @type is "compute_config"
+    cpu_cores is 16 as u8
+    memory_gb is 32 as u8
+    gpu is true
+}
+active is true

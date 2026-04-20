@@ -1,0 +1,6 @@
+@type is "error"
+timestamp is 1701496555
+source is "dev"
+code is 542 as u16
+message is "kappa failed"
+fatal is false

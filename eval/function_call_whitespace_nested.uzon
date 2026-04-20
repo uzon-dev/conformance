@@ -1,0 +1,16 @@
+add is function a as i32, b as i32 returns i32 { a + b }
+double is function n as i32 returns i32 { n * 2 }
+
+f1 is function x as i32 returns i32 { add (x, 1) }
+f2 is function x as i32 returns i32 {
+    add(x,
+        1
+    )
+}
+f3 is function x as i32 returns i32 {
+    double(add(x, 1))
+}
+
+r1 is f1(10)
+r2 is f2(10)
+r3 is f3(10)

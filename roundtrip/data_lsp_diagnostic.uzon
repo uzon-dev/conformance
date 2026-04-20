@@ -1,0 +1,17 @@
+diagnostics is [
+    {
+        range is { start is { line is 10 as u32, character is 4 as u32 }, end is { line is 10 as u32, character is 15 as u32 } }
+        severity is 1 as u8
+        code is "E0308"
+        source is "uzon-analyzer"
+        message is "type mismatch: expected 'u32', found 'i32'"
+        related_information is [
+            {
+                location is { uri is "file:///src/main.uzon", range is { start is { line is 5 as u32, character is 0 as u32 }, end is { line is 5 as u32, character is 20 as u32 } } }
+                message is "expected type defined here"
+            }
+        ]
+        tags is [] as [u8]
+        data is { fixable is true, suggested_fix is "add 'to u32'" }
+    }
+]

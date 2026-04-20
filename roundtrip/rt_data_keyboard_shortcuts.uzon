@@ -1,0 +1,9 @@
+shortcuts is [
+    { keys is "Ctrl+C", action is "copy", scope is "global", enabled is true },
+    { keys is "Ctrl+V", action is "paste", scope is "global", enabled is true },
+    { keys is "Ctrl+Z", action is "undo", scope is "editor", enabled is true },
+    { keys is "Ctrl+Shift+Z", action is "redo", scope is "editor", enabled is true },
+    { keys is "Ctrl+S", action is "save", scope is "editor", enabled is true },
+    { keys is "Ctrl+Shift+P", action is "command_palette", scope is "global", enabled is true },
+    { keys is "Alt+F4", action is "quit", scope is "global", enabled is false }
+]

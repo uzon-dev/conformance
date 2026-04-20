@@ -1,0 +1,4 @@
+// §3.5 v0.10 — bare variant as function return
+Status is enum active, inactive
+default_status is function returns Status { active }
+s is default_status()

@@ -1,0 +1,9 @@
+_day is monday from monday, tuesday, wednesday, thursday, friday, saturday, sunday called Weekday
+_month is january from january, february, march, april, may, june, july, august, september, october, november, december called Month
+
+schedule is [
+    { day is monday as Weekday, month is january as Month, event is "kickoff" },
+    { day is wednesday as Weekday, month is march as Month, event is "review" },
+    { day is friday as Weekday, month is june as Month, event is "release" },
+    { day is sunday as Weekday, month is december as Month, event is "shutdown" }
+]

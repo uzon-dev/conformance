@@ -1,0 +1,9 @@
+service is {
+    name is "traefik"
+    version is "5.0.1"
+    port is 8010 as u16
+    health is "/health"
+    replicas is 3 as u8
+    resources is { cpu_m is 100 as u16, memory_mb is 384 as u16 }
+    labels is { app is "traefik", tier is "backend" }
+}

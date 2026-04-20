@@ -1,0 +1,17 @@
+// Roundtrip: multiple enum and union types coexisting
+_color is red from red, green, blue called Color
+_size is small from small, medium, large called Size
+_shape is circle from circle, square, triangle called Shape
+
+_result is "ok" named ok from ok as string, err as string called Result
+_option is null named none from some as i32, none as null called Option
+
+config is {
+    fg is blue as Color
+    bg is red as Color
+    size is large as Size
+    shape is triangle as Shape
+    last_result is "success" as Result named ok
+    cached_value is 42 as Option named some
+    pending is null as Option named none
+}

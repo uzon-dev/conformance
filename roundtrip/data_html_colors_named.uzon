@@ -1,0 +1,17 @@
+colors is {
+    aliceblue is "#F0F8FF"
+    coral is "#FF7F50"
+    darkslategray is "#2F4F4F"
+    gold is "#FFD700"
+    honeydew is "#F0FFF0"
+    ivory is "#FFFFF0"
+    khaki is "#F0E68C"
+    lavender is "#E6E6FA"
+    mintcream is "#F5FFFA"
+    navy is "#000080"
+    orchid is "#DA70D6"
+    peru is "#CD853F"
+    salmon is "#FA8072"
+    teal is "#008080"
+    wheat is "#F5DEB3"
+}

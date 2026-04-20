@@ -1,0 +1,2 @@
+// §3.6: Duplicate member types in untagged union are a type error
+x is 1 from union i32, string, i32

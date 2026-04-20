@@ -1,0 +1,12 @@
+metric is {
+    name is "network_in"
+    host is "server-13"
+    timestamp is 1712801980 as u64
+    value is 56.1
+    unit is "bytes"
+    tags is {
+        environment is "production"
+        region is "us-west"
+        service is "svc-03"
+    }
+}

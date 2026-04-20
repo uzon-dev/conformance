@@ -1,0 +1,4 @@
+@type is "heartbeat"
+timestamp is 1756463253
+source is "host"
+detail is "gamma_714"

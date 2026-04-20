@@ -1,0 +1,8 @@
+// Schema definition #140
+@type is "schema"
+version is 2 as u8
+name is "sigma_schema_140"
+fields are
+        { name is "field_0", @type is "u16", required is true },
+        { name is "field_1", @type is "u8", required is false },
+        { name is "field_2", @type is "string", required is true }

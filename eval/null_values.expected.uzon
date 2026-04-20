@@ -1,0 +1,4 @@
+n is null
+is_null is true
+is_not_null is false
+to_str is "null"

@@ -1,0 +1,14 @@
+product is {
+    sku is "SKU-CLO-0091"
+    name is "Clothing Item 91"
+    category is "clothing"
+    price is 55.49
+    currency is "USD"
+    stock is 273 as u16
+    weight_g is 1010 as u32
+    dimensions is (21.0, 6.0, 3.0)
+    rating is 4.1
+    reviews is 637 as u16
+    active is true
+    tags is [ "clothing", "new" ]
+}

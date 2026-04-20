@@ -1,0 +1,12 @@
+// Resource #94
+@type is "queue"
+name is "queue_94"
+region is "eu-west-1"
+config is {
+    @type is "queue_config"
+    broker is "nats"
+    max_retries is 5 as u8
+    batch_size is 790 as u16
+}
+tags are "debug", "enabled", "host"
+active is true

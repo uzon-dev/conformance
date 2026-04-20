@@ -1,0 +1,20 @@
+// §5.15 + §8: ( on next line is new expression in ALL contexts
+f is function n as i32 returns i32 { n + 1 }
+
+// Inside list — f and (1) are separate elements... but (1) is grouping = 1
+// This would be a heterogeneous list (function, i32) → type error
+// So test with consistent types:
+nums are 1, 2, 3
+
+// Inside struct
+config is {
+    x is f(10)
+    y is (1, 2)
+}
+
+// Inside function body — return tuple
+make is function n as i32 returns (i32, i32) {
+    a is n
+    (a, a + 1)
+}
+result is make(5)

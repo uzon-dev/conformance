@@ -1,0 +1,4 @@
+// §3.6 — comparing unions with different member type sets is a type error
+a is 42 from union i32, string
+b is 42 from union i32, f64
+bad is a is b

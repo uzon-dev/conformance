@@ -1,0 +1,8 @@
+_priority is low from low, medium, high called Priority
+_outcome is "pending" named pending from
+    pending as string, failed as null
+    called Outcome
+
+a is "waiting" as Outcome named pending
+b is null as Outcome named failed
+c is "done" as Outcome named pending

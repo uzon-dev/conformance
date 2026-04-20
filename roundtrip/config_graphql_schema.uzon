@@ -1,0 +1,34 @@
+schema is {
+    types is [
+        {
+            name is "User"
+            fields is [
+                { name is "id", @type is "ID!", description is "Unique identifier" },
+                { name is "email", @type is "String!", description is "User email" },
+                { name is "name", @type is "String", description is null },
+                { name is "posts", @type is "[Post!]!", description is "User's posts" },
+                { name is "createdAt", @type is "DateTime!", description is null }
+            ]
+        },
+        {
+            name is "Post"
+            fields is [
+                { name is "id", @type is "ID!", description is null },
+                { name is "title", @type is "String!", description is null },
+                { name is "body", @type is "String!", description is null },
+                { name is "author", @type is "User!", description is null },
+                { name is "tags", @type is "[String!]!", description is "Post tags" },
+                { name is "published", @type is "Boolean!", description is null }
+            ]
+        }
+    ]
+    queries is [
+        { name is "user", args is [ { name is "id", @type is "ID!" } ], @returns is "User" },
+        { name is "users", args is [ { name is "limit", @type is "Int" } ], @returns is "[User!]!" },
+        { name is "post", args is [ { name is "id", @type is "ID!" } ], @returns is "Post" }
+    ]
+    mutations is [
+        { name is "createUser", args is [ { name is "email", @type is "String!" }, { name is "name", @type is "String" } ], @returns is "User!" },
+        { name is "createPost", args is [ { name is "title", @type is "String!" }, { name is "body", @type is "String!" } ], @returns is "Post!" }
+    ]
+}

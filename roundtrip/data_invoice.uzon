@@ -1,0 +1,21 @@
+invoice is {
+    number is "INV-2026-0042"
+    date is "2026-04-11"
+    due_date is "2026-05-11"
+    customer is {
+        name is "Acme Corp"
+        address is "123 Main St\nSuite 400\nNew York, NY 10001"
+        tax_id is "XX-1234567"
+    }
+    items is [
+        { description is "Consulting - Q1", quantity is 120.0, unit_price is 150.0, tax_rate is 0.0 },
+        { description is "Software License", quantity is 1.0, unit_price is 5000.0, tax_rate is 0.08 },
+        { description is "Support Contract", quantity is 12.0, unit_price is 500.0, tax_rate is 0.08 }
+    ]
+    subtotal is 29000.0
+    tax is 880.0
+    total is 29880.0
+    currency is "USD"
+    notes is "Payment terms: Net 30\nThank you for your business!"
+    paid is false
+}

@@ -1,0 +1,9 @@
+// in on structs — value membership, type-mismatched fields skipped
+config is { port is 8080, host is "localhost", tls is true }
+a is 8080 in config
+b is "localhost" in config
+c is true in config
+d is 9090 in config
+e is "port" in config           // "port" is not a value, it's a key
+f is null in { x is null, y is 1 }
+g is null in { x is 1, y is 2 }

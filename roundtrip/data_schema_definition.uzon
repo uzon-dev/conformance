@@ -1,0 +1,26 @@
+_field_type is text from text, integer, float, boolean, date, json called FieldType
+
+tables is [
+    {
+        name is "users"
+        columns is [
+            { name is "id", @type is integer as FieldType, primary is true, nullable is false },
+            { name is "email", @type is text as FieldType, primary is false, nullable is false },
+            { name is "name", @type is text as FieldType, primary is false, nullable is true },
+            { name is "created_at", @type is date as FieldType, primary is false, nullable is false },
+            { name is "metadata", @type is json as FieldType, primary is false, nullable is true }
+        ]
+        indexes is [ { columns is [ "email" ], unique is true }, { columns is [ "created_at" ], unique is false } ]
+    },
+    {
+        name is "posts"
+        columns is [
+            { name is "id", @type is integer as FieldType, primary is true, nullable is false },
+            { name is "user_id", @type is integer as FieldType, primary is false, nullable is false },
+            { name is "title", @type is text as FieldType, primary is false, nullable is false },
+            { name is "body", @type is text as FieldType, primary is false, nullable is false },
+            { name is "published", @type is boolean as FieldType, primary is false, nullable is false }
+        ]
+        indexes is [ { columns is [ "user_id" ], unique is false }, { columns is [ "user_id", "title" ], unique is true } ]
+    }
+]

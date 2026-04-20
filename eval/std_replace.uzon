@@ -1,0 +1,5 @@
+a is std.replace("a:b:c", ":", "-")
+b is std.replace("hello world", "world", "UZON")
+c is std.replace("aaa", "a", "bb")
+d is std.replace("hello", "xyz", "!")
+e is std.replace("hello", "", "!")

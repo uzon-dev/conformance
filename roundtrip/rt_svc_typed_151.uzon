@@ -1,0 +1,8 @@
+// Service configuration #151
+@type is "mqtt"
+name is "alpha_151"
+port is 24028 as u16
+enabled is false
+max_connections is 2357 as i32
+timeout_ms is 18657 as i32
+retry_count is 1 as u8

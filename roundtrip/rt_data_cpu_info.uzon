@@ -1,0 +1,4 @@
+cpus is [
+    { id is 0 as u8, model is "AMD Ryzen 9 7950X", cores is 16 as u8, threads is 32 as u8, base_mhz is 4500 as u16, boost_mhz is 5700 as u16, cache_mb is 64 as u8, tdp_w is 170 as u16 },
+    { id is 1 as u8, model is "Intel i9-14900K", cores is 24 as u8, threads is 32 as u8, base_mhz is 3200 as u16, boost_mhz is 6000 as u16, cache_mb is 36 as u8, tdp_w is 253 as u16 }
+]

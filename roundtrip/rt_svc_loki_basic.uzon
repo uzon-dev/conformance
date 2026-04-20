@@ -1,0 +1,9 @@
+service is {
+    name is "loki"
+    version is "6.2.2"
+    port is 8017 as u16
+    health is "/health"
+    replicas is 2 as u8
+    resources is { cpu_m is 300 as u16, memory_mb is 256 as u16 }
+    labels is { app is "loki", tier is "infrastructure" }
+}

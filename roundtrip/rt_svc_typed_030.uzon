@@ -1,0 +1,8 @@
+// Service configuration #30
+@type is "websocket"
+name is "backup_30"
+port is 5514 as u16
+enabled is false
+max_connections is 3863 as i32
+timeout_ms is 13330 as i32
+tls is false

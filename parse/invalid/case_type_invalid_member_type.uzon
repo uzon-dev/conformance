@@ -1,0 +1,6 @@
+// §5.10: when clause type must be a member type of the union
+u is 42 from union i32, string
+result is case type u
+    when i32 then "int"
+    when f64 then "float"
+    else "other"

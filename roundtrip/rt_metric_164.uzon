@@ -1,0 +1,12 @@
+metric is {
+    name is "heap_size"
+    host is "server-04"
+    timestamp is 1712809840 as u64
+    value is 78.8
+    unit is "bytes"
+    tags is {
+        environment is "development"
+        region is "us-east"
+        service is "svc-04"
+    }
+}

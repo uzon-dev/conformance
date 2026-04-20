@@ -1,0 +1,4 @@
+// §3.8 + §5.4 — ordered comparison on functions is a type error
+f is function n as i32 returns i32 { n + 1 }
+g is function n as i32 returns i32 { n * 2 }
+bad is f < g

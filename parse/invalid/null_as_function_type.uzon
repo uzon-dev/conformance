@@ -1,0 +1,5 @@
+// §6.1: null as T where T is a function type is a type error —
+// function types are not in the null-compatible set (§6.1 permits
+// only null, union-with-null, and tagged-union-with-null-variant).
+CbType is function x as i32 returns i32 { x } called Callback
+bad is null as Callback

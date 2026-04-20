@@ -1,0 +1,7 @@
+// §3.8: Negative return requires intermediate binding
+f is function returns i32 {
+    a is 5
+    result is -3
+    result
+}
+r is f()

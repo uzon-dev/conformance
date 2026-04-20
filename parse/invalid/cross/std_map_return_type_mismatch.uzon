@@ -1,0 +1,10 @@
+// §5.16.2 + §3.8 + §3.4: map function has mismatched if branches
+_entry is { a is 0 as i32 } called Entry
+items are _entry with { a is 1 as i32 }, _entry with { a is 2 as i32 }, _entry with { a is 3 as i32 }
+
+bad is std.map(
+    items,
+    function e as Entry returns string {
+        if e.a > 2 then 42 else "small"
+    }
+)

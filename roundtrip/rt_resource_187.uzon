@@ -1,0 +1,12 @@
+// Resource #187
+@type is "cache"
+name is "cache_187"
+region is "us-west-2"
+config is {
+    @type is "cache_config"
+    backend is "memcached"
+    ttl_seconds is 68710 as i32
+    max_memory_mb is 3878 as u16
+}
+tags are "lambda"
+active is true

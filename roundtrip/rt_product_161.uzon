@@ -1,0 +1,14 @@
+product is {
+    sku is "SKU-OFF-0161"
+    name is "Office Item 161"
+    category is "office"
+    price is 90.49
+    currency is "USD"
+    stock is 483 as u16
+    weight_g is 1710 as u32
+    dimensions is (11.0, 16.0, 3.0)
+    rating is 3.1
+    reviews is 127 as u16
+    active is true
+    tags is [ "office", "featured" ]
+}

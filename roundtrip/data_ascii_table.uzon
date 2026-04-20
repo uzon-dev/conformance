@@ -1,0 +1,11 @@
+printable is [
+    { code is 32 as u8, char is " ", name is "Space" },
+    { code is 33 as u8, char is "!", name is "Exclamation" },
+    { code is 34 as u8, char is "\"", name is "Double quote" },
+    { code is 48 as u8, char is "0", name is "Digit zero" },
+    { code is 65 as u8, char is "A", name is "Uppercase A" },
+    { code is 90 as u8, char is "Z", name is "Uppercase Z" },
+    { code is 97 as u8, char is "a", name is "Lowercase a" },
+    { code is 122 as u8, char is "z", name is "Lowercase z" },
+    { code is 126 as u8, char is "~", name is "Tilde" }
+]

@@ -1,0 +1,11 @@
+election is {
+    date is "2024-11-05"
+    @type is "General"
+    total_votes is 158400000 as u64
+    results is [
+        { candidate is "Candidate A", party is "Party X", votes is 77300000 as u64, pct is 48.8 },
+        { candidate is "Candidate B", party is "Party Y", votes is 74900000 as u64, pct is 47.3 },
+        { candidate is "Others", party is null, votes is 6200000 as u64, pct is 3.9 }
+    ]
+    turnout_pct is 66.2
+}

@@ -1,0 +1,11 @@
+_payload is 0 named i32val from
+    i32val as i32, f64val as f64, strval as string, boolval as bool, nulval as null
+    called TypedPayload
+
+samples is [
+    42 as TypedPayload named i32val,
+    3.14 as TypedPayload named f64val,
+    "hello" as TypedPayload named strval,
+    true as TypedPayload named boolval,
+    null as TypedPayload named nulval
+]

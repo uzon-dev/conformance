@@ -1,0 +1,12 @@
+// Resource #190
+@type is "queue"
+name is "queue_190"
+region is "us-east-1"
+config is {
+    @type is "queue_config"
+    broker is "kafka"
+    max_retries is 10 as u8
+    batch_size is 224 as u16
+}
+tags are "debug"
+active is false

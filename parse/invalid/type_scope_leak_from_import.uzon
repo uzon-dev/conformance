@@ -1,0 +1,6 @@
+// §6.2 + §7.3: Type inside imported struct — bare reference is a type error
+_shared is {
+    base is { x is 0 as i32, y is 0 as i32 } called Point
+}
+// Point is inside _shared — must use _shared.Point
+origin is { x is 0 as i32, y is 0 as i32 } as Point

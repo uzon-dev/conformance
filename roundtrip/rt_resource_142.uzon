@@ -1,0 +1,12 @@
+// Resource #142
+@type is "queue"
+name is "queue_142"
+region is "us-west-2"
+config is {
+    @type is "queue_config"
+    broker is "sqs"
+    max_retries is 9 as u8
+    batch_size is 933 as u16
+}
+tags are "backup", "staging", "debug"
+active is false

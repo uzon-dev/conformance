@@ -1,0 +1,7 @@
+// Service configuration #93
+@type is "tcp"
+name is "theta_93"
+port is 28885 as u16
+enabled is true
+max_connections is 2451 as i32
+timeout_ms is 29866 as i32

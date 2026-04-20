@@ -1,0 +1,7 @@
+// Service configuration #127
+@type is "amqp"
+name is "dev_127"
+port is 64414 as u16
+enabled is false
+max_connections is 6474 as i32
+timeout_ms is 556 as i32

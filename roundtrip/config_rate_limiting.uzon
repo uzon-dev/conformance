@@ -1,0 +1,19 @@
+rate_limits is {
+    global is { requests_per_sec is 1000 as u32, burst is 50 as u32 }
+    per_ip is { requests_per_sec is 100 as u32, burst is 20 as u32 }
+    per_user is { requests_per_sec is 50 as u32, burst is 10 as u32 }
+    endpoints is [
+        { path is "/api/auth/login", rpm is 10 as u16, penalty_sec is 300 as u32 },
+        { path is "/api/upload", rpm is 5 as u16, penalty_sec is 60 as u32 },
+        { path is "/api/search", rpm is 60 as u16, penalty_sec is 30 as u32 },
+        { path is "/api/export", rpm is 2 as u16, penalty_sec is 600 as u32 }
+    ]
+    whitelist is [ "10.0.0.0/8", "172.16.0.0/12" ]
+    response is {
+        status is 429 as u16
+        headers is {
+            'Retry-After' is "60"
+            'X-RateLimit-Policy' is "sliding-window"
+        }
+    }
+}

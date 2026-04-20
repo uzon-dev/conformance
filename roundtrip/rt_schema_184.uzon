@@ -1,0 +1,10 @@
+// Schema definition #184
+@type is "schema"
+version is 3 as u8
+name is "enabled_schema_184"
+fields are
+        { name is "field_0", @type is "i64", required is true },
+        { name is "field_1", @type is "string", required is true },
+        { name is "field_2", @type is "i64", required is true },
+        { name is "field_3", @type is "string", required is false },
+        { name is "field_4", @type is "bool", required is false }

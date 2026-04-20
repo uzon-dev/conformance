@@ -1,0 +1,8 @@
+// §3.2.2 + §3.2.1 + §3.8 + §6.3
+// plus produces new type → with on extended → function expects base
+base is { x is 1 as i32 } called Base
+extended is base plus { y is 2 as i32 }
+copied is extended with { x is 10 as i32 }
+format is function b as Base returns string { "x={b.x}" }
+// copied is still extended shape (not Base) → type error
+bad is format(copied)

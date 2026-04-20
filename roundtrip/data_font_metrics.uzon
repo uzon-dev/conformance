@@ -1,0 +1,18 @@
+font is {
+    family is "Inter"
+    style is "Regular"
+    version is "4.0"
+    metrics is {
+        units_per_em is 2048 as u16
+        ascender is 2048 as u16
+        descender is -512 as i16
+        line_gap is 0 as u16
+        cap_height is 1490 as u16
+        x_height is 1060 as u16
+        underline_position is -200 as i16
+        underline_thickness is 100 as u16
+    }
+    tables is [ "cmap", "glyf", "head", "hhea", "hmtx", "kern", "loca", "maxp", "name", "os2", "post" ]
+    glyph_count is 2548 as u16
+    supported_scripts is [ "Latin", "Cyrillic", "Greek", "Vietnamese" ]
+}

@@ -1,0 +1,4 @@
+small is 1000 as i64
+exact is 1000.0 as f64
+at_limit is 16777216 as i32
+ok is 16777216.0 as f32

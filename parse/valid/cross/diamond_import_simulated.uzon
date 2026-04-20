@@ -1,0 +1,24 @@
+// §7 + §5.14 + §3.2.1 + §5.12
+// diamond import pattern simulated with nested structs
+// both config_a and config_b reference shared
+_shared is {
+    version is 1 as u8
+    base is { name is "default", active is true }
+    separator is "---"
+}
+
+config_a is {
+    _shared is _shared             // "import" shared
+    local is _shared.base with { name is "A" }
+    label is "Config A v{_shared.version}"
+}
+
+config_b is {
+    _shared is _shared             // same "import"
+    local is _shared.base with { name is "B" }
+    label is "Config B v{_shared.version}"
+}
+
+// both reference same shared
+same_version is config_a._shared.version is config_b._shared.version
+combined is config_a.label ++ " | " ++ config_b.label

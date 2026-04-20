@@ -1,0 +1,12 @@
+// Resource #96
+@type is "queue"
+name is "queue_96"
+region is "ap-northeast-1"
+config is {
+    @type is "queue_config"
+    broker is "kafka"
+    max_retries is 10 as u8
+    batch_size is 593 as u16
+}
+tags are "alpha", "theta"
+active is true

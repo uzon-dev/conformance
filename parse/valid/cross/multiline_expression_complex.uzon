@@ -1,0 +1,17 @@
+// §8 + §5.3 + §5.9: complex multi-line expression
+x is 10 as i32
+y is 20 as i32
+z is 5 as i32
+
+// expression continuation with mixed operators
+result is (x * y
+         + z ^ 2 as i32
+         - x % 3)
+         / 2
+
+// multi-line if with arithmetic
+classification is if result > 100
+    then "high"
+    else if result > 50
+    then "medium"
+    else "low"

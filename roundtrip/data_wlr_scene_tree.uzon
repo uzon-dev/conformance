@@ -1,0 +1,42 @@
+_snode is {
+    @type is ""
+    name is null
+    x is null
+    y is null
+    w is null
+    h is null
+    color is null
+    texture is null
+    children is null
+}
+
+scene is _snode with {
+    @type is "tree"
+    children is [
+        _snode with {
+            @type is "tree"
+            name is "background"
+            children is [
+                _snode with { @type is "rect", x is 0 as i32, y is 0 as i32, w is 3840 as u16, h is 2160 as u16, color is (30 as u8, 30 as u8, 46 as u8, 255 as u8) }
+            ]
+        },
+        _snode with {
+            @type is "tree"
+            name is "windows"
+            children is [
+                _snode with {
+                    @type is "tree"
+                    name is "window-1"
+                    children is [
+                        _snode with { @type is "rect", x is 0 as i32, y is 0 as i32, w is 1920 as u16, h is 1080 as u16, color is (40 as u8, 40 as u8, 56 as u8, 255 as u8) },
+                        _snode with { @type is "buffer", x is 2 as i32, y is 32 as i32, w is 1916 as u16, h is 1046 as u16, texture is "wl_buffer@42" }
+                    ]
+                }
+            ]
+        },
+        _snode with {
+            @type is "tree"
+            name is "overlay"
+        }
+    ]
+}

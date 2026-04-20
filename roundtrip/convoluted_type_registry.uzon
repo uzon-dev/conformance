@@ -1,0 +1,13 @@
+_kind is primitive from primitive, compound, generic called TypeKind
+
+types is [
+    { name is "bool", kind is primitive as TypeKind, size is 1 as u8, nullable is false, params is [] as [string] },
+    { name is "i32", kind is primitive as TypeKind, size is 4 as u8, nullable is false, params is [] as [string] },
+    { name is "string", kind is primitive as TypeKind, size is 0 as u8, nullable is false, params is [] as [string] },
+    { name is "List", kind is generic as TypeKind, size is 0 as u8, nullable is false, params is [ "T" ] },
+    { name is "Map", kind is generic as TypeKind, size is 0 as u8, nullable is false, params is [ "K", "V" ] },
+    { name is "Optional", kind is generic as TypeKind, size is 0 as u8, nullable is true, params is [ "T" ] },
+    { name is "Result", kind is generic as TypeKind, size is 0 as u8, nullable is false, params is [ "T", "E" ] },
+    { name is "Point", kind is compound as TypeKind, size is 8 as u8, nullable is false, params is [] as [string] },
+    { name is "Rect", kind is compound as TypeKind, size is 16 as u8, nullable is false, params is [] as [string] }
+]

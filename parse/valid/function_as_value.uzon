@@ -1,0 +1,8 @@
+// §3.8 Functions are values — stored in structs and lists
+add is function a as i32, b as i32 returns i32 { a + b }
+sub is function a as i32, b as i32 returns i32 { a - b }
+
+// function in struct
+ops is { @plus is add, minus is sub }
+r1 is ops.@plus(3, 4)            // 7
+r2 is ops.minus(10, 3)          // 7

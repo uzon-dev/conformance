@@ -1,0 +1,27 @@
+// French
+fr_lo is "château"
+fr_up is "RÉSUMÉ"
+fr_lo2 is "garçon"
+fr_up2 is "NAÏVE"
+fr_lo3 is "noël"
+fr_up3 is "CAFÉ"
+
+// German — ß → SS (one char becomes two)
+de_lo is "ärger"
+de_up is "STRASSE"
+de_lo2 is "übung"
+de_up2 is "MÜNCHEN"
+de_lo3 is "öffnung"
+
+// Roundtrip: upper then lower — ß → SS → ss (not reversible)
+fr_round is "château"
+de_round is "strasse"
+
+// Spanish, Danish, Polish
+es_up is "SEÑOR"
+da_lo is "ørsted"
+pl_up is "ŁÓDŹ"
+
+// Greek
+gr_lo is "ωμέγα"
+gr_up is "ΑΛΦΑ"

@@ -1,0 +1,5 @@
+endpoints is [
+    { path is "/mysql/api/v1/status", method is "GET", timeout_ms is 1300 as u32, auth is false },
+    { path is "/mysql/api/v1/config", method is "GET", timeout_ms is 2300 as u32, auth is true },
+    { path is "/mysql/api/v1/metrics", method is "GET", timeout_ms is 650 as u32, auth is false }
+]

@@ -1,0 +1,48 @@
+provider is { name is "aws", region is "us-east-1", profile is "production" }
+
+vpc is {
+    cidr is "10.0.0.0/16"
+    subnets is [
+        { cidr is "10.0.1.0/24", az is "us-east-1a", @type is "public" },
+        { cidr is "10.0.2.0/24", az is "us-east-1b", @type is "public" },
+        { cidr is "10.0.10.0/24", az is "us-east-1a", @type is "private" },
+        { cidr is "10.0.11.0/24", az is "us-east-1b", @type is "private" }
+    ]
+    nat_gateway is true
+    flow_logs is true
+}
+
+ec2 is {
+    instances is [
+        { name is "web-1", @type is "t3.medium", ami is "ami-0123456789", subnet is "public", count is 2 as u8 },
+        { name is "worker-1", @type is "c5.xlarge", ami is "ami-0123456789", subnet is "private", count is 4 as u8 }
+    ]
+    security_groups is [
+        { name is "web-sg", ingress is [ { port is 443 as u16, cidr is "0.0.0.0/0" }, { port is 80 as u16, cidr is "0.0.0.0/0" } ] },
+        { name is "worker-sg", ingress is [ { port is 8080 as u16, cidr is "10.0.0.0/16" } ] }
+    ]
+}
+
+rds is {
+    engine is "postgres"
+    version is "16.2"
+    instance_class is "db.r6g.xlarge"
+    storage_gb is 500 as u16
+    multi_az is true
+    backup_retention is 7 as u8
+}
+
+_bucket is {
+    name is ""
+    acl is "private"
+    versioning is false
+    lifecycle_days is null
+} called Bucket
+
+s3 is {
+    buckets is [
+        _bucket with { name is "myapp-assets", acl is "public-read" },
+        _bucket with { name is "myapp-backups", versioning is true },
+        _bucket with { name is "myapp-logs", lifecycle_days is 90 as u16 }
+    ] as [Bucket]
+}

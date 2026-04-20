@@ -1,0 +1,3 @@
+// §6.2 Keywords may be used as type names via @ escape
+Config is { x is 1, y is 2 } called @type
+c is { x is 10, y is 20 } as @type

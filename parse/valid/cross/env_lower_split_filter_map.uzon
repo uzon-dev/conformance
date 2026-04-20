@@ -1,0 +1,9 @@
+// §5.13 + §5.16.4 + §5.16.2
+// env → lower → split → filter → map
+raw_tags is env.TAGS or else "Web, API, , Backend, "
+normalized is std.lower(std.trim(raw_tags))
+parts is std.split(normalized, ",")
+trimmed is std.map(parts, function s as string returns string { std.trim(s) })
+non_empty is std.filter(trimmed, function s as string returns bool { std.len(s) > 0 })
+count is std.len(non_empty)
+display is std.join(non_empty, " | ")

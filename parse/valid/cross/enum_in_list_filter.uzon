@@ -1,0 +1,18 @@
+// §3.5 + §5.8.1 + §5.16.2: enum in list + filter
+_s is active from active, inactive, suspended called Status
+
+_entry is { name is "", status is active as Status } called Entry
+
+entries are
+    _entry with { name is "alfa" },
+    _entry with { name is "bravo", status is inactive as Status },
+    _entry with { name is "charlie" },
+    _entry with { name is "delta", status is suspended as Status }
+
+active_entries is std.filter(
+    entries,
+    function e as Entry returns bool {
+        e.status is active as Status
+    }
+)
+active_count is std.len(active_entries)    // 2

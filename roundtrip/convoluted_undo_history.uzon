@@ -1,0 +1,13 @@
+_op is insert from insert, delete, replace, format called OpType
+
+history is {
+    current is 5 as u32
+    entries is [
+        { id is 1 as u32, op is insert as OpType, pos is 0 as u32, text is "Hello", old is null, ts is "08:00:01" },
+        { id is 2 as u32, op is insert as OpType, pos is 5 as u32, text is " World", old is null, ts is "08:00:02" },
+        { id is 3 as u32, op is delete as OpType, pos is 5 as u32, text is null, old is " World", ts is "08:00:05" },
+        { id is 4 as u32, op is insert as OpType, pos is 5 as u32, text is ", UZON!", old is null, ts is "08:00:06" },
+        { id is 5 as u32, op is replace as OpType, pos is 0 as u32, text is "Hi", old is "Hello", ts is "08:00:10" }
+    ]
+    redo_stack is [] as [u32]
+}

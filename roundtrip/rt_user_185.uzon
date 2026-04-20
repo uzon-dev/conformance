@@ -1,0 +1,16 @@
+user is {
+    id is 10185 as u32
+    username is "frank185"
+    email is "frank185@example.com"
+    display_name is "Frank #185"
+    city is "NYC"
+    age is 53 as u8
+    verified is true
+    created is "2026-06-18T12:00:00Z"
+    login_count is 2405 as u32
+    preferences is {
+        theme is "light"
+        language is "ko"
+        notifications is false
+    }
+}

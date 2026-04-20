@@ -1,0 +1,9 @@
+// Schema definition #195
+@type is "schema"
+version is 3 as u8
+name is "dev_schema_195"
+fields are
+        { name is "field_0", @type is "i32", required is false },
+        { name is "field_1", @type is "f64", required is true },
+        { name is "field_2", @type is "u16", required is false },
+        { name is "field_3", @type is "string", required is false }

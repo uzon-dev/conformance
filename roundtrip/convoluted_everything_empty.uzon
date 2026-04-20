@@ -1,0 +1,9 @@
+s is ""
+l is [] as [i32]
+b is [] as [bool]
+f is [] as [f64]
+st is { }
+ns is { inner is { deep is { } } }
+ls is [ { }, { }, { } ]
+le is [ [] as [i32], [] as [i32] ]
+lt is [ ] as [string]

@@ -1,0 +1,8 @@
+// Service configuration #73
+@type is "tcp"
+name is "upsilon_73"
+port is 7702 as u16
+enabled is true
+max_connections is 9847 as i32
+timeout_ms is 26495 as i32
+tls is true

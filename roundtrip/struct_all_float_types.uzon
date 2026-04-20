@@ -1,0 +1,8 @@
+floats is {
+    a is 3.14 as f32
+    b is 2.718281828 as f64
+    c is 0.0 as f32
+    d is -0.0 as f64
+    e is 1.0e10 as f64
+    f is 1.0e-10 as f64
+}

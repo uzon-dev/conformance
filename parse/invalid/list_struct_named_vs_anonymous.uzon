@@ -1,0 +1,7 @@
+// §3.4 + §3.2.1: Named type vs anonymous struct — type error (nominal identity)
+_p is { x is 0 as i32, y is 0 as i32 } called Point
+
+items is [
+    { x is 1 as i32, y is 2 as i32 } as Point,
+    { x is 3 as i32, y is 4 as i32 }
+]

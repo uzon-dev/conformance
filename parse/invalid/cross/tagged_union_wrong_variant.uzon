@@ -1,0 +1,3 @@
+// §3.7 + §6.3: reuse tagged union with nonexistent variant
+result is "ok" named ok from ok as string, err as string called Result
+bad is "test" as Result named unknown    // unknown is not a variant

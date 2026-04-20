@@ -1,0 +1,6 @@
+concat is "hello" ++ " " ++ "world"
+repeat is "*" ** 5
+repeat_zero is "x" ** 0
+list_concat is [ 1, 2 ] ++ [ 3, 4 ]
+list_repeat is [ 0 ] ** 3
+list_repeat_zero is [ 1 ] ** 0

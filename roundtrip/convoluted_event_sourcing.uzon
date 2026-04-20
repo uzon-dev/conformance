@@ -1,0 +1,20 @@
+aggregate_id is "order-12345"
+version is 5 as u32
+events is [
+    { seq is 1 as u32, @type is "OrderCreated", ts is "08:00:00", data is { customer_id is "c1", items is [] as [string] } },
+    { seq is 2 as u32, @type is "ItemAdded", ts is "08:00:05", data is { sku is "SKU-001", qty is 2 as u8, price is 29.99 } },
+    { seq is 3 as u32, @type is "ItemAdded", ts is "08:00:10", data is { sku is "SKU-007", qty is 1 as u8, price is 49.99 } },
+    { seq is 4 as u32, @type is "ItemRemoved", ts is "08:00:30", data is { sku is "SKU-001", qty is 1 as u8, reason is "customer request" } },
+    { seq is 5 as u32, @type is "OrderSubmitted", ts is "08:01:00", data is { total is 79.98, payment_method is "card_ending_4242" } }
+]
+snapshot is {
+    version is 5 as u32
+    state is {
+        status is "submitted"
+        items is [
+            { sku is "SKU-001", qty is 1 as u8, price is 29.99 },
+            { sku is "SKU-007", qty is 1 as u8, price is 49.99 }
+        ]
+        total is 79.98
+    }
+}

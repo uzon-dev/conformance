@@ -1,0 +1,12 @@
+// base: { id: 0 }
+// with_name: { id: 0, name: "unnamed" }
+// with_type: { id: 0, name: "unnamed", kind: "unknown" }
+// with_meta: { id: 0, name: "unnamed", kind: "unknown", active: true, priority: 0 }
+final_id is 0 as i32
+final_name is "unnamed"
+final_kind is "unknown"
+final_active is true
+final_priority is 0 as i32
+mod_name is "test"
+mod_priority is 5 as i32
+mod_kind is "unknown"

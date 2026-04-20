@@ -1,0 +1,8 @@
+unix_perms is [
+    { mode is 0o755, symbolic is "rwxr-xr-x", description is "Standard executable" },
+    { mode is 0o644, symbolic is "rw-r--r--", description is "Standard file" },
+    { mode is 0o600, symbolic is "rw-------", description is "Private file" },
+    { mode is 0o700, symbolic is "rwx------", description is "Private executable" },
+    { mode is 0o777, symbolic is "rwxrwxrwx", description is "World writable" },
+    { mode is 0o400, symbolic is "r--------", description is "Read-only owner" }
+]

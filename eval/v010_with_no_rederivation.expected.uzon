@@ -1,0 +1,6 @@
+Scope is struct {
+    radius is 100.0 as f64
+    area is radius * radius * 3.14159
+}
+base is { radius is 100.0 as f64, area is 31415.899999999998 as f64 } as Scope
+bigger is { radius is 200.0 as f64, area is 31415.899999999998 as f64 } as Scope

@@ -1,0 +1,8 @@
+// ERROR: §3.2.2 + §5.13 + §3.1
+// plus override evaluates to undefined → type error
+_shared is struct "./shared"
+
+bad is _shared.base_module plus {
+    power_kw is env.NONEXISTENT
+    new_field is "valid"
+}

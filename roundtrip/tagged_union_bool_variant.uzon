@@ -1,0 +1,4 @@
+_flag is true named present from present as bool, absent as null called Flag
+a is true as Flag named present
+b is false as Flag named present
+c is null as Flag named absent

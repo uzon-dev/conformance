@@ -1,0 +1,39 @@
+// Functions operating on function results — simulated higher-order patterns
+numbers are 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+
+isEven is function n as i64 returns bool { n % 2 is 0 } called Predicate
+isOdd is function n as i64 returns bool { n % 2 is not 0 } as Predicate
+isAbove5 is function n as i64 returns bool { n > 5 } as Predicate
+
+// apply different predicates
+evens is std.filter(numbers, isEven)
+odds is std.filter(numbers, isOdd)
+above5 is std.filter(numbers, isAbove5)
+
+// combine results
+even_count is std.len(evens)
+odd_count is std.len(odds)
+above5_count is std.len(above5)
+
+// even numbers above 5
+even_above5 is std.filter(
+    evens,
+    isAbove5
+)
+
+// sum of even numbers above 5: 6 + 8 + 10 = 24
+sum_even_above5 is std.reduce(
+    even_above5,
+    0,
+    function acc as i64, n as i64 returns i64 { acc + n }
+)
+
+// all even numbers squared, sorted descending
+even_sq_desc is std.sort(
+    std.map(evens, function n as i64 returns i64 { n * n }),
+    function a as i64, b as i64 returns bool { a > b }
+)
+even_sq_str is std.join(
+    std.map(even_sq_desc, function n as i64 returns string { n to string }),
+    ", "
+)

@@ -1,0 +1,14 @@
+entry is {
+    id is 100099 as u64
+    timestamp is "2026-04-11T03:39:33.177Z"
+    level is "ERROR"
+    component is "cache"
+    message is "Event 99: cache error condition detected"
+    context is {
+        request_id is "req-000099"
+        duration_ms is 298 as u32
+        status_code is 500 as u16
+        user_id is "usr_0099"
+    }
+    tags is [ "cache", "error" ]
+}

@@ -1,0 +1,12 @@
+items is [
+    { id is 0 as u16, v is "s0" }, { id is 1 as u16, v is "s1" }, { id is 2 as u16, v is "s2" }, { id is 3 as u16, v is "s3" }, { id is 4 as u16, v is "s4" },
+    { id is 5 as u16, v is "s5" }, { id is 6 as u16, v is "s6" }, { id is 7 as u16, v is "s7" }, { id is 8 as u16, v is "s8" }, { id is 9 as u16, v is "s9" },
+    { id is 10 as u16, v is "s10" }, { id is 11 as u16, v is "s11" }, { id is 12 as u16, v is "s12" }, { id is 13 as u16, v is "s13" }, { id is 14 as u16, v is "s14" },
+    { id is 15 as u16, v is "s15" }, { id is 16 as u16, v is "s16" }, { id is 17 as u16, v is "s17" }, { id is 18 as u16, v is "s18" }, { id is 19 as u16, v is "s19" },
+    { id is 20 as u16, v is "s20" }, { id is 21 as u16, v is "s21" }, { id is 22 as u16, v is "s22" }, { id is 23 as u16, v is "s23" }, { id is 24 as u16, v is "s24" },
+    { id is 25 as u16, v is "s25" }, { id is 26 as u16, v is "s26" }, { id is 27 as u16, v is "s27" }, { id is 28 as u16, v is "s28" }, { id is 29 as u16, v is "s29" },
+    { id is 30 as u16, v is "s30" }, { id is 31 as u16, v is "s31" }, { id is 32 as u16, v is "s32" }, { id is 33 as u16, v is "s33" }, { id is 34 as u16, v is "s34" },
+    { id is 35 as u16, v is "s35" }, { id is 36 as u16, v is "s36" }, { id is 37 as u16, v is "s37" }, { id is 38 as u16, v is "s38" }, { id is 39 as u16, v is "s39" },
+    { id is 40 as u16, v is "s40" }, { id is 41 as u16, v is "s41" }, { id is 42 as u16, v is "s42" }, { id is 43 as u16, v is "s43" }, { id is 44 as u16, v is "s44" },
+    { id is 45 as u16, v is "s45" }, { id is 46 as u16, v is "s46" }, { id is 47 as u16, v is "s47" }, { id is 48 as u16, v is "s48" }, { id is 49 as u16, v is "s49" }
+]

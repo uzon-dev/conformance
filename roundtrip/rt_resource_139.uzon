@@ -1,0 +1,12 @@
+// Resource #139
+@type is "cache"
+name is "cache_139"
+region is "eu-west-1"
+config is {
+    @type is "cache_config"
+    backend is "local"
+    ttl_seconds is 23644 as i32
+    max_memory_mb is 85 as u16
+}
+tags are "theta", "gamma", "iota"
+active is true

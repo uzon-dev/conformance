@@ -1,0 +1,42 @@
+_stage_type is source from source, transform, filter, aggregate, sink called StageType
+
+pipeline is {
+    name is "etl-daily"
+    stages is [
+        {
+            id is "s1"
+            @type is source as StageType
+            config is { table is "raw_events", batch_size is 10000 as u32 }
+            inputs is [] as [string]
+            outputs is [ "s2", "s3" ]
+        },
+        {
+            id is "s2"
+            @type is transform as StageType
+            config is { expression is "UPPER(name)", columns is [ "name", "email" ] }
+            inputs is [ "s1" ]
+            outputs is [ "s4" ]
+        },
+        {
+            id is "s3"
+            @type is filter as StageType
+            config is { condition is "age >= 18", columns is [] as [string] }
+            inputs is [ "s1" ]
+            outputs is [ "s4" ]
+        },
+        {
+            id is "s4"
+            @type is aggregate as StageType
+            config is { group_by is [ "country" ], aggregations is [ { column is "age", func is "avg" }, { column is "id", func is "count" } ] }
+            inputs is [ "s2", "s3" ]
+            outputs is [ "s5" ]
+        },
+        {
+            id is "s5"
+            @type is sink as StageType
+            config is { table is "aggregated_users", mode is "upsert" }
+            inputs is [ "s4" ]
+            outputs is [] as [string]
+        }
+    ]
+}

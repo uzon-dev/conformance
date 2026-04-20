@@ -1,0 +1,37 @@
+messages is [
+    {
+        name is "User"
+        fields is [
+            { number is 1 as u16, name is "id", @type is "int64", rule is "required" },
+            { number is 2 as u16, name is "email", @type is "string", rule is "required" },
+            { number is 3 as u16, name is "name", @type is "string", rule is "optional" },
+            { number is 4 as u16, name is "roles", @type is "Role", rule is "repeated" },
+            { number is 5 as u16, name is "created_at", @type is "google.protobuf.Timestamp", rule is "required" },
+            { number is 10 as u16, name is "metadata", @type is "map<string, string>", rule is "optional" }
+        ]
+        reserved_numbers is [ 6, 7, 8, 9 ]
+        reserved_names is [ "password", "token" ]
+    },
+    {
+        name is "Role"
+        fields is [
+            { number is 1 as u16, name is "name", @type is "string", rule is "required" },
+            { number is 2 as u16, name is "permissions", @type is "string", rule is "repeated" }
+        ]
+        reserved_numbers is [] as [u16]
+        reserved_names is [] as [string]
+    }
+]
+enums is [
+    {
+        name is "Status"
+        values is [
+            { name is "UNKNOWN", number is 0 as u16 },
+            { name is "ACTIVE", number is 1 as u16 },
+            { name is "INACTIVE", number is 2 as u16 },
+            { name is "DELETED", number is 3 as u16 }
+        ]
+    }
+]
+package is "api.v3"
+options is { 'go_package' is "github.com/example/api/v3;apiv3", 'java_package' is "com.example.api.v3" }

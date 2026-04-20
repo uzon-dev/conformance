@@ -1,0 +1,10 @@
+// Schema definition #46
+@type is "schema"
+version is 4 as u8
+name is "mode_schema_46"
+fields are
+        { name is "field_0", @type is "string", required is false },
+        { name is "field_1", @type is "i32", required is true },
+        { name is "field_2", @type is "bool", required is true },
+        { name is "field_3", @type is "f64", required is true },
+        { name is "field_4", @type is "u8", required is false }

@@ -1,0 +1,7 @@
+// §3.7.1 + §5.3 + §5.4
+// tagged union transparency — arithmetic sees inner value, but
+// comparing two tagged unions is type error
+a is 1 named ok from ok as i32, err as string called Result
+b is 2 named ok from ok as i32, err as string called Result
+// two tagged unions compared with < is type error
+bad is a < b

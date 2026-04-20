@@ -1,0 +1,3 @@
+// §5.13 — correct pattern for boolean flags from env
+debug is (env.DEBUG or else "false") is "true"
+verbose is (env.VERBOSE or else "false") is "true"

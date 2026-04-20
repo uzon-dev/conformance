@@ -1,0 +1,12 @@
+_a is x from x, y called TypeA
+_b is p from p, q, r called TypeB
+_c is m from m, n called TypeC
+_d is i from i, j, k, l called TypeD
+_e is s from s, t called TypeE
+combo is {
+    a is y as TypeA
+    b is r as TypeB
+    c is m as TypeC
+    d is l as TypeD
+    e is t as TypeE
+}

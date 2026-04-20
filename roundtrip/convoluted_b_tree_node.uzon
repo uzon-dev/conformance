@@ -1,0 +1,14 @@
+btree is {
+    order is 4 as u8
+    root is {
+        keys is [ 10, 20 ]
+        leaf is false
+        children is [
+            { keys is [ 3, 5, 7 ], leaf is true, children is [] as [string] },
+            { keys is [ 12, 15, 18 ], leaf is true, children is [] as [string] },
+            { keys is [ 22, 25, 30, 35 ], leaf is true, children is [] as [string] }
+        ]
+    }
+    height is 2 as u8
+    size is 12 as u32
+}

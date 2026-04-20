@@ -1,0 +1,13 @@
+diff is {
+    base is "abc1234"
+    head is "def5678"
+    files is [
+        { path is "src/parser.zig", additions is 42 as u32, deletions is 15 as u32, status is "modified" },
+        { path is "src/std/sort.zig", additions is 120 as u32, deletions is 0 as u32, status is "added" },
+        { path is "src/legacy.zig", additions is 0 as u32, deletions is 89 as u32, status is "deleted" },
+        { path is "src/eval.zig", additions is 7 as u32, deletions is 3 as u32, status is "modified" },
+        { path is "tests/sort_test.zig", additions is 200 as u32, deletions is 0 as u32, status is "added" },
+        { path is "README.md", additions is 15 as u32, deletions is 5 as u32, status is "modified" }
+    ]
+    total is { files_changed is 6 as u32, additions is 384 as u32, deletions is 112 as u32 }
+}

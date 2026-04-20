@@ -1,0 +1,24 @@
+tree is {
+    value is "root"
+    children is [
+        {
+            value is "A"
+            children is [
+                { value is "A1", children is [] as [string] },
+                { value is "A2", children is [] as [string] }
+            ]
+        },
+        {
+            value is "B"
+            children is [
+                { value is "B1", children is [
+                    { value is "B1a", children is [] as [string] }
+                ] }
+            ]
+        },
+        {
+            value is "C"
+            children is [] as [string]
+        }
+    ]
+}

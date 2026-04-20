@@ -1,0 +1,23 @@
+// §3.2 + §3.2.1 + §3.2.2 + §3.8 + §5.16 + §4.4.1
+// struct → called → with → plus → function → std.map → interpolation
+base is { name is "unknown", hp is 100 as i32, alive is true } called Unit
+
+warrior is base with { name is "Kael", hp is 150 as i32 }
+mage is base with { name is "Lyra", hp is 80 as i32 }
+
+detailed_warrior is warrior plus {
+    weapon is "sword"
+    armor is 50 as i32
+}
+
+party are warrior, mage
+
+describeUnit is function u as Unit returns string {
+    status is if u.alive then "alive" else "dead"
+    "{u.name} (HP: {u.hp}, {status})"
+}
+
+roster is std.map(party, describeUnit)
+summary is std.join(roster, " | ")
+header is "PARTY: {summary}"
+count is std.len(party)

@@ -1,0 +1,8 @@
+// Service configuration #181
+@type is "grpc"
+name is "omicron_181"
+port is 63048 as u16
+enabled is true
+max_connections is 5737 as i32
+timeout_ms is 973 as i32
+tls is false

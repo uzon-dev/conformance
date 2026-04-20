@@ -1,0 +1,9 @@
+top_level are "a", "b", "c"
+nested is {
+    inner_ints are 1, 2, 3, 4, 5
+    inner_strs are "x", "y", "z"
+    deep is {
+        bools are true, false, true
+        nullables are null, 1, null, 2 as [i32]
+    }
+}

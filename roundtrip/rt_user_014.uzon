@@ -1,0 +1,16 @@
+user is {
+    id is 10014 as u32
+    username is "oscar014"
+    email is "oscar14@mock.dev"
+    display_name is "Oscar #14"
+    city is "Vienna"
+    age is 32 as u8
+    verified is true
+    created is "2026-03-15T12:00:00Z"
+    login_count is 182 as u32
+    preferences is {
+        theme is "dark"
+        language is "ja"
+        notifications is true
+    }
+}

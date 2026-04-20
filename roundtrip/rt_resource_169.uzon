@@ -1,0 +1,12 @@
+// Resource #169
+@type is "database"
+name is "database_169"
+region is "ap-northeast-1"
+config is {
+    @type is "database_config"
+    engine is "mysql"
+    port is 5432 as u16
+    pool_size is 29 as u8
+    ssl is false
+}
+active is false

@@ -1,0 +1,8 @@
+// §5.16.4: all string std functions chained
+raw is env.INPUT or else "  Hello, WORLD!  "
+step1 is std.trim(raw)
+step2 is std.lower(step1)
+step3 is std.replace(step2, "world", "uzon")
+step4 is std.upper(step3)
+parts is std.split(step4, ",")
+result is std.join(parts, " |")

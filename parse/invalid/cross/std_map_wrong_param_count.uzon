@@ -1,0 +1,4 @@
+// §5.16.2 + §3.8: std.map requires single-param function
+numbers are 1, 2, 3
+// function has two required params — std.map passes one
+bad is std.map(numbers, function a as i64, b as i64 returns i64 { a + b })

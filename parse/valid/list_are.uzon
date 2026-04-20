@@ -1,0 +1,7 @@
+// §3.4.1 are keyword
+names are "alfa", "bravo", "charlie" as [string]
+numbers are 1, 2, 3
+multiline are
+    "first",
+    "second",
+    "third"

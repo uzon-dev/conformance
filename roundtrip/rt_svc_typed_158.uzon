@@ -1,0 +1,8 @@
+// Service configuration #158
+@type is "http"
+name is "beta_158"
+port is 29612 as u16
+enabled is false
+max_connections is 1285 as i32
+timeout_ms is 28349 as i32
+tls is false

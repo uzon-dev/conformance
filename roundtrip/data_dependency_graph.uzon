@@ -1,0 +1,9 @@
+packages is [
+    { name is "core", version is "1.0.0", deps is [] as [string] },
+    { name is "utils", version is "1.2.0", deps is [ "core" ] },
+    { name is "http", version is "2.0.0", deps is [ "core", "utils" ] },
+    { name is "auth", version is "1.1.0", deps is [ "core", "http" ] },
+    { name is "api", version is "3.0.0", deps is [ "core", "utils", "http", "auth" ] },
+    { name is "cli", version is "1.0.0", deps is [ "core", "api" ] },
+    { name is "web", version is "2.1.0", deps is [ "core", "api", "auth" ] }
+]

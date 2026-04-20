@@ -1,0 +1,8 @@
+// Service configuration #83
+@type is "tcp"
+name is "theta_83"
+port is 21703 as u16
+enabled is true
+max_connections is 3043 as i32
+timeout_ms is 6376 as i32
+tls is true

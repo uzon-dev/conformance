@@ -1,0 +1,7 @@
+// Service configuration #156
+@type is "udp"
+name is "xi_156"
+port is 62976 as u16
+enabled is true
+max_connections is 4196 as i32
+timeout_ms is 9584 as i32

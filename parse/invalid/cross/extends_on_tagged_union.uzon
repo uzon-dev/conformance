@@ -1,0 +1,3 @@
+// §3.2.2 + §3.7.1: plus requires struct, tagged union is not transparent here
+result is "ok" named ok from ok as string, err as string called Result
+bad is result plus { x is 1 }

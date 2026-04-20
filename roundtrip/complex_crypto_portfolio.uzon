@@ -1,0 +1,14 @@
+portfolio is {
+    owner is "anon_whale_42"
+    total_usd is 1234567.89
+    holdings is [
+        { symbol is "BTC", name is "Bitcoin", amount is 2.5, avg_cost is 42000.0, current is 67000.0, allocation_pct is 40.5 },
+        { symbol is "ETH", name is "Ethereum", amount is 25.0, avg_cost is 2200.0, current is 3500.0, allocation_pct is 21.2 },
+        { symbol is "SOL", name is "Solana", amount is 500.0, avg_cost is 45.0, current is 150.0, allocation_pct is 18.2 },
+        { symbol is "USDC", name is "USD Coin", amount is 50000.0, avg_cost is 1.0, current is 1.0, allocation_pct is 12.1 },
+        { symbol is "LINK", name is "Chainlink", amount is 2000.0, avg_cost is 8.0, current is 25.0, allocation_pct is 6.1 },
+        { symbol is "DOT", name is "Polkadot", amount is 3000.0, avg_cost is 5.0, current is 10.0, allocation_pct is 1.9 }
+    ]
+    'unrealized-pnl' is 456789.12
+    updated_at is "2026-04-11T12:00:00Z"
+}

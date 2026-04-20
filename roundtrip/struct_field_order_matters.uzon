@@ -1,0 +1,14 @@
+// Field declaration order must survive roundtrip
+forward is { z is 3, y is 2, x is 1 }
+reverse is { x is 1, y is 2, z is 3 }
+scrambled is { b is 2, d is 4, a is 1, c is 3 }
+nested is {
+    z_outer is {
+        b_inner is 2
+        a_inner is 1
+    }
+    a_outer is {
+        z_inner is 3
+        y_inner is 2
+    }
+}

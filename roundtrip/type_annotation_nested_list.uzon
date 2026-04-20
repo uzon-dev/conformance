@@ -1,0 +1,5 @@
+// Type annotations inside nested structures
+a is [ [ 1, 2 ] as [i32], [ 3, 4 ] as [i32] ]
+b is [ (1 as i8, 2 as i16), (3 as i8, 4 as i16) ]
+c is { items is [ 10, 20 ] as [u16], count is 2 as u8 }
+d is ([ 1, 2 ] as [i32], [ "a", "b" ], 42 as u8)

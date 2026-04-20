@@ -1,0 +1,4 @@
+add is 1.5 + 2.5
+div is 7.0 / 2.0
+exp is 2.0 ^ 0.5
+big is 1.0e3 + 1.0

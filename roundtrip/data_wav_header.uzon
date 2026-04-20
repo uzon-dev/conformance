@@ -1,0 +1,19 @@
+header is {
+    chunk_id is "RIFF"
+    chunk_size is 36 as u32
+    format is "WAVE"
+    subchunk1 is {
+        id is "fmt "
+        size is 16 as u32
+        audio_format is 1 as u16
+        num_channels is 2 as u16
+        sample_rate is 44100 as u32
+        byte_rate is 176400 as u32
+        block_align is 4 as u16
+        bits_per_sample is 16 as u16
+    }
+    subchunk2 is {
+        id is "data"
+        size is 0 as u32
+    }
+}

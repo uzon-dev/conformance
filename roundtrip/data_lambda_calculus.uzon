@@ -1,0 +1,16 @@
+// Church numerals and combinators represented as data
+combinators is {
+    I is { name is "Identity", notation is "λx.x", args is 1 as u8 }
+    K is { name is "Constant", notation is "λxy.x", args is 2 as u8 }
+    S is { name is "Substitution", notation is "λxyz.xz(yz)", args is 3 as u8 }
+    Y is { name is "Fixed-point", notation is "λf.(λx.f(xx))(λx.f(xx))", args is 1 as u8 }
+    omega is { name is "Omega", notation is "(λx.xx)(λx.xx)", args is 0 as u8 }
+}
+church is {
+    zero is "λfx.x"
+    one is "λfx.fx"
+    two is "λfx.f(fx)"
+    three is "λfx.f(f(fx))"
+    succ is "λnfx.f(nfx)"
+    @plus is "λmnfx.mf(nfx)"
+}

@@ -1,0 +1,5 @@
+a is std.len([ 1, 2, 3 ])
+b is std.len((true, "hi", 42))
+c is std.len({ x is 1, y is 2 })
+d is std.len([] as [i32])
+e is std.len("hello")

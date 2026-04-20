@@ -1,0 +1,28 @@
+header is {
+    magic is [ 0x7F, 0x45, 0x4C, 0x46 ]
+    class is 2 as u8
+    data is 1 as u8
+    version is 1 as u8
+    os_abi is 0 as u8
+    @type is 2 as u16
+    machine is 62 as u16
+    entry_point is 0x401000 as u64
+    program_headers is {
+        offset is 64 as u64
+        entry_size is 56 as u16
+        count is 9 as u16
+    }
+    section_headers is {
+        offset is 0x2A40 as u64
+        entry_size is 64 as u16
+        count is 30 as u16
+        string_table_index is 29 as u16
+    }
+    sections is [
+        { name is ".text", @type is "PROGBITS", flags is "AX", addr is 0x401000 as u64, size is 0x1A3 as u64 },
+        { name is ".rodata", @type is "PROGBITS", flags is "A", addr is 0x402000 as u64, size is 0x15 as u64 },
+        { name is ".data", @type is "PROGBITS", flags is "WA", addr is 0x403000 as u64, size is 0x10 as u64 },
+        { name is ".bss", @type is "NOBITS", flags is "WA", addr is 0x403010 as u64, size is 0x08 as u64 },
+        { name is ".symtab", @type is "SYMTAB", flags is "", addr is 0 as u64, size is 0x180 as u64 }
+    ]
+}

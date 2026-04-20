@@ -1,0 +1,10 @@
+_bool_like is yes from yes, no called YesNo
+_toggle is on from on, off called Toggle
+_direction is left from left, right called LeftRight
+
+a is yes as YesNo
+b is no as YesNo
+c is on as Toggle
+d is off as Toggle
+e is left as LeftRight
+f is right as LeftRight

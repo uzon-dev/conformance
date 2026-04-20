@@ -1,0 +1,9 @@
+// Typed record #97
+id is 123216
+node_0 is 7685 as i32
+omicron_1 is "level"
+xi_2 is null
+delta_3 is -774.64 as f32
+active_4 is false
+gamma_5 is -886696
+host_6 is false

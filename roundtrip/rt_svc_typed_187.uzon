@@ -1,0 +1,8 @@
+// Service configuration #187
+@type is "amqp"
+name is "node_187"
+port is 1126 as u16
+enabled is false
+max_connections is 9359 as i32
+timeout_ms is 13750 as i32
+tls is true

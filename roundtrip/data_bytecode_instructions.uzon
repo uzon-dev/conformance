@@ -1,0 +1,15 @@
+program is {
+    constants is [ 0, 1, 2, 42, 100 ]
+    instructions is [
+        { op is "LOAD_CONST", arg is 3 as u8 },
+        { op is "LOAD_CONST", arg is 4 as u8 },
+        { op is "ADD", arg is 0 as u8 },
+        { op is "STORE_LOCAL", arg is 0 as u8 },
+        { op is "LOAD_LOCAL", arg is 0 as u8 },
+        { op is "LOAD_CONST", arg is 2 as u8 },
+        { op is "MUL", arg is 0 as u8 },
+        { op is "RETURN", arg is 0 as u8 }
+    ]
+    locals is 1 as u8
+    max_stack is 2 as u8
+}

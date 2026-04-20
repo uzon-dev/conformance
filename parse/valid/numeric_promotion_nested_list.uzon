@@ -1,0 +1,4 @@
+// §3.4 + §5: untyped integer literals promote to f64 when other
+// elements are float. Nested list: each inner list follows its own
+// homogeneity rule with adoption from sibling elements.
+xs is [[1.0, 2], [3, 4.0]] as [[f64]]

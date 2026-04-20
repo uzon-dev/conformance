@@ -1,0 +1,17 @@
+record is {
+    f01 is true
+    f02 is false
+    f03 is 0
+    f04 is 1
+    f05 is -1
+    f06 is 3.14
+    f07 is ""
+    f08 is "hello"
+    f09 is null
+    f10 is [ 1 ]
+    f11 is [ ]  as [i64]
+    f12 is (1, 2)
+    f13 is { a is 1 }
+    f14 is inf
+    f15 is nan
+}

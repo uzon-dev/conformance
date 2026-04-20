@@ -1,0 +1,13 @@
+sparse is {
+    rows is 1000 as u32
+    cols is 1000 as u32
+    entries is [
+        (0 as u32, 0 as u32, 1.0),
+        (0 as u32, 999 as u32, -3.5),
+        (42 as u32, 42 as u32, 42.0),
+        (100 as u32, 200 as u32, 0.001),
+        (999 as u32, 0 as u32, 7.7),
+        (999 as u32, 999 as u32, 1.0)
+    ]
+    symmetric is false
+}

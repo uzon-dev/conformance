@@ -1,0 +1,20 @@
+tree is {
+    v is 1, c is [
+        { v is 2, c is [
+            { v is 4, c is [
+                { v is 8, c is [
+                    { v is 16, c is [
+                        { v is 32, c is [
+                            { v is 64, c is [] as [string] }
+                        ] }
+                    ] }
+                ] }
+            ] },
+            { v is 5, c is [] as [string] }
+        ] },
+        { v is 3, c is [
+            { v is 6, c is [] as [string] },
+            { v is 7, c is [] as [string] }
+        ] }
+    ]
+}

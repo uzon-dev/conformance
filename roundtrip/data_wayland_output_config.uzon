@@ -1,0 +1,30 @@
+outputs is [
+    {
+        connector is "eDP-1"
+        make is "Samsung"
+        model is "ATNA56WR14"
+        serial is "HCPD500000"
+        resolution is (2880 as u16, 1800 as u16)
+        refresh_mhz is 90000 as u32
+        physical_mm is (310 as u16, 194 as u16)
+        scale is 1.5
+        transform is 0 as u8
+        vrr is true
+        max_bpc is 10 as u8
+        hdr is false
+    },
+    {
+        connector is "DP-1"
+        make is "LG"
+        model is "27GP950"
+        serial is "203NTAB12345"
+        resolution is (3840 as u16, 2160 as u16)
+        refresh_mhz is 144000 as u32
+        physical_mm is (596 as u16, 335 as u16)
+        scale is 2.0
+        transform is 0 as u8
+        vrr is true
+        max_bpc is 10 as u8
+        hdr is true
+    }
+]

@@ -1,0 +1,6 @@
+sensor_readings is [
+    { ts is 0 as u32, temp is 22.5, pressure is 1013.25, humidity is 45 as u8, wind is null, radiation is nan, altitude is inf },
+    { ts is 1 as u32, temp is null, pressure is 1013.20, humidity is null, wind is 5.5, radiation is 0.1, altitude is 1000.0 },
+    { ts is 2 as u32, temp is nan, pressure is null, humidity is 50 as u8, wind is nan, radiation is null, altitude is -inf },
+    { ts is 3 as u32, temp is 23.0, pressure is inf, humidity is 48 as u8, wind is null, radiation is nan, altitude is null }
+]

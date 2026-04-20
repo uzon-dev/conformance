@@ -1,0 +1,10 @@
+data is {
+    i8_val is -72 as i8
+    u8_val is 56 as u8
+    i16_val is -18768 as i16
+    u16_val is 14000 as u16
+    i32_val is -1300000000 as i32
+    u32_val is 700000000 as u32
+    f32_val is 0.861 as f32
+    f64_val is 8.64197523
+}

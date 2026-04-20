@@ -1,0 +1,8 @@
+neg_zero is "-0.0"
+pos_zero is "0.0"
+infty is "inf"
+neg_infty is "-inf"
+nan_val is "nan"
+plain is "3.14"
+tiny is "0.000001"
+sci_large is "1.0e100"

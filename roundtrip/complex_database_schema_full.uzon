@@ -1,0 +1,39 @@
+_col_type is text from text, integer, bigint, decimal, boolean, timestamp, jsonb, uuid called ColumnType
+_constraint is primary_key from primary_key, unique, not_null, foreign_key, check called ConstraintType
+
+schema is {
+    name is "public"
+    tables is [
+        {
+            name is "organizations"
+            columns is [
+                { name is "id", @type is uuid as ColumnType, constraints is [ primary_key ] as [ConstraintType] },
+                { name is "name", @type is text as ColumnType, constraints is [ not_null ] as [ConstraintType] },
+                { name is "slug", @type is text as ColumnType, constraints is [ not_null, unique ] as [ConstraintType] },
+                { name is "plan", @type is text as ColumnType, constraints is [ not_null ] as [ConstraintType] },
+                { name is "settings", @type is jsonb as ColumnType, constraints is [] as [ConstraintType] },
+                { name is "created_at", @type is timestamp as ColumnType, constraints is [ not_null ] as [ConstraintType] }
+            ]
+            indexes is [
+                { name is "idx_org_slug", columns is [ "slug" ], unique is true },
+                { name is "idx_org_created", columns is [ "created_at" ], unique is false }
+            ]
+        },
+        {
+            name is "users"
+            columns is [
+                { name is "id", @type is uuid as ColumnType, constraints is [ primary_key ] as [ConstraintType] },
+                { name is "org_id", @type is uuid as ColumnType, constraints is [ not_null, foreign_key ] as [ConstraintType] },
+                { name is "email", @type is text as ColumnType, constraints is [ not_null, unique ] as [ConstraintType] },
+                { name is "name", @type is text as ColumnType, constraints is [] as [ConstraintType] },
+                { name is "active", @type is boolean as ColumnType, constraints is [ not_null ] as [ConstraintType] },
+                { name is "last_login", @type is timestamp as ColumnType, constraints is [] as [ConstraintType] }
+            ]
+            indexes is [
+                { name is "idx_user_email", columns is [ "email" ], unique is true },
+                { name is "idx_user_org", columns is [ "org_id" ], unique is false },
+                { name is "idx_user_org_active", columns is [ "org_id", "active" ], unique is false }
+            ]
+        }
+    ]
+}

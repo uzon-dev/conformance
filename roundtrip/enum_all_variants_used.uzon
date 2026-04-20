@@ -1,0 +1,15 @@
+_day is mon from mon, tue, wed, thu, fri, sat, sun called Day
+
+schedule is {
+    mon is "standup" 
+    tue is "sprint planning"
+    wed is "deep work"
+    thu is "review"
+    fri is "retro"
+    sat is "off"
+    sun is "off"
+}
+
+workdays is [ mon, tue, wed, thu, fri ] as [Day]
+weekend is [ sat, sun ] as [Day]
+today is wed as Day

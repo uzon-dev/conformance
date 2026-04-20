@@ -1,0 +1,8 @@
+// §3.5 v0.10 — bare variant resolves via field type
+Color is enum red, green, blue
+Config is struct { bg is red as Color, fg is green as Color }
+active is {
+    bg is blue
+    fg is red
+} as Config
+is_bg_blue is active.bg is blue as Color

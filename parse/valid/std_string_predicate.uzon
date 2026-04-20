@@ -1,0 +1,17 @@
+// §5.16.6 String Predicates
+path is "/api/v1/users"
+hostname is "web01.internal"
+
+c is std.contains(path, "api")
+sw is std.startsWith(path, "/api")
+ew is std.endsWith(hostname, ".internal")
+
+// empty string edge cases
+c_empty is std.contains("hello", "")
+sw_empty is std.startsWith("hello", "")
+ew_empty is std.endsWith("hello", "")
+
+// practical use with env
+has_debug is std.contains(env.FLAGS or else "", "debug")
+is_api is std.startsWith(env.PATH or else "/", "/api")
+is_internal is std.endsWith(env.HOST or else "localhost", ".internal")

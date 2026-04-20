@@ -1,0 +1,5 @@
+// §3.4 + §3.2.1: Different number of fields — type error
+items is [
+    { a is 1, b is 2 },
+    { a is 3 }
+]

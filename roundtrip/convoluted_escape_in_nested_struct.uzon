@@ -1,0 +1,13 @@
+config is {
+    paths is {
+        windows is "C:\\Users\\test\\Documents"
+        unix is "/home/test/documents"
+        url is "https://example.com/path?q=hello\{world}&x=1"
+    }
+    templates is {
+        greeting is "Dear \{name},\nWelcome!"
+        sql is "SELECT * FROM users WHERE name = 'O''Brien'"
+        regex is "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]\{2,}$"
+    }
+    json_embed is "\{\"key\": \"value\", \"nested\": \{\"a\": 1}}"
+}

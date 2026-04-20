@@ -1,0 +1,10 @@
+// Roundtrip: enums embedded in struct lists
+_status is pending from pending, active, archived called Status
+_priority is low from low, medium, high, critical called Priority
+
+tasks is [
+    { id is 1 as i32, title is "Design", status is active as Status, priority is high as Priority },
+    { id is 2 as i32, title is "Implement", status is pending as Status, priority is critical as Priority },
+    { id is 3 as i32, title is "Test", status is pending as Status, priority is medium as Priority },
+    { id is 4 as i32, title is "Deploy", status is archived as Status, priority is low as Priority }
+]

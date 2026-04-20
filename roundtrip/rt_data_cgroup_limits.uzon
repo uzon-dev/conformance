@@ -1,0 +1,4 @@
+cgroups is [
+    { path is "/sys/fs/cgroup/system.slice/app.service", cpu_quota is 200000 as u64, cpu_period is 100000 as u64, memory_max_bytes is 2147483648 as u64, memory_current_bytes is 734003200 as u64, pids_max is 4096 as u32, pids_current is 42 as u32 },
+    { path is "/sys/fs/cgroup/system.slice/db.service", cpu_quota is 400000 as u64, cpu_period is 100000 as u64, memory_max_bytes is 8589934592 as u64, memory_current_bytes is 6442450944 as u64, pids_max is 8192 as u32, pids_current is 156 as u32 }
+]

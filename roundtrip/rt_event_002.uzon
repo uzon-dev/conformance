@@ -1,0 +1,5 @@
+@type is "pageview"
+timestamp is 1763187139
+source is "iota"
+url is "https://rho.example.com/dev"
+session_id is "mu_6499"

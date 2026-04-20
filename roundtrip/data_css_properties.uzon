@@ -1,0 +1,24 @@
+styles is {
+    container is {
+        display is "flex"
+        'flex-direction' is "column"
+        'align-items' is "center"
+        'justify-content' is "space-between"
+        padding is "16px 24px"
+        margin is "0 auto"
+        'max-width' is "1200px"
+        'background-color' is "#FFFFFF"
+        'border-radius' is "8px"
+        'box-shadow' is "0 2px 4px rgba(0,0,0,0.1)"
+    }
+    button is {
+        display is "inline-flex"
+        padding is "8px 16px"
+        'font-size' is "14px"
+        'font-weight' is "600"
+        'border-radius' is "6px"
+        border is "none"
+        cursor is "pointer"
+        transition is "all 0.2s ease"
+    }
+}

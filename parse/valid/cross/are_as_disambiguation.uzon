@@ -1,0 +1,3 @@
+// §3.4.1: Trailing as is list-level, not element-level
+ids are 1, 2, 3 as [i32]             // list-level: [1, 2, 3] as [i32]
+typed are 1, 2, (3 as i32)           // element-level: 3 as i32, needs parens

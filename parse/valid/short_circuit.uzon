@@ -1,0 +1,5 @@
+// §5.6 Short-circuit evaluation
+// right side of and is not evaluated when left is false
+safe_and is false and (1 / 0 is 0)    // false
+// right side of or is not evaluated when left is true
+safe_or is true or (1 / 0 is 0)       // true

@@ -1,0 +1,30 @@
+// §8 + §5.3 + §5.8.2 + §5.4 + §5.9 + §5.6
+// expression continuation across multiple operator types
+values are 10, 20, 30, 40, 50
+
+// arithmetic continuation
+total is 100
+      + 200
+      + 300
+      - 50
+
+// concatenation continuation
+message is "hello"
+         ++ " "
+         ++ "world"
+         ++ "!"
+
+// logical continuation
+check is true
+      and true
+      and not false
+      or false
+
+// comparison in continued expression
+bounded is total > 0
+         and total < 1000
+
+// if with continuation
+result is if bounded
+    then "in range: " ++ total to string
+    else "out of range"

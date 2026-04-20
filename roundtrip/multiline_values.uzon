@@ -1,0 +1,7 @@
+// Adjacent string literals
+poem is "Roses are red,"
+        "violets are blue,"
+        "UZON is great,"
+        "and so are you."
+note is "line one"
+        "line two"

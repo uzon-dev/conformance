@@ -1,0 +1,8 @@
+// Service configuration #140
+@type is "tcp"
+name is "node_140"
+port is 62982 as u16
+enabled is false
+max_connections is 8553 as i32
+timeout_ms is 9983 as i32
+tls is false

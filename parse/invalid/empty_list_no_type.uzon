@@ -1,0 +1,2 @@
+// §3.4 Empty list without type annotation
+bad is []

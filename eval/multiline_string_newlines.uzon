@@ -1,0 +1,7 @@
+// §4.4.2 Adjacent strings joined with \n between each pair
+msg is "line1"
+    "line2"
+    "line3"
+with_empty is "a"
+    ""
+    "b"

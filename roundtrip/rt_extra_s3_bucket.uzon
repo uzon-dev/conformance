@@ -1,0 +1,21 @@
+_lifecycle is {
+    prefix is ""
+    transition_days is null
+    expiration_days is null
+    storage_class is ""
+} called LifecycleRule
+
+bucket is {
+    name is "my-app-assets"
+    region is "us-east-1"
+    acl is "private"
+    versioning is true
+    lifecycle is [
+        _lifecycle with { prefix is "logs/", transition_days is 30 as u16, storage_class is "GLACIER" },
+        _lifecycle with { prefix is "temp/", expiration_days is 7 as u16 }
+    ] as [LifecycleRule]
+    cors is [
+        { origin is "https://example.com", methods is [ "GET", "PUT" ], max_age is 3600 as u32 }
+    ]
+    tags is { project is "my-app", environment is "production" }
+}

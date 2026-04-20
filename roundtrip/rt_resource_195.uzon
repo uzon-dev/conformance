@@ -1,0 +1,12 @@
+// Resource #195
+@type is "database"
+name is "database_195"
+region is "us-east-1"
+config is {
+    @type is "database_config"
+    engine is "sqlite"
+    port is 5432 as u16
+    pool_size is 98 as u8
+    ssl is true
+}
+active is true

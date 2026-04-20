@@ -1,0 +1,7 @@
+_val is null named none from some as string, none as null called Opt
+
+top is "hello" as Opt named some
+in_struct is { a is "world" as Opt named some, b is null as Opt named none }
+in_list is [ "x" as Opt named some, null as Opt named none, "y" as Opt named some ]
+in_tuple is ("data" as Opt named some, null as Opt named none, 42)
+in_nested is { outer is { inner is "deep" as Opt named some } }

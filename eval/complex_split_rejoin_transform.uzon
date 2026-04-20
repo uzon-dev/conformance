@@ -1,0 +1,38 @@
+// Parse CSV-like data, transform, and reassemble
+raw is "alice:25:admin,bob:30:editor,charlie:22:viewer"
+
+records is std.split(raw, ",")
+// ["alice:25:admin", "bob:30:editor", "charlie:22:viewer"]
+
+record_count is std.len(records)
+
+// extract just names (first field of each)
+names is std.map(
+    records,
+    function r as string returns string {
+        parts is std.split(r, ":")
+        std.get(parts, 0) or else "unknown"
+    }
+)
+
+name_list is std.join(names, ", ")
+
+// extract roles (third field)
+roles is std.map(
+    records,
+    function r as string returns string {
+        parts is std.split(r, ":")
+        std.get(parts, 2) or else "none"
+    }
+)
+
+role_list is std.join(roles, ", ")
+
+// rebuild with different delimiter
+rebuilt is std.join(
+    std.map(
+        records,
+        function r as string returns string { std.replace(r, ":", " | ") }
+    ),
+    "\n"
+)

@@ -1,0 +1,6 @@
+// ERROR: §3.7.1 + §5.4
+// two tagged unions with ordered comparison → type error
+a is 1 named ok from ok as i32, err as string called Result
+b is 2 named ok from ok as i32, err as string called Result
+
+bad is a < b

@@ -1,0 +1,14 @@
+entry is {
+    id is 100193 as u64
+    timestamp is "2026-04-11T01:13:31.739Z"
+    level is "INFO"
+    component is "api"
+    message is "Event 193: api info condition detected"
+    context is {
+        request_id is "req-000193"
+        duration_ms is 580 as u32
+        status_code is 201 as u16
+        user_id is "usr_0193"
+    }
+    tags is [ "api", "info" ]
+}

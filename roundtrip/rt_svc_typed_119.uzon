@@ -1,0 +1,8 @@
+// Service configuration #119
+@type is "udp"
+name is "path_119"
+port is 42897 as u16
+enabled is true
+max_connections is 7494 as i32
+timeout_ms is 27798 as i32
+tls is true

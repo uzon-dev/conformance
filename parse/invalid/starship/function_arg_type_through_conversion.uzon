@@ -1,0 +1,7 @@
+// ERROR: §3.8 + §5.11 + §5.15
+// conversion produces f64 but function expects u16
+_shared is struct "./shared"
+
+process is function x as u16 returns u16 { x }
+
+bad is process(_shared.typed_speed to f64)

@@ -1,0 +1,2 @@
+// §3.5 + §6.2 — cannot combine standalone enum with called
+RGB is enum red, green, blue called Colors

@@ -1,0 +1,10 @@
+scopes is {
+    'read:user' is { description is "Read user profile", includes is [] as [string] }
+    'write:user' is { description is "Modify user profile", includes is [ "read:user" ] }
+    'read:posts' is { description is "Read posts", includes is [] as [string] }
+    'write:posts' is { description is "Create/edit posts", includes is [ "read:posts" ] }
+    'delete:posts' is { description is "Delete posts", includes is [ "write:posts" ] }
+    'admin:users' is { description is "Full user management", includes is [ "write:user", "read:user" ] }
+    'admin:posts' is { description is "Full post management", includes is [ "delete:posts", "write:posts", "read:posts" ] }
+    'admin:all' is { description is "Full system access", includes is [ "admin:users", "admin:posts" ] }
+}

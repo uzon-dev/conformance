@@ -1,0 +1,7 @@
+// Schema definition #147
+@type is "schema"
+version is 1 as u8
+name is "upsilon_schema_147"
+fields are
+        { name is "field_0", @type is "f64", required is false },
+        { name is "field_1", @type is "i64", required is false }

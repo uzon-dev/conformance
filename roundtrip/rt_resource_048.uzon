@@ -1,0 +1,12 @@
+// Resource #48
+@type is "queue"
+name is "queue_48"
+region is "eu-west-1"
+config is {
+    @type is "queue_config"
+    broker is "sqs"
+    max_retries is 10 as u8
+    batch_size is 645 as u16
+}
+tags are "name", "xi", "value", "epsilon"
+active is true

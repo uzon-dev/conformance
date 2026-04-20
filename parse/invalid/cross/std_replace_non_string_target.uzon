@@ -1,0 +1,2 @@
+// §5.16.4: std.replace all args must be string
+bad is std.replace("hello", 42, "world")

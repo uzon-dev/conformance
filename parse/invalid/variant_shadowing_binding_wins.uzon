@@ -1,0 +1,9 @@
+// §3.5 Rule 4 — a local binding `red` shadows the variant in a rule-4
+// (struct field with named enum type) position. The binding wins (i64
+// vs RGB) → type error when the field expects RGB.
+RGB is enum red, green, blue
+red is 99
+Palette is struct { accent is green as RGB }
+// Rule-4 context (struct field with named enum type) — binding `red`
+// wins over variant RGB.red, producing a type error.
+bad is { accent is red } as Palette

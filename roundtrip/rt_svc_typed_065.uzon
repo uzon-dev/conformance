@@ -1,0 +1,8 @@
+// Service configuration #65
+@type is "redis"
+name is "sigma_65"
+port is 15404 as u16
+enabled is false
+max_connections is 485 as i32
+timeout_ms is 12842 as i32
+tls is false

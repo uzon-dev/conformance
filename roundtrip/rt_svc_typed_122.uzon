@@ -1,0 +1,8 @@
+// Service configuration #122
+@type is "tcp"
+name is "port_122"
+port is 40808 as u16
+enabled is false
+max_connections is 3125 as i32
+timeout_ms is 20445 as i32
+tls is true

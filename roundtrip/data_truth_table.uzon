@@ -1,0 +1,21 @@
+// AND truth table
+and_table is [
+    (false, false, false),
+    (false, true, false),
+    (true, false, false),
+    (true, true, true)
+]
+// OR truth table
+or_table is [
+    (false, false, false),
+    (false, true, true),
+    (true, false, true),
+    (true, true, true)
+]
+// XOR truth table
+xor_table is [
+    (false, false, false),
+    (false, true, true),
+    (true, false, true),
+    (true, true, false)
+]

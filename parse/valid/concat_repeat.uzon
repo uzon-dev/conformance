@@ -1,0 +1,5 @@
+// §5.8.2, §5.8.3 Concatenation and repetition
+str_concat is "hello" ++ " " ++ "world"
+list_concat is [ 1, 2 ] ++ [ 3, 4 ]
+str_repeat is "*" ** 5
+list_repeat is [ 0 ] ** 3

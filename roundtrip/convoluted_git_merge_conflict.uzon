@@ -1,0 +1,23 @@
+conflict is {
+    file is "src/config.uzon"
+    base_commit is "abc1234"
+    ours_commit is "def5678"
+    theirs_commit is "ghi9012"
+    hunks is [
+        {
+            base_start is 10 as u32
+            base_lines is 3 as u32
+            ours is { start is 10 as u32, lines is 4 as u32, content is [ "host is \"prod.example.com\"", "port is 443 as u16", "tls is true", "debug is false" ] }
+            theirs is { start is 10 as u32, lines is 3 as u32, content is [ "host is \"staging.example.com\"", "port is 8443 as u16", "tls is true" ] }
+            resolved is false
+        },
+        {
+            base_start is 20 as u32
+            base_lines is 1 as u32
+            ours is { start is 21 as u32, lines is 1 as u32, content is [ "timeout is 30 as u16" ] }
+            theirs is { start is 20 as u32, lines is 2 as u32, content is [ "timeout is 60 as u16", "retries is 3 as u8" ] }
+            resolved is false
+        }
+    ]
+    auto_mergeable is false
+}

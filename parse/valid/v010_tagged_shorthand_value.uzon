@@ -1,0 +1,4 @@
+// §3.7 v0.10 — variant_name inner_value shorthand
+Event is tagged union pressed as string, released as string
+e1 is pressed "enter" as Event
+e2 is released "ctrl" as Event

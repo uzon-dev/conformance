@@ -1,0 +1,4 @@
+@type is "logout"
+timestamp is 1765840632
+source is "test"
+detail is "dev_366"

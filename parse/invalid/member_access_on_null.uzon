@@ -1,0 +1,4 @@
+// §5.12: member access (.) on null is a type error. Distinguishes
+// from `undefined.x` which propagates.
+n is null
+bad is n.field

@@ -1,0 +1,7 @@
+_val is null named none from some as i32, none as null called Optional
+items is [
+    42 as Optional named some,
+    null as Optional named none,
+    7 as Optional named some,
+    null as Optional named none
+]

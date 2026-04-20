@@ -1,0 +1,23 @@
+templates is {
+    welcome is {
+        subject is "Welcome to \{AppName}!"
+        body is "Hi \{name},\n\nWelcome aboard!\n\nBest,\nThe Team"
+        @from is "hello@example.com"
+        reply_to is "support@example.com"
+        headers is { 'X-Mailer' is "UzonMail/1.0", 'X-Priority' is "3" }
+    }
+    reset_password is {
+        subject is "Password Reset Request"
+        body is "Click the link below to reset your password:\n\n\{resetUrl}\n\nExpires in 24 hours."
+        @from is "security@example.com"
+        reply_to is null
+        headers is { 'X-Mailer' is "UzonMail/1.0", 'X-Priority' is "1" }
+    }
+    invoice is {
+        subject is "Invoice #\{invoiceId}"
+        body is "Dear \{name},\n\nPlease find attached your invoice.\n\nAmount: $\{amount}\nDue: \{dueDate}"
+        @from is "billing@example.com"
+        reply_to is "billing@example.com"
+        headers is { 'X-Mailer' is "UzonMail/1.0" }
+    }
+}

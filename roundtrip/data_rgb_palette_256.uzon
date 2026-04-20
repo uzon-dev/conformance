@@ -1,0 +1,19 @@
+// First 16 ANSI colors
+ansi is [
+    (0 as u8, 0 as u8, 0 as u8),
+    (128 as u8, 0 as u8, 0 as u8),
+    (0 as u8, 128 as u8, 0 as u8),
+    (128 as u8, 128 as u8, 0 as u8),
+    (0 as u8, 0 as u8, 128 as u8),
+    (128 as u8, 0 as u8, 128 as u8),
+    (0 as u8, 128 as u8, 128 as u8),
+    (192 as u8, 192 as u8, 192 as u8),
+    (128 as u8, 128 as u8, 128 as u8),
+    (255 as u8, 0 as u8, 0 as u8),
+    (0 as u8, 255 as u8, 0 as u8),
+    (255 as u8, 255 as u8, 0 as u8),
+    (0 as u8, 0 as u8, 255 as u8),
+    (255 as u8, 0 as u8, 255 as u8),
+    (0 as u8, 255 as u8, 255 as u8),
+    (255 as u8, 255 as u8, 255 as u8)
+]

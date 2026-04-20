@@ -1,0 +1,8 @@
+levels is [
+    { level is 0 as u8, nodes is [ { key is 3, next is 6 }, { key is 6, next is 7 }, { key is 7, next is 9 }, { key is 9, next is 12 }, { key is 12, next is 19 }, { key is 19, next is 21 }, { key is 21, next is 25 }, { key is 25, next is null } ] },
+    { level is 1 as u8, nodes is [ { key is 6, next is 9 }, { key is 9, next is 19 }, { key is 19, next is 25 }, { key is 25, next is null } ] },
+    { level is 2 as u8, nodes is [ { key is 6, next is 19 }, { key is 19, next is null } ] },
+    { level is 3 as u8, nodes is [ { key is 6, next is null } ] }
+]
+max_level is 3 as u8
+probability is 0.5

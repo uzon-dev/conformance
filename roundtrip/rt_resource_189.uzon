@@ -1,0 +1,11 @@
+// Resource #189
+@type is "proxy"
+name is "proxy_189"
+region is "us-east-1"
+config is {
+    @type is "proxy_config"
+    capacity is 2712 as i32
+    priority is 7 as u8
+}
+tags are "dev", "name", "value", "backup"
+active is false

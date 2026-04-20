@@ -1,0 +1,5 @@
+interfaces is [
+    { name is "lo", @type is "loopback", state is "UP", mtu is 65535 as u16, ipv4 is "127.0.0.1/8", ipv6 is "::1/128", tx_bytes is 0 as u64, rx_bytes is 0 as u64 },
+    { name is "eth0", @type is "ethernet", state is "UP", mtu is 1500 as u16, ipv4 is "10.0.1.50/24", ipv6 is "fe80::1/64", tx_bytes is 1234567890 as u64, rx_bytes is 9876543210 as u64 },
+    { name is "wlan0", @type is "wireless", state is "DOWN", mtu is 1500 as u16, ipv4 is null, ipv6 is null, tx_bytes is 0 as u64, rx_bytes is 0 as u64 }
+]

@@ -1,0 +1,20 @@
+_priority is low from low, medium, high, urgent called Priority
+board is {
+    name is "Sprint 42"
+    columns is {
+        backlog is [
+            { id is 101 as i32, title is "Refactor auth module", priority is medium as Priority, assignee is null, tags is [ "tech-debt" ] },
+            { id is 102 as i32, title is "Add dark mode", priority is low as Priority, assignee is null, tags is [ "ui", "enhancement" ] }
+        ]
+        in_progress is [
+            { id is 103 as i32, title is "Fix login timeout", priority is urgent as Priority, assignee is "Alice", tags is [ "bug", "auth" ] },
+            { id is 104 as i32, title is "API rate limiting", priority is high as Priority, assignee is "Bob", tags is [ "backend", "security" ] }
+        ]
+        review is [
+            { id is 105 as i32, title is "Update docs", priority is low as Priority, assignee is "Charlie", tags is [ "docs" ] }
+        ]
+        done is [
+            { id is 100 as i32, title is "Database migration", priority is high as Priority, assignee is "Diana", tags is [ "backend", "db" ] }
+        ]
+    }
+}

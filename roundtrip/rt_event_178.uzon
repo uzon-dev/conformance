@@ -1,0 +1,5 @@
+@type is "pageview"
+timestamp is 1730839382
+source is "mode"
+url is "https://lambda.example.com/eta"
+session_id is "xi_9328"

@@ -1,0 +1,3 @@
+// §3.8 Argument type mismatch
+add is function a as i32, b as i32 returns i32 { a + b }
+bad is add(1 as i32, "hello")

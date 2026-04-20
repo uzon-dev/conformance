@@ -1,0 +1,4 @@
+simple is "hello"
+empty is ""
+escape is "line1\nline2"
+unicode is "café"

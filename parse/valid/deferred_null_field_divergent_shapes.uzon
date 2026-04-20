@@ -1,0 +1,11 @@
+// §3.2.1 — Inner anonymous struct shapes may differ across instances.
+Config is struct {
+    name is ""
+    opts is null
+}
+
+configs is [
+    { name is "a", opts is { level is 1, verbose is true } },
+    { name is "b", opts is { level is 2 } },
+    { name is "c", opts is { mode is "fast", retries is 3, delay is 100 } },
+] as [Config]

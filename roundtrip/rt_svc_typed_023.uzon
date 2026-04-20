@@ -1,0 +1,8 @@
+// Service configuration #23
+@type is "amqp"
+name is "path_23"
+port is 24243 as u16
+enabled is false
+max_connections is 897 as i32
+timeout_ms is 22164 as i32
+retry_count is 10 as u8

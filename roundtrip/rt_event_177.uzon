@@ -1,0 +1,6 @@
+@type is "error"
+timestamp is 1794689883
+source is "value"
+code is 588 as u16
+message is "iota failed"
+fatal is true

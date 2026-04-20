@@ -1,0 +1,13 @@
+// §5.11.0 — integer → float may lose precision but is not an error
+// Large i64 values beyond 2^53 cannot be exactly represented in f64
+// Conversion rounds silently using IEEE 754 round-to-nearest-even.
+big_int is 9007199254740993 as i64    // 2^53 + 1 — not exactly representable in f64
+approx is big_int to f64               // Rounds to 2^53 = 9007199254740992.0
+
+// i32 beyond 2^24 not exact in f32
+large_i32 is 16777217 as i32           // 2^24 + 1
+as_f32 is large_i32 to f32             // Rounds to 2^24 = 16777216.0
+
+// Small values are lossless
+small is 100 as i32
+exact is small to f64                  // 100.0 exactly

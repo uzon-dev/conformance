@@ -1,0 +1,6 @@
+pos_inf is inf
+neg_inf is -inf
+not_num is nan
+nan_neq is nan is nan
+nan_not is nan is not nan
+inf_gt is inf > 1000.0

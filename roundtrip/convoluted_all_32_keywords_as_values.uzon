@@ -1,0 +1,16 @@
+// All 32 active keywords + 1 reserved as string values
+words is [
+    "true", "false", "null", "inf", "nan", "undefined",
+    "is", "are", "from", "called", "as", "named",
+    "with", "union", "plus", "type", "to", "of",
+    "and", "or", "not",
+    "if", "then", "else", "case", "when",
+    "env", "struct", "in",
+    "function", "returns", "default",
+    "lazy"
+]
+struct_keys is {
+    @true is "true", @false is "false", @null is "null",
+    @inf is "inf", @nan is "nan", @undefined is "undefined",
+    @is is "is", @are is "are", @from is "from"
+}

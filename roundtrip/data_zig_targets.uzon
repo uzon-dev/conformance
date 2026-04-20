@@ -1,0 +1,10 @@
+targets is [
+    { arch is "x86_64", os is "linux", abi is "gnu" },
+    { arch is "x86_64", os is "linux", abi is "musl" },
+    { arch is "aarch64", os is "linux", abi is "gnu" },
+    { arch is "x86_64", os is "macos", abi is "none" },
+    { arch is "aarch64", os is "macos", abi is "none" },
+    { arch is "x86_64", os is "windows", abi is "msvc" },
+    { arch is "wasm32", os is "wasi", abi is "none" },
+    { arch is "wasm32", os is "freestanding", abi is "none" }
+]

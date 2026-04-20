@@ -1,0 +1,26 @@
+pipeline is {
+    stages is [
+        { name is "Fetch", latency is 1 as u8, width is 4 as u8 },
+        { name is "Decode", latency is 1 as u8, width is 4 as u8 },
+        { name is "Rename", latency is 1 as u8, width is 4 as u8 },
+        { name is "Dispatch", latency is 1 as u8, width is 6 as u8 },
+        { name is "Execute", latency is 3 as u8, width is 8 as u8 },
+        { name is "Writeback", latency is 1 as u8, width is 4 as u8 },
+        { name is "Commit", latency is 1 as u8, width is 4 as u8 }
+    ]
+    execution_units is [
+        { @type is "ALU", count is 4 as u8, latency is 1 as u8 },
+        { @type is "FPU", count is 2 as u8, latency is 4 as u8 },
+        { @type is "AGU", count is 2 as u8, latency is 1 as u8 },
+        { @type is "Branch", count is 1 as u8, latency is 1 as u8 }
+    ]
+    cache is {
+        L1i is { size_kb is 32 as u16, associativity is 8 as u8, line_size is 64 as u8, latency is 4 as u8 }
+        L1d is { size_kb is 48 as u16, associativity is 12 as u8, line_size is 64 as u8, latency is 5 as u8 }
+        L2 is { size_kb is 1280 as u16, associativity is 10 as u8, line_size is 64 as u8, latency is 12 as u8 }
+        L3 is { size_kb is 32768 as u16, associativity is 16 as u8, line_size is 64 as u8, latency is 40 as u8 }
+    }
+    branch_predictor is { @type is "TAGE-SC-L", history_bits is 256 as u16, accuracy_pct is 97.5 }
+    rob_size is 512 as u16
+    clock_mhz is 5500 as u16
+}

@@ -1,0 +1,12 @@
+// Resource #27
+@type is "compute"
+name is "compute_27"
+region is "us-east-1"
+config is {
+    @type is "compute_config"
+    cpu_cores is 1 as u8
+    memory_gb is 32 as u8
+    gpu is false
+}
+tags are "server"
+active is true

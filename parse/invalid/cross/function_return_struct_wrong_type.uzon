@@ -1,0 +1,10 @@
+// §3.8 + §3.2 + §6.3: function returns wrong named struct type
+base is { x is 0 as i32 } called PointA
+other is { x is 0 as i32 } called PointB
+
+makePoint is function x as i32 returns PointA {
+    // same fields but different called name → type error
+    { x is x } as PointB
+}
+
+bad is makePoint(5)

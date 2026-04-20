@@ -1,0 +1,30 @@
+_element is fire from fire, water, earth, air, dark, light called Element
+_rarity is common from common, uncommon, rare, epic, legendary called Rarity
+
+player is {
+    name is "Aethon"
+    level is 42 as u8
+    hp is (850 as i32, 1000 as i32)
+    mp is (200 as i32, 400 as i32)
+    stats is {
+        strength is 45 as u8
+        agility is 38 as u8
+        intelligence is 52 as u8
+        luck is 17 as u8
+    }
+    element is fire as Element
+    position is (1024.5, -512.3, 0.0)
+}
+
+inventory is [
+    { name is "Flame Sword", slot is "weapon", rarity is legendary as Rarity, damage is 150 as i32, element is fire as Element },
+    { name is "Crystal Shield", slot is "shield", rarity is epic as Rarity, damage is 0 as i32, element is light as Element },
+    { name is "Health Potion", slot is "consumable", rarity is common as Rarity, damage is 0 as i32, element is water as Element },
+    { name is "Shadow Cloak", slot is "armor", rarity is rare as Rarity, damage is 0 as i32, element is dark as Element }
+]
+
+quests is [
+    { id is 1 as i32, title is "Dragon's Lair", completed is false, reward_gold is 5000 as i32 },
+    { id is 2 as i32, title is "Lost Artifact", completed is true, reward_gold is 2000 as i32 },
+    { id is 3 as i32, title is "The Dark Tower", completed is false, reward_gold is 10000 as i32 }
+]

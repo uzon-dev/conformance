@@ -1,0 +1,16 @@
+user is {
+    id is 10197 as u32
+    username is "rachel197"
+    email is "rachel197@demo.net"
+    display_name is "Rachel #197"
+    city is "London"
+    age is 65 as u8
+    verified is true
+    created is "2026-06-02T12:00:00Z"
+    login_count is 2561 as u32
+    preferences is {
+        theme is "light"
+        language is "ko"
+        notifications is false
+    }
+}

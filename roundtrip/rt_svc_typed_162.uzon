@@ -1,0 +1,8 @@
+// Service configuration #162
+@type is "mqtt"
+name is "kappa_162"
+port is 24033 as u16
+enabled is false
+max_connections is 2409 as i32
+timeout_ms is 8487 as i32
+tls is true

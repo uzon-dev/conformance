@@ -1,0 +1,11 @@
+planets is [
+    { name is "Mercury", distance_au is 0.387, radius_km is 2439.7, moons is 0 as u8, rings is false },
+    { name is "Venus", distance_au is 0.723, radius_km is 6051.8, moons is 0 as u8, rings is false },
+    { name is "Earth", distance_au is 1.0, radius_km is 6371.0, moons is 1 as u8, rings is false },
+    { name is "Mars", distance_au is 1.524, radius_km is 3389.5, moons is 2 as u8, rings is false },
+    { name is "Jupiter", distance_au is 5.203, radius_km is 69911.0, moons is 95 as u8, rings is true },
+    { name is "Saturn", distance_au is 9.537, radius_km is 58232.0, moons is 146 as u8, rings is true },
+    { name is "Uranus", distance_au is 19.191, radius_km is 25362.0, moons is 28 as u8, rings is true },
+    { name is "Neptune", distance_au is 30.069, radius_km is 24622.0, moons is 16 as u8, rings is true }
+]
+star is { name is "Sol", @type is "G2V", mass_solar is 1.0, age_gyr is 4.6 }

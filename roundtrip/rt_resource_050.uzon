@@ -1,0 +1,11 @@
+// Resource #50
+@type is "queue"
+name is "queue_50"
+region is "us-east-1"
+config is {
+    @type is "queue_config"
+    broker is "nats"
+    max_retries is 1 as u8
+    batch_size is 192 as u16
+}
+active is true

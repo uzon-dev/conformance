@@ -1,0 +1,8 @@
+// storing program as data, not executing
+program is {
+    name is "Hello World"
+    code is "++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>."
+            ">---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.>++."
+    memory_size is 30000 as u16
+    instruction_count is 106 as u16
+}

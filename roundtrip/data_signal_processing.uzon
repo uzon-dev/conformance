@@ -1,0 +1,12 @@
+signal is {
+    sample_rate is 48000 as u32
+    channels is 2 as u8
+    bit_depth is 24 as u8
+    duration_sec is 5.0
+    filters is [
+        { @type is "lowpass", cutoff_hz is 4000.0, order is 4 as u8, q is 0.707 },
+        { @type is "highpass", cutoff_hz is 80.0, order is 2 as u8, q is 0.707 },
+        { @type is "notch", cutoff_hz is 60.0, order is 2 as u8, q is 30.0 }
+    ]
+    fft is { size is 4096 as u32, window is "hann", overlap is 0.5 }
+}

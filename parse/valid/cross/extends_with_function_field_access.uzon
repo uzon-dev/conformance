@@ -1,0 +1,13 @@
+// §3.2.2 + §3.2.1 + §3.8 + §5.12
+// plus → with on result → function accesses extended fields
+base is { name is "item", count is 0 as i32 } called Item
+
+extended is base plus { active is true, tag is "default" }
+
+// with on extended shape
+updated is extended with { count is 5 as i32, tag is "modified" }
+
+// self-reference in nested computation
+total_items is updated.count * 2
+
+report is "name={updated.name}, count={updated.count}, tag={updated.tag}"

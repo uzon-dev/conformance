@@ -1,0 +1,5 @@
+grid is [
+    [ { v is 1, c is "r" }, { v is 2, c is "g" }, { v is 3, c is "b" } ],
+    [ { v is 4, c is "r" }, { v is 5, c is "g" }, { v is 6, c is "b" } ],
+    [ { v is 7, c is "r" }, { v is 8, c is "g" }, { v is 9, c is "b" } ]
+]

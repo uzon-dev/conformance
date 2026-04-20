@@ -1,0 +1,5 @@
+sample is [
+    { id is 801 as u64, value is "row_1_comments", active is true, score is 58.8 },
+    { id is 802 as u64, value is "row_2_comments", active is true, score is 68.9 },
+    { id is 803 as u64, value is "row_3_comments", active is true, score is 78.10 }
+]

@@ -1,0 +1,14 @@
+product is {
+    sku is "SKU-BEA-0175"
+    name is "Beauty Item 175"
+    category is "beauty"
+    price is 97.49
+    currency is "USD"
+    stock is 25 as u16
+    weight_g is 1850 as u32
+    dimensions is (25.0, 15.0, 7.0)
+    rating is 4.5
+    reviews is 225 as u16
+    active is false
+    tags is [ "beauty", "new" ]
+}

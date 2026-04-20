@@ -1,0 +1,25 @@
+rules is {
+    en is {
+        zero is "no items"
+        one is "1 item"
+        other is "\{count} items"
+        categories is [ "one", "other" ]
+    }
+    ko is {
+        other is "\{count}개 항목"
+        categories is [ "other" ]
+    }
+    ja is {
+        other is "\{count}件"
+        categories is [ "other" ]
+    }
+    ar is {
+        zero is "لا عناصر"
+        one is "عنصر واحد"
+        two is "عنصران"
+        few is "\{count} عناصر"
+        many is "\{count} عنصرًا"
+        other is "\{count} عنصر"
+        categories is [ "zero", "one", "two", "few", "many", "other" ]
+    }
+}

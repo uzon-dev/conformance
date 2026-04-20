@@ -1,0 +1,17 @@
+// §3.8 + §5.16.2: function returns list → filter → sort
+numbers are 15, 3, 8, 22, 1, 17, 42, 9
+
+getAbove is function items as [i64], threshold as i64 returns [i64] {
+    std.filter(items, function n as i64 returns bool { n > threshold })
+}
+
+above_ten is getAbove(numbers, 10)
+sorted_above is std.sort(
+    above_ten,
+    function a as i64, b as i64 returns bool { a < b }
+)
+count is std.len(sorted_above)
+summary is std.join(
+    std.map(sorted_above, function n as i64 returns string { n to string }),
+    ", "
+)

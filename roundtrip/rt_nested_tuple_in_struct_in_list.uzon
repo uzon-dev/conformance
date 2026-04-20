@@ -1,0 +1,6 @@
+data is [
+    { label is "origin", point is (0.0, 0.0, 0.0) },
+    { label is "unit-x", point is (1.0, 0.0, 0.0) },
+    { label is "unit-y", point is (0.0, 1.0, 0.0) },
+    { label is "unit-z", point is (0.0, 0.0, 1.0) }
+]

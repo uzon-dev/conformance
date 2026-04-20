@@ -1,0 +1,8 @@
+// lower + upper + replace + trim + split + join
+raw is "  Hello, World!  "
+step1 is std.trim(raw)
+step2 is std.lower(step1)
+step3 is std.replace(step2, "world", "uzon")
+step4 is std.upper(step3)
+words is std.split(step4, " ")
+rejoined is std.join(words, "_")

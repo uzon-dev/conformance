@@ -1,0 +1,2 @@
+// §3.7: Duplicate variant names in tagged union are a type error
+x is 1 named a from a as i32, b as string, a as f64

@@ -1,0 +1,6 @@
+// §3.7 — standalone tagged union: binding value is first variant's default
+Result is tagged union ok as string, err as string
+default_tag is Result is named ok
+default_is_ok is default_tag
+reuse is "success" as Result named ok
+reuse_is_ok is reuse is named ok

@@ -1,0 +1,12 @@
+// Resource #76
+@type is "cache"
+name is "cache_76"
+region is "ap-northeast-1"
+config is {
+    @type is "cache_config"
+    backend is "local"
+    ttl_seconds is 50990 as i32
+    max_memory_mb is 2840 as u16
+}
+tags are "server", "mu"
+active is true

@@ -1,0 +1,9 @@
+// ERROR: §3.8 — function body contains only bindings, no return expression
+_shared is struct "./shared"
+
+computeStatus is function returns string {
+    flag is _shared.operational
+    label is if flag then "online" else "offline"
+}
+
+bad is computeStatus()

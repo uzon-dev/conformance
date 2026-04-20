@@ -1,0 +1,6 @@
+@type is "error"
+timestamp is 1780801793
+source is "theta"
+code is 569 as u16
+message is "omicron failed"
+fatal is false

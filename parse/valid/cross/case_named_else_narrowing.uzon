@@ -1,0 +1,6 @@
+// §5.10: case named else — narrowed to remaining variants' inner types
+_r is "timeout" named err from ok as i32, err as string, empty as null called Result
+
+msg is case named _r
+    when ok then "ok:" ++ (_r to string)
+    else _r to string               // remaining: err(string), empty(null) — to string works for both

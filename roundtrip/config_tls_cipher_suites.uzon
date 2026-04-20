@@ -1,0 +1,21 @@
+tls is {
+    min_version is "1.2"
+    max_version is "1.3"
+    cipher_suites is {
+        tls_1_3 is [
+            "TLS_AES_256_GCM_SHA384",
+            "TLS_CHACHA20_POLY1305_SHA256",
+            "TLS_AES_128_GCM_SHA256"
+        ]
+        tls_1_2 is [
+            "ECDHE-ECDSA-AES256-GCM-SHA384",
+            "ECDHE-RSA-AES256-GCM-SHA384",
+            "ECDHE-ECDSA-CHACHA20-POLY1305",
+            "ECDHE-RSA-CHACHA20-POLY1305"
+        ]
+    }
+    curves is [ "X25519", "P-256", "P-384" ]
+    ocsp_stapling is true
+    session_tickets is false
+    certificate is { path is "/etc/ssl/cert.pem", chain is "/etc/ssl/chain.pem", key is "/etc/ssl/key.pem" }
+}

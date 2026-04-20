@@ -1,0 +1,12 @@
+metric is {
+    name is "network_out"
+    host is "server-04"
+    timestamp is 1712807440 as u64
+    value is 10.8
+    unit is "bytes"
+    tags is {
+        environment is "staging"
+        region is "us-east"
+        service is "svc-04"
+    }
+}

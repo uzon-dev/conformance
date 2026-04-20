@@ -1,0 +1,7 @@
+// Service configuration #133
+@type is "mqtt"
+name is "host_133"
+port is 7535 as u16
+enabled is true
+max_connections is 5886 as i32
+timeout_ms is 2084 as i32

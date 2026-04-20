@@ -1,0 +1,8 @@
+// §5.11.2 to string on every convertible type
+from_int is 42 to string              // "42"
+from_float is 3.14 to string          // "3.14"
+from_bool is true to string           // "true"
+from_null is null to string           // "null"
+from_neg is -17 to string             // "-17"
+from_inf is inf to string             // "inf"
+from_nan is nan to string             // "nan"

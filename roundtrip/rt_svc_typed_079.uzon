@@ -1,0 +1,8 @@
+// Service configuration #79
+@type is "udp"
+name is "backup_79"
+port is 58716 as u16
+enabled is true
+max_connections is 4536 as i32
+timeout_ms is 18312 as i32
+tls is false

@@ -1,0 +1,6 @@
+@type is "deploy"
+timestamp is 1734227688
+source is "alpha"
+version is "6.59.726"
+environment is "prod"
+rollback is false

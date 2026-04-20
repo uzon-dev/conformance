@@ -1,0 +1,6 @@
+@type is "error"
+timestamp is 1734971668
+source is "main"
+code is 475 as u16
+message is "level failed"
+fatal is true

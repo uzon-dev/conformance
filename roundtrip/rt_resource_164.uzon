@@ -1,0 +1,13 @@
+// Resource #164
+@type is "database"
+name is "database_164"
+region is "us-west-2"
+config is {
+    @type is "database_config"
+    engine is "mongo"
+    port is 5432 as u16
+    pool_size is 50 as u8
+    ssl is false
+}
+tags are "port", "eta", "alpha"
+active is false

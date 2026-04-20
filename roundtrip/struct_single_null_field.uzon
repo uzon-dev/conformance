@@ -1,0 +1,4 @@
+a is { x is null }
+b is { y is null }
+c is { z is null }
+nested is { inner is { deep is null } }

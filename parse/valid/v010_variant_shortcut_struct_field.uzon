@@ -1,0 +1,10 @@
+// §3.5 v0.10 — Bare variant name in struct field with declared enum type
+Color is enum red, green, blue
+Config is struct {
+    bg is red as Color
+    fg is green as Color
+}
+active is {
+    bg is blue
+    fg is red
+} as Config

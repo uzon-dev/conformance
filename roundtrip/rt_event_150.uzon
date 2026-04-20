@@ -1,0 +1,6 @@
+@type is "error"
+timestamp is 1796671078
+source is "theta"
+code is 523 as u16
+message is "active failed"
+fatal is false

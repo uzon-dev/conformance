@@ -1,0 +1,6 @@
+// §5.11.0: cross-signedness conversion at same width is permitted
+// but range-checked. Positive i32 values that fit in u32 convert fine.
+a is 100 as i32
+b is a to u32         // valid — 100 fits in u32
+c is 2147483647 as i32
+d is c to u32         // valid — i32.MAX = 2147483647 fits in u32

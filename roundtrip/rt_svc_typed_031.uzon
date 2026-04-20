@@ -1,0 +1,8 @@
+// Service configuration #31
+@type is "graphql"
+name is "node_31"
+port is 3628 as u16
+enabled is false
+max_connections is 9572 as i32
+timeout_ms is 18621 as i32
+retry_count is 4 as u8

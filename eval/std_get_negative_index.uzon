@@ -1,0 +1,5 @@
+// §5.16.2 Negative indices are out-of-bounds → undefined
+items are 10, 20, 30
+neg is std.get(items, -1) or else -1
+oob is std.get(items, 100) or else -1
+valid is std.get(items, 0) or else -1

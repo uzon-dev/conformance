@@ -1,0 +1,9 @@
+// Service configuration #123
+@type is "websocket"
+name is "eta_123"
+port is 42196 as u16
+enabled is true
+max_connections is 655 as i32
+timeout_ms is 10223 as i32
+retry_count is 0 as u8
+tls is true

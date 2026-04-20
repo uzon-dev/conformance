@@ -1,0 +1,5 @@
+// §2.2: `or else` is a composite token that survives intervening
+// comments and blank lines (NEWLINE_SEP does not break it).
+port is env.PORT or
+    // fallback port if env is unset
+    else 8080

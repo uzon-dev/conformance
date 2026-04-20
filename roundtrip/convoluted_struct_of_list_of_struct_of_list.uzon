@@ -1,0 +1,17 @@
+school is {
+    departments is [
+        {
+            name is "CS"
+            courses is [
+                { code is "CS101", students is [ "A", "B", "C" ], grades is [ (95 as u8, "A"), (85 as u8, "B"), (70 as u8, "C") ] },
+                { code is "CS201", students is [ "A", "D" ], grades is [ (92 as u8, "A"), (88 as u8, "B") ] }
+            ]
+        },
+        {
+            name is "Math"
+            courses is [
+                { code is "MA101", students is [ "B", "C", "D", "E" ], grades is [ (90 as u8, "A"), (75 as u8, "C"), (82 as u8, "B"), (95 as u8, "A") ] }
+            ]
+        }
+    ]
+}

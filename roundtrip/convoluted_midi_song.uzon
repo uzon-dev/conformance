@@ -1,0 +1,32 @@
+song is {
+    title is "Test Composition"
+    bpm is 120 as u16
+    time_sig is (4, 4)
+    tracks is [
+        {
+            name is "Piano"
+            channel is 0 as u8
+            instrument is 0 as u8
+            notes is [
+                { tick is 0 as u32, pitch is 60 as u8, vel is 80 as u8, dur is 480 as u32 },
+                { tick is 480 as u32, pitch is 64 as u8, vel is 75 as u8, dur is 480 as u32 },
+                { tick is 960 as u32, pitch is 67 as u8, vel is 85 as u8, dur is 480 as u32 },
+                { tick is 1440 as u32, pitch is 72 as u8, vel is 90 as u8, dur is 960 as u32 }
+            ]
+            cc is [
+                { tick is 0 as u32, controller is 64 as u8, value is 127 as u8 },
+                { tick is 1920 as u32, controller is 64 as u8, value is 0 as u8 }
+            ]
+        },
+        {
+            name is "Bass"
+            channel is 1 as u8
+            instrument is 33 as u8
+            notes is [
+                { tick is 0 as u32, pitch is 36 as u8, vel is 100 as u8, dur is 960 as u32 },
+                { tick is 960 as u32, pitch is 43 as u8, vel is 95 as u8, dur is 960 as u32 }
+            ]
+            cc is [] as [string]
+        }
+    ]
+}

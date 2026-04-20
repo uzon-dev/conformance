@@ -1,0 +1,7 @@
+// Schema definition #56
+@type is "schema"
+version is 1 as u8
+name is "nu_schema_56"
+fields are
+        { name is "field_0", @type is "i64", required is false },
+        { name is "field_1", @type is "u16", required is true }

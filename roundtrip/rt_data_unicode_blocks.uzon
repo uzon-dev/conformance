@@ -1,0 +1,9 @@
+blocks is [
+    { name is "Basic Latin", start is 0x0000, end is 0x007F, sample is "Hello" },
+    { name is "CJK Unified Ideographs", start is 0x4E00, end is 0x9FFF, sample is "漢字" },
+    { name is "Hangul Syllables", start is 0xAC00, end is 0xD7AF, sample is "한글" },
+    { name is "Hiragana", start is 0x3040, end is 0x309F, sample is "ひらがな" },
+    { name is "Arabic", start is 0x0600, end is 0x06FF, sample is "عربي" },
+    { name is "Devanagari", start is 0x0900, end is 0x097F, sample is "देवनागरी" },
+    { name is "Emoticons", start is 0x1F600, end is 0x1F64F, sample is "😀😎" }
+]

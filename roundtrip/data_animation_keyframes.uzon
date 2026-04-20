@@ -1,0 +1,13 @@
+animation is {
+    name is "bounce"
+    duration_ms is 1000 as u32
+    iteration_count is "infinite"
+    timing is "ease-in-out"
+    keyframes is [
+        { offset is 0.0, transform is "translateY(0)", opacity is 1.0 },
+        { offset is 0.25, transform is "translateY(-30px)", opacity is 1.0 },
+        { offset is 0.5, transform is "translateY(0)", opacity is 0.8 },
+        { offset is 0.75, transform is "translateY(-15px)", opacity is 1.0 },
+        { offset is 1.0, transform is "translateY(0)", opacity is 1.0 }
+    ]
+}

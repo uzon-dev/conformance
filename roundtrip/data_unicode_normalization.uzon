@@ -1,0 +1,9 @@
+forms is {
+    composed is "é"
+    precomposed is "\u{00E9}"
+    decomposed_display is "e + combining acute"
+    hangul_composed is "한"
+    hangul_jamo is "ㅎㅏㄴ"
+    fullwidth is "ＵＺＯＮ"
+    halfwidth is "UZON"
+}

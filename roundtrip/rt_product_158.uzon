@@ -1,0 +1,14 @@
+product is {
+    sku is "SKU-GAR-0158"
+    name is "Garden Item 158"
+    category is "garden"
+    price is 88.99
+    currency is "USD"
+    stock is 474 as u16
+    weight_g is 1680 as u32
+    dimensions is (28.0, 13.0, 10.0)
+    rating is 4.8
+    reviews is 106 as u16
+    active is true
+    tags is [ "garden", "featured" ]
+}

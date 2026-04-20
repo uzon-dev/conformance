@@ -1,0 +1,6 @@
+// §3.4 List
+integers is [ 1, 2, 3 ]
+strings is [ "a", "b", "c" ]
+empty is [] as [i32]
+typed is [ 1, 2, 3 ] as [i32]
+with_null is [ 1, null, 3 ]

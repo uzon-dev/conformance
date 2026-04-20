@@ -1,0 +1,10 @@
+// §5.7 + §5.11: or else + to conversion chaining
+port is env.PORT to u16 or else 8080
+retries is env.RETRIES to u8 or else 3 as u8
+timeout is env.TIMEOUT to f64 or else 30.0
+
+// undefined to string propagates (not error)
+label is env.MISSING_LABEL to string or else "default"
+
+// chained or else
+host is env.PRIMARY_HOST or else env.SECONDARY_HOST or else "localhost"

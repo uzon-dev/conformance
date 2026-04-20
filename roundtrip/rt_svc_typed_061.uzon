@@ -1,0 +1,7 @@
+// Service configuration #61
+@type is "tcp"
+name is "server_61"
+port is 18831 as u16
+enabled is false
+max_connections is 8859 as i32
+timeout_ms is 2740 as i32

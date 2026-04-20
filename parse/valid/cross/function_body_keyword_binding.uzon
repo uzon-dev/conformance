@@ -1,0 +1,7 @@
+// §3.8 + §2.3: @keyword as intermediate binding in function body
+f is function n as i32 returns i32 {
+    @from is n + 1
+    @type is @from * 2
+    @type
+}
+result is f(5)

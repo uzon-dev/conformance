@@ -1,0 +1,4 @@
+// §3.7 v0.10 — Bare variant name for nullary tagged union variants
+Event is tagged union pressed as string, cleared as null
+e1 is cleared as Event
+e2 is pressed "enter" as Event

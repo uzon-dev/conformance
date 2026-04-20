@@ -1,0 +1,7 @@
+schedule is {
+    monday is [ ("09:00", "standup"), ("10:00", "review"), ("14:00", "coding") ]
+    tuesday is [ ("09:00", "standup"), ("11:00", "design"), ("15:00", "testing") ]
+    wednesday is [ ("09:00", "standup") ]
+    thursday is [ ("09:00", "standup"), ("13:00", "demo") ]
+    friday is [ ("09:00", "standup"), ("16:00", "retro") ]
+}

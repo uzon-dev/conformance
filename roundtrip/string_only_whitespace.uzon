@@ -1,0 +1,5 @@
+space is " "
+spaces is "   "
+tab is "\t"
+newline is "\n"
+mixed_ws is " \t\n\r "

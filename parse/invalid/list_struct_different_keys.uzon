@@ -1,0 +1,5 @@
+// §3.4 + §3.2.1: Different field names — type error
+items is [
+    { name is "alpha" },
+    { label is "beta" }
+]

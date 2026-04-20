@@ -1,0 +1,8 @@
+// Service configuration #97
+@type is "graphql"
+name is "beta_97"
+port is 63334 as u16
+enabled is true
+max_connections is 4425 as i32
+timeout_ms is 18982 as i32
+tls is false

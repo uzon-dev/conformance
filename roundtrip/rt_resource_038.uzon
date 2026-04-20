@@ -1,0 +1,10 @@
+// Resource #38
+@type is "network"
+name is "network_38"
+region is "us-west-2"
+config is {
+    @type is "network_config"
+    capacity is 5195 as i32
+    priority is 4 as u8
+}
+active is false

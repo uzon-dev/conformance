@@ -1,0 +1,4 @@
+// §9: is not named at binding position — decomposed as binding + not expr
+// To use as comparison, wrap in parentheses
+_h is "ok" named ok from ok as string, err as string called Health
+check is (_h is not named err)

@@ -1,0 +1,2 @@
+// §2.5 — enum is now a keyword, cannot be used as bare binding name
+enum is 5

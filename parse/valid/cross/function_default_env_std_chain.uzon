@@ -1,0 +1,18 @@
+// §3.8 + §5.13 + §5.7 + §5.16.4 + §5.16.2 + §4.4.1
+// function with default + env + or else + std.split + std.map + interpolation
+formatPath is function raw as string,
+    separator as string default ":" returns [string] {
+    parts is std.split(raw, separator)
+    std.map(parts, function p as string returns string { std.trim(p) })
+}
+
+unix_paths is formatPath(env.PATH or else "/usr/bin:/bin")
+win_paths is formatPath(
+    env.WIN_PATH or else "C:\\Users;C:\\Windows",
+    ";"
+)
+
+unix_display is std.join(unix_paths, " → ")
+win_display is std.join(win_paths, " → ")
+report is "UNIX: {unix_display}"
+          "WIN:  {win_display}"

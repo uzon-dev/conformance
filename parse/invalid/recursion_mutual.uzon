@@ -1,0 +1,3 @@
+// §3.8 Mutual recursion forbidden
+f is function n as i32 returns i32 { g(n) }
+g is function n as i32 returns i32 { f(n) }

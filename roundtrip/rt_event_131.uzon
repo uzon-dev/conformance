@@ -1,0 +1,6 @@
+@type is "deploy"
+timestamp is 1711002322
+source is "sigma"
+version is "3.68.201"
+environment is "staging"
+rollback is true

@@ -1,0 +1,5 @@
+text is {
+    one is "\t"
+    cols is "a\tb\tc\td"
+    table is "h1\th2\th3\nv1\tv2\tv3"
+}

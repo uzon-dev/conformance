@@ -1,0 +1,8 @@
+data is {
+    @type is "config"
+    @from is "source"
+    @to is "destination"
+    @in is "container"
+    @default is "fallback"
+    @as is "alias"
+}

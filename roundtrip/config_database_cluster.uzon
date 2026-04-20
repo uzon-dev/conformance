@@ -1,0 +1,30 @@
+cluster is {
+    name is "prod-db-cluster"
+    engine is "postgresql"
+    version is "16.2"
+    nodes is [
+        { id is 1 as u8, host is "db-1.internal", role is "primary", region is "us-east-1" },
+        { id is 2 as u8, host is "db-2.internal", role is "replica", region is "us-east-1" },
+        { id is 3 as u8, host is "db-3.internal", role is "replica", region is "us-west-2" }
+    ]
+    connection is {
+        pool_min is 5 as u16
+        pool_max is 50 as u16
+        idle_timeout_sec is 300 as u32
+        max_lifetime_sec is 3600 as u32
+        ssl_mode is "verify-full"
+        ssl_cert is "/etc/ssl/db-client.pem"
+    }
+    backup is {
+        enabled is true
+        schedule is "0 2 * * *"
+        retention_days is 30 as u16
+        destination is "s3://backups/db/"
+        encryption is true
+    }
+    monitoring is {
+        slow_query_ms is 1000 as u32
+        log_level is "warn"
+        metrics_port is 9187 as u16
+    }
+}

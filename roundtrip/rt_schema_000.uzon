@@ -1,0 +1,7 @@
+// Schema definition #0
+@type is "schema"
+version is 3 as u8
+name is "name_schema_0"
+fields are
+        { name is "field_0", @type is "i32", required is false },
+        { name is "field_1", @type is "bool", required is true }

@@ -1,0 +1,8 @@
+// split → trim → filter → sort → join
+raw is "  banana , apple ,  cherry  , , date "
+parts is std.split(raw, ",")
+trimmed is std.map(parts, function s as string returns string { std.trim(s) })
+non_empty is std.filter(trimmed, function s as string returns bool { std.len(s) > 0 })
+sorted is std.sort(non_empty, function a as string, b as string returns bool { a < b })
+result is std.join(sorted, ", ")
+count is std.len(sorted)

@@ -1,0 +1,15 @@
+// §5.10 case type with compound type expressions (list, tuple types)
+data is [ 1, 2, 3 ] from union [i32], [string], i32
+
+label is case type data
+    when [i32] then "int list"
+    when [string] then "string list"
+    when i32 then "single int"
+    else "other"
+
+// tuple type in case type
+pair is (1, "a") from union (i32, string), i32
+tag is case type pair
+    when (i32, string) then "pair"
+    when i32 then "single"
+    else "unknown"

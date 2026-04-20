@@ -1,0 +1,10 @@
+// §3.8 + §5.15 + §5.16: function calling function + std chaining
+format is function items as [string] returns string {
+    sorted is std.sort(items, function a as string, b as string returns bool { a < b })
+    upper_sorted is std.map(sorted, function s as string returns string { std.upper(s) })
+    std.join(upper_sorted, ", ")
+}
+
+raw are "banana", "apple", "cherry"
+result is format(raw)
+// "APPLE, BANANA, CHERRY"

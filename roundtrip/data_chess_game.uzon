@@ -1,0 +1,17 @@
+game is {
+    white is "Kasparov"
+    black is "Karpov"
+    event is "World Championship 1985"
+    result is "1-0"
+    moves is [
+        ("e4", "c5"), ("Nf3", "d6"), ("d4", "cxd4"), ("Nxd4", "Nf6"),
+        ("Nc3", "a6"), ("Be2", "e5"), ("Nb3", "Be7"), ("O-O", "O-O"),
+        ("f4", "b5"), ("f5", "b4")
+    ]
+    annotations is {
+        opening is "Sicilian Defense, Najdorf Variation"
+        eco is "B90"
+        critical_move is 24 as u8
+        brilliancy is true
+    }
+}

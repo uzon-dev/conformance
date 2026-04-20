@@ -1,0 +1,16 @@
+tree is {
+    hash is "abc123def456"
+    left is {
+        hash is "aaa111"
+        left is { hash is "leaf01", data is "block 0", left is null, right is null }
+        right is { hash is "leaf02", data is "block 1", left is null, right is null }
+    }
+    right is {
+        hash is "bbb222"
+        left is { hash is "leaf03", data is "block 2", left is null, right is null }
+        right is { hash is "leaf04", data is "block 3", left is null, right is null }
+    }
+}
+root_hash is "abc123def456"
+depth is 3 as u8
+leaf_count is 4 as u8

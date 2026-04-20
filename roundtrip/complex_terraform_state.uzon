@@ -1,0 +1,50 @@
+state is {
+    version is 4 as u8
+    serial is 42 as u32
+    resources is [
+        {
+            @type is "aws_instance"
+            name is "web"
+            provider is "aws"
+            instances is [
+                {
+                    attributes is {
+                        id is "i-0123456789abcdef0"
+                        ami is "ami-0abcdef1234567890"
+                        instance_type is "t3.medium"
+                        'private-ip' is "10.0.1.50"
+                        'public-ip' is "54.123.45.67"
+                        subnet_id is "subnet-abc123"
+                        vpc_id is "vpc-def456"
+                        tags is { Name is "web-server", Environment is "production" }
+                    }
+                    sensitive is [ "user_data" ]
+                }
+            ]
+        },
+        {
+            @type is "aws_db_instance"
+            name is "primary"
+            provider is "aws"
+            instances is [
+                {
+                    attributes is {
+                        id is "mydb"
+                        engine is "postgres"
+                        engine_version is "16.2"
+                        instance_class is "db.r6g.large"
+                        storage_gb is 100
+                        endpoint is "mydb.abc123.us-east-1.rds.amazonaws.com:5432"
+                        multi_az is true
+                        tags is { Name is "primary-db" }
+                    }
+                    sensitive is [ "password", "master_password" ]
+                }
+            ]
+        }
+    ]
+    outputs is {
+        web_ip is { value is "54.123.45.67", @type is "string" }
+        db_endpoint is { value is "mydb.abc123.us-east-1.rds.amazonaws.com:5432", @type is "string" }
+    }
+}

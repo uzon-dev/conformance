@@ -1,0 +1,4 @@
+// §6.4: mutual recursion through type references is forbidden.
+// Spec's own invalid example.
+A is struct { b is {} as B }
+B is struct { a is {} as A }

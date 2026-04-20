@@ -1,0 +1,7 @@
+// ERROR: §3.7 + §6.3
+// reuse tagged union type with nonexistent variant
+mission is "explore" named active from
+    active as string, paused as string, completed as null
+    called MissionState
+
+bad is "wait" as MissionState named unknown

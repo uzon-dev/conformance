@@ -1,0 +1,2 @@
+base is { x is 1 as i32, y is 2 as i32 }
+modified is { x is 10 as i32, y is 2 as i32 }

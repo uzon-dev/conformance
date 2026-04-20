@@ -1,0 +1,5 @@
+a is std.endsWith("config.uzon", ".uzon")
+b is std.endsWith("config.uzon", ".json")
+c is std.endsWith("hello", "")
+d is std.endsWith("hello", "hello")
+e is std.endsWith("hello", "say hello")

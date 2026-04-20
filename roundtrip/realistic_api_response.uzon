@@ -1,0 +1,56 @@
+// Roundtrip: realistic API response structure
+response is {
+    status is 200 as u16
+    headers is {
+        'Content-Type' is "application/json"
+        'X-Request-ID' is "req-abc-123"
+        'Cache-Control' is "max-age=3600"
+    }
+    body is {
+        data is [
+            {
+                id is 1001 as i32
+                name is "Alice Johnson"
+                email is "alice@example.com"
+                roles is [ "admin", "editor" ]
+                profile is {
+                    avatar is "https://example.com/avatars/alice.png"
+                    bio is "Software engineer"
+                    social is {
+                        github is "alicej"
+                        twitter is null
+                    }
+                }
+                scores is (95 as i32, 88 as i32, 92 as i32)
+                active is true
+            },
+            {
+                id is 1002 as i32
+                name is "Bob Smith"
+                email is "bob@example.com"
+                roles is [ "viewer" ]
+                profile is {
+                    avatar is null
+                    bio is ""
+                    social is {
+                        github is null
+                        twitter is "bobsmith"
+                    }
+                }
+                scores is (72 as i32, 65 as i32, 80 as i32)
+                active is false
+            }
+        ]
+        pagination is {
+            page is 1 as u32
+            per_page is 20 as u32
+            total is 2 as u32
+            has_next is false
+        }
+    }
+    meta is {
+        @type is "api_response"
+        version is "2.1"
+        timestamp is "2026-04-11T12:00:00Z"
+    }
+}

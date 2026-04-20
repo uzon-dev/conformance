@@ -1,0 +1,7 @@
+clamp is function n as i32, lo as i32, hi as i32 returns i32 {
+    clamped_lo is if n < lo then lo else n
+    if clamped_lo > hi then hi else clamped_lo
+}
+a is clamp(5, 0, 10)
+b is clamp(-5, 0, 10)
+c is clamp(15, 0, 10)

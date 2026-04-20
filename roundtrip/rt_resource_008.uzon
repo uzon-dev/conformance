@@ -1,0 +1,12 @@
+// Resource #8
+@type is "cache"
+name is "cache_8"
+region is "us-east-1"
+config is {
+    @type is "cache_config"
+    backend is "redis"
+    ttl_seconds is 62970 as i32
+    max_memory_mb is 1833 as u16
+}
+tags are "rho", "pi", "eta"
+active is false

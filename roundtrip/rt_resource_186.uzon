@@ -1,0 +1,13 @@
+// Resource #186
+@type is "database"
+name is "database_186"
+region is "eu-west-1"
+config is {
+    @type is "database_config"
+    engine is "mysql"
+    port is 3306 as u16
+    pool_size is 75 as u8
+    ssl is true
+}
+tags are "host", "mode", "theta"
+active is true

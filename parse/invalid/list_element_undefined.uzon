@@ -1,0 +1,2 @@
+// §3.4 undefined in list elements is a runtime error
+items is [1, env.NONEXISTENT_VAR, 3]

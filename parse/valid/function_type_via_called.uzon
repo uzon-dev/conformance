@@ -1,0 +1,3 @@
+// §6.2 Function types require naming via called before use in type annotations
+IntPredicate is function n as i32 returns bool { n > 0 } called IntPredicate
+predicates is [IntPredicate] as [IntPredicate]

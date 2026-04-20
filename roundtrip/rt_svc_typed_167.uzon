@@ -1,0 +1,8 @@
+// Service configuration #167
+@type is "tcp"
+name is "backup_167"
+port is 22095 as u16
+enabled is false
+max_connections is 2481 as i32
+timeout_ms is 2127 as i32
+tls is true

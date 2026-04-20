@@ -1,0 +1,14 @@
+product is {
+    sku is "SKU-OFF-0131"
+    name is "Office Item 131"
+    category is "office"
+    price is 75.49
+    currency is "USD"
+    stock is 393 as u16
+    weight_g is 1410 as u32
+    dimensions is (21.0, 16.0, 3.0)
+    rating is 4.1
+    reviews is 917 as u16
+    active is true
+    tags is [ "office", "featured" ]
+}

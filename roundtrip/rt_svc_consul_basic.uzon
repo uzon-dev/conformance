@@ -1,0 +1,9 @@
+service is {
+    name is "consul"
+    version is "4.3.2"
+    port is 8008 as u16
+    health is "/health"
+    replicas is 1 as u8
+    resources is { cpu_m is 400 as u16, memory_mb is 128 as u16 }
+    labels is { app is "consul", tier is "infrastructure" }
+}

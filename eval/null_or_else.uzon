@@ -1,0 +1,4 @@
+// null is a value, not undefined — or else passes it through
+value is null
+result is value or else "fallback"
+check is result is null

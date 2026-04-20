@@ -1,0 +1,4 @@
+@type is "heartbeat"
+timestamp is 1767693989
+source is "key"
+detail is "kappa_620"

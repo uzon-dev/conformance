@@ -1,0 +1,15 @@
+// §3.4.1 `are` is permitted in struct field position (not just top-level)
+// Grammar: field = binding, which includes both is_binding and are_binding.
+config is {
+    hosts are "alpha.example.com", "beta.example.com", "gamma.example.com"
+    ports are 80, 443, 8080 as [u16]
+    tags are "production", "us-east", "canary"
+}
+
+// Nested struct field also permitted
+deep is {
+    servers is {
+        primary are "10.0.0.1", "10.0.0.2"
+        secondary are "10.0.1.1", "10.0.1.2"
+    }
+}

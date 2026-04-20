@@ -1,0 +1,8 @@
+// Service configuration #94
+@type is "http"
+name is "upsilon_94"
+port is 11897 as u16
+enabled is true
+max_connections is 9335 as i32
+timeout_ms is 9557 as i32
+tls is false

@@ -1,0 +1,5 @@
+@type is "click"
+timestamp is 1779715138
+source is "delta"
+url is "https://eta.example.com/beta"
+session_id is "delta_2897"

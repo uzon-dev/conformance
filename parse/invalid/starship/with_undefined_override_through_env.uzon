@@ -1,0 +1,5 @@
+// ERROR: §3.2.1 + §5.13 + §3.1
+// env.NONEXISTENT is undefined → with override with undefined is type error
+_shared is struct "./shared"
+
+bad is _shared.base_module with { power_kw is env.NONEXISTENT }

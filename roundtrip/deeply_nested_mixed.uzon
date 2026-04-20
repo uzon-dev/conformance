@@ -1,0 +1,34 @@
+// Roundtrip: deeply nested mixed types
+app is {
+    version is (1, 4, 2)
+    metadata is {
+        @type is "application"
+        'build-date' is "2026-01-15"
+        tags is [ "stable", "release" ]
+    }
+    components is [
+        {
+            name is "frontend"
+            ports is [ 80 as u16, 443 as u16 ]
+            config is {
+                minify is true
+                source_map is false
+                entry_points is [ "/app", "/admin" ]
+            }
+        },
+        {
+            name is "backend"
+            ports is [ 8080 as u16, 8443 as u16 ]
+            config is {
+                minify is false
+                source_map is true
+                entry_points is [ "/api/v1", "/api/v2", "/health" ]
+            }
+        }
+    ]
+    limits is {
+        cpu is (4, "cores")
+        memory is (8192, "MB")
+        storage is (100, "GB")
+    }
+}

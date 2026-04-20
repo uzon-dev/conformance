@@ -1,0 +1,16 @@
+user is {
+    id is 10199 as u32
+    username is "tina199"
+    email is "tina199@mock.dev"
+    display_name is "Tina #199"
+    city is "Paris"
+    age is 67 as u8
+    verified is true
+    created is "2026-08-04T12:00:00Z"
+    login_count is 2587 as u32
+    preferences is {
+        theme is "light"
+        language is "de"
+        notifications is false
+    }
+}

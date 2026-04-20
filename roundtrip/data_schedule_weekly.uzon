@@ -1,0 +1,11 @@
+_meeting is { time is "", duration is 0 as u16, title is "" } called Meeting
+
+week is {
+    mon is [ { time is "09:00", duration is 30 as u16, title is "Standup" }, { time is "14:00", duration is 60 as u16, title is "Sprint Planning" } ]
+    tue is [ { time is "09:00", duration is 30 as u16, title is "Standup" }, { time is "11:00", duration is 90 as u16, title is "Design Review" } ]
+    wed is [ { time is "09:00", duration is 30 as u16, title is "Standup" } ]
+    thu is [ { time is "09:00", duration is 30 as u16, title is "Standup" }, { time is "15:00", duration is 60 as u16, title is "Demo" } ]
+    fri is [ { time is "09:00", duration is 30 as u16, title is "Standup" }, { time is "16:00", duration is 60 as u16, title is "Retro" } ]
+    sat is [] as [Meeting]
+    sun is [] as [Meeting]
+}

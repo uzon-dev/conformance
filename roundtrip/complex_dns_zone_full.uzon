@@ -1,0 +1,28 @@
+zone is {
+    origin is "example.com."
+    ttl is 3600 as u32
+    soa is {
+        mname is "ns1.example.com."
+        rname is "admin.example.com."
+        serial is 2026041101 as u64
+        refresh is 7200 as u32
+        retry is 3600 as u32
+        expire is 1209600 as u32
+        minimum is 300 as u32
+    }
+    records is [
+        { name is "@", @type is "NS", value is "ns1.example.com.", ttl is 86400 as u32 },
+        { name is "@", @type is "NS", value is "ns2.example.com.", ttl is 86400 as u32 },
+        { name is "@", @type is "A", value is "93.184.216.34", ttl is 300 as u32 },
+        { name is "@", @type is "AAAA", value is "2606:2800:220:1:248:1893:25c8:1946", ttl is 300 as u32 },
+        { name is "www", @type is "CNAME", value is "example.com.", ttl is 3600 as u32 },
+        { name is "api", @type is "A", value is "93.184.216.35", ttl is 60 as u32 },
+        { name is "api", @type is "A", value is "93.184.216.36", ttl is 60 as u32 },
+        { name is "@", @type is "MX", value is "10 mail1.example.com.", ttl is 3600 as u32 },
+        { name is "@", @type is "MX", value is "20 mail2.example.com.", ttl is 3600 as u32 },
+        { name is "@", @type is "TXT", value is "v=spf1 include:_spf.example.com -all", ttl is 3600 as u32 },
+        { name is "mail._domainkey", @type is "TXT", value is "v=DKIM1; k=rsa; p=MIGfMA0GCS...", ttl is 3600 as u32 },
+        { name is "_dmarc", @type is "TXT", value is "v=DMARC1; p=reject; rua=mailto:dmarc@example.com", ttl is 3600 as u32 },
+        { name is "_acme-challenge", @type is "TXT", value is "gfj9Xq...Rg85nM", ttl is 60 as u32 }
+    ]
+}

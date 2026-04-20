@@ -1,0 +1,8 @@
+// §5.10: Nested case — inner case consumes outer when/else
+a is 1
+b is "x"
+x is case a
+    when 1 then case b
+        when "x" then 10
+    when 2 then 30
+    else 40

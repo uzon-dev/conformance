@@ -1,0 +1,14 @@
+services is [
+    {
+        name is "UserService"
+        package is "api.v3.users"
+        methods is [
+            { name is "GetUser", input is "GetUserRequest", output is "User", stream_input is false, stream_output is false },
+            { name is "ListUsers", input is "ListUsersRequest", output is "User", stream_input is false, stream_output is true },
+            { name is "CreateUser", input is "CreateUserRequest", output is "User", stream_input is false, stream_output is false },
+            { name is "UpdateUser", input is "UpdateUserRequest", output is "User", stream_input is false, stream_output is false },
+            { name is "WatchUsers", input is "WatchRequest", output is "UserEvent", stream_input is false, stream_output is true }
+        ]
+        options is { deadline_ms is 5000 as u32, retry_policy is "exponential", max_retries is 3 as u8 }
+    }
+]

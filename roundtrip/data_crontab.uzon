@@ -1,0 +1,7 @@
+entries is [
+    { minute is "*", hour is "*", dom is "*", month is "*", dow is "*", command is "/usr/bin/check_health.sh", description is "Every minute health check" },
+    { minute is "0", hour is "*/4", dom is "*", month is "*", dow is "*", command is "/usr/bin/cleanup.sh", description is "Every 4 hours cleanup" },
+    { minute is "30", hour is "2", dom is "*", month is "*", dow is "0", command is "/usr/bin/weekly_backup.sh", description is "Weekly backup Sunday 2:30" },
+    { minute is "0", hour is "0", dom is "1", month is "*", dow is "*", command is "/usr/bin/monthly_report.sh", description is "Monthly report" },
+    { minute is "0", hour is "9", dom is "*", month is "*", dow is "1-5", command is "/usr/bin/standup_reminder.sh", description is "Weekday standup reminder" }
+]

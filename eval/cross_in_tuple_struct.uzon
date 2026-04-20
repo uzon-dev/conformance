@@ -1,0 +1,26 @@
+// Cross-cutting: in operator across all collection types
+
+// list — homogeneous, type must match
+list_hit is 2 in [ 1, 2, 3 ]
+list_miss is 4 in [ 1, 2, 3 ]
+
+// tuple — heterogeneous, type mismatch skipped
+tuple_int is 42 in (1, "two", 42)
+tuple_str is "two" in (1, "two", 42)
+tuple_miss is "three" in (1, "two", 42)
+
+// struct — value membership, not key membership
+data is { name is "UZON", port is 8080, active is true }
+struct_str is "UZON" in data
+struct_int is 8080 in data
+struct_bool is true in data
+struct_key_miss is "name" in data       // "name" is a key, not a value
+struct_val_miss is 9090 in data
+
+// null across all types
+null_list is null in [ 1, null, 3 ]
+null_tuple is null in (1, null, "x")
+null_struct is null in { a is null, b is 1 }
+null_absent_list is null in [ 1, 2, 3 ]
+null_absent_tuple is null in (1, 2, 3)
+null_absent_struct is null in { a is 1, b is 2 }

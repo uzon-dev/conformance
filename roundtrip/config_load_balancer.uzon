@@ -1,0 +1,12 @@
+lb is {
+    algorithm is "least-connections"
+    health_check is { path is "/health", interval_sec is 10 as u16, timeout_sec is 5 as u16, unhealthy_threshold is 3 as u8 }
+    backends is [
+        { address is "10.0.1.10:8080", weight is 5 as u8, max_conns is 1000 as u16, zone is "us-east" },
+        { address is "10.0.1.11:8080", weight is 5 as u8, max_conns is 1000 as u16, zone is "us-east" },
+        { address is "10.0.2.10:8080", weight is 3 as u8, max_conns is 500 as u16, zone is "us-west" },
+        { address is "10.0.2.11:8080", weight is 3 as u8, max_conns is 500 as u16, zone is "us-west" }
+    ]
+    sticky_sessions is { enabled is true, cookie is "SERVERID", ttl_sec is 3600 as u32 }
+    circuit_breaker is { threshold is 5 as u8, timeout_sec is 30 as u16, half_open_max is 3 as u8 }
+}

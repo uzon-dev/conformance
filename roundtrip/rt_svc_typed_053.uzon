@@ -1,0 +1,8 @@
+// Service configuration #53
+@type is "udp"
+name is "path_53"
+port is 14798 as u16
+enabled is true
+max_connections is 9949 as i32
+timeout_ms is 21553 as i32
+tls is true

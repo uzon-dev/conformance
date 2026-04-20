@@ -1,0 +1,5 @@
+// §5.8.2 + §3.4
+// list concatenation — element types must match
+a is [ 1, 2 ]
+b is [ "x", "y" ]
+bad is a ++ b

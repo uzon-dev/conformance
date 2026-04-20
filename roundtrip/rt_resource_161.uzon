@@ -1,0 +1,12 @@
+// Resource #161
+@type is "queue"
+name is "queue_161"
+region is "eu-west-1"
+config is {
+    @type is "queue_config"
+    broker is "kafka"
+    max_retries is 2 as u8
+    batch_size is 376 as u16
+}
+tags are "delta", "path", "enabled"
+active is false

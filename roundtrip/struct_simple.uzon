@@ -1,0 +1,6 @@
+// Roundtrip: simple struct
+config is {
+    host is "localhost"
+    port is 8080
+    debug is false
+}

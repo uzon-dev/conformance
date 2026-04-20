@@ -1,0 +1,15 @@
+// tuples have different internal types but same arity
+pairs is [
+    (1, "one"),
+    (2, "two"),
+    (3, "three")
+]
+triples is [
+    (1, "a", true),
+    (2, "b", false),
+    (3, "c", true)
+]
+quads is [
+    (1, "x", true, 1.0),
+    (2, "y", false, 2.0)
+]

@@ -1,0 +1,3 @@
+// §3.2.2 plus must add at least one new field
+base is { x is 1 as i32 }
+bad is base plus { x is 2 as i32 }

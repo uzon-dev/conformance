@@ -1,0 +1,3 @@
+// Roundtrip: enum values
+_color is red from red, green, blue called Color
+selected is green as Color

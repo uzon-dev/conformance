@@ -1,0 +1,8 @@
+// Service configuration #193
+@type is "postgres"
+name is "rho_193"
+port is 32048 as u16
+enabled is false
+max_connections is 3141 as i32
+timeout_ms is 9475 as i32
+tls is true

@@ -1,0 +1,5 @@
+// §2.3: NFC-composed Unicode identifiers are valid. Same byte form
+// used at declaration and reference sites.
+// café = composed U+00E9
+café is 1
+ref is café

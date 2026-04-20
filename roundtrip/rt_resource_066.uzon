@@ -1,0 +1,11 @@
+// Resource #66
+@type is "queue"
+name is "queue_66"
+region is "ap-northeast-1"
+config is {
+    @type is "queue_config"
+    broker is "rabbitmq"
+    max_retries is 9 as u8
+    batch_size is 760 as u16
+}
+active is false

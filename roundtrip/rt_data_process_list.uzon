@@ -1,0 +1,6 @@
+processes is [
+    { pid is 1 as u32, user is "root", cpu_pct is 0.0, mem_pct is 0.1, vsz_kb is 168960 as u64, rss_kb is 11264 as u64, command is "/sbin/init" },
+    { pid is 1234 as u32, user is "www", cpu_pct is 2.5, mem_pct is 1.8, vsz_kb is 524288 as u64, rss_kb is 98304 as u64, command is "nginx: worker" },
+    { pid is 5678 as u32, user is "postgres", cpu_pct is 15.3, mem_pct is 8.2, vsz_kb is 2097152 as u64, rss_kb is 819200 as u64, command is "postgres: writer" },
+    { pid is 9012 as u32, user is "app", cpu_pct is 45.7, mem_pct is 12.5, vsz_kb is 4194304 as u64, rss_kb is 1638400 as u64, command is "uzon-server --port 8080" }
+]

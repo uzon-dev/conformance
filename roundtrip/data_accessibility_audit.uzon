@@ -1,0 +1,12 @@
+audit is {
+    url is "https://example.com"
+    score is 87 as u8
+    violations is [
+        { rule is "color-contrast", impact is "serious", count is 3 as u16, elements is [ "p.subtitle", "a.nav-link", "span.caption" ] },
+        { rule is "image-alt", impact is "critical", count is 1 as u16, elements is [ "img.hero-banner" ] },
+        { rule is "link-name", impact is "serious", count is 2 as u16, elements is [ "a.icon-only", "a.social-link" ] }
+    ]
+    passes is 42 as u16
+    incomplete is 3 as u16
+    inapplicable is 12 as u16
+}

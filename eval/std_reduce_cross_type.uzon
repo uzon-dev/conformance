@@ -1,0 +1,5 @@
+// §5.16.4 std.reduce element type T ≠ accumulator type U
+words are "hello", "world", "UZON"
+total_len is std.reduce(words, 0, function acc as i64, w as string returns i64 {
+    acc + std.len(w)
+})

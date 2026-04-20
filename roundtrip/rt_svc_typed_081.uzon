@@ -1,0 +1,8 @@
+// Service configuration #81
+@type is "tcp"
+name is "pi_81"
+port is 27526 as u16
+enabled is false
+max_connections is 9538 as i32
+timeout_ms is 12192 as i32
+tls is false

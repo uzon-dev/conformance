@@ -1,0 +1,14 @@
+entry is {
+    id is 100166 as u64
+    timestamp is "2026-04-11T22:46:22.418Z"
+    level is "WARN"
+    component is "worker"
+    message is "Event 166: worker warn condition detected"
+    context is {
+        request_id is "req-000166"
+        duration_ms is 499 as u32
+        status_code is 400 as u16
+        user_id is "usr_0166"
+    }
+    tags is [ "worker", "warn" ]
+}

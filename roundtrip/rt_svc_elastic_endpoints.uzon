@@ -1,0 +1,5 @@
+endpoints is [
+    { path is "/elastic/api/v1/status", method is "GET", timeout_ms is 1500 as u32, auth is false },
+    { path is "/elastic/api/v1/config", method is "GET", timeout_ms is 2500 as u32, auth is true },
+    { path is "/elastic/api/v1/metrics", method is "GET", timeout_ms is 750 as u32, auth is false }
+]

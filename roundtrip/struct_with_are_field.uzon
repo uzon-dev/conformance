@@ -1,0 +1,5 @@
+config is {
+    names are "alice", "bob", "charlie"
+    scores are 95, 88, 72
+    flags are true, false, true
+}

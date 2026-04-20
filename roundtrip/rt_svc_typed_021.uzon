@@ -1,0 +1,9 @@
+// Service configuration #21
+@type is "http"
+name is "server_21"
+port is 57361 as u16
+enabled is false
+max_connections is 3909 as i32
+timeout_ms is 9225 as i32
+retry_count is 3 as u8
+tls is true

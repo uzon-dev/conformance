@@ -1,0 +1,6 @@
+// §5.8.1 in on tuples — heterogeneous value membership
+t is (1, "hello", true, 3.14)
+a is 1 in t
+b is "hello" in t
+c is true in t
+d is null in (1, null, "x")

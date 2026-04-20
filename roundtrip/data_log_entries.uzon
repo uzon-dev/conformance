@@ -1,0 +1,7 @@
+logs is [
+    { ts is "2026-04-11T08:00:01Z", level is "INFO", msg is "Server started", meta is { port is 8080 as u16 } },
+    { ts is "2026-04-11T08:00:05Z", level is "DEBUG", msg is "Connection pool initialized", meta is { size is 20 as u8 } },
+    { ts is "2026-04-11T08:01:23Z", level is "WARN", msg is "Slow query detected", meta is { duration_ms is 1523 as u32 } },
+    { ts is "2026-04-11T08:05:47Z", level is "ERROR", msg is "Connection refused", meta is { host is "db-2.internal" } },
+    { ts is "2026-04-11T08:05:48Z", level is "INFO", msg is "Failover to replica", meta is { host is "db-3.internal" } }
+]

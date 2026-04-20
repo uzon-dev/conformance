@@ -1,0 +1,3 @@
+// §3.2.1 with cannot add new fields
+base is { x is 1 }
+bad is base with { x is 2, y is 3 }

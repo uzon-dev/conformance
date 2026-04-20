@@ -1,0 +1,20 @@
+// §5.9 + §5.3 + §5.4 + §5.11 + §4.4.1 + §5.7
+// if → arithmetic → comparison → to conversion → interpolation → or else
+base_price is 100 as i32
+tax_rate is env.TAX_RATE to f64 or else 0.08
+quantity is env.QUANTITY to i32 or else 1
+
+subtotal is base_price * quantity
+tax is subtotal to f64 * tax_rate
+total is subtotal to f64 + tax
+
+discount is if quantity > 10 then 0.1 else 0.0
+final_price is total * (1.0 - discount)
+
+tier is if final_price > 1000.0 then "premium"
+    else if final_price > 500.0 then "standard"
+    else "basic"
+
+receipt is "Qty: {quantity} × {base_price}"
+           " = {subtotal} + tax {tax}"
+           " = {final_price} ({tier})"

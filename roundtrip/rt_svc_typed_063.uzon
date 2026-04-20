@@ -1,0 +1,9 @@
+// Service configuration #63
+@type is "amqp"
+name is "main_63"
+port is 26548 as u16
+enabled is true
+max_connections is 330 as i32
+timeout_ms is 28173 as i32
+retry_count is 9 as u8
+tls is false

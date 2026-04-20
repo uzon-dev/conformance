@@ -1,0 +1,8 @@
+// Schema definition #45
+@type is "schema"
+version is 1 as u8
+name is "epsilon_schema_45"
+fields are
+        { name is "field_0", @type is "u16", required is false },
+        { name is "field_1", @type is "u8", required is false },
+        { name is "field_2", @type is "string", required is true }

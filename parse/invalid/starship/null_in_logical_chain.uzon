@@ -1,0 +1,5 @@
+// ERROR: §4.5 + §5.6 + §3.2
+// null field used in logical expression
+vessel is { name is "Wanderer", active is null }
+
+bad is vessel.active and true

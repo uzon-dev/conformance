@@ -1,0 +1,10 @@
+// Typed record #66
+id is 947171
+eta_0 is -8238 as i64
+path_1 is -4136 as i64
+backup_2 is true
+mode_3 is true
+server_4 is 425.797369 as f32
+staging_5 is null
+level_6 is 67 as u8
+level_7 is 105 as i8

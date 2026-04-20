@@ -1,0 +1,6 @@
+// §5.16.3 Numeric Utilities
+a is std.isFinite(3.14)       // true
+b is std.isInf(inf)           // true
+c is std.isNan(nan)           // true
+d is std.isFinite(nan)        // false
+e is std.isInf(3.14)          // false

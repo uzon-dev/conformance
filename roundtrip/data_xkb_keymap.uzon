@@ -1,0 +1,17 @@
+keymap is {
+    model is "pc105"
+    layout is "us"
+    variant is ""
+    options is [ "ctrl:nocaps", "compose:ralt" ]
+    keycodes is [
+        { code is 9 as u16, name is "ESC" },
+        { code is 10 as u16, name is "AE01" },
+        { code is 24 as u16, name is "AD01" },
+        { code is 36 as u16, name is "RTRN" },
+        { code is 37 as u16, name is "LCTL" },
+        { code is 50 as u16, name is "LFSH" },
+        { code is 64 as u16, name is "LALT" },
+        { code is 65 as u16, name is "SPCE" },
+        { code is 133 as u16, name is "LWIN" }
+    ]
+}

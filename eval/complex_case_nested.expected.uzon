@@ -1,0 +1,3 @@
+// tier=silver, role=editor → silver branch → editor → 5
+access_level is 5
+label is "standard"

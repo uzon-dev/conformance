@@ -1,0 +1,2 @@
+// §7.2: a file importing itself is a circular dependency.
+me is struct "./loop"

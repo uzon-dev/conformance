@@ -1,0 +1,2 @@
+// §3.2 Duplicate field names in struct are forbidden
+bad is { x is 1, y is 2, x is 3 }

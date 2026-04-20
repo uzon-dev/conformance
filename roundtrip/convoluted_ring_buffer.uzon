@@ -1,0 +1,9 @@
+buffer is {
+    capacity is 16 as u8
+    head is 7 as u8
+    tail is 3 as u8
+    count is 4 as u8
+    data is [ null, null, null, 42, 17, 99, 3, null, null, null, null, null, null, null, null, null ] as [i32]
+    overwrite is false
+    full is false
+}

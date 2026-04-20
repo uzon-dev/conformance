@@ -1,0 +1,22 @@
+_trigger is {
+    source is ""
+    method is null
+    path is null
+    queue is null
+    batch_size is null
+} called Trigger
+
+lambda is {
+    name is "process-order"
+    runtime is "provided.al2023"
+    handler is "bootstrap"
+    memory_mb is 256 as u16
+    timeout_sec is 30 as u16
+    architecture is "arm64"
+    env_vars is { TABLE_NAME is "orders", QUEUE_URL is "https://sqs.us-east-1.amazonaws.com/123/orders" }
+    layers is [ "arn:aws:lambda:us-east-1:123:layer:common:5" ]
+    triggers is [
+        _trigger with { source is "api-gateway", method is "POST", path is "/orders" },
+        _trigger with { source is "sqs", queue is "order-events", batch_size is 10 as u8 }
+    ] as [Trigger]
+}

@@ -1,0 +1,12 @@
+_event is "init" named start from
+    start as string, data as i32, flag as bool,
+    pair as (i32, i32), empty as null
+    called Event
+
+events is [
+    "system boot" as Event named start,
+    42 as Event named data,
+    true as Event named flag,
+    (10, 20) as Event named pair,
+    null as Event named empty
+]

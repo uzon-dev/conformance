@@ -1,0 +1,48 @@
+_stage is {
+    name is ""
+    image is ""
+    commands is [] as [string]
+    timeout_min is 0 as u16
+    artifacts is null
+    depends_on is null
+    only is null
+} called Stage
+
+pipeline is {
+    name is "CI/CD Pipeline"
+    triggers is [ "push", "pull_request", "schedule" ]
+    stages is [
+        _stage with {
+            name is "lint"
+            image is "node:20-alpine"
+            commands is [ "npm ci", "npm run lint", "npm run typecheck" ]
+            timeout_min is 10 as u16
+        },
+        _stage with {
+            name is "test"
+            image is "node:20-alpine"
+            commands is [ "npm ci", "npm test -- --coverage" ]
+            timeout_min is 30 as u16
+            artifacts is [ "coverage/lcov.info", "test-results.xml" ]
+        },
+        _stage with {
+            name is "build"
+            image is "node:20-alpine"
+            commands is [ "npm ci", "npm run build" ]
+            timeout_min is 15 as u16
+            depends_on is [ "lint", "test" ]
+        },
+        _stage with {
+            name is "deploy"
+            image is "alpine:3.19"
+            commands is [ "apk add curl", "./deploy.sh" ]
+            timeout_min is 20 as u16
+            depends_on is [ "build" ]
+            only is [ "main" ]
+        }
+    ] as [Stage]
+    notifications is {
+        slack is { channel is "#deployments", on_failure is true, on_success is false }
+        email is { recipients is [ "team@example.com" ], on_failure is true, on_success is true }
+    }
+}

@@ -1,0 +1,7 @@
+// Schema definition #51
+@type is "schema"
+version is 1 as u8
+name is "iota_schema_51"
+fields are
+        { name is "field_0", @type is "u8", required is false },
+        { name is "field_1", @type is "u16", required is false }

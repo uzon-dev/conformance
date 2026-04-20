@@ -1,0 +1,7 @@
+// Service configuration #36
+@type is "grpc"
+name is "eta_36"
+port is 59332 as u16
+enabled is true
+max_connections is 2556 as i32
+timeout_ms is 9024 as i32

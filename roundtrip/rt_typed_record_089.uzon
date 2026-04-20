@@ -1,0 +1,10 @@
+// Typed record #89
+id is 403098
+active_0 is null
+test_1 is 183 as u8
+upsilon_2 is -889.610654 as f64
+host_3 is 174 as u8
+level_4 is 4750 as u32
+nu_5 is false
+name_6 is 3129 as u16
+name_7 is 261.234 as f32

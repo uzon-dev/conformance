@@ -1,0 +1,10 @@
+// Resource #181
+@type is "monitor"
+name is "monitor_181"
+region is "eu-west-1"
+config is {
+    @type is "monitor_config"
+    capacity is 4134 as i32
+    priority is 7 as u8
+}
+active is false

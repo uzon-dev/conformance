@@ -1,0 +1,26 @@
+// §4.6 + §4.7 + §5.16.3 + §5.9 + §5.4
+// nan/inf + std numeric utils + if/then/else + comparison
+reading is nan
+limit is inf
+normal is 42.0 as f64
+zero is 0.0 as f64
+
+// std.isNan/isInf/isFinite
+r_nan is std.isNan(reading)               // true
+r_inf is std.isInf(limit)                 // true
+r_fin is std.isFinite(normal)             // true
+
+// conditional based on numeric check
+sensor_status is if std.isNan(reading) then "NO SIGNAL"
+    else if std.isInf(reading) then "OVERFLOW"
+    else if reading < 0.0 then "NEGATIVE"
+    else "OK: {reading}"
+
+// inf comparison
+above_limit is normal < limit        // true (always)
+inf_vs_inf is inf is inf                       // true
+
+// division producing special values
+div_by_zero is 1.0 / zero                 // inf
+zero_div_zero is zero / zero         // nan
+check_result is std.isNan(zero_div_zero)  // true

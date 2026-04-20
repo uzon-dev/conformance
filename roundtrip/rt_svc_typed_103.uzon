@@ -1,0 +1,7 @@
+// Service configuration #103
+@type is "udp"
+name is "enabled_103"
+port is 29736 as u16
+enabled is false
+max_connections is 9985 as i32
+timeout_ms is 26291 as i32

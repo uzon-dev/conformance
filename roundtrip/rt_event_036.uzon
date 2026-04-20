@@ -1,0 +1,6 @@
+@type is "purchase"
+timestamp is 1705294153
+source is "tau"
+amount is 360.49
+currency is "USD"
+item_count is 11 as u8

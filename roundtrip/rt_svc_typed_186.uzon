@@ -1,0 +1,7 @@
+// Service configuration #186
+@type is "redis"
+name is "staging_186"
+port is 40131 as u16
+enabled is false
+max_connections is 8453 as i32
+timeout_ms is 18943 as i32

@@ -1,0 +1,11 @@
+// Schema definition #5
+@type is "schema"
+version is 2 as u8
+name is "pi_schema_5"
+fields are
+        { name is "field_0", @type is "i64", required is true },
+        { name is "field_1", @type is "bool", required is false },
+        { name is "field_2", @type is "f64", required is true },
+        { name is "field_3", @type is "f64", required is false },
+        { name is "field_4", @type is "i64", required is true },
+        { name is "field_5", @type is "string", required is true }

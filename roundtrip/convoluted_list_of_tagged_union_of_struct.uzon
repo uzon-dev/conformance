@@ -1,0 +1,20 @@
+_shape_kind is "rect" named rect from
+    rect as string, circle as string, polygon as string
+    called ShapeKind
+
+_shape is {
+    kind is "rect" as ShapeKind named rect
+    w is null
+    h is null
+    r is null
+    sides is null
+    radius is null
+} called Shape
+
+shapes is [
+    _shape with { kind is "rect" as ShapeKind named rect, w is 10.0, h is 20.0 },
+    _shape with { kind is "circle" as ShapeKind named circle, r is 5.0 },
+    _shape with { kind is "polygon" as ShapeKind named polygon, sides is 6 as u8, radius is 8.0 },
+    _shape with { kind is "rect" as ShapeKind named rect, w is 100.0, h is 50.0 },
+    _shape with { kind is "circle" as ShapeKind named circle, r is 0.5 }
+] as [Shape]

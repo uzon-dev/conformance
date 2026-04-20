@@ -1,0 +1,2 @@
+// §5.8.3 Repetition count must be non-negative
+bad is "x" ** -1

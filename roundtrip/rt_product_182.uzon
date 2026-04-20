@@ -1,0 +1,14 @@
+product is {
+    sku is "SKU-FOO-0182"
+    name is "Food Item 182"
+    category is "food"
+    price is 100.99
+    currency is "USD"
+    stock is 46 as u16
+    weight_g is 1920 as u32
+    dimensions is (12.0, 7.0, 4.0)
+    rating is 3.2
+    reviews is 274 as u16
+    active is true
+    tags is [ "food", "featured" ]
+}

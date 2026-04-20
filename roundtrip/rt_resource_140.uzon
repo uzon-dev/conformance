@@ -1,0 +1,12 @@
+// Resource #140
+@type is "queue"
+name is "queue_140"
+region is "us-east-1"
+config is {
+    @type is "queue_config"
+    broker is "sqs"
+    max_retries is 1 as u8
+    batch_size is 87 as u16
+}
+tags are "host", "staging", "lambda"
+active is false

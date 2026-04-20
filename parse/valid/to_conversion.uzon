@@ -1,0 +1,6 @@
+// §5.11 Type conversion
+int_to_float is 42 to f64
+float_to_int is 3.14 to i64          // 3
+int_widen is 100 as u8 to u16
+bool_to_string is true to string     // "true"
+int_to_string is 42 to string        // "42"

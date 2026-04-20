@@ -1,0 +1,5 @@
+// §5.10: when clause type must match a variant inner type
+_h is "ok" named ok from ok as string, code as i32 called Status
+result is case type _h
+    when f64 then "float"
+    else "other"

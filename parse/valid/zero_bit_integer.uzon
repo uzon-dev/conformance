@@ -1,0 +1,6 @@
+// §3.1 u0 and i0 are unit types (2^0 = 1 value, only 0)
+zero_u is 0 as u0
+zero_i is 0 as i0
+
+// Same type — both hold the only value 0
+eq is zero_u is 0 as u0

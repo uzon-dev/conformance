@@ -1,0 +1,13 @@
+// §5.10: case named branch narrowing evaluation
+r_ok is 42 named ok from ok as i32, err as string called Result
+r_err is "failed" as Result named err
+
+m1 is case named r_ok
+    when ok then "ok: " ++ (r_ok to string)
+    when err then "err: " ++ r_ok
+    else "unknown"
+
+m2 is case named r_err
+    when ok then "ok: " ++ (r_err to string)
+    when err then "err: " ++ r_err
+    else "unknown"

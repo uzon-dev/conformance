@@ -1,0 +1,3 @@
+// §6.1 — null as TU named variant requires variant's inner type = null.
+Result is tagged union ok as string, err as string
+bad is null as Result named err

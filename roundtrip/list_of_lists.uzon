@@ -1,0 +1,12 @@
+// Roundtrip: nested lists (list of lists)
+matrix is [
+    [ 1, 2, 3 ],
+    [ 4, 5, 6 ],
+    [ 7, 8, 9 ]
+]
+empty_nested is [ [] as [i32], [] as [i32] ]
+jagged is [
+    [ 1 ],
+    [ 2, 3 ],
+    [ 4, 5, 6 ]
+]

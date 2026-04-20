@@ -1,0 +1,9 @@
+_severity is info from info, warning, error, critical called Severity
+errors is [
+    { code is "E001", severity is error as Severity, message is "Invalid email format", http_status is 400 as u16, retryable is false },
+    { code is "E002", severity is error as Severity, message is "Resource not found", http_status is 404 as u16, retryable is false },
+    { code is "E003", severity is warning as Severity, message is "Rate limit approaching", http_status is 429 as u16, retryable is true },
+    { code is "E004", severity is critical as Severity, message is "Database connection lost", http_status is 503 as u16, retryable is true },
+    { code is "E005", severity is info as Severity, message is "Cache miss", http_status is 200 as u16, retryable is false },
+    { code is "E006", severity is critical as Severity, message is "Out of memory", http_status is 500 as u16, retryable is false }
+]

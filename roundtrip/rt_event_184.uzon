@@ -1,0 +1,4 @@
+@type is "heartbeat"
+timestamp is 1738387144
+source is "nu"
+detail is "gamma_802"

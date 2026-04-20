@@ -1,0 +1,11 @@
+endpoint is {
+    name is "login"
+    method is "POST"
+    path is "/api/v1/login"
+    auth_required is false
+    rate_limit is 20 as u32
+    timeout_ms is 30000 as u32
+    cache_ttl_sec is 0 as u32
+    request_body is true
+    response_codes is [ 200 as u16, 400 as u16, 200 as u16, 500 as u16 ]
+}

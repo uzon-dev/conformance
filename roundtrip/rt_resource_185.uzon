@@ -1,0 +1,11 @@
+// Resource #185
+@type is "cache"
+name is "cache_185"
+region is "ap-northeast-1"
+config is {
+    @type is "cache_config"
+    backend is "memcached"
+    ttl_seconds is 62214 as i32
+    max_memory_mb is 3181 as u16
+}
+active is true

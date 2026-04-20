@@ -1,0 +1,11 @@
+// Resource #65
+@type is "storage"
+name is "storage_65"
+region is "us-west-2"
+config is {
+    @type is "storage_config"
+    capacity is 2298 as i32
+    priority is 7 as u8
+}
+tags are "lambda", "beta"
+active is true

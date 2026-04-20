@@ -1,0 +1,12 @@
+deployment is {
+    id is "deploy-043"
+    environment is "production"
+    region is "ap-northeast-1"
+    version is "3.3.3"
+    replicas is 4 as u8
+    image is "registry.example.com/app:3.3.3"
+    resources is { cpu_m is 630 as u16, memory_mb is 944 as u16 }
+    rollout is { max_surge is 2 as u8, max_unavailable is 1 as u8 }
+    created_at is "2026-04-16T19:00:00Z"
+    healthy is true
+}

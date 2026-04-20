@@ -1,0 +1,13 @@
+// case type dispatch on untagged union
+u1 is 42 from union i32, string
+u2 is "hello" from union i32, string
+
+r1 is case type u1
+    when i32 then "number"
+    when string then "text"
+    else "unknown"
+
+r2 is case type u2
+    when i32 then "number"
+    when string then "text"
+    else "unknown"

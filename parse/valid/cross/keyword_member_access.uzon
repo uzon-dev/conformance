@@ -1,0 +1,9 @@
+// §2.3: Keywords in member access require @ escape
+config is {
+    @from is "source"
+    @type is "http"
+    @to is "destination"
+}
+a is config.@from
+b is config.@type
+c is config.@to

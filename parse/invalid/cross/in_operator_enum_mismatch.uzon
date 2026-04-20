@@ -1,0 +1,5 @@
+// §5.8.1 + §3.5 + §6.3
+// in with different enum types — nominal mismatch
+_c is red from red, blue called Color
+_s is small from small, big called Size
+bad is red as Color in [ small, big ] as [Size]

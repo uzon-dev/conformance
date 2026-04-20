@@ -1,0 +1,14 @@
+types is {
+    i8s is [ -128, 0, 127 ] as [i8]
+    i16s is [ -32768, 0, 32767 ] as [i16]
+    i32s is [ -2147483648, 0, 2147483647 ] as [i32]
+    u8s is [ 0, 128, 255 ] as [u8]
+    u16s is [ 0, 32768, 65535 ] as [u16]
+    u32s is [ 0, 2147483648, 4294967295 ] as [u32]
+    f32s is [ -1.0, 0.0, 1.0, inf, -inf, nan ] as [f32]
+    f64s is [ -1.0, 0.0, 1.0, inf, -inf, nan ] as [f64]
+    strings is [ "", "a", "hello\nworld", "\t\r\n", "\{escaped}" ]
+    bools is [ true, false, true ]
+    nulls_i32 is [ null, 1, null ] as [i32]
+    nulls_str is [ null, "x", null ] as [string]
+}

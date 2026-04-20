@@ -1,0 +1,9 @@
+lines is [
+    { name is "Line 1", color is "#0052A4", stations is [ "Seoul Station", "City Hall", "Jongno 3-ga", "Dongdaemun", "Cheongnyangni" ] },
+    { name is "Line 2", color is "#00A84D", stations is [ "City Hall", "Euljiro", "Sindang", "Wangsimni", "Seongsu" ] },
+    { name is "Line 3", color is "#EF7C1C", stations is [ "Gyeongbokgung", "Anguk", "Jongno 3-ga", "Euljiro 3-ga", "Chungmuro" ] }
+]
+transfers is [
+    { station is "City Hall", lines is [ "Line 1", "Line 2" ] },
+    { station is "Jongno 3-ga", lines is [ "Line 1", "Line 3" ] }
+]

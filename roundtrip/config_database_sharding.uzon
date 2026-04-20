@@ -1,0 +1,11 @@
+sharding is {
+    strategy is "hash"
+    key is "user_id"
+    shards is [
+        { id is 0 as u8, range_start is 0 as u32, range_end is 1073741823 as u32, primary is "shard0-primary.db", replicas is [ "shard0-r1.db", "shard0-r2.db" ] },
+        { id is 1 as u8, range_start is 1073741824 as u32, range_end is 2147483647 as u32, primary is "shard1-primary.db", replicas is [ "shard1-r1.db" ] },
+        { id is 2 as u8, range_start is 2147483648 as u32, range_end is 3221225471 as u32, primary is "shard2-primary.db", replicas is [ "shard2-r1.db", "shard2-r2.db" ] },
+        { id is 3 as u8, range_start is 3221225472 as u32, range_end is 4294967295 as u32, primary is "shard3-primary.db", replicas is [ "shard3-r1.db" ] }
+    ]
+    rebalance is { enabled is true, threshold_pct is 20 as u8, cooldown_min is 60 as u16 }
+}

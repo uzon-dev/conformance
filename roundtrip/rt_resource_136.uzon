@@ -1,0 +1,10 @@
+// Resource #136
+@type is "monitor"
+name is "monitor_136"
+region is "ap-northeast-1"
+config is {
+    @type is "monitor_config"
+    capacity is 9363 as i32
+    priority is 2 as u8
+}
+active is false

@@ -1,0 +1,8 @@
+encodings is {
+    base64 is "SGVsbG8sIFdvcmxkIQ=="
+    hex is "48656c6c6f2c20576f726c6421"
+    url_encoded is "hello%20world%21%26goodbye"
+    html_entities is "&lt;div class=&quot;test&quot;&gt;hello&lt;/div&gt;"
+    sql_escaped is "O''Brien"
+    json_escaped is "\{\\\"key\\\": \\\"value\\\"}"
+}

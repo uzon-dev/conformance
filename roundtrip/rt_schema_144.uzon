@@ -1,0 +1,9 @@
+// Schema definition #144
+@type is "schema"
+version is 4 as u8
+name is "level_schema_144"
+fields are
+        { name is "field_0", @type is "i32", required is false },
+        { name is "field_1", @type is "i32", required is false },
+        { name is "field_2", @type is "bool", required is true },
+        { name is "field_3", @type is "i32", required is false }

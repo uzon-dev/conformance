@@ -1,0 +1,4 @@
+// §2.3 Quoted identifiers
+'Content-Type' is "application/json"
+'X-Custom-Header' is "value"
+normal is 'Content-Type'

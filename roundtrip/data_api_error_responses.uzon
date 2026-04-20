@@ -1,0 +1,26 @@
+_detail is { field is "", message is "", value is null } called ErrorDetail
+
+errors is {
+    validation is {
+        status is 400 as u16
+        code is "VALIDATION_ERROR"
+        details is [
+            { field is "email", message is "Invalid email format", value is "not-an-email" },
+            { field is "age", message is "Must be between 0 and 150", value is "-5" },
+            { field is "name", message is "Required field", value is null }
+        ]
+    }
+    auth is {
+        status is 401 as u16
+        code is "AUTHENTICATION_REQUIRED"
+        details is [] as [ErrorDetail]
+    }
+    rate_limit is {
+        status is 429 as u16
+        code is "RATE_LIMIT_EXCEEDED"
+        details is [
+            { field is "limit", message is "100 requests per minute", value is "127" }
+        ]
+        retry_after is 60 as u32
+    }
+}

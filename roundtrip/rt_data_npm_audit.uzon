@@ -1,0 +1,9 @@
+advisories is [
+    { id is 1234 as u32, module is "lodash", severity is "high", title is "Prototype Pollution", url is "https://npmjs.com/advisories/1234", patched_versions is ">=4.17.21" },
+    { id is 2345 as u32, module is "minimist", severity is "critical", title is "Prototype Pollution", url is "https://npmjs.com/advisories/2345", patched_versions is ">=1.2.6" },
+    { id is 3456 as u32, module is "json5", severity is "moderate", title is "Prototype Pollution", url is "https://npmjs.com/advisories/3456", patched_versions is ">=2.2.3" }
+]
+metadata is {
+    vulnerabilities is { critical is 1 as u16, high is 1 as u16, moderate is 1 as u16, low is 0 as u16, info is 0 as u16 }
+    total_dependencies is 847 as u32
+}

@@ -1,0 +1,12 @@
+// ERROR: §5.10 + §5.9 + §3.5
+// case branches have different types in realistic enum scenario
+_shared is struct "./shared"
+
+status is env.STATUS to _shared.ShipStatus
+    or else cruising as _shared.ShipStatus
+
+bad is case status
+    when docked then "safe"
+    when orbiting then 42
+    when cruising then true
+    else null

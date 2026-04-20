@@ -1,0 +1,12 @@
+// Resource #17
+@type is "queue"
+name is "queue_17"
+region is "ap-northeast-1"
+config is {
+    @type is "queue_config"
+    broker is "nats"
+    max_retries is 9 as u8
+    batch_size is 983 as u16
+}
+tags are "upsilon", "main", "staging"
+active is true

@@ -1,0 +1,6 @@
+// §3.5 — standalone enum: binding value is first variant
+RGB is enum red, green, blue
+default_color is RGB
+is_red is default_color is red as RGB
+custom is blue as RGB
+is_blue is custom is blue as RGB

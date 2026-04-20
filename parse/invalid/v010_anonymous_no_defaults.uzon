@@ -1,0 +1,6 @@
+// §3.2 v0.10 — Field defaults require type context
+// This should fail: `anon is {}` is anonymous empty struct, not a Config with defaults
+// To get defaults, use `anon is {} as Config` or place in a field of declared type
+Config is struct { x is 1 as i32, y is 2 as i32 }
+anon is {}
+sum is anon.x + 1

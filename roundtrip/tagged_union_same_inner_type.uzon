@@ -1,0 +1,11 @@
+_msg is "init" named info from
+    info as string, warning as string, error as string
+    called Message
+a is "all good" as Message named info
+b is "check disk" as Message named warning
+c is "out of memory" as Message named error
+items is [
+    "ok" as Message named info,
+    "slow" as Message named warning,
+    "fail" as Message named error
+]

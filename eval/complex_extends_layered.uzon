@@ -1,0 +1,19 @@
+// Multiple plus layers — each adds fields
+base is { id is 0 as i32 } called Base
+
+with_name is base plus { name is "unnamed" }
+with_type is with_name plus { kind is "unknown" }
+with_meta is with_type plus { active is true, priority is 0 as i32 }
+
+// verify all fields cascade through
+final_id is with_meta.id
+final_name is with_meta.name
+final_kind is with_meta.kind
+final_active is with_meta.active
+final_priority is with_meta.priority
+
+// with on the final extended struct
+modified is with_meta with { name is "test", priority is 5 as i32 }
+mod_name is modified.name
+mod_priority is modified.priority
+mod_kind is modified.kind

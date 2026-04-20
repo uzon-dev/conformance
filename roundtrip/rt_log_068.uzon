@@ -1,0 +1,14 @@
+entry is {
+    id is 100068 as u64
+    timestamp is "2026-04-11T20:08:56.364Z"
+    level is "DEBUG"
+    component is "queue"
+    message is "Event 68: queue debug condition detected"
+    context is {
+        request_id is "req-000068"
+        duration_ms is 205 as u32
+        status_code is 200 as u16
+        user_id is "usr_0068"
+    }
+    tags is [ "queue", "debug" ]
+}

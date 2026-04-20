@@ -1,0 +1,4 @@
+// §7.3: imported value keeps declaring-scope nominal identity.
+m is struct "./mod"
+q is m.p as m.Point
+q_is_point is q is type m.Point

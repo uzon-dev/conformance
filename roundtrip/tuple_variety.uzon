@@ -1,0 +1,6 @@
+two is (1, 2)
+three is ("a", "b", "c")
+four is (true, false, true, false)
+five is (1, 2.0, "three", true, null)
+six is (1 as i8, 2 as i16, 3 as i32, 4 as i64, 5 as u8, 6 as u16)
+pair_list is [ (1, "a"), (2, "b"), (3, "c"), (4, "d") ]

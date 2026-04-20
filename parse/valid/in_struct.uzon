@@ -1,0 +1,6 @@
+// §5.8.1 in on structs — value membership
+config is { port is 8080, host is "localhost" }
+a is 8080 in config
+b is "localhost" in config
+c is null in { x is null }
+d is std.hasKey(config, "port")    // key check via std.hasKey

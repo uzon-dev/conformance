@@ -1,0 +1,4 @@
+// §5.11.0: narrowing conversion that overflows the target's range
+// is a runtime error.
+a is 300 as i32
+bad is a to u8           // 300 exceeds u8.MAX = 255

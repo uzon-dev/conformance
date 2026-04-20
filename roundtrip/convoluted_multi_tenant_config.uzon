@@ -1,0 +1,28 @@
+_plan is free from free, pro, enterprise called Plan
+
+tenants is [
+    {
+        id is "t_001"
+        name is "Startup Inc"
+        plan is free as Plan
+        limits is { users is 5 as u16, storage_gb is 1 as u16, api_calls_day is 1000 as u32 }
+        features is { sso is false, audit_log is false, custom_domain is false, priority_support is false }
+        billing is null
+    },
+    {
+        id is "t_002"
+        name is "Growing Corp"
+        plan is pro as Plan
+        limits is { users is 50 as u16, storage_gb is 100 as u16, api_calls_day is 100000 as u32 }
+        features is { sso is true, audit_log is true, custom_domain is false, priority_support is false }
+        billing is { card_last4 is "4242", exp is "12/27", interval is "monthly", amount_cents is 4900 as u32 }
+    },
+    {
+        id is "t_003"
+        name is "Enterprise Ltd"
+        plan is enterprise as Plan
+        limits is { users is 65535 as u16, storage_gb is 10000 as u16, api_calls_day is 4294967295 as u32 }
+        features is { sso is true, audit_log is true, custom_domain is true, priority_support is true }
+        billing is { card_last4 is "1234", exp is "06/28", interval is "annual", amount_cents is 499900 as u32 }
+    }
+]

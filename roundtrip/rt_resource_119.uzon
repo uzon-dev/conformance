@@ -1,0 +1,10 @@
+// Resource #119
+@type is "network"
+name is "network_119"
+region is "us-west-2"
+config is {
+    @type is "network_config"
+    capacity is 9453 as i32
+    priority is 0 as u8
+}
+active is true

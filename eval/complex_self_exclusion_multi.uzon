@@ -1,0 +1,6 @@
+// Self-exclusion chain — each binding skips itself, finds or else
+a is a or else 1
+b is b or else a + 1
+c is c or else b * a
+d is d or else a + b + c
+total is a + b + c + d

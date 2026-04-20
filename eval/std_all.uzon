@@ -1,0 +1,5 @@
+numbers are 2, 4, 6, 8
+a is std.all(numbers, function n as i64 returns bool { n % 2 is 0 })
+b is std.all(numbers, function n as i64 returns bool { n > 5 })
+c is std.all([] as [i64], function n as i64 returns bool { n > 0 })
+d is std.all([ 1, 2, 3 ], function n as i64 returns bool { n > 0 })

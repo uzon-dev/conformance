@@ -1,0 +1,7 @@
+// Typed record #11
+id is 980270
+mode_0 is "iota"
+staging_1 is false
+level_2 is "test"
+prod_3 is 279.57302
+port_4 is 79.3 as f64

@@ -1,0 +1,1 @@
+t is (1, "two", 3.0, true, null, [ 6 ], { x is 7 }, (8, 9), inf, nan)

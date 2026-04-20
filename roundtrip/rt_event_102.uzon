@@ -1,0 +1,5 @@
+@type is "pageview"
+timestamp is 1751791391
+source is "rho"
+url is "https://staging.example.com/tau"
+session_id is "beta_9468"

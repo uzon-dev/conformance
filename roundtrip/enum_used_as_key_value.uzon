@@ -1,0 +1,7 @@
+_color is red from red, green, blue called Color
+mapping is {
+    r is red as Color
+    g is green as Color
+    b is blue as Color
+}
+pair is (red as Color, blue as Color)

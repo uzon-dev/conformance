@@ -1,0 +1,11 @@
+// Resource #116
+@type is "gateway"
+name is "gateway_116"
+region is "us-east-1"
+config is {
+    @type is "gateway_config"
+    capacity is 2225 as i32
+    priority is 8 as u8
+}
+tags are "zeta", "server", "omicron", "test"
+active is true

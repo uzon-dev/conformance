@@ -1,0 +1,10 @@
+// Resource #62
+@type is "proxy"
+name is "proxy_62"
+region is "us-east-1"
+config is {
+    @type is "proxy_config"
+    capacity is 7573 as i32
+    priority is 0 as u8
+}
+active is true

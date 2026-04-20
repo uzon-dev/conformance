@@ -1,0 +1,5 @@
+@type is "click"
+timestamp is 1786355513
+source is "lambda"
+url is "https://debug.example.com/active"
+session_id is "enabled_3709"

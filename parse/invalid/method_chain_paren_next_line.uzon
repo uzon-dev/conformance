@@ -1,0 +1,7 @@
+// §5.15: ( on next line after .method is NOT a call
+funcs is {
+    add is function a as i32, b as i32 returns i32 { a + b }
+}
+result is funcs
+    .add
+    (1, 2)

@@ -1,0 +1,4 @@
+a is (inf, nan)
+b is (-inf, 0.0, inf)
+c is (nan, nan, nan)
+d is (1.0, inf, nan, -inf, 0.0)

@@ -1,0 +1,8 @@
+// Roundtrip: tagged union values
+_result is "ok" named success from
+    success as string, error as string, pending as null
+    called Result
+
+a is "data loaded" as Result named success
+b is "timeout" as Result named error
+c is null as Result named pending

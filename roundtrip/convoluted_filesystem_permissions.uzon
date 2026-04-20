@@ -1,0 +1,37 @@
+_perm is none from none, read, write, execute, read_write, read_execute, write_execute, all called Permission
+
+acl is [
+    {
+        path is "/etc/shadow"
+        owner is "root"
+        group is "shadow"
+        perms is { owner is read_write as Permission, group is read as Permission, other is none as Permission }
+        acl_entries is [
+            { user is "admin", permission is read as Permission },
+            { user is "backup", permission is read as Permission }
+        ]
+        sticky is false
+        setuid is false
+        setgid is false
+    },
+    {
+        path is "/usr/bin/passwd"
+        owner is "root"
+        group is "root"
+        perms is { owner is all as Permission, group is read_execute as Permission, other is read_execute as Permission }
+        acl_entries is [] as [string]
+        sticky is false
+        setuid is true
+        setgid is false
+    },
+    {
+        path is "/tmp"
+        owner is "root"
+        group is "root"
+        perms is { owner is all as Permission, group is all as Permission, other is all as Permission }
+        acl_entries is [] as [string]
+        sticky is true
+        setuid is false
+        setgid is false
+    }
+]

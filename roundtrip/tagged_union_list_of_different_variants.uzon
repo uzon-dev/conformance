@@ -1,0 +1,11 @@
+_cell is "" named text from
+    text as string, number as f64, formula as string, empty as null, error as string
+    called Cell
+
+spreadsheet_row is [
+    "Item" as Cell named text,
+    100.0 as Cell named number,
+    "=B1*1.1" as Cell named formula,
+    null as Cell named empty,
+    "#REF!" as Cell named error
+]

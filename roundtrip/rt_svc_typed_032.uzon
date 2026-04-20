@@ -1,0 +1,8 @@
+// Service configuration #32
+@type is "mqtt"
+name is "rho_32"
+port is 16666 as u16
+enabled is false
+max_connections is 4925 as i32
+timeout_ms is 15082 as i32
+tls is false

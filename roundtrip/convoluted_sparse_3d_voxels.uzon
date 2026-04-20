@@ -1,0 +1,16 @@
+voxels is [
+    { pos is (0 as i16, 0 as i16, 0 as i16), material is 1 as u8, light is 15 as u8 },
+    { pos is (1 as i16, 0 as i16, 0 as i16), material is 1 as u8, light is 14 as u8 },
+    { pos is (0 as i16, 1 as i16, 0 as i16), material is 2 as u8, light is 12 as u8 },
+    { pos is (0 as i16, 0 as i16, 1 as i16), material is 3 as u8, light is 10 as u8 },
+    { pos is (1 as i16, 1 as i16, 1 as i16), material is 1 as u8, light is 8 as u8 },
+    { pos is (-1 as i16, 0 as i16, 0 as i16), material is 4 as u8, light is 0 as u8 },
+    { pos is (0 as i16, -1 as i16, 0 as i16), material is 0 as u8, light is 15 as u8 }
+]
+palette is [
+    (0 as u8, 0 as u8, 0 as u8),
+    (128 as u8, 128 as u8, 128 as u8),
+    (200 as u8, 100 as u8, 50 as u8),
+    (50 as u8, 150 as u8, 50 as u8),
+    (50 as u8, 50 as u8, 200 as u8)
+]

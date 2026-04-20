@@ -1,0 +1,3 @@
+// §3.2.2 + §6.2 + §11.2.1: plus result called with existing type name
+base is { x is 1 as i32 } called Point
+bad is base plus { y is 2 as i32 } called Point

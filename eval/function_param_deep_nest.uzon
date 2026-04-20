@@ -1,0 +1,10 @@
+// §3.8: Parameter visible through 2 levels of nesting
+wrap is function n as i32 returns i32 {
+    a is {
+        b is {
+            val is n + 1
+        }
+    }
+    a.b.val
+}
+result is wrap(41)

@@ -1,0 +1,8 @@
+// Service configuration #42
+@type is "amqp"
+name is "node_42"
+port is 64845 as u16
+enabled is true
+max_connections is 3888 as i32
+timeout_ms is 28431 as i32
+tls is false

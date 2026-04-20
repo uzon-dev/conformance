@@ -1,0 +1,6 @@
+// heading = east → 90
+// opposite(east) = west → 270
+// diff = 270 - 90 = 180
+degrees is 90
+opp_degrees is 270
+diff is 180

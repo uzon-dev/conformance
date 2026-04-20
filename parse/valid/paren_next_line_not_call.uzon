@@ -1,0 +1,5 @@
+// §5.15 + §8: ( on next line is never a function call
+// At top level, each line starting with ( begins a new expression
+f is function n as i32 returns i32 { n + 1 }
+x is f(10)
+y is (1, 2, 3)     // tuple — not f(10)(1, 2, 3)

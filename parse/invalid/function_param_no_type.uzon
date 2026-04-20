@@ -1,0 +1,2 @@
+// §3.8 Function parameter must have explicit as type
+bad is function n returns i32 { n + 1 }

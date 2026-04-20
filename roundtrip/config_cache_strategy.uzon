@@ -1,0 +1,13 @@
+cache is {
+    layers is [
+        { name is "L1", @type is "memory", max_entries is 10000 as u32, ttl_sec is 60 as u32, eviction is "lru" },
+        { name is "L2", @type is "redis", max_entries is 1000000 as u32, ttl_sec is 3600 as u32, eviction is "lfu" },
+        { name is "L3", @type is "disk", max_entries is 10000000 as u32, ttl_sec is 86400 as u32, eviction is "fifo" }
+    ]
+    patterns is [
+        { path is "/api/user/*", ttl_sec is 300 as u32, vary is [ "Authorization" ] },
+        { path is "/api/catalog/*", ttl_sec is 3600 as u32, vary is [ "Accept-Language" ] },
+        { path is "/static/*", ttl_sec is 2592000 as u32, vary is [] as [string] }
+    ]
+    invalidation is { strategy is "tag-based", broadcast is true, delay_ms is 100 as u32 }
+}

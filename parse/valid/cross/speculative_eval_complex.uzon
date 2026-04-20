@@ -1,0 +1,14 @@
+// §5.9: speculative evaluation — errors suppressed in non-taken branches
+// runtime errors in else branch don't fire when condition is true
+safe_div is if true then 42 else (1 / 0)
+
+// both branches must have same type (checked speculatively)
+x is env.MODE or else "default"
+mode is if x is "fast"
+    then 100 as i32
+    else 50 as i32
+
+// undefined in non-taken branch
+guarded is if env.SPECIAL is undefined
+    then "none"
+    else "value: {env.SPECIAL}"

@@ -1,0 +1,7 @@
+// Service configuration #5
+@type is "graphql"
+name is "epsilon_5"
+port is 13625 as u16
+enabled is false
+max_connections is 3743 as i32
+timeout_ms is 25431 as i32

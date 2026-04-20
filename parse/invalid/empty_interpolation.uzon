@@ -1,0 +1,2 @@
+// §4.4.1: empty interpolation {} is a syntax error.
+bad is "before{}after"

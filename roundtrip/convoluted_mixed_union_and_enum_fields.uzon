@@ -1,0 +1,42 @@
+_color is red from red, green, blue called Color
+_size is s from s, m, l, xl called Size
+_material is cotton from cotton, polyester, silk called Material
+
+_price is 0.0 named fixed from fixed as f64, range as (f64, f64), negotiable as null called Price
+
+products is [
+    {
+        sku is "SHIRT-001"
+        name is "Classic T-Shirt"
+        color is red as Color
+        size is m as Size
+        material is cotton as Material
+        price is 29.99 as Price named fixed
+        in_stock is true
+        variants is [
+            { color is blue as Color, size is s as Size, qty is 12 as u16 },
+            { color is blue as Color, size is m as Size, qty is 8 as u16 },
+            { color is green as Color, size is l as Size, qty is 0 as u16 }
+        ]
+    },
+    {
+        sku is "DRESS-007"
+        name is "Evening Gown"
+        color is blue as Color
+        size is s as Size
+        material is silk as Material
+        price is (500.0, 800.0) as Price named range
+        in_stock is true
+        variants is [] as [string]
+    },
+    {
+        sku is "CUSTOM-X"
+        name is "Bespoke Suit"
+        color is green as Color
+        size is xl as Size
+        material is polyester as Material
+        price is null as Price named negotiable
+        in_stock is false
+        variants is [] as [string]
+    }
+]

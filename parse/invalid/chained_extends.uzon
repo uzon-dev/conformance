@@ -1,0 +1,3 @@
+// §11.2.1 Chained plus
+base is { x is 1 }
+bad is base plus { y is 2 } plus { z is 3 }

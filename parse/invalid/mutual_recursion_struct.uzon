@@ -1,0 +1,4 @@
+// §6.4: mutual recursion between two struct types is a type error
+// (neither can be default-constructed — no base case).
+A is struct { b_ref is {} as B }
+B is struct { a_ref is {} as A }

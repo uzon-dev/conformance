@@ -1,0 +1,3 @@
+cfg is { primes is [ 2, 3, 5, 7, 11 ], names is [ "one", "two", "three" ] }
+first_prime is 2
+count is 3

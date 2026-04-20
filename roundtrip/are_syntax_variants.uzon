@@ -1,0 +1,5 @@
+// Roundtrip: are binding — list sugar
+names are "alice", "bob", "charlie"
+numbers are 1, 2, 3, 4, 5
+typed_ids are 10, 20, 30 as [i32]
+single are "only"

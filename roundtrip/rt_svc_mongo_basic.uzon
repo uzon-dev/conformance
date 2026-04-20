@@ -1,0 +1,9 @@
+service is {
+    name is "mongo"
+    version is "3.4.1"
+    port is 8004 as u16
+    health is "/health"
+    replicas is 1 as u8
+    resources is { cpu_m is 500 as u16, memory_mb is 128 as u16 }
+    labels is { app is "mongo", tier is "backend" }
+}

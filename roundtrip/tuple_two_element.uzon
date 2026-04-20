@@ -1,0 +1,7 @@
+ii is (1, 2)
+ss is ("a", "b")
+bb is (true, false)
+nn is (null, null)
+mixed is (1, "two")
+nested is ((1, 2), (3, 4))
+with_null is (null, 42)

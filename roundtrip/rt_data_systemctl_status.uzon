@@ -1,0 +1,7 @@
+units is [
+    { name is "nginx.service", loaded is "loaded", active is "active", sub is "running", description is "A high performance web server" },
+    { name is "postgresql.service", loaded is "loaded", active is "active", sub is "running", description is "PostgreSQL RDBMS" },
+    { name is "redis.service", loaded is "loaded", active is "active", sub is "running", description is "Redis In-Memory Data Store" },
+    { name is "uzon-server.service", loaded is "loaded", active is "inactive", sub is "dead", description is "UZON Language Server" },
+    { name is "crond.service", loaded is "loaded", active is "active", sub is "running", description is "Command Scheduler" }
+]

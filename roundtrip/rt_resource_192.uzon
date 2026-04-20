@@ -1,0 +1,11 @@
+// Resource #192
+@type is "cache"
+name is "cache_192"
+region is "eu-west-1"
+config is {
+    @type is "cache_config"
+    backend is "redis"
+    ttl_seconds is 6038 as i32
+    max_memory_mb is 2249 as u16
+}
+active is false

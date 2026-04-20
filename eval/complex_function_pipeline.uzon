@@ -1,0 +1,16 @@
+// Functions calling functions in a pipeline
+double is function n as i32 returns i32 { n * 2 }
+add_ten is function n as i32 returns i32 { n + 10 }
+negate is function n as i32 returns i32 { 0 - n }
+abs is function n as i32 returns i32 {
+    if n < 0 then 0 - n else n
+}
+
+// pipeline: 3 → double(3)=6 → add_ten(6)=16 → negate(16)=-16 → abs(-16)=16
+pipeline is abs(negate(add_ten(double(3))))
+
+// same with intermediate bindings
+step1 is double(3)
+step2 is add_ten(step1)
+step3 is negate(step2)
+step4 is abs(step3)

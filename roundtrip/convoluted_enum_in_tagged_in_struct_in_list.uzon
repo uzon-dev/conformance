@@ -1,0 +1,19 @@
+_severity is low from low, medium, high, critical called Severity
+_alert is null named cleared from
+    active as string, cleared as null
+    called Alert
+
+dashboard is [
+    {
+        service is "api"
+        alerts is [
+            "CPU > 95% [critical]" as Alert named active,
+            null as Alert named cleared,
+            "disk 80% [medium]" as Alert named active
+        ]
+    },
+    {
+        service is "db"
+        alerts is [ null as Alert named cleared, null as Alert named cleared ]
+    }
+]

@@ -1,0 +1,22 @@
+// Org chart as nested structs (no self-referential type needed)
+tree is {
+    id is 1 as i32
+    label is "CEO"
+    reports is [
+        {
+            id is 2 as i32
+            label is "CTO"
+            reports is [
+                { id is 4 as i32, label is "VP Eng", reports is [] as [string] },
+                { id is 5 as i32, label is "VP Product", reports is [] as [string] }
+            ]
+        },
+        {
+            id is 3 as i32
+            label is "CFO"
+            reports is [
+                { id is 6 as i32, label is "Controller", reports is [] as [string] }
+            ]
+        }
+    ]
+}

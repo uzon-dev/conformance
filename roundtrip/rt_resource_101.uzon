@@ -1,0 +1,10 @@
+// Resource #101
+@type is "monitor"
+name is "monitor_101"
+region is "us-west-2"
+config is {
+    @type is "monitor_config"
+    capacity is 4725 as i32
+    priority is 6 as u8
+}
+active is false

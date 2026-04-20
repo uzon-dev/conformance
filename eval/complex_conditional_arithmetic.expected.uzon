@@ -1,0 +1,14 @@
+// quantity=15 → 15>10 → discount_pct=15
+// member_bonus=5
+// total_discount=20
+// subtotal=100*15=1500
+// discount_amount=1500*20/100=300
+// final_price=1500-300=1200
+// total_discount=20 → tier="gold" (20 is NOT >20, it's <=20 but >15)
+discount_pct is 15 as i32
+member_bonus is 5 as i32
+total_discount is 20 as i32
+subtotal is 1500 as i32
+discount_amount is 300 as i32
+final_price is 1200 as i32
+tier is "gold"

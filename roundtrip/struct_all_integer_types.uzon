@@ -1,0 +1,12 @@
+ints is {
+    a is 127 as i8
+    b is -128 as i8
+    c is 255 as u8
+    d is 32767 as i16
+    e is 65535 as u16
+    f is 2147483647 as i32
+    g is -2147483648 as i32
+    h is 4294967295 as u32
+    i is 0 as i64
+    j is 0 as u64
+}

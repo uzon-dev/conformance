@@ -1,0 +1,4 @@
+// §5.2 Comparing structs with different shapes is type error
+a is { x is 1 }
+b is { x is 1, y is 2 }
+bad is a is b

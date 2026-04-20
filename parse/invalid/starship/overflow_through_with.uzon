@@ -1,0 +1,6 @@
+// ERROR: §5.3 + §3.2.1 — with produces value that overflows
+_shared is struct "./shared"
+
+config is { max is 250 as u8, current is 200 as u8 }
+// with override is fine, but arithmetic overflows
+sum is config.max + config.current   // 450 > u8 max

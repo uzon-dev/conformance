@@ -1,0 +1,5 @@
+greet is function name as string default "world" returns string {
+    "hello, {name}"
+}
+a is greet()
+b is greet("UZON")

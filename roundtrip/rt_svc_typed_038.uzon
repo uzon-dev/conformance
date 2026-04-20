@@ -1,0 +1,8 @@
+// Service configuration #38
+@type is "amqp"
+name is "sigma_38"
+port is 55376 as u16
+enabled is false
+max_connections is 5474 as i32
+timeout_ms is 25368 as i32
+tls is false

@@ -1,0 +1,27 @@
+// Tagged union with case named — full dispatch
+_response is "pending" named loading from
+    loading as string, success as string,
+    error as string, empty as null
+    called ApiResponse
+
+responses are
+    "fetching data" as ApiResponse named loading,
+    "user profile" as ApiResponse named success,
+    "404 not found" as ApiResponse named error,
+    null as ApiResponse named empty
+
+formatResponse is function r as ApiResponse returns string {
+    case named r
+        when loading then "⏳ {r}"
+        when success then "✓ {r}"
+        when error then "✗ {r}"
+        when empty then "∅ empty"
+        else "? unknown"
+}
+
+labels is std.map(responses, formatResponse)
+summary is std.join(labels, " | ")
+has_error is std.any(
+    responses,
+    function r as ApiResponse returns bool { r is named error }
+)

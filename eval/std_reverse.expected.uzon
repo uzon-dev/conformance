@@ -1,0 +1,8 @@
+a is [ 3, 2, 1 ]
+b is [ "c", "b", "a" ]
+c is "olleh"
+d is "글한"
+e is [] as [i32]
+f is ""
+g is [ 42 ]
+h is "x"

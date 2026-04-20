@@ -1,0 +1,9 @@
+// Service configuration #169
+@type is "mqtt"
+name is "tau_169"
+port is 61181 as u16
+enabled is false
+max_connections is 5553 as i32
+timeout_ms is 22346 as i32
+retry_count is 10 as u8
+tls is false

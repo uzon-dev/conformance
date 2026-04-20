@@ -1,0 +1,7 @@
+dependencies is [
+    { name is "react", range is "^18.2.0", resolved is (18, 2, 0), latest is (18, 3, 1) },
+    { name is "typescript", range is "~5.4.0", resolved is (5, 4, 5), latest is (5, 5, 0) },
+    { name is "webpack", range is ">=5.0.0 <6.0.0", resolved is (5, 91, 0), latest is (5, 91, 0) },
+    { name is "eslint", range is "8.x", resolved is (8, 57, 0), latest is (9, 1, 0) },
+    { name is "prettier", range is "3.2.5", resolved is (3, 2, 5), latest is (3, 2, 5) }
+]

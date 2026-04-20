@@ -1,0 +1,8 @@
+// Service configuration #87
+@type is "http"
+name is "active_87"
+port is 17570 as u16
+enabled is false
+max_connections is 1080 as i32
+timeout_ms is 13230 as i32
+tls is true

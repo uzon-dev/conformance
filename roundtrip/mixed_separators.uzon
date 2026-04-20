@@ -1,0 +1,11 @@
+comma_struct is { a is 1, b is 2, c is 3 }
+newline_struct is {
+    x is "hello"
+    y is true
+    z is 42
+}
+trailing_comma is {
+    p is 1,
+    q is 2,
+    r is 3,
+}

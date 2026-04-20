@@ -1,0 +1,6 @@
+// loading → "⏳ fetching data"
+// success → "✓ user profile"
+// error → "✗ 404 not found"
+// empty → "∅ empty"
+summary is "⏳ fetching data | ✓ user profile | ✗ 404 not found | ∅ empty"
+has_error is true

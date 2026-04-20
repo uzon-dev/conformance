@@ -1,0 +1,9 @@
+// §3.2 Struct
+empty is { }
+simple is { x is 1, y is 2 }
+nested is { outer is { inner is true } }
+single_line is { a is 1, b is "hi" }
+multi_line is {
+    host is "localhost"
+    port is 8080
+}

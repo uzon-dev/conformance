@@ -1,0 +1,8 @@
+// ERROR: §5.2 + §3.2.2
+// comparing structs with different shapes → type error
+_shared is struct "./shared"
+
+a is _shared.base_module
+b is _shared.base_module plus { extra is true }
+
+bad is a is b

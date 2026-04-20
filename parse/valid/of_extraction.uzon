@@ -1,0 +1,4 @@
+// §5.14 Field extraction (of)
+config is { port is 8080, host is "localhost" }
+port is of config
+host is of config

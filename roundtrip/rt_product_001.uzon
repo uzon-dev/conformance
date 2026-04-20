@@ -1,0 +1,14 @@
+product is {
+    sku is "SKU-CLO-0001"
+    name is "Clothing Item 1"
+    category is "clothing"
+    price is 10.49
+    currency is "USD"
+    stock is 3 as u16
+    weight_g is 110 as u32
+    dimensions is (11.0, 6.0, 3.0)
+    rating is 3.1
+    reviews is 7 as u16
+    active is true
+    tags is [ "clothing", "new" ]
+}

@@ -1,0 +1,30 @@
+response is {
+    data is {
+        repository is {
+            name is "uzon"
+            owner is { login is "uzon-dev", avatar_url is "https://avatars.github.com/u/12345" }
+            description is "Universal ZON — data expression format"
+            stars is 847 as u32
+            forks is 63 as u32
+            issues is {
+                total is 12 as u32
+                nodes is [
+                    { number is 42, title is "Support std.sort", state is "CLOSED", labels is [ "enhancement", "std" ] },
+                    { number is 45, title is "Add lower/upper to std", state is "CLOSED", labels is [ "enhancement", "std" ] },
+                    { number is 51, title is "Conformance test suite", state is "OPEN", labels is [ "testing", "infrastructure" ] }
+                ]
+            }
+            languages is [
+                { name is "Zig", percentage is 78.5, color is "#EC915C" },
+                { name is "UZON", percentage is 18.2, color is "#4A90D9" },
+                { name is "Python", percentage is 3.3, color is "#3572A5" }
+            ]
+            license is "MIT"
+            default_branch is "main"
+            created_at is "2025-01-15T00:00:00Z"
+            pushed_at is "2026-04-11T07:30:00Z"
+        }
+    }
+    errors is null
+    extensions is { cost is { requested is 1 as u32, actual is 1 as u32, throttle_status is { maximum is 1000 as u32, remaining is 999 as u32, restore_rate is 50 as u32 } } }
+}

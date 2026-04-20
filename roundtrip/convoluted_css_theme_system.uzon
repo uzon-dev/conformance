@@ -1,0 +1,34 @@
+themes is {
+    light is {
+        colors is {
+            'bg-primary' is "#FFFFFF"
+            'bg-secondary' is "#F5F5F5"
+            'fg-primary' is "#1A1A1A"
+            'fg-secondary' is "#666666"
+            'accent-primary' is "#0066CC"
+            'accent-hover' is "#0052A3"
+            'border-default' is "#E0E0E0"
+            'shadow-color' is "rgba(0,0,0,0.1)"
+        }
+        spacing is { xs is 4 as u8, sm is 8 as u8, md is 16 as u8, lg is 24 as u8, xl is 32 as u8, xxl is 48 as u8 }
+        radii is { sm is 4 as u8, md is 8 as u8, lg is 12 as u8, full is 9999 as u16 }
+        fonts is { sans is "Inter, system-ui, sans-serif", mono is "JetBrains Mono, monospace", serif is "Georgia, serif" }
+        sizes is { text_sm is 12 as u8, text_base is 14 as u8, text_lg is 16 as u8, text_xl is 20 as u8, text_2xl is 24 as u8 }
+    }
+    dark is {
+        colors is {
+            'bg-primary' is "#1E1E2E"
+            'bg-secondary' is "#313244"
+            'fg-primary' is "#CDD6F4"
+            'fg-secondary' is "#A6ADC8"
+            'accent-primary' is "#89B4FA"
+            'accent-hover' is "#74C7EC"
+            'border-default' is "#45475A"
+            'shadow-color' is "rgba(0,0,0,0.3)"
+        }
+        spacing is { xs is 4 as u8, sm is 8 as u8, md is 16 as u8, lg is 24 as u8, xl is 32 as u8, xxl is 48 as u8 }
+        radii is { sm is 4 as u8, md is 8 as u8, lg is 12 as u8, full is 9999 as u16 }
+        fonts is { sans is "Inter, system-ui, sans-serif", mono is "JetBrains Mono, monospace", serif is "Georgia, serif" }
+        sizes is { text_sm is 12 as u8, text_base is 14 as u8, text_lg is 16 as u8, text_xl is 20 as u8, text_2xl is 24 as u8 }
+    }
+}

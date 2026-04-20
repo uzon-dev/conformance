@@ -1,0 +1,8 @@
+entry is {
+    date is "2026-09-09"
+    hour is 8 as u8
+    minute is 56 as u8
+    second is 44 as u8
+    unix_ts is 1700691200 as u64
+    iso is "2026-09-09T08:56:44Z"
+}

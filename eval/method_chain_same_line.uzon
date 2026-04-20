@@ -1,0 +1,5 @@
+funcs is {
+    double is function n as i32 returns i32 { n * 2 }
+}
+result is funcs
+    .double(5)

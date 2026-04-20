@@ -1,0 +1,9 @@
+service is {
+    name is "grafana"
+    version is "6.0.0"
+    port is 8015 as u16
+    health is "/health"
+    replicas is 4 as u8
+    resources is { cpu_m is 100 as u16, memory_mb is 512 as u16 }
+    labels is { app is "grafana", tier is "frontend" }
+}

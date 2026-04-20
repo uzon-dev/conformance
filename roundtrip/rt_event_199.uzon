@@ -1,0 +1,6 @@
+@type is "error"
+timestamp is 1769324022
+source is "staging"
+code is 402 as u16
+message is "rho failed"
+fatal is false

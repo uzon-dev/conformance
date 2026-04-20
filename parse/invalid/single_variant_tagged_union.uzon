@@ -1,0 +1,2 @@
+// §3.7 Tagged union must have at least 2 variants
+x is 1 named only from only as i32

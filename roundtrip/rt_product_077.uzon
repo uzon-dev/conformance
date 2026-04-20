@@ -1,0 +1,14 @@
+product is {
+    sku is "SKU-FOO-0077"
+    name is "Food Item 77"
+    category is "food"
+    price is 48.49
+    currency is "USD"
+    stock is 231 as u16
+    weight_g is 870 as u32
+    dimensions is (27.0, 7.0, 9.0)
+    rating is 4.7
+    reviews is 539 as u16
+    active is true
+    tags is [ "food", "featured" ]
+}

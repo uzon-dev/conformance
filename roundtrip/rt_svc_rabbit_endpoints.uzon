@@ -1,0 +1,5 @@
+endpoints is [
+    { path is "/rabbit/api/v1/status", method is "GET", timeout_ms is 1700 as u32, auth is false },
+    { path is "/rabbit/api/v1/config", method is "GET", timeout_ms is 2700 as u32, auth is true },
+    { path is "/rabbit/api/v1/metrics", method is "GET", timeout_ms is 850 as u32, auth is false }
+]

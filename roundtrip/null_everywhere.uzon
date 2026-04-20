@@ -1,0 +1,14 @@
+// Roundtrip: null in every possible position
+top_null is null
+struct_nulls is { a is null, b is null, c is 1 as i32, d is null }
+list_nulls is [ null, 1, null, 2, null ]
+tuple_null is (null, "text", null, 42)
+nested_null is {
+    outer is {
+        inner is {
+            value is null
+        }
+        also_null is null
+    }
+    list is [ null, null ] as [string]
+}

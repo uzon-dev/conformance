@@ -1,0 +1,12 @@
+i8o is 1 as i8
+i16o is 1 as i16
+i32o is 1 as i32
+i64o is 1
+u8o is 1 as u8
+u16o is 1 as u16
+u32o is 1 as u32
+u64o is 1 as u64
+f32o is 1.0 as f32
+f64o is 1.0 as f64
+bo is true
+so is "1"

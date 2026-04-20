@@ -1,0 +1,5 @@
+@type is "pageview"
+timestamp is 1706144233
+source is "lambda"
+url is "https://enabled.example.com/iota"
+session_id is "key_2752"

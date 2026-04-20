@@ -1,0 +1,25 @@
+unit is {
+    section is "Unit"
+    description is "UZON Language Server"
+    after is [ "network-online.target", "syslog.target" ]
+    wants is [ "network-online.target" ]
+}
+service is {
+    section is "Service"
+    @type is "notify"
+    user is "uzon"
+    group is "uzon"
+    working_directory is "/opt/uzon"
+    exec_start is "/opt/uzon/bin/uzon-lsp --port 9257"
+    exec_reload is "/bin/kill -HUP $MAINPID"
+    restart is "on-failure"
+    restart_sec is 5 as u8
+    timeout_start_sec is 30 as u16
+    timeout_stop_sec is 30 as u16
+    limit_nofile is 65536 as u32
+    environment is [ "UZON_HOME=/opt/uzon", "UZON_LOG=info" ]
+}
+install is {
+    section is "Install"
+    wanted_by is [ "multi-user.target" ]
+}

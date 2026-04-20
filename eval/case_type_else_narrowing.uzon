@@ -1,0 +1,6 @@
+u is "hello" from union i32, f64, string
+
+msg is case type u
+    when i32 then "int"
+    when f64 then "float"
+    else u ++ "!"

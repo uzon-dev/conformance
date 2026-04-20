@@ -1,0 +1,14 @@
+entry is {
+    id is 100024 as u64
+    timestamp is "2026-04-11T00:24:48.952Z"
+    level is "DEBUG"
+    component is "auth"
+    message is "Event 24: auth debug condition detected"
+    context is {
+        request_id is "req-000024"
+        duration_ms is 73 as u32
+        status_code is 200 as u16
+        user_id is "usr_0024"
+    }
+    tags is [ "auth", "debug" ]
+}

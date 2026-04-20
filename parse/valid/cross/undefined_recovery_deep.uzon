@@ -1,0 +1,14 @@
+// §3.1 + §5.7 + §5.12: deep undefined propagation and recovery
+config is { database is { host is "localhost" } }
+
+// propagation through nested access
+deep_missing is config.database.nonexistent.further.deeper
+
+// recovery at each level
+recovered is deep_missing or else "safe"
+
+// self-exclusion + or else
+fallback is fallback or else config.database.host
+
+// undefined in to conversion propagates
+conv is config.nonexistent to string or else "default"

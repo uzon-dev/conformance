@@ -1,0 +1,6 @@
+a is [ 42 ]
+b is [ "hello" ]
+c is [ true ]
+d is [ null ] as [i32]
+e is [ (1, 2) ]
+f is [ { x is 1 } ]

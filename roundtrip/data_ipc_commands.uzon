@@ -1,0 +1,26 @@
+commands is [
+    { @type is "get_workspaces", args is [] as [string], response is "workspace_list" },
+    { @type is "get_outputs", args is [] as [string], response is "output_list" },
+    { @type is "get_tree", args is [] as [string], response is "node_tree" },
+    { @type is "run_command", args is [ "focus left" ], response is "command_result" },
+    { @type is "run_command", args is [ "move container to workspace 3" ], response is "command_result" },
+    { @type is "run_command", args is [ "resize set width 50 ppt" ], response is "command_result" },
+    { @type is "subscribe", args is [ "workspace", "window", "output" ], response is "subscription_result" },
+    { @type is "get_binding_modes", args is [] as [string], response is "mode_list" }
+]
+
+_event is {
+    @type is ""
+    change is ""
+    old is null
+    new is null
+    container_id is null
+    output is null
+} called Event
+
+events is [
+    _event with { @type is "workspace", change is "focus", old is "1", new is "2" },
+    _event with { @type is "window", change is "focus", container_id is 42 as u32 },
+    _event with { @type is "window", change is "close", container_id is 42 as u32 },
+    _event with { @type is "output", change is "scale", output is "eDP-1" }
+] as [Event]

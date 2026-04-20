@@ -1,0 +1,4 @@
+// missing and chained evaluate to undefined — cannot be expressed as literals
+// test runner should verify they are undefined via is undefined check
+recovered is "safe"
+to_str is "default"

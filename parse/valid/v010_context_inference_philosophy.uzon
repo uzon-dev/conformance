@@ -1,0 +1,56 @@
+// §3.2 + §3.5 + §3.7 v0.10 — Syllogism classification with defaults
+// Modeling Aristotelian categorical syllogisms.
+Mood is enum barbara, celarent, darii, ferio
+
+Quality is enum affirmative, negative
+Quantity is enum universal, particular
+
+Premise is struct {
+    quality is affirmative as Quality
+    quantity is universal as Quantity
+    subject is "" as string
+    predicate is "" as string
+}
+
+Syllogism is struct {
+    mood is barbara as Mood
+    major is {} as Premise
+    minor is {} as Premise
+    conclusion is {} as Premise
+    valid is true as bool
+}
+
+// Classical example: "All humans are mortal, Socrates is a human, ..."
+examples are
+    {
+        mood is barbara,
+        major is { subject is "humans", predicate is "mortal" },
+        minor is {
+            quantity is particular,
+            subject is "Socrates",
+            predicate is "human"
+        },
+        conclusion is {
+            quantity is particular,
+            subject is "Socrates",
+            predicate is "mortal"
+        }
+    },
+    {
+        mood is celarent,
+        major is {
+            quality is negative,
+            subject is "reptiles",
+            predicate is "warm-blooded"
+        },
+        minor is {
+            subject is "snakes",
+            predicate is "reptiles"
+        },
+        conclusion is {
+            quality is negative,
+            subject is "snakes",
+            predicate is "warm-blooded"
+        }
+    }
+    as [Syllogism]

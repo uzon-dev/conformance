@@ -1,0 +1,10 @@
+errors is [
+    { name is "OutOfMemory", code is 1 as u16, message is "The allocator failed to allocate memory" },
+    { name is "InvalidCharacter", code is 2 as u16, message is "An invalid character was encountered" },
+    { name is "Overflow", code is 3 as u16, message is "Integer overflow or underflow occurred" },
+    { name is "EndOfStream", code is 4 as u16, message is "The stream has been exhausted" },
+    { name is "AccessDenied", code is 5 as u16, message is "Permission denied by the operating system" },
+    { name is "FileNotFound", code is 6 as u16, message is "The specified file does not exist" },
+    { name is "BrokenPipe", code is 7 as u16, message is "The pipe has been ended" },
+    { name is "ConnectionRefused", code is 8 as u16, message is "The connection was refused by the remote host" }
+]

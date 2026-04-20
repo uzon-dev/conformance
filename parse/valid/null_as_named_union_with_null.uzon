@@ -1,0 +1,3 @@
+// §6.1: null as T is valid when T is a union including null.
+MaybeI is union i32, null
+x is null as MaybeI

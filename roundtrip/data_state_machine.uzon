@@ -1,0 +1,15 @@
+_state is idle from idle, loading, ready, error, terminated called State
+
+machine is {
+    initial is idle as State
+    transitions is [
+        { @from is idle as State, @to is loading as State, trigger is "start", guard is null },
+        { @from is loading as State, @to is ready as State, trigger is "loaded", guard is null },
+        { @from is loading as State, @to is error as State, trigger is "fail", guard is null },
+        { @from is ready as State, @to is loading as State, trigger is "refresh", guard is "isStale" },
+        { @from is ready as State, @to is terminated as State, trigger is "shutdown", guard is null },
+        { @from is error as State, @to is loading as State, trigger is "retry", guard is "retriesLeft" },
+        { @from is error as State, @to is terminated as State, trigger is "abort", guard is null }
+    ]
+    terminal is [ terminated ] as [State]
+}

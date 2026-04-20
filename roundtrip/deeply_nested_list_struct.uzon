@@ -1,0 +1,37 @@
+org is {
+    name is "Acme Corp"
+    divisions is [
+        {
+            name is "Engineering"
+            teams is [
+                {
+                    name is "Platform"
+                    members is [
+                        { name is "Alice", roles is [ "lead", "backend" ] },
+                        { name is "Bob", roles is [ "frontend" ] }
+                    ]
+                },
+                {
+                    name is "Product"
+                    members is [
+                        { name is "Charlie", roles is [ "lead", "fullstack" ] },
+                        { name is "Diana", roles is [ "mobile", "ios" ] },
+                        { name is "Eve", roles is [ "mobile", "android" ] }
+                    ]
+                }
+            ]
+        },
+        {
+            name is "Operations"
+            teams is [
+                {
+                    name is "SRE"
+                    members is [
+                        { name is "Frank", roles is [ "lead", "infrastructure" ] },
+                        { name is "Grace", roles is [ "monitoring" ] }
+                    ]
+                }
+            ]
+        }
+    ]
+}

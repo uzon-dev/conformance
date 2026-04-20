@@ -1,0 +1,14 @@
+entry is {
+    id is 100173 as u64
+    timestamp is "2026-04-11T05:53:11.279Z"
+    level is "INFO"
+    component is "scheduler"
+    message is "Event 173: scheduler info condition detected"
+    context is {
+        request_id is "req-000173"
+        duration_ms is 520 as u32
+        status_code is 201 as u16
+        user_id is "usr_0173"
+    }
+    tags is [ "scheduler", "info" ]
+}

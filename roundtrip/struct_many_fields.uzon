@@ -1,0 +1,22 @@
+config is {
+    field_01 is "a"
+    field_02 is 2
+    field_03 is true
+    field_04 is null
+    field_05 is 5.0
+    field_06 is [ 1, 2 ]
+    field_07 is (1, "two")
+    field_08 is { nested is true }
+    field_09 is -99
+    field_10 is ""
+    field_11 is 0
+    field_12 is false
+    field_13 is inf
+    field_14 is nan
+    field_15 is -inf
+    field_16 is 0.0
+    field_17 is "hello\nworld"
+    field_18 is "\t\r\n"
+    field_19 is [ null, null ] as [i32]
+    field_20 is (null, 0, "", false)
+}

@@ -1,0 +1,12 @@
+// §3.2.1 — `with` copies values, does NOT re-derive dependent fields
+Scope is struct {
+    radius is 100.0 as f64
+    area is radius * radius * 3.14159
+}
+
+base is {} as Scope
+// base.area = 100.0 * 100.0 * 3.14159 = 31415.9
+
+// `with` overrides radius but area is copied from base, not recomputed
+bigger is base with { radius is 200.0 as f64 }
+// bigger.area is still 31415.9 (NOT 125663.6)

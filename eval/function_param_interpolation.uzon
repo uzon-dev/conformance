@@ -1,0 +1,8 @@
+// §3.8 + §4.4.1: Parameter in nested struct string interpolation
+format is function key as string, value as i32 returns string {
+    entry is {
+        label is "{key}: {value}"
+    }
+    entry.label
+}
+result is format("port", 8080)

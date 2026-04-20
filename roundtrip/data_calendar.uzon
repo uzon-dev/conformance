@@ -1,0 +1,19 @@
+_holiday is { day is 0 as u8, name is "" } called Holiday
+
+calendar is {
+    year is 2026 as u16
+    months is [
+        { name is "January", days is 31 as u8, holidays is [ { day is 1 as u8, name is "New Year's Day" } ] },
+        { name is "February", days is 28 as u8, holidays is [] as [Holiday] },
+        { name is "March", days is 31 as u8, holidays is [] as [Holiday] },
+        { name is "April", days is 30 as u8, holidays is [] as [Holiday] },
+        { name is "May", days is 31 as u8, holidays is [ { day is 25 as u8, name is "Memorial Day" } ] },
+        { name is "June", days is 30 as u8, holidays is [] as [Holiday] },
+        { name is "July", days is 31 as u8, holidays is [ { day is 4 as u8, name is "Independence Day" } ] },
+        { name is "August", days is 31 as u8, holidays is [] as [Holiday] },
+        { name is "September", days is 30 as u8, holidays is [ { day is 7 as u8, name is "Labor Day" } ] },
+        { name is "October", days is 31 as u8, holidays is [] as [Holiday] },
+        { name is "November", days is 30 as u8, holidays is [ { day is 26 as u8, name is "Thanksgiving" } ] },
+        { name is "December", days is 31 as u8, holidays is [ { day is 25 as u8, name is "Christmas" } ] }
+    ]
+}

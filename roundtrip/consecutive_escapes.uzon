@@ -1,0 +1,7 @@
+a is "\\\\\\\\"
+b is "\"\"\"\""
+c is "\n\n\n\n"
+d is "\t\t\t"
+e is "\r\n\r\n"
+f is "\\n\\t\\r"
+g is "\\\"\n\\\"\n"

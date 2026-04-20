@@ -1,0 +1,7 @@
+// §3.2.1 — TYPED-null fields (x is null as T) stay strict.
+Rule is struct {
+    name is ""
+    port is null as i32
+}
+
+bad is { name is "x", port is "8080" } as Rule

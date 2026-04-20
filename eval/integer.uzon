@@ -1,0 +1,8 @@
+zero is 0
+pos is 42
+neg is -17
+typed is 255 as u8
+hex is 0xFF
+bin is 0b1010
+oct is 0o17
+underscore is 1_000_000

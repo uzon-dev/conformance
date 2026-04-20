@@ -1,0 +1,6 @@
+all_true is [ true, true, true, true, true ]
+all_false is [ false, false, false, false ]
+alternating is [ true, false, true, false, true, false ]
+single_true is [ true ]
+single_false is [ false ]
+empty is [] as [bool]

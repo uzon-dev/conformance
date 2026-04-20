@@ -1,0 +1,5 @@
+filters is [
+    { name is "user_exists", capacity is 1000000 as u64, error_rate is 0.001, hash_count is 10 as u8, bits is 14377588 as u64, memory_kb is 1758 as u32 },
+    { name is "ip_blocklist", capacity is 100000 as u64, error_rate is 0.0001, hash_count is 13 as u8, bits is 1917011 as u64, memory_kb is 234 as u32 },
+    { name is "dedup_check", capacity is 10000000 as u64, error_rate is 0.01, hash_count is 7 as u8, bits is 95850584 as u64, memory_kb is 11700 as u32 }
+]

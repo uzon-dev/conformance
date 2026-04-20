@@ -1,0 +1,26 @@
+build is {
+    name is "uzon"
+    version is (0, 5, 0)
+    root_source_file is "src/main.zig"
+    target is {
+        cpu_arch is "native"
+        os_tag is "native"
+        abi is "native"
+    }
+    optimize is "ReleaseSafe"
+    modules is {
+        uzon is { root is "src/lib.zig", deps is [] as [string] }
+        uzon_cli is { root is "src/cli.zig", deps is [ "uzon" ] }
+    }
+    steps is [
+        { name is "test", description is "Run unit tests", command is "zig build test" },
+        { name is "bench", description is "Run benchmarks", command is "zig build bench" },
+        { name is "docs", description is "Generate docs", command is "zig build docs" }
+    ]
+    options is {
+        strip is false
+        link_libc is false
+        single_threaded is false
+        emit_asm is false
+    }
+}

@@ -1,0 +1,12 @@
+// Resource #103
+@type is "queue"
+name is "queue_103"
+region is "eu-west-1"
+config is {
+    @type is "queue_config"
+    broker is "sqs"
+    max_retries is 7 as u8
+    batch_size is 452 as u16
+}
+tags are "lambda"
+active is false

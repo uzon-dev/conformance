@@ -1,0 +1,13 @@
+scripts is {
+    latin is "Hello World"
+    cjk is "你好世界"
+    hangul is "안녕하세요"
+    hiragana is "こんにちは"
+    katakana is "コンニチハ"
+    cyrillic is "Привет мир"
+    greek is "Γεια σου κόσμε"
+    arabic is "مرحبا بالعالم"
+    hebrew is "שלום עולם"
+    thai is "สวัสดีชาวโลก"
+    devanagari is "नमस्ते दुनिया"
+}

@@ -1,0 +1,8 @@
+// Service configuration #48
+@type is "graphql"
+name is "port_48"
+port is 29503 as u16
+enabled is true
+max_connections is 5149 as i32
+timeout_ms is 14399 as i32
+retry_count is 8 as u8

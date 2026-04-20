@@ -1,0 +1,6 @@
+nums is [ 1, 2, 3 ]
+first is nums.first
+second is nums.1
+length is std.len(nums)
+has_2 is 2 in nums
+has_9 is 9 in nums

@@ -1,0 +1,31 @@
+_state is closed from closed, open, half_open called CBState
+
+breakers is {
+    'user-service' is {
+        state is closed as CBState
+        failure_threshold is 5 as u8
+        success_threshold is 3 as u8
+        timeout_sec is 60 as u16
+        recent_calls is [
+            { ts is "12:00:01", success is true, latency_ms is 45 as u32 },
+            { ts is "12:00:02", success is true, latency_ms is 52 as u32 },
+            { ts is "12:00:03", success is false, latency_ms is 30000 as u32 },
+            { ts is "12:00:04", success is true, latency_ms is 38 as u32 }
+        ]
+        failure_count is 1 as u8
+        success_count is 3 as u8
+    }
+    'payment-service' is {
+        state is open as CBState
+        failure_threshold is 3 as u8
+        success_threshold is 5 as u8
+        timeout_sec is 120 as u16
+        recent_calls is [
+            { ts is "11:59:58", success is false, latency_ms is 30000 as u32 },
+            { ts is "11:59:59", success is false, latency_ms is 30000 as u32 },
+            { ts is "12:00:00", success is false, latency_ms is 30000 as u32 }
+        ]
+        failure_count is 3 as u8
+        success_count is 0 as u8
+    }
+}

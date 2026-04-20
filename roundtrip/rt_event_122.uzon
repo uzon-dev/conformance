@@ -1,0 +1,4 @@
+@type is "heartbeat"
+timestamp is 1761909967
+source is "dev"
+detail is "epsilon_297"

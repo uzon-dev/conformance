@@ -1,0 +1,25 @@
+modes is {
+    normal is [
+        { keys is "h", action is "cursor_left", count is true },
+        { keys is "j", action is "cursor_down", count is true },
+        { keys is "k", action is "cursor_up", count is true },
+        { keys is "l", action is "cursor_right", count is true },
+        { keys is "w", action is "word_forward", count is true },
+        { keys is "b", action is "word_backward", count is true },
+        { keys is "dd", action is "delete_line", count is true },
+        { keys is "yy", action is "yank_line", count is true },
+        { keys is "p", action is "paste_after", count is false },
+        { keys is "u", action is "undo", count is true },
+        { keys is "i", action is "enter_insert", count is false },
+        { keys is "v", action is "enter_visual", count is false },
+        { keys is ":", action is "enter_command", count is false },
+        { keys is "/", action is "search_forward", count is false },
+        { keys is "gg", action is "goto_top", count is false },
+        { keys is "G", action is "goto_bottom", count is false }
+    ]
+    insert is [
+        { keys is "Escape", action is "exit_insert", count is false },
+        { keys is "Ctrl-w", action is "delete_word_back", count is false },
+        { keys is "Ctrl-u", action is "delete_to_start", count is false }
+    ]
+}

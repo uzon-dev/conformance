@@ -1,0 +1,9 @@
+// Schema definition #100
+@type is "schema"
+version is 5 as u8
+name is "mu_schema_100"
+fields are
+        { name is "field_0", @type is "f64", required is false },
+        { name is "field_1", @type is "u8", required is false },
+        { name is "field_2", @type is "i32", required is true },
+        { name is "field_3", @type is "u8", required is false }

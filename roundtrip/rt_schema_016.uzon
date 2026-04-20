@@ -1,0 +1,10 @@
+// Schema definition #16
+@type is "schema"
+version is 4 as u8
+name is "debug_schema_16"
+fields are
+        { name is "field_0", @type is "bool", required is true },
+        { name is "field_1", @type is "i32", required is true },
+        { name is "field_2", @type is "i32", required is true },
+        { name is "field_3", @type is "u16", required is true },
+        { name is "field_4", @type is "i32", required is true }

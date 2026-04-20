@@ -1,0 +1,6 @@
+docs is {
+    readme is "# UZON\n\nA data expression format.\n\n## Features\n\n- Structs\n- Lists\n- Functions"
+    license is "MIT License\n\nCopyright (c) 2026\n\nPermission is hereby granted..."
+    changelog is "## 0.5.0\n\n- Added std.sort\n- Added std.lower/upper\n\n## 0.4.0\n\n- Added functions"
+    config_example is "host is \"localhost\"\nport is 8080\ndebug is true"
+}

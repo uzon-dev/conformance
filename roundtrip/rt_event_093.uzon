@@ -1,0 +1,6 @@
+@type is "error"
+timestamp is 1780111922
+source is "delta"
+code is 598 as u16
+message is "node failed"
+fatal is true

@@ -1,0 +1,10 @@
+// Resource #52
+@type is "gateway"
+name is "gateway_52"
+region is "us-east-1"
+config is {
+    @type is "gateway_config"
+    capacity is 6040 as i32
+    priority is 8 as u8
+}
+active is false

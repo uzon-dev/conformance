@@ -1,0 +1,11 @@
+// evens: [2, 4, 6, 8, 10]
+// odds: [1, 3, 5, 7, 9]
+// above5: [6, 7, 8, 9, 10]
+// even_above5: [6, 8, 10]
+// sum_even_above5: 24
+// even squares: [4, 16, 36, 64, 100] → desc: [100, 64, 36, 16, 4]
+even_count is 5
+odd_count is 5
+above5_count is 5
+sum_even_above5 is 24
+even_sq_str is "100, 64, 36, 16, 4"

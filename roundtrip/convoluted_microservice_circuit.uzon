@@ -1,0 +1,26 @@
+_state is closed from closed, open, half_open called CBState
+_call_result is null named none from
+    success as i32, failure as string, none as null
+    called CallResult
+
+services is {
+    'user-svc' is {
+        url is "http://user-svc:8080"
+        breaker is { state is closed as CBState, failures is 0 as u8 }
+        recent is [
+            45 as CallResult named success,
+            52 as CallResult named success,
+            "timeout:504" as CallResult named failure,
+            38 as CallResult named success
+        ]
+    }
+    'order-svc' is {
+        url is "http://order-svc:8080"
+        breaker is { state is open as CBState, failures is 5 as u8 }
+        recent is [
+            "connection refused:503" as CallResult named failure,
+            "connection refused:503" as CallResult named failure,
+            "connection refused:503" as CallResult named failure
+        ]
+    }
+}

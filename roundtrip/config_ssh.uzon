@@ -1,0 +1,13 @@
+ssh is {
+    hosts is [
+        { alias is "prod", hostname is "prod.example.com", user is "deploy", port is 22 as u16, identity is "~/.ssh/prod_key" },
+        { alias is "staging", hostname is "staging.example.com", user is "deploy", port is 2222 as u16, identity is "~/.ssh/staging_key" },
+        { alias is "bastion", hostname is "bastion.example.com", user is "admin", port is 22 as u16, identity is "~/.ssh/bastion_key" }
+    ]
+    defaults is {
+        'ServerAliveInterval' is 60 as u16
+        'ServerAliveCountMax' is 3 as u8
+        'StrictHostKeyChecking' is "accept-new"
+        'ForwardAgent' is false
+    }
+}

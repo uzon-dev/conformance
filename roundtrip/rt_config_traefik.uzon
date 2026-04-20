@@ -1,0 +1,17 @@
+entrypoints is {
+    web is { address is ":80", http is { redirections is { entry_point is { @to is "websecure", scheme is "https" } } } }
+    websecure is { address is ":443", http is { tls is { cert_resolver is "letsencrypt" } } }
+}
+routers is [
+    { name is "api", rule is "Host(`api.example.com`)", service is "api-svc", middlewares is [ "rate-limit", "auth" ] },
+    { name is "web", rule is "Host(`www.example.com`)", service is "web-svc", middlewares is [ "compress" ] }
+]
+services is [
+    { name is "api-svc", url is "http://api:8080", health is "/health" },
+    { name is "web-svc", url is "http://web:3000", health is "/ping" }
+]
+middlewares is {
+    'rate-limit' is { average is 100 as u32, burst is 50 as u32 }
+    auth is { forward_auth is "http://auth:9000/verify" }
+    compress is { min_response_body_bytes is 1024 as u32 }
+}

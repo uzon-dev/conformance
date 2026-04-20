@@ -1,0 +1,19 @@
+request is {
+    method is "POST"
+    url is "https://api.example.com/v3/users"
+    headers is {
+        'Content-Type' is "application/json"
+        'Authorization' is "Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIxMjM0NTY3ODkwIn0"
+        'Accept' is "application/json"
+        'User-Agent' is "UZON-Client/0.5"
+        'X-Trace-ID' is "trace-abc-def-123"
+    }
+    body is {
+        name is "New User"
+        email is "new@example.com"
+        roles is [ "viewer" ]
+        metadata is { source is "api", campaign is null }
+    }
+    timeout_ms is 30000 as u32
+    retry is { max is 3 as u8, backoff_ms is 1000 as u32 }
+}

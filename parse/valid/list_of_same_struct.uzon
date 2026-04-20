@@ -1,0 +1,26 @@
+// §3.4 + §3.2.1: List of structurally identical anonymous structs
+items is [
+    { name is "alpha", level is 1 as u8 },
+    { name is "beta", level is 2 as u8 },
+    { name is "gamma", level is 3 as u8 }
+]
+
+// Field order doesn't matter — structurally same
+mixed_order is [
+    { a is 1, b is "x" },
+    { b is "y", a is 2 }
+]
+
+// Named type — all elements same named type
+_base is { x is 0 as i32, y is 0 as i32 } called Point
+points is [
+    { x is 1 as i32, y is 2 as i32 } as Point,
+    { x is 3 as i32, y is 4 as i32 } as Point
+]
+
+// With null — null adopts struct type
+with_null is [
+    { id is 1, tag is "ok" },
+    null,
+    { id is 3, tag is "done" }
+]

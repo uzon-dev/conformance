@@ -1,0 +1,7 @@
+// Service configuration #138
+@type is "mqtt"
+name is "pi_138"
+port is 52796 as u16
+enabled is true
+max_connections is 268 as i32
+timeout_ms is 5809 as i32

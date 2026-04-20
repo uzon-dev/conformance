@@ -1,0 +1,5 @@
+@type is "click"
+timestamp is 1712199793
+source is "backup"
+url is "https://node.example.com/upsilon"
+session_id is "debug_4389"

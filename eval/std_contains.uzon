@@ -1,0 +1,5 @@
+a is std.contains("hello world", "world")
+b is std.contains("hello world", "xyz")
+c is std.contains("/api/v1/users", "api")
+d is std.contains("hello", "")
+e is std.contains("", "test")

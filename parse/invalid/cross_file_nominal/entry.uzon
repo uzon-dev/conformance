@@ -1,0 +1,4 @@
+// §7.3: same-named types in different files are distinct.
+module_a is struct "./module_a"
+module_b is struct "./module_b"
+wrong is module_a.origin as module_b.Point

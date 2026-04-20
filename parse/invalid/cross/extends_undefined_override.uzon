@@ -1,0 +1,3 @@
+// §3.2.2 + §3.1: overriding with undefined in plus is type error
+base is { x is 1 as i32 }
+bad is base plus { x is nonexistent, y is 2 }

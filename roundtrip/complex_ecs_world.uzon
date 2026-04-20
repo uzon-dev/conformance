@@ -1,0 +1,25 @@
+world is {
+    tick is 12345 as u64
+    delta_ms is 16.667
+    entities is [
+        {
+            id is 1 as u32
+            name is "Player"
+            transform is { pos is (100.5, 200.3, 0.0), rot is (0.0, 0.0, 45.0), scale is (1.0, 1.0, 1.0) }
+            physics is { velocity is (5.0, -3.0, 0.0), mass is 70.0, friction is 0.3, grounded is true }
+            sprite is { atlas is "characters.png", frame is 4 as u16, size is (32 as u16, 48 as u16), flip_x is false }
+            health is { current is 85 as u16, max is 100 as u16, regen_rate is 1.0, invincible is false }
+            inventory is [ "sword_01", "potion_03", "key_gold" ]
+        },
+        {
+            id is 42 as u32
+            name is "Boss"
+            transform is { pos is (500.0, 300.0, 0.0), rot is (0.0, 0.0, 0.0), scale is (2.0, 2.0, 1.0) }
+            physics is { velocity is (0.0, 0.0, 0.0), mass is 500.0, friction is 0.8, grounded is true }
+            sprite is { atlas is "enemies.png", frame is 0 as u16, size is (64 as u16, 64 as u16), flip_x is true }
+            health is { current is 1000 as u16, max is 1000 as u16, regen_rate is 5.0, invincible is false }
+            inventory is [] as [string]
+        }
+    ]
+    systems is [ "physics", "collision", "animation", "render", "ai", "input" ]
+}

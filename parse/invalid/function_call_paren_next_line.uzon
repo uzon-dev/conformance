@@ -1,0 +1,6 @@
+// §5.15: ( on next line is NOT a function call — it's a separate expression
+// This creates a tuple (1, 2) as a standalone expression, which is invalid
+// at the binding level (no binding for it)
+add is function a as i32, b as i32 returns i32 { a + b }
+result is add
+    (1, 2)

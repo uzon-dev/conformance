@@ -1,0 +1,5 @@
+a is std.startsWith("/api/v1/users", "/api")
+b is std.startsWith("/api/v1/users", "/web")
+c is std.startsWith("hello", "")
+d is std.startsWith("hello", "hello")
+e is std.startsWith("hello", "hello world")

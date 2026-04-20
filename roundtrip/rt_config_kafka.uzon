@@ -1,0 +1,15 @@
+brokers is [
+    { id is 0 as u8, host is "kafka-0.internal", port is 9092 as u16, rack is "us-east-1a" },
+    { id is 1 as u8, host is "kafka-1.internal", port is 9092 as u16, rack is "us-east-1b" },
+    { id is 2 as u8, host is "kafka-2.internal", port is 9092 as u16, rack is "us-east-1c" }
+]
+topics is [
+    { name is "orders", partitions is 12 as u8, replication is 3 as u8, retention_hours is 168 as u16, cleanup is "delete" },
+    { name is "events", partitions is 24 as u8, replication is 3 as u8, retention_hours is 720 as u16, cleanup is "compact" },
+    { name is "logs", partitions is 6 as u8, replication is 2 as u8, retention_hours is 24 as u16, cleanup is "delete" }
+]
+consumer_groups is [
+    { name is "order-processor", topics is [ "orders" ], lag is 0 as u64 },
+    { name is "analytics", topics is [ "orders", "events" ], lag is 15234 as u64 },
+    { name is "log-shipper", topics is [ "logs" ], lag is 0 as u64 }
+]

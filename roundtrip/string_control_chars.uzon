@@ -1,0 +1,6 @@
+null_byte is "\0"
+bell is "ring\0ring"
+tab_heavy is "\t\t\t\t"
+cr_lf is "\r\n"
+lf_only is "\n"
+multi_cr_lf is "\r\n\r\n\r\n"

@@ -1,0 +1,15 @@
+dfa is {
+    alphabet is [ "0", "1" ]
+    states is [ "q0", "q1", "q2" ]
+    start is "q0"
+    accept is [ "q2" ]
+    transitions is [
+        { @from is "q0", input is "0", @to is "q0" },
+        { @from is "q0", input is "1", @to is "q1" },
+        { @from is "q1", input is "0", @to is "q2" },
+        { @from is "q1", input is "1", @to is "q0" },
+        { @from is "q2", input is "0", @to is "q1" },
+        { @from is "q2", input is "1", @to is "q2" }
+    ]
+    description is "Accepts strings where the number of 0s is divisible by 3"
+}

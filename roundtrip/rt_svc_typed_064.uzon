@@ -1,0 +1,9 @@
+// Service configuration #64
+@type is "mqtt"
+name is "name_64"
+port is 20593 as u16
+enabled is true
+max_connections is 6875 as i32
+timeout_ms is 17736 as i32
+retry_count is 8 as u8
+tls is true

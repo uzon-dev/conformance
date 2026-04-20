@@ -1,0 +1,11 @@
+// §5.15: ( must be on same line as callee in method chains
+funcs is {
+    add is function a as i32, b as i32 returns i32 { a + b }
+}
+
+// Correct: .add and ( on same line
+r1 is funcs.add(1, 2)
+
+// Correct: .add on next line, ( on same line as add
+r2 is funcs
+    .add(1, 2)

@@ -1,0 +1,6 @@
+// ERROR: §3.2.1 + §3.7.1
+// with on tagged union → type error (not transparent)
+result is "ok" named success from
+    success as string, failure as string called Outcome
+
+bad is result with { x is 1 }

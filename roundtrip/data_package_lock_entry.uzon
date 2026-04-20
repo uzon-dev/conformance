@@ -1,0 +1,14 @@
+packages is [
+    {
+        name is "@uzon/core"
+        version is "0.6.0"
+        resolved is "https://registry.uzon.dev/@uzon/core/-/core-0.5.0.tgz"
+        integrity is "sha512-abc123def456..."
+        dependencies is { '@uzon/types' is "^0.3.0" }
+        dev_dependencies is { '@uzon/test' is "^0.1.0", vitest is "^1.0.0" }
+        peer_dependencies is { }
+        engines is { node is ">=18.0.0" }
+        os is [ "linux", "darwin", "win32" ]
+        cpu is [ "x64", "arm64" ]
+    }
+]

@@ -1,0 +1,12 @@
+metric is {
+    name is "gc_pause"
+    host is "server-11"
+    timestamp is 1712811460 as u64
+    value is 24.7
+    unit is "milliseconds"
+    tags is {
+        environment is "development"
+        region is "ap-east"
+        service is "svc-01"
+    }
+}

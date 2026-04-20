@@ -1,0 +1,8 @@
+// Service configuration #118
+@type is "http"
+name is "level_118"
+port is 59934 as u16
+enabled is true
+max_connections is 8965 as i32
+timeout_ms is 5276 as i32
+tls is true

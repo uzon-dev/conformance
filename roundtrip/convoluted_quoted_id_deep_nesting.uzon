@@ -1,0 +1,18 @@
+root is {
+    'level-1' is {
+        'level-2' is {
+            'level-3' is {
+                'the-value' is 42
+                'with spaces' is "spaced"
+                'kebab-case' is true
+            }
+        }
+    }
+    'another-branch' is {
+        'deep.dotted' is {
+            @type is "meta"
+            @default is null
+            '123start' is "numeric start"
+        }
+    }
+}

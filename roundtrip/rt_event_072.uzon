@@ -1,0 +1,6 @@
+@type is "error"
+timestamp is 1739483304
+source is "mode"
+code is 434 as u16
+message is "iota failed"
+fatal is false

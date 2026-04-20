@@ -1,0 +1,15 @@
+x is 42
+is_int is x is type i64
+is_str is x is type string
+not_str is x is not type string
+not_int is x is not type i64
+
+name is "hello"
+name_is_str is name is type string
+name_is_int is name is type i64
+
+flag is true
+flag_is_bool is flag is type bool
+
+n is null
+n_is_null is n is type null

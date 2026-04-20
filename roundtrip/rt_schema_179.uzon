@@ -1,0 +1,7 @@
+// Schema definition #179
+@type is "schema"
+version is 2 as u8
+name is "backup_schema_179"
+fields are
+        { name is "field_0", @type is "u8", required is false },
+        { name is "field_1", @type is "f64", required is false }

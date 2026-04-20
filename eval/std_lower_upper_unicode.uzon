@@ -1,0 +1,29 @@
+// §5.16.3: std.lower/std.upper — full Unicode case mapping
+
+// French
+fr_lo is std.lower("CHÂTEAU")
+fr_up is std.upper("résumé")
+fr_lo2 is std.lower("GARÇON")
+fr_up2 is std.upper("naïve")
+fr_lo3 is std.lower("NOËL")
+fr_up3 is std.upper("café")
+
+// German — ß uppercases to SS (Unicode case mapping)
+de_lo is std.lower("ÄRGER")
+de_up is std.upper("straße")
+de_lo2 is std.lower("ÜBUNG")
+de_up2 is std.upper("münchen")
+de_lo3 is std.lower("ÖFFNUNG")
+
+// Mixed: roundtrip through upper then lower
+fr_round is std.lower(std.upper("château"))
+de_round is std.lower(std.upper("straße"))
+
+// Spanish, Danish, Polish
+es_up is std.upper("señor")
+da_lo is std.lower("ØRSTED")
+pl_up is std.upper("łódź")
+
+// Greek
+gr_lo is std.lower("ΩΜΈΓΑ")
+gr_up is std.upper("αλφα")

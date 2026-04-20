@@ -1,0 +1,21 @@
+satellite is {
+    norad_id is 25544 as u32
+    name is "ISS (ZARYA)"
+    orbit is {
+        epoch is "2026-04-11T00:00:00Z"
+        semi_major_axis_km is 6793.5
+        eccentricity is 0.0001234
+        inclination_deg is 51.6425
+        raan_deg is 247.5123
+        arg_perigee_deg is 130.2456
+        mean_anomaly_deg is 229.7890
+        period_min is 92.68
+        rev_per_day is 15.5
+    }
+    tle is {
+        line1 is "1 25544U 98067A   26101.00000000  .00016717  00000-0  10270-3 0  9993"
+        line2 is "2 25544  51.6425 247.5123 0001234 130.2456 229.7890 15.50000000123456"
+    }
+    dimensions is { length_m is 109.0, width_m is 73.0, mass_kg is 420000.0 }
+    crew is 7 as u8
+}

@@ -1,0 +1,12 @@
+policies is {
+    aggressive is { max_retries is 10 as u8, initial_delay_ms is 100 as u32, max_delay_ms is 1000 as u32, backoff is "exponential", jitter is true }
+    standard is { max_retries is 3 as u8, initial_delay_ms is 1000 as u32, max_delay_ms is 30000 as u32, backoff is "exponential", jitter is true }
+    conservative is { max_retries is 2 as u8, initial_delay_ms is 5000 as u32, max_delay_ms is 60000 as u32, backoff is "linear", jitter is false }
+    none is { max_retries is 0 as u8, initial_delay_ms is 0 as u32, max_delay_ms is 0 as u32, backoff is "none", jitter is false }
+}
+assignments is [
+    { operation is "read", policy is "aggressive" },
+    { operation is "write", policy is "standard" },
+    { operation is "delete", policy is "conservative" },
+    { operation is "health_check", policy is "none" }
+]

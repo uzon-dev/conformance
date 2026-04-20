@@ -1,0 +1,7 @@
+// §5.10: case named also requires else, even when all variants
+// are covered.
+E is tagged union a as i32, b as string
+e is 1 as E named a
+bad is case named e
+    when a then "alpha"
+    when b then "beta"

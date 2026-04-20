@@ -1,0 +1,3 @@
+// §11.2.1 + §3.2.1: circular dependency through with
+a is b with { x is 1 }
+b is a with { x is 2 }

@@ -1,0 +1,37 @@
+_recurrence is none from none, daily, weekly, monthly, yearly called Recurrence
+
+events is [
+    {
+        id is "evt-001"
+        title is "Daily Standup"
+        start is "09:00"
+        duration_min is 15 as u16
+        recurrence is daily as Recurrence
+        exceptions is [ "2026-04-13", "2026-04-14" ]
+        attendees is [ { email is "alice@example.com", optional is false }, { email is "bob@example.com", optional is true } ]
+        location is null
+        notes is ""
+    },
+    {
+        id is "evt-002"
+        title is "Sprint Review"
+        start is "14:00"
+        duration_min is 60 as u16
+        recurrence is weekly as Recurrence
+        exceptions is [] as [string]
+        attendees is [ { email is "team@example.com", optional is false } ]
+        location is "Room 42B"
+        notes is "Bring demos"
+    },
+    {
+        id is "evt-003"
+        title is "Annual Review"
+        start is "10:00"
+        duration_min is 120 as u16
+        recurrence is yearly as Recurrence
+        exceptions is [] as [string]
+        attendees is [ { email is "manager@example.com", optional is false }, { email is "hr@example.com", optional is false } ]
+        location is "Conference Room A"
+        notes is "Prepare self-assessment document"
+    }
+]

@@ -1,0 +1,14 @@
+product is {
+    sku is "SKU-ELE-0105"
+    name is "Electronics Item 105"
+    category is "electronics"
+    price is 62.49
+    currency is "USD"
+    stock is 315 as u16
+    weight_g is 1150 as u32
+    dimensions is (15.0, 5.0, 7.0)
+    rating is 3.5
+    reviews is 735 as u16
+    active is false
+    tags is [ "electronics", "sale" ]
+}

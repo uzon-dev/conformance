@@ -1,0 +1,7 @@
+// Service configuration #69
+@type is "mqtt"
+name is "epsilon_69"
+port is 15718 as u16
+enabled is true
+max_connections is 669 as i32
+timeout_ms is 24814 as i32

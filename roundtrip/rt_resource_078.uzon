@@ -1,0 +1,11 @@
+// Resource #78
+@type is "gateway"
+name is "gateway_78"
+region is "us-west-2"
+config is {
+    @type is "gateway_config"
+    capacity is 8373 as i32
+    priority is 3 as u8
+}
+tags are "omicron"
+active is false

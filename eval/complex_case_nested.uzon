@@ -1,0 +1,29 @@
+// Nested case — outer case selects a value, inner case maps it
+_tier is bronze from bronze, silver, gold called Tier
+_role is viewer from viewer, editor, admin called Role
+
+tier is silver as Tier
+role is editor as Role
+
+// case inside case
+access_level is case tier
+    when bronze then case role
+        when viewer then 1
+        when editor then 2
+        else 3
+    when silver then case role
+        when viewer then 4
+        when editor then 5
+        else 6
+    when gold then case role
+        when viewer then 7
+        when editor then 8
+        else 9
+    else 0
+
+// tier=silver, role=editor → 5
+label is case access_level
+    when 1 then "minimal"
+    when 5 then "standard"
+    when 9 then "full"
+    else "custom"

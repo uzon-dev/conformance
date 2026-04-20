@@ -1,0 +1,10 @@
+options is [
+    { kind is 0 as u8, name is "End of Options", length is 1 as u8, data is null },
+    { kind is 1 as u8, name is "No-Operation", length is 1 as u8, data is null },
+    { kind is 2 as u8, name is "Maximum Segment Size", length is 4 as u8, data is "1460" },
+    { kind is 3 as u8, name is "Window Scale", length is 3 as u8, data is "7" },
+    { kind is 4 as u8, name is "SACK Permitted", length is 2 as u8, data is null },
+    { kind is 5 as u8, name is "SACK", length is 0 as u8, data is "left=1000,right=2000" },
+    { kind is 8 as u8, name is "Timestamps", length is 10 as u8, data is "TSval=123456,TSecr=654321" },
+    { kind is 28 as u8, name is "User Timeout", length is 4 as u8, data is "300" }
+]

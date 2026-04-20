@@ -1,0 +1,7 @@
+// Service configuration #191
+@type is "websocket"
+name is "level_191"
+port is 55444 as u16
+enabled is true
+max_connections is 7850 as i32
+timeout_ms is 20800 as i32

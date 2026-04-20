@@ -1,0 +1,5 @@
+path is "C:\\Users\\admin\\Documents\\file.txt"
+sql is "SELECT * FROM users WHERE name = 'O''Brien' AND active = true"
+html is "<div class=\"container\">\n  <p>Hello</p>\n</div>"
+json is "\{\"items\": [1, 2, 3], \"ok\": true}"
+csv is "name,age,city\n\"Alice\",30,\"New York\"\n\"Bob\",25,\"London\""

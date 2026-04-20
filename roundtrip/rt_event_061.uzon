@@ -1,0 +1,4 @@
+@type is "logout"
+timestamp is 1773509785
+source is "prod"
+detail is "host_718"

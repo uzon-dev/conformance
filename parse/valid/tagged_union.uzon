@@ -1,0 +1,7 @@
+// §3.7 Tagged union
+result is "success" named ok from
+    ok as string, err as string
+    called Result
+check is result is named ok
+extract is result
+reuse is "fail" as Result named err

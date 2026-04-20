@@ -1,0 +1,8 @@
+// Service configuration #124
+@type is "grpc"
+name is "tau_124"
+port is 60637 as u16
+enabled is false
+max_connections is 6817 as i32
+timeout_ms is 5855 as i32
+tls is true

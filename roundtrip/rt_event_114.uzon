@@ -1,0 +1,5 @@
+@type is "pageview"
+timestamp is 1737784631
+source is "mode"
+url is "https://name.example.com/value"
+session_id is "beta_8765"

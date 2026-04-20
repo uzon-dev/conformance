@@ -1,0 +1,5 @@
+colors is [
+    { name is "red", srgb is (255 as u8, 0 as u8, 0 as u8), linear is (1.0, 0.0, 0.0), oklch is (0.6279, 0.2577, 29.23) },
+    { name is "green", srgb is (0 as u8, 128 as u8, 0 as u8), linear is (0.0, 0.2158, 0.0), oklch is (0.5195, 0.1768, 142.50) },
+    { name is "blue", srgb is (0 as u8, 0 as u8, 255 as u8), linear is (0.0, 0.0, 1.0), oklch is (0.4520, 0.3132, 264.05) }
+]

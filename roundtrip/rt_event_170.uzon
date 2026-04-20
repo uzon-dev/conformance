@@ -1,0 +1,5 @@
+@type is "click"
+timestamp is 1777576121
+source is "prod"
+url is "https://theta.example.com/prod"
+session_id is "alpha_7144"

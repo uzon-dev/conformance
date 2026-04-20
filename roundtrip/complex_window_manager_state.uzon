@@ -1,0 +1,13 @@
+wm is {
+    outputs is [
+        { name is "eDP-1", width is 2560 as u16, height is 1440 as u16, scale is 1.5, workspaces is [ 1 as u8, 2 as u8 ], active_workspace is 1 as u8 },
+        { name is "HDMI-A-1", width is 3840 as u16, height is 2160 as u16, scale is 2.0, workspaces is [ 3 as u8, 4 as u8 ], active_workspace is 3 as u8 }
+    ]
+    windows is [
+        { id is 1 as u32, title is "nvim", app_id is "foot", workspace is 1 as u8, x is 0 as i32, y is 0 as i32, w is 1280 as u16, h is 1440 as u16, focused is true, floating is false, fullscreen is false, urgent is false },
+        { id is 2 as u32, title is "Firefox", app_id is "firefox", workspace is 1 as u8, x is 1280 as i32, y is 0 as i32, w is 1280 as u16, h is 1440 as u16, focused is false, floating is false, fullscreen is false, urgent is false },
+        { id is 3 as u32, title is "Slack", app_id is "slack", workspace is 2 as u8, x is 0 as i32, y is 0 as i32, w is 2560 as u16, h is 1440 as u16, focused is false, floating is false, fullscreen is true, urgent is true },
+        { id is 4 as u32, title is "Calculator", app_id is "gnome-calculator", workspace is 1 as u8, x is 500 as i32, y is 300 as i32, w is 400 as u16, h is 500 as u16, focused is false, floating is true, fullscreen is false, urgent is false }
+    ]
+    focus_stack is [ 1 as u32, 2 as u32, 4 as u32, 3 as u32 ]
+}

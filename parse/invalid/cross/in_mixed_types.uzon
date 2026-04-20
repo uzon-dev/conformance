@@ -1,0 +1,3 @@
+// §5.8.1 + §3.4: in with type mismatch
+x is 1 as i32
+bad is x in [ 1, 2, 3 ]    // list is [i64], x is i32

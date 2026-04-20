@@ -1,0 +1,4 @@
+headers is [
+    { 'Content-Type' is "text/html", 'Cache-Control' is "no-cache" },
+    { 'Content-Type' is "application/json", 'Cache-Control' is "max-age=3600" }
+]

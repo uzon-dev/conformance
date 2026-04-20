@@ -1,0 +1,14 @@
+model is {
+    name is "transformer-tiny"
+    layers is [
+        { name is "embed", @type is "Embedding", params is { vocab_size is 32000 as u32, dim is 256 as u16 }, output_shape is [ 0, 256 ] as [u32] },
+        { name is "pos_embed", @type is "PositionalEncoding", params is { max_len is 2048 as u16, dim is 256 as u16 }, output_shape is [ 0, 256 ] as [u32] },
+        { name is "attn_1", @type is "MultiHeadAttention", params is { heads is 8 as u8, dim is 256 as u16, dropout is 0.1 }, output_shape is [ 0, 256 ] as [u32] },
+        { name is "norm_1", @type is "LayerNorm", params is { dim is 256 as u16, eps is 1.0e-5 }, output_shape is [ 0, 256 ] as [u32] },
+        { name is "ff_1", @type is "FeedForward", params is { dim is 256 as u16, hidden is 1024 as u16, activation is "gelu", dropout is 0.1 }, output_shape is [ 0, 256 ] as [u32] },
+        { name is "norm_2", @type is "LayerNorm", params is { dim is 256 as u16, eps is 1.0e-5 }, output_shape is [ 0, 256 ] as [u32] },
+        { name is "head", @type is "Linear", params is { in_dim is 256 as u16, out_dim is 32000 as u32 }, output_shape is [ 0, 32000 ] as [u32] }
+    ]
+    total_params is 18742272 as u64
+    optimizer is { @type is "AdamW", lr is 3.0e-4, betas is (0.9, 0.999), weight_decay is 0.01, eps is 1.0e-8 }
+}

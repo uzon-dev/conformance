@@ -1,0 +1,33 @@
+// §3.2 + §3.5 v0.10 — Physics measurements with SI prefixes
+// Laboratory measurement series with error bars.
+SIPrefix is enum nano, micro, milli, none_prefix, kilo, mega, giga
+
+Quantity is struct {
+    value is 0.0 as f64
+    prefix is none_prefix as SIPrefix
+    unit is "" as string
+}
+
+Uncertainty is enum statistical, systematic, combined
+
+Measurement is struct {
+    observed is {} as Quantity
+    error is {} as Quantity
+    error_type is combined as Uncertainty
+    confidence_level is 0.95 as f64
+}
+
+// Speed of light measurements from various experimental setups
+measurements are
+    {
+        observed is { value is 299.792458, prefix is mega, unit is "m/s" },
+        error is { value is 0.000004, prefix is mega, unit is "m/s" },
+        error_type is systematic
+    },
+    {
+        observed is { value is 6.62607015, prefix is nano, unit is "J*s" },
+        error is { value is 0.0, unit is "J*s" },
+        error_type is statistical,
+        confidence_level is 1.0
+    }
+    as [Measurement]

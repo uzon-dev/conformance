@@ -1,0 +1,14 @@
+product is {
+    sku is "SKU-FUR-0199"
+    name is "Furniture Item 199"
+    category is "furniture"
+    price is 109.49
+    currency is "USD"
+    stock is 97 as u16
+    weight_g is 2090 as u32
+    dimensions is (29.0, 9.0, 11.0)
+    rating is 4.9
+    reviews is 393 as u16
+    active is true
+    tags is [ "furniture", "new" ]
+}

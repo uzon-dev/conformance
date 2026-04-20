@@ -1,0 +1,6 @@
+@type is "error"
+timestamp is 1717208745
+source is "pi"
+code is 425 as u16
+message is "tau failed"
+fatal is true

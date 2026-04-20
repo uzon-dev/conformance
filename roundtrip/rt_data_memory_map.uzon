@@ -1,0 +1,6 @@
+regions is [
+    { start is 0x00400000 as u64, end is 0x00401000 as u64, perms is "r-x", offset is 0 as u64, device is "08:01", inode is 12345 as u64, path is "/usr/bin/app" },
+    { start is 0x00601000 as u64, end is 0x00602000 as u64, perms is "rw-", offset is 4096 as u64, device is "08:01", inode is 12345 as u64, path is "/usr/bin/app" },
+    { start is 0x7F0000000000 as u64, end is 0x7F0000200000 as u64, perms is "r-x", offset is 0 as u64, device is "08:01", inode is 67890 as u64, path is "/lib/libc.so.6" },
+    { start is 0x7FFE00000000 as u64, end is 0x7FFE00021000 as u64, perms is "rw-", offset is 0 as u64, device is "00:00", inode is 0 as u64, path is "[stack]" }
+]

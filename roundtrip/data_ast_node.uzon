@@ -1,0 +1,16 @@
+ast is {
+    @type is "BinaryExpr"
+    op is "+"
+    left is {
+        @type is "BinaryExpr"
+        op is "*"
+        left is { @type is "Literal", value is 2 }
+        right is { @type is "Literal", value is 3 }
+    }
+    right is {
+        @type is "UnaryExpr"
+        op is "-"
+        operand is { @type is "Literal", value is 1 }
+    }
+}
+// Represents: (2 * 3) + (-1) = 5

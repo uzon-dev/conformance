@@ -1,0 +1,6 @@
+// §5.10: case type works on any value (consistent with is type)
+x is 42
+result is case type x
+    when i64 then "integer"
+    when string then "text"
+    else "other"

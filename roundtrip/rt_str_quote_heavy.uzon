@@ -1,0 +1,6 @@
+text is {
+    single is "it's"
+    double_esc is "she said \"hello\""
+    nested is "he said \"she said 'hi'\""
+    json is "\{\"key\": \"value\"}"
+}

@@ -1,0 +1,7 @@
+// Service configuration #117
+@type is "tcp"
+name is "main_117"
+port is 33639 as u16
+enabled is false
+max_connections is 7565 as i32
+timeout_ms is 21002 as i32

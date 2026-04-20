@@ -1,0 +1,14 @@
+a is { x is 1, y is 2, z is 3 }
+b is {
+    x is 1
+    y is 2
+    z is 3
+}
+c is {
+    x is 1,
+    y is 2,
+    z is 3,
+}
+d is { x is 1
+    y is 2
+    z is 3 }

@@ -1,0 +1,44 @@
+// Null vs undefined through every pathway
+config is {
+    host is "localhost"
+    port is null
+    timeout is 30 as i32
+}
+
+// null: passes through or else
+a is config.port or else 9999            // null (not 9999)
+
+// undefined: caught by or else
+b is config.missing or else "default"    // "default"
+
+// null comparison
+c is config.port is null                 // true
+d is config.port is not null             // false
+
+// undefined comparison
+e is config.missing is undefined         // true
+f is config.host is undefined            // false
+
+// null in if — must use is null, not direct
+g is if config.port is null then "unset" else "set"
+
+// chained or else — null passes, undefined caught
+h is config.missing or else config.port or else "final"
+// missing → undefined → right side → port → null → null passes → null
+
+// undefined to string propagates, then or else catches
+i is config.missing to string or else "recovered"
+
+// null to string converts
+j is config.port to string               // "null"
+
+// deeply nested undefined
+k is config.missing.deep.deeper or else "deep_safe"
+
+// with: null → i32
+filled is config with { port is 8080 as i32 }
+l is filled.port                         // 8080
+
+// with: i32 → null
+cleared is filled with { port is null }
+m is cleared.port is null                // true

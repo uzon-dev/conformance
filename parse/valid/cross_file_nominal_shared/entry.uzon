@@ -1,0 +1,5 @@
+// §7.3: shared declaration → single nominal type.
+_shared is struct "./shared"
+a_point is { x is 1 as i32, y is 2 as i32 } as _shared.Point
+b_point is { x is 3 as i32, y is 4 as i32 } as _shared.Point
+pair are a_point, b_point as [_shared.Point]

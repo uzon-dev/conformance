@@ -1,0 +1,6 @@
+// §5.10: all case type branches MUST produce the same result type
+u is 42 from union i32, string
+result is case type u
+    when i32 then 100
+    when string then "text"
+    else "other"

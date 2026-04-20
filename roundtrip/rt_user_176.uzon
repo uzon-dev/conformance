@@ -1,0 +1,16 @@
+user is {
+    id is 10176 as u32
+    username is "quinn176"
+    email is "quinn176@test.org"
+    display_name is "Quinn #176"
+    city is "Dubai"
+    age is 44 as u8
+    verified is true
+    created is "2026-09-09T12:00:00Z"
+    login_count is 2288 as u32
+    preferences is {
+        theme is "dark"
+        language is "en"
+        notifications is true
+    }
+}

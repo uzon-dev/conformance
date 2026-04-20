@@ -1,0 +1,21 @@
+block is {
+    header is {
+        number is 19500000 as u64
+        hash is "0xabc123def456789..."
+        parent_hash is "0x987654321fedcba..."
+        timestamp is 1712800000 as u64
+        nonce is "0x1234567890abcdef"
+        difficulty is 0 as u64
+        gas_limit is 30000000 as u64
+        gas_used is 15234567 as u64
+        base_fee_gwei is 25 as u64
+        miner is "0x1234...5678"
+    }
+    transactions is [
+        { hash is "0xtx1...", @from is "0xaaa...", @to is "0xbbb...", value_wei is "1000000000000000000", gas is 21000 as u32, status is true },
+        { hash is "0xtx2...", @from is "0xccc...", @to is "0xddd...", value_wei is "500000000000000000", gas is 65000 as u32, status is true },
+        { hash is "0xtx3...", @from is "0xeee...", @to is "0xfff...", value_wei is "0", gas is 150000 as u32, status is false }
+    ]
+    uncle_count is 0 as u8
+    size_bytes is 45678 as u32
+}

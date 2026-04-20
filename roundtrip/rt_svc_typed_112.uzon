@@ -1,0 +1,8 @@
+// Service configuration #112
+@type is "grpc"
+name is "rho_112"
+port is 31792 as u16
+enabled is false
+max_connections is 6522 as i32
+timeout_ms is 21393 as i32
+tls is true

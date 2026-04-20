@@ -1,0 +1,6 @@
+@type is "error"
+timestamp is 1701658959
+source is "prod"
+code is 596 as u16
+message is "test failed"
+fatal is true

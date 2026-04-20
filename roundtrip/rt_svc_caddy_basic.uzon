@@ -1,0 +1,9 @@
+service is {
+    name is "caddy"
+    version is "5.1.2"
+    port is 8011 as u16
+    health is "/health"
+    replicas is 4 as u8
+    resources is { cpu_m is 200 as u16, memory_mb is 512 as u16 }
+    labels is { app is "caddy", tier is "infrastructure" }
+}

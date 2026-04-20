@@ -1,0 +1,9 @@
+service is {
+    name is "nginx"
+    version is "3.0.0"
+    port is 8000 as u16
+    health is "/health"
+    replicas is 1 as u8
+    resources is { cpu_m is 100 as u16, memory_mb is 128 as u16 }
+    labels is { app is "nginx", tier is "frontend" }
+}

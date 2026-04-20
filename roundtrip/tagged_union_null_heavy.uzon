@@ -1,0 +1,6 @@
+_maybe is null named nothing from just as string, nothing as null called Maybe
+a is "hello" as Maybe named just
+b is null as Maybe named nothing
+c is "world" as Maybe named just
+d is null as Maybe named nothing
+items is [ "a" as Maybe named just, null as Maybe named nothing, "c" as Maybe named just ]

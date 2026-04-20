@@ -1,0 +1,3 @@
+// §5.16.2 std.values({}) returns empty tuple
+a is std.values({})
+b is std.values({ x is 1 })

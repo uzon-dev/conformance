@@ -1,0 +1,8 @@
+// Service configuration #175
+@type is "mqtt"
+name is "node_175"
+port is 58459 as u16
+enabled is false
+max_connections is 6182 as i32
+timeout_ms is 5154 as i32
+tls is true

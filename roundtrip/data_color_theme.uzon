@@ -1,0 +1,17 @@
+theme is {
+    name is "Nord"
+    variant is "dark"
+    colors is {
+        bg is { primary is "#2E3440", secondary is "#3B4252", tertiary is "#434C5E" }
+        fg is { primary is "#ECEFF4", secondary is "#D8DEE9", muted is "#4C566A" }
+        accent is { blue is "#5E81AC", green is "#A3BE8C", red is "#BF616A", yellow is "#EBCB8B", purple is "#B48EAD" }
+        semantic is { success is "#A3BE8C", warning is "#EBCB8B", error is "#BF616A", info is "#5E81AC" }
+    }
+    typography is {
+        font_mono is "JetBrains Mono"
+        font_sans is "Inter"
+        sizes is { xs is 12 as u8, sm is 14 as u8, md is 16 as u8, lg is 20 as u8, xl is 24 as u8, xxl is 32 as u8 }
+    }
+    spacing is [ 0, 4, 8, 12, 16, 24, 32, 48, 64, 96 ] as [u8]
+    border_radius is { sm is 4 as u8, md is 8 as u8, lg is 12 as u8, full is 9999 as u16 }
+}

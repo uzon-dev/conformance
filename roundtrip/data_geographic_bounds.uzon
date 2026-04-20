@@ -1,0 +1,5 @@
+regions is [
+    { name is "South Korea", bounds is { north is 38.612, south is 33.106, east is 131.872, west is 124.608 } },
+    { name is "Japan", bounds is { north is 45.551, south is 24.249, east is 153.987, west is 122.934 } },
+    { name is "France", bounds is { north is 51.089, south is 41.365, east is 9.560, west is -5.142 } }
+]

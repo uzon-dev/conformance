@@ -1,0 +1,3 @@
+// §3.2.2 plus type incompatible override
+base is { x is 1 as i32 }
+bad is base plus { x is "hello", y is 2 }

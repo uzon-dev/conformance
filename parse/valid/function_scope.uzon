@@ -1,0 +1,11 @@
+// §3.8 Function body scope
+x is 99
+f is function n as i32 returns i32 {
+    offset is 10
+    inner is {
+        a is offset
+        b is x
+    }
+    n + inner.a + inner.b
+}
+result is f(1)    // 1 + 10 + 99 = 110

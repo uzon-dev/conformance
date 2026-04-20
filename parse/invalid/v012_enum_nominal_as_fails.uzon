@@ -1,0 +1,8 @@
+// §5.11.0 + §3.5 — Two separately named enum types are distinct
+// even with identical variants. `as` does NOT convert between them.
+Color is enum red, green, blue
+Paint is enum red, green, blue
+
+// Type error: Color and Paint are distinct nominal types
+c is red as Color
+bad is c as Paint

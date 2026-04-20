@@ -1,0 +1,5 @@
+@type is "pageview"
+timestamp is 1709831184
+source is "delta"
+url is "https://mu.example.com/rho"
+session_id is "dev_2154"

@@ -1,0 +1,4 @@
+simple is 3.14
+neg is -0.5
+sci is 600.0
+typed is 1.0 as f32

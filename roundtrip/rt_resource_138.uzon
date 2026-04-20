@@ -1,0 +1,11 @@
+// Resource #138
+@type is "proxy"
+name is "proxy_138"
+region is "us-west-2"
+config is {
+    @type is "proxy_config"
+    capacity is 1048 as i32
+    priority is 8 as u8
+}
+tags are "xi"
+active is true

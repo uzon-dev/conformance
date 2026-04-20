@@ -1,0 +1,5 @@
+// §5.8.1 in applies to tuples — value membership
+t is (1, "hello", true)
+found is 1 in t
+str_found is "hello" in t
+not_found is 99 in t

@@ -1,0 +1,32 @@
+// Roundtrip: every value type in one document
+bool_val is true
+int_val is 42
+float_val is 3.14
+string_val is "hello"
+null_val is null
+inf_val is inf
+nan_val is nan
+
+list_val is [ 1, 2, 3 ]
+tuple_val is (true, "mixed", 42)
+struct_val is { x is 1, y is 2 }
+
+_color is red from red, green, blue called Color
+enum_val is blue as Color
+
+_result is "ok" named ok from ok as string, err as null called Result
+tagged_val is "success" as Result named ok
+
+union_val is "flexible" from union string, i32
+
+nested is {
+    items is [
+        { name is "a", score is (10, true) },
+        { name is "b", score is (20, false) }
+    ]
+    metadata is {
+        @type is "test"
+        'X-Version' is "1.0"
+        count is 2
+    }
+}

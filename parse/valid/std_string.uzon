@@ -1,0 +1,8 @@
+// §5.16.4 String Utilities
+j is std.join([ "a", "b", "c" ], ":")             // "a:b:c"
+r is std.replace("hello world", "world", "UZON")  // "hello UZON"
+s is std.split("a:b:c", ":")                       // [ "a", "b", "c" ]
+t is std.trim("  hello  ")                         // "hello"
+roundtrip is std.join(std.split("x:y:z", ":"), ":")  // "x:y:z"
+lo is std.lower("Hello, World!")                           // "hello, world!"
+up is std.upper("hello")                                   // "HELLO"

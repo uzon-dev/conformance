@@ -1,0 +1,9 @@
+service is {
+    name is "vault"
+    version is "4.4.0"
+    port is 8009 as u16
+    health is "/health"
+    replicas is 2 as u8
+    resources is { cpu_m is 500 as u16, memory_mb is 256 as u16 }
+    labels is { app is "vault", tier is "frontend" }
+}

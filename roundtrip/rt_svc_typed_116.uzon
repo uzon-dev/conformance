@@ -1,0 +1,8 @@
+// Service configuration #116
+@type is "postgres"
+name is "test_116"
+port is 28028 as u16
+enabled is true
+max_connections is 2960 as i32
+timeout_ms is 5670 as i32
+tls is false

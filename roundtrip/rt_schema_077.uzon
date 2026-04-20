@@ -1,0 +1,7 @@
+// Schema definition #77
+@type is "schema"
+version is 1 as u8
+name is "zeta_schema_77"
+fields are
+        { name is "field_0", @type is "bool", required is true },
+        { name is "field_1", @type is "bool", required is false }

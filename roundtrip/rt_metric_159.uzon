@@ -1,0 +1,12 @@
+metric is {
+    name is "queue_depth"
+    host is "server-19"
+    timestamp is 1712809540 as u64
+    value is 70.3
+    unit is "count"
+    tags is {
+        environment is "production"
+        region is "ap-east"
+        service is "svc-09"
+    }
+}

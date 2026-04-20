@@ -1,0 +1,14 @@
+// Roundtrip: many booleans in nested structure
+permissions is {
+    read is true
+    write is false
+    execute is true
+    admin is false
+    features is {
+        dark_mode is true
+        notifications is true
+        beta is false
+        experimental is false
+    }
+    flags is [ true, false, true, true, false ]
+}

@@ -1,0 +1,8 @@
+connections is [
+    { local is "0.0.0.0:8080", remote is "0.0.0.0:0", state is "LISTEN", pid is 1234 as u32 },
+    { local is "10.0.1.50:8080", remote is "10.0.2.100:49152", state is "ESTABLISHED", pid is 1234 as u32 },
+    { local is "10.0.1.50:8080", remote is "10.0.2.101:49200", state is "ESTABLISHED", pid is 1234 as u32 },
+    { local is "10.0.1.50:8080", remote is "10.0.2.102:49300", state is "TIME_WAIT", pid is 0 as u32 },
+    { local is "10.0.1.50:5432", remote is "10.0.1.50:48100", state is "ESTABLISHED", pid is 5678 as u32 },
+    { local is "10.0.1.50:34567", remote is "10.0.3.50:6379", state is "ESTABLISHED", pid is 1234 as u32 }
+]

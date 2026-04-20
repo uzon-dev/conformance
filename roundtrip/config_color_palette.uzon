@@ -1,0 +1,13 @@
+palette is {
+    name is "Ocean Breeze"
+    colors is [
+        { name is "deep-sea", hex is "#003366", rgb is (0 as u8, 51 as u8, 102 as u8) },
+        { name is "wave", hex is "#0077B6", rgb is (0 as u8, 119 as u8, 182 as u8) },
+        { name is "foam", hex is "#90E0EF", rgb is (144 as u8, 224 as u8, 239 as u8) },
+        { name is "sand", hex is "#F5E6CA", rgb is (245 as u8, 230 as u8, 202 as u8) },
+        { name is "coral", hex is "#FF6B6B", rgb is (255 as u8, 107 as u8, 107 as u8) }
+    ]
+    background is "#FFFFFF"
+    foreground is "#1A1A2E"
+    accent is "#E94560"
+}

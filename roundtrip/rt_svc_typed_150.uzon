@@ -1,0 +1,8 @@
+// Service configuration #150
+@type is "graphql"
+name is "dev_150"
+port is 41235 as u16
+enabled is false
+max_connections is 4391 as i32
+timeout_ms is 1048 as i32
+tls is false

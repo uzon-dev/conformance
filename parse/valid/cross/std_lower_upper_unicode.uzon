@@ -1,0 +1,7 @@
+// §5.16.3: std.lower/std.upper on non-ASCII Unicode
+fr is std.lower("RÉSUMÉ")
+de is std.upper("straße")
+gr is std.upper("αλφα")
+da is std.lower("ØRSTED")
+mixed is std.upper("café au lait")
+chain is std.lower(std.upper("naïve"))

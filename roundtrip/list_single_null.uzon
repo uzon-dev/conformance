@@ -1,0 +1,4 @@
+a is [ null ] as [i32]
+b is [ null ] as [string]
+c is [ null ] as [bool]
+d is [ null ] as [f64]

@@ -1,0 +1,13 @@
+_piece is king from king, queen, rook, bishop, knight, pawn called Piece
+_color is white from white, black called PieceColor
+
+starting_position is [
+    { piece is rook as Piece, color is white as PieceColor, square is "a1" },
+    { piece is knight as Piece, color is white as PieceColor, square is "b1" },
+    { piece is bishop as Piece, color is white as PieceColor, square is "c1" },
+    { piece is queen as Piece, color is white as PieceColor, square is "d1" },
+    { piece is king as Piece, color is white as PieceColor, square is "e1" },
+    { piece is bishop as Piece, color is white as PieceColor, square is "f1" },
+    { piece is knight as Piece, color is white as PieceColor, square is "g1" },
+    { piece is rook as Piece, color is white as PieceColor, square is "h1" }
+]

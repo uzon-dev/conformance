@@ -1,0 +1,9 @@
+// Roundtrip: strings with special content
+with_braces is "not \{interpolation} here"
+with_backslash is "C:\\Users\\test"
+with_quotes is "she said \"hello\""
+with_newlines is "line1\nline2\nline3"
+with_tabs is "col1\tcol2\tcol3"
+with_null_char is "before\0after"
+with_unicode is "\u{1F600} emoji"
+empty is ""

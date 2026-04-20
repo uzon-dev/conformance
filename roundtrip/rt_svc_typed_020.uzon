@@ -1,0 +1,8 @@
+// Service configuration #20
+@type is "postgres"
+name is "main_20"
+port is 16104 as u16
+enabled is false
+max_connections is 1173 as i32
+timeout_ms is 23294 as i32
+retry_count is 3 as u8

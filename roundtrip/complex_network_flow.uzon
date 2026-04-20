@@ -1,0 +1,28 @@
+flow is {
+    id is "flow-2026-04-11-001"
+    protocol is "TCP"
+    src is { ip is "192.168.1.100", port is 49152 as u16, mac is "AA:BB:CC:DD:EE:F1" }
+    dst is { ip is "10.0.1.50", port is 443 as u16, mac is "11:22:33:44:55:66" }
+    tls is {
+        version is "TLSv1.3"
+        cipher is "TLS_AES_256_GCM_SHA384"
+        sni is "api.example.com"
+        alpn is "h2"
+        certificate is { issuer is "Let's Encrypt", valid_to is "2026-07-10T00:00:00Z", fingerprint is "sha256:abc123..." }
+    }
+    timestamps is {
+        syn is "2026-04-11T08:00:01.001Z"
+        syn_ack is "2026-04-11T08:00:01.045Z"
+        established is "2026-04-11T08:00:01.046Z"
+        first_data is "2026-04-11T08:00:01.047Z"
+        fin is "2026-04-11T08:00:05.123Z"
+    }
+    stats is {
+        packets_sent is 42 as u32
+        packets_received is 38 as u32
+        bytes_sent is 15234 as u64
+        bytes_received is 892456 as u64
+        retransmits is 0 as u32
+        rtt_ms is 44.5
+    }
+}

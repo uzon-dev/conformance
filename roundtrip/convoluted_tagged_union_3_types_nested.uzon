@@ -1,0 +1,6 @@
+_inner is 0 named num from num as i32, text as string, flag as bool called Inner
+_outer is null named none from some as Inner, none as null called Outer
+
+num_val is 42 as Inner named num
+text_val is "hello" as Inner named text
+outer_none is null as Outer named none

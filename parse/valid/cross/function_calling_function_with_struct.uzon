@@ -1,0 +1,24 @@
+// §3.8 + §5.15 + §3.2 + §3.2.1 + §6.2 + §4.4.1
+// function calling function + struct creation + with + named types + interpolation
+entry is { key is "", value is "" } called Entry
+
+makeEntry is function k as string, v as string returns Entry {
+    { key is k, value is v } as Entry
+}
+
+formatEntry is function e as Entry returns string {
+    "{e.key}={e.value}"
+}
+
+formatPair is function k as string, v as string returns string {
+    e is makeEntry(k, v)
+    formatEntry(e)
+}
+
+line1 is formatPair("host", "localhost")
+line2 is formatPair("port", "8080")
+config_block is line1 ++ "\n" ++ line2
+
+// with on function result
+modified is makeEntry("host", "localhost") with { value is "example.com" }
+modified_line is formatEntry(modified)

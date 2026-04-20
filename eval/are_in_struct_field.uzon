@@ -1,0 +1,7 @@
+// §3.4.1 `are` in struct fields evaluates to lists
+cfg is {
+    primes are 2, 3, 5, 7, 11
+    names are "one", "two", "three"
+}
+first_prime is cfg.primes.first
+count is std.len(cfg.names)

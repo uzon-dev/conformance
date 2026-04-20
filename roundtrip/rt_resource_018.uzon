@@ -1,0 +1,11 @@
+// Resource #18
+@type is "queue"
+name is "queue_18"
+region is "us-west-2"
+config is {
+    @type is "queue_config"
+    broker is "sqs"
+    max_retries is 10 as u8
+    batch_size is 352 as u16
+}
+active is true

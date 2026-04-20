@@ -1,0 +1,6 @@
+// ERROR: §11.2.1 + §3.2.1 + §5.14
+// circular: a depends on b via with, b depends on a via of
+base is { host is "localhost", port is 8080 as u16 }
+a is b with { host is "override" }
+port is of a
+b is base with { port is port }

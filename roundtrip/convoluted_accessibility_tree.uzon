@@ -1,0 +1,57 @@
+_anode is {
+    role is ""
+    name is null
+    level is null
+    children is null
+}
+
+tree is _anode with {
+    role is "document"
+    name is "UZON Specification"
+    children is [
+        _anode with {
+            role is "heading"
+            name is "Introduction"
+            level is 1 as u8
+        },
+        _anode with {
+            role is "region"
+            name is "Content"
+            children is [
+                _anode with {
+                    role is "heading"
+                    name is "Data Types"
+                    level is 2 as u8
+                },
+                _anode with {
+                    role is "list"
+                    children is [
+                        _anode with { role is "listitem", name is "Struct" },
+                        _anode with { role is "listitem", name is "List" },
+                        _anode with { role is "listitem", name is "Tuple" }
+                    ]
+                },
+                _anode with {
+                    role is "table"
+                    name is "Type comparison"
+                    children is [
+                        _anode with {
+                            role is "row"
+                            children is [
+                                _anode with { role is "columnheader", name is "Type" },
+                                _anode with { role is "columnheader", name is "Mutable" }
+                            ]
+                        },
+                        _anode with {
+                            role is "row"
+                            children is [
+                                _anode with { role is "cell", name is "Struct" },
+                                _anode with { role is "cell", name is "No" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+// Build a formatted table using string operations
+headers are "Name", "Score", "Grade"
+widths are 12, 8, 6
+
+// manual padding since we don't have pad function
+separator is std.join(
+    std.map(widths, function w as i64 returns string { "-" ** w to i32 }),
+    "+"
+)
+
+rows are
+    "Alice       |      95|     A",
+    "Bob         |      85|     B",
+    "Charlie     |      70|     C"
+
+table is std.join(rows, "\n")
+
+// stats
+scores are 95, 85, 70
+total is std.reduce(scores, 0, function acc as i64, n as i64 returns i64 { acc + n })
+count is std.len(scores)
+average is total / count
+
+sorted is std.sort(scores, function a as i64, b as i64 returns bool { a > b })
+top is std.get(sorted, 0)
+
+summary is "Total: {total}, Avg: {average}, Top: {top}"

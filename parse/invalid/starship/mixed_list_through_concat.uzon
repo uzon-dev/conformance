@@ -1,0 +1,7 @@
+// ERROR: §3.4 + §5.16.2 + §5.8.2
+// map produces [i64], labels is [string] — concat fails
+numbers are 1, 2, 3
+labels are "a", "b", "c" as [string]
+
+mapped is std.map(numbers, function n as i64 returns i64 { n * 2 })
+bad is mapped ++ labels

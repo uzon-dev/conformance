@@ -1,0 +1,32 @@
+// Roundtrip: package manifest (Cargo.toml / package.json style)
+package is {
+    name is "uzon-parser"
+    version is (0, 5, 0)
+    description is "A parser and evaluator for the UZON data expression format"
+    license is "MIT"
+    repository is "https://github.com/uzon-dev/uzon-ts"
+    keywords is [ "uzon", "parser", "config", "data-format" ]
+    authors is [
+        { name is "Alice", email is "alice@example.com" },
+        { name is "Bob", email is null }
+    ]
+}
+
+dependencies is {
+    runtime is [
+        { name is "unicode-segmentation", version is "1.10" },
+        { name is "thiserror", version is "1.0" }
+    ]
+    dev is [
+        { name is "criterion", version is "0.5", features is [ "html_reports" ] },
+        { name is "proptest", version is "1.2", features is [] as [string] }
+    ]
+}
+
+targets is {
+    lib is { path is "src/lib.rs", doc is true }
+    bin is [
+        { name is "uzon", path is "src/main.rs" },
+        { name is "uzon-fmt", path is "src/fmt.rs" }
+    ]
+}

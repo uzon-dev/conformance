@@ -1,0 +1,3 @@
+// §7.1 struct import paths MUST be static string literals — interpolation forbidden
+_name is "config"
+bad is struct "./path/{_name}"

@@ -1,0 +1,11 @@
+// Schema definition #131
+@type is "schema"
+version is 4 as u8
+name is "sigma_schema_131"
+fields are
+        { name is "field_0", @type is "bool", required is true },
+        { name is "field_1", @type is "i64", required is false },
+        { name is "field_2", @type is "i32", required is true },
+        { name is "field_3", @type is "bool", required is false },
+        { name is "field_4", @type is "string", required is true },
+        { name is "field_5", @type is "string", required is false }

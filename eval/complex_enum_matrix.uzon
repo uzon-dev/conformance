@@ -1,0 +1,28 @@
+// Enum + case + arithmetic — build a lookup table
+_dir is north from north, south, east, west called Direction
+
+// direction to degrees
+toDegrees is function d as Direction returns i32 {
+    case d
+        when north then 0
+        when east then 90
+        when south then 180
+        when west then 270
+        else 0
+}
+
+// opposite direction
+opposite is function d as Direction returns Direction {
+    case d
+        when north then south as Direction
+        when south then north as Direction
+        when east then west as Direction
+        when west then east as Direction
+        else d
+}
+
+heading is east as Direction
+degrees is toDegrees(heading)
+opp is opposite(heading)
+opp_degrees is toDegrees(opp)
+diff is opp_degrees - degrees

@@ -1,0 +1,13 @@
+queue is {
+    items is [
+        { priority is 0 as u8, data is "emergency shutdown", ts is "08:00:00" },
+        { priority is 1 as u8, data is "critical alert", ts is "08:00:01" },
+        { priority is 1 as u8, data is "critical alert 2", ts is "08:00:02" },
+        { priority is 3 as u8, data is "warning", ts is "07:59:50" },
+        { priority is 5 as u8, data is "info log", ts is "07:55:00" },
+        { priority is 5 as u8, data is "debug trace", ts is "07:50:00" },
+        { priority is 10 as u8, data is "cleanup task", ts is "07:00:00" }
+    ]
+    size is 7 as u8
+    capacity is 64 as u8
+}

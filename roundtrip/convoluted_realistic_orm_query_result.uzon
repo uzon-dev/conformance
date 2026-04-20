@@ -1,0 +1,24 @@
+_order is asc from asc, desc called SortOrder
+
+query_result is {
+    sql is "SELECT u.id, u.name, p.title FROM users u JOIN posts p ON u.id = p.user_id WHERE u.active = true ORDER BY u.name ASC LIMIT 10"
+    params is [ "true", "10" ]
+    columns is [
+        { name is "id", @type is "integer", table is "users", nullable is false },
+        { name is "name", @type is "text", table is "users", nullable is true },
+        { name is "title", @type is "text", table is "posts", nullable is false }
+    ]
+    rows is [
+        (1, "Alice", "First Post"),
+        (1, "Alice", "Second Post"),
+        (2, "Bob", "Hello World"),
+        (3, null, "Anonymous Post")
+    ]
+    metadata is {
+        rows_affected is 4 as u32
+        execution_time_ms is 12.5
+        plan is "Index Scan using idx_users_active on users"
+        sort is { column is "name", order is asc as SortOrder }
+        pagination is { offset is 0 as u32, limit is 10 as u32, has_more is false }
+    }
+}

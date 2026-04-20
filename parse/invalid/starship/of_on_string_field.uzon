@@ -1,0 +1,8 @@
+// ERROR: §5.14 + §3.2
+// of resolves to a string value (not struct), then tries to extract from it
+_shared is struct "./shared"
+
+vessel is { name is "Wanderer", registry is "DSV-2049" }
+
+// vessel.name is string — of tries to find vessel.name.name → not a struct
+name is of vessel.name

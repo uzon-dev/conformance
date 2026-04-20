@@ -1,0 +1,4 @@
+@type is "heartbeat"
+timestamp is 1776525600
+source is "mu"
+detail is "name_669"

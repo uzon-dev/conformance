@@ -1,0 +1,12 @@
+service is {
+    name is "billing-0"
+    host is "0.0.0.0"
+    port is 3010 as u16
+    workers is 2 as u8
+    max_conn is 150 as u16
+    tls is false
+    log_level is "debug"
+    health is { path is "/health", interval_sec is 5 as u16, timeout_sec is 2 as u16 }
+    tags is [ "billing", "v1.0", "dev" ]
+    limits is { cpu_m is 250 as u16, memory_mb is 128 as u16 }
+}

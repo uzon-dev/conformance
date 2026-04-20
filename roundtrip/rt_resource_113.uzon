@@ -1,0 +1,11 @@
+// Resource #113
+@type is "queue"
+name is "queue_113"
+region is "us-east-1"
+config is {
+    @type is "queue_config"
+    broker is "kafka"
+    max_retries is 8 as u8
+    batch_size is 816 as u16
+}
+active is true

@@ -1,0 +1,6 @@
+// §5.10 — anonymous struct shapes are not valid type expressions
+// Use a named struct type via `called` instead
+p is { x is 0 as i32, y is 0 as i32 }
+bad is case type p
+    when { x is 0 as i32, y is 0 as i32 } then "point"
+    else "other"

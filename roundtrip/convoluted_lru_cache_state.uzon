@@ -1,0 +1,14 @@
+cache is {
+    capacity is 5 as u8
+    size is 5 as u8
+    order is [ "key5", "key1", "key3", "key2", "key4" ]
+    entries is {
+        key1 is { value is "data_1", hits is 15 as u32, inserted_at is "08:00:00", last_access is "08:05:00" }
+        key2 is { value is "data_2", hits is 3 as u32, inserted_at is "08:01:00", last_access is "08:02:00" }
+        key3 is { value is "data_3", hits is 42 as u32, inserted_at is "08:00:30", last_access is "08:04:30" }
+        key4 is { value is "data_4", hits is 1 as u32, inserted_at is "08:03:00", last_access is "08:03:01" }
+        key5 is { value is "data_5", hits is 100 as u32, inserted_at is "08:00:01", last_access is "08:06:00" }
+    }
+    evictions is 12 as u32
+    hit_rate is 0.847
+}

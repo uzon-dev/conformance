@@ -1,0 +1,12 @@
+query is {
+    id is 0xABCD
+    flags is { qr is false, opcode is 0 as u8, rd is true, ra is false }
+    questions is [ { name is "example.com", @type is "A", class is "IN" } ]
+    answers is [] as [string]
+}
+response is {
+    id is 0xABCD
+    flags is { qr is true, opcode is 0 as u8, rd is true, ra is true }
+    questions is [ { name is "example.com", @type is "A", class is "IN" } ]
+    answers is [ { name is "example.com", @type is "A", class is "IN", ttl is 300 as u32, data is "93.184.216.34" } ]
+}

@@ -1,0 +1,16 @@
+list_hit is true
+list_miss is false
+tuple_int is true
+tuple_str is true
+tuple_miss is false
+struct_str is true
+struct_int is true
+struct_bool is true
+struct_key_miss is false
+struct_val_miss is false
+null_list is true
+null_tuple is true
+null_struct is true
+null_absent_list is false
+null_absent_tuple is false
+null_absent_struct is false

@@ -1,0 +1,5 @@
+// Roundtrip: tuples of various shapes
+pair is (1, "hello")
+triple is (true, 3.14, "yes")
+nested is ((1, 2), (3, 4))
+mixed is (42, null, "text", false)

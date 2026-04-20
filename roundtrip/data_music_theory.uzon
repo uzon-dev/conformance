@@ -1,0 +1,11 @@
+scales is {
+    major is { intervals is [ 0, 2, 4, 5, 7, 9, 11 ] as [i8], pattern is "WWHWWWH" }
+    minor is { intervals is [ 0, 2, 3, 5, 7, 8, 10 ] as [i8], pattern is "WHWWHWW" }
+    pentatonic is { intervals is [ 0, 2, 4, 7, 9 ] as [i8], pattern is "W3HW3H" }
+    blues is { intervals is [ 0, 3, 5, 6, 7, 10 ] as [i8], pattern is "3HHWW3" }
+}
+chords is [
+    { name is "Cmaj", notes is [ "C", "E", "G" ], intervals is (0 as i8, 4 as i8, 7 as i8) },
+    { name is "Am", notes is [ "A", "C", "E" ], intervals is (0 as i8, 3 as i8, 7 as i8) },
+    { name is "G7", notes is [ "G", "B", "D", "F" ], intervals is (0 as i8, 4 as i8, 7 as i8, 10 as i8) }
+]

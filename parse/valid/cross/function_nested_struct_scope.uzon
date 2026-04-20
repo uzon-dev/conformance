@@ -1,0 +1,13 @@
+// §3.8 + §5.12: function body scope chain with nested struct
+base is 10 as i32
+multiplier is 3 as i32
+
+compute is function n as i32 returns i32 {
+    offset is base              // function body → file scope → 10
+    inner is {
+        scaled is multiplier    // struct → function body → file scope → 3
+        local is offset         // struct → function body → 10
+    }
+    n * inner.scaled + inner.local
+}
+result is compute(5)            // 5 * 3 + 10 = 25

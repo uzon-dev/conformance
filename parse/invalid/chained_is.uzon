@@ -1,0 +1,3 @@
+// §5.2 Chained is — at most one comparison per expression level
+x is 1
+result is x is 1 is true

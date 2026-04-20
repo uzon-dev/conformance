@@ -1,0 +1,35 @@
+workspace is {
+    id is 1 as u8
+    name is "dev"
+    layout is "horizontal"
+    split is 0.55
+    left is {
+        @type is "window"
+        title is "nvim - src/main.zig"
+        app_id is "foot"
+        pid is 12345 as u32
+        focused is true
+        size is (1408 as u16, 1440 as u16)
+    }
+    right is {
+        @type is "container"
+        layout is "vertical"
+        split is 0.6
+        top is {
+            @type is "window"
+            title is "zig build test"
+            app_id is "foot"
+            pid is 12346 as u32
+            focused is false
+            size is (1152 as u16, 864 as u16)
+        }
+        bottom is {
+            @type is "window"
+            title is "htop"
+            app_id is "foot"
+            pid is 12347 as u32
+            focused is false
+            size is (1152 as u16, 576 as u16)
+        }
+    }
+}

@@ -1,0 +1,6 @@
+containers is [
+    { id is "abc123def456", name is "web-1", image is "myapp:3.2.1", state is "running", ports is [ "8080:80" ], cpu_pct is 12.5, mem_mb is 256 as u32, uptime is "3d 5h" },
+    { id is "fed654cba321", name is "db-1", image is "postgres:16", state is "running", ports is [ "5432:5432" ], cpu_pct is 8.3, mem_mb is 1024 as u32, uptime is "7d 12h" },
+    { id is "111222333444", name is "cache-1", image is "redis:7", state is "running", ports is [ "6379:6379" ], cpu_pct is 1.2, mem_mb is 128 as u32, uptime is "7d 12h" },
+    { id is "555666777888", name is "worker-1", image is "myapp:3.2.1", state is "exited", ports is [] as [string], cpu_pct is 0.0, mem_mb is 0 as u32, uptime is "0s" }
+]

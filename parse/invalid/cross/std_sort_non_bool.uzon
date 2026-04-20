@@ -1,0 +1,4 @@
+// ERROR: §5.16.2 + §3.8
+// std.sort comparator returns i32 instead of bool
+numbers are 5, 3, 1
+bad is std.sort(numbers, function a as i64, b as i64 returns i64 { a - b })

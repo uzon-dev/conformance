@@ -1,0 +1,6 @@
+// §5.11.0 — `to` also does not convert between enum types
+Color is enum red, green, blue
+Paint is enum red, green, blue
+
+c is red as Color
+bad is c to Paint

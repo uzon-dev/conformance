@@ -1,0 +1,6 @@
+// ERROR: §5.16.1 + §3.4
+// std.values requires struct
+_shared is struct "./shared"
+modules are _shared.bridge, _shared.base_module
+
+bad is std.values(modules)

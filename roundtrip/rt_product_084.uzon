@@ -1,0 +1,14 @@
+product is {
+    sku is "SKU-HEA-0084"
+    name is "Health Item 84"
+    category is "health"
+    price is 51.99
+    currency is "USD"
+    stock is 252 as u16
+    weight_g is 940 as u32
+    dimensions is (14.0, 14.0, 6.0)
+    rating is 3.4
+    reviews is 588 as u16
+    active is true
+    tags is [ "health", "sale" ]
+}

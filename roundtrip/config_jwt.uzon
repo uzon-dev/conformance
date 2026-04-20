@@ -1,0 +1,16 @@
+jwt is {
+    algorithm is "RS256"
+    issuer is "https://auth.example.com"
+    audience is [ "https://api.example.com", "https://app.example.com" ]
+    expiry_sec is 3600 as u32
+    refresh_expiry_sec is 604800 as u32
+    claims is {
+        required is [ "sub", "iat", "exp", "iss", "aud" ]
+        optional is [ "name", "email", "roles", "permissions" ]
+    }
+    keys is {
+        current is { kid is "key-2026-04", path is "/etc/keys/current.pem" }
+        previous is { kid is "key-2026-01", path is "/etc/keys/previous.pem" }
+    }
+    cookie is { name is "access_token", secure is true, http_only is true, same_site is "strict", domain is ".example.com" }
+}

@@ -1,0 +1,7 @@
+// §3.8 Function body — last item must be expression, not binding
+// Binding-only body is invalid. This file shows correct patterns.
+just_expr is function n as i32 returns i32 { n + 1 }
+with_binding is function n as i32 returns i32 {
+    doubled is n * 2
+    doubled + 1          // expression, not binding — this is the return value
+}

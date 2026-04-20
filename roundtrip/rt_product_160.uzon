@@ -1,0 +1,14 @@
+product is {
+    sku is "SKU-BEA-0160"
+    name is "Beauty Item 160"
+    category is "beauty"
+    price is 89.99
+    currency is "USD"
+    stock is 480 as u16
+    weight_g is 1700 as u32
+    dimensions is (10.0, 15.0, 2.0)
+    rating is 3.0
+    reviews is 120 as u16
+    active is false
+    tags is [ "beauty", "new" ]
+}

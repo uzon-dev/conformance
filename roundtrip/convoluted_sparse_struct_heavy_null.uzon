@@ -1,0 +1,6 @@
+record is {
+    f01 is null, f02 is null, f03 is 1, f04 is null, f05 is null,
+    f06 is null, f07 is "x", f08 is null, f09 is null, f10 is null,
+    f11 is null, f12 is null, f13 is null, f14 is true, f15 is null,
+    f16 is null, f17 is null, f18 is null, f19 is null, f20 is 3.14
+}

@@ -1,0 +1,12 @@
+metric is {
+    name is "disk_io"
+    host is "server-07"
+    timestamp is 1712806420 as u64
+    value is 81.9
+    unit is "bytes"
+    tags is {
+        environment is "development"
+        region is "ap-east"
+        service is "svc-07"
+    }
+}

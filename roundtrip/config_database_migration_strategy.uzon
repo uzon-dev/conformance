@@ -1,0 +1,14 @@
+_strategy is blue_green from blue_green, rolling, canary, recreate called Strategy
+
+deployment is {
+    strategy is canary as Strategy
+    canary is { initial_pct is 5 as u8, increment_pct is 10 as u8, interval_sec is 300 as u32, success_threshold is 0.999 }
+    rollback is { auto is true, error_threshold is 0.01, latency_p99_ms is 500 as u32 }
+    pre_hooks is [ "migrate-db", "warm-cache" ]
+    post_hooks is [ "notify-slack", "update-dashboard" ]
+    regions is [
+        { name is "us-east-1", weight is 40 as u8, primary is true },
+        { name is "us-west-2", weight is 30 as u8, primary is false },
+        { name is "eu-west-1", weight is 30 as u8, primary is false }
+    ]
+}

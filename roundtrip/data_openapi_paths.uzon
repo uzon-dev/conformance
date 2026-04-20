@@ -1,0 +1,11 @@
+paths is {
+    '/users' is {
+        get is { summary is "List users", tags is [ "users" ], responses is { ok is 200 as u16, error is 500 as u16 } }
+        post is { summary is "Create user", tags is [ "users" ], responses is { created is 201 as u16, bad is 400 as u16 } }
+    }
+    '/users/\{id}' is {
+        get is { summary is "Get user", tags is [ "users" ], responses is { ok is 200 as u16, missing is 404 as u16 } }
+        put is { summary is "Update user", tags is [ "users" ], responses is { ok is 200 as u16, bad is 400 as u16 } }
+        delete is { summary is "Delete user", tags is [ "users" ], responses is { ok is 204 as u16, missing is 404 as u16 } }
+    }
+}

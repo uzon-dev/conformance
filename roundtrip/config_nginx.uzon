@@ -1,0 +1,40 @@
+_location is {
+    path is ""
+    proxy_pass is null
+    'proxy-set-header' is null
+    root is null
+    expires is null
+    return is null
+} called Location
+
+http is {
+    'upstream-backend' is {
+        servers is [
+            { address is "127.0.0.1:8001", weight is 3 as u8, backup is false },
+            { address is "127.0.0.1:8002", weight is 2 as u8, backup is false },
+            { address is "127.0.0.1:8003", weight is 1 as u8, backup is true }
+        ]
+        'keepalive-connections' is 64 as u16
+    }
+    server is {
+        listen is 443 as u16
+        'server-name' is "example.com"
+        ssl is {
+            certificate is "/etc/ssl/cert.pem"
+            'certificate-key' is "/etc/ssl/key.pem"
+            protocols is [ "TLSv1.2", "TLSv1.3" ]
+            ciphers is "ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256"
+            'session-timeout' is "1d"
+        }
+        locations is [
+            _location with { path is "/", proxy_pass is "http://backend", 'proxy-set-header' is "X-Real-IP $remote_addr" },
+            _location with { path is "/static/", root is "/var/www/static", expires is "30d" },
+            _location with { path is "/health", return is 200 as u16 }
+        ] as [Location]
+        headers is {
+            'X-Frame-Options' is "DENY"
+            'X-Content-Type-Options' is "nosniff"
+            'Strict-Transport-Security' is "max-age=31536000"
+        }
+    }
+}

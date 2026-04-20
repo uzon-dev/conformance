@@ -1,0 +1,9 @@
+// ERROR: §3.8 + §5.12 + §5.11.2
+// default references nonexistent outer binding → undefined propagates
+// then interpolation in body hits undefined → runtime error
+
+greet is function name as string default greeting returns string {
+    "hello, {name}"
+}
+
+bad is greet()

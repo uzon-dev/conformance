@@ -1,0 +1,8 @@
+// Service configuration #72
+@type is "http"
+name is "upsilon_72"
+port is 61899 as u16
+enabled is true
+max_connections is 6159 as i32
+timeout_ms is 13097 as i32
+retry_count is 3 as u8

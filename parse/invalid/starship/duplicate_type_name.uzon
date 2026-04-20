@@ -1,0 +1,4 @@
+// ERROR: §11.2.1 + §6.2
+// two enums with same called name in same scope
+_level is info from info, warn, error called LogLevel
+_other is low from low, high called LogLevel

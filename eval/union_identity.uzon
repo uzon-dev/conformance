@@ -1,0 +1,13 @@
+// §3.6 anonymous unions with same member set are the same type (order irrelevant)
+a is 42 from union i32, string
+b is "hello" from union string, i32     // same type as a (reversed order)
+
+// Same union type, different runtime types → false (not error)
+diff_rt is a is b
+
+// Same union, transparency with non-union value
+trans is a is 42
+
+// Same runtime type, same value
+c is 42 from union i32, string
+same is a is c

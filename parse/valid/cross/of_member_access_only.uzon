@@ -1,0 +1,7 @@
+// §5.14: of uses member_access (dot only, no function calls)
+config is {
+    port is 8080
+    host is "localhost"
+}
+port is of config           // port is config.port = 8080
+host is of config           // host is config.host = "localhost"

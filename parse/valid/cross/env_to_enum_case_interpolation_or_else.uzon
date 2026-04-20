@@ -1,0 +1,16 @@
+// §5.13 + §5.11 + §3.5 + §5.10 + §4.4.1 + §5.7
+// env → to enum → or else fallback → case → interpolation
+_severity is low from low, medium, high, critical called Severity
+
+severity is env.SEVERITY to Severity or else low as Severity
+
+label is case severity
+    when low then "INFO"
+    when medium then "WARN"
+    when high then "ALERT"
+    when critical then "CRITICAL"
+    else "UNKNOWN"
+
+report is "Severity: {label} ({severity})"
+resolved is env.RESOLVED is "true" or else false
+final is if resolved then "RESOLVED: {report}" else report

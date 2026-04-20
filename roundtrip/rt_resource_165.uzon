@@ -1,0 +1,12 @@
+// Resource #165
+@type is "queue"
+name is "queue_165"
+region is "us-west-2"
+config is {
+    @type is "queue_config"
+    broker is "sqs"
+    max_retries is 1 as u8
+    batch_size is 104 as u16
+}
+tags are "zeta", "prod"
+active is true

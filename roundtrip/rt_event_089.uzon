@@ -1,0 +1,6 @@
+@type is "purchase"
+timestamp is 1791624920
+source is "epsilon"
+amount is 187.6
+currency is "USD"
+item_count is 6 as u8

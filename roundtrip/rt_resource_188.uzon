@@ -1,0 +1,12 @@
+// Resource #188
+@type is "queue"
+name is "queue_188"
+region is "ap-northeast-1"
+config is {
+    @type is "queue_config"
+    broker is "rabbitmq"
+    max_retries is 10 as u8
+    batch_size is 63 as u16
+}
+tags are "value", "enabled"
+active is true

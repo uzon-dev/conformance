@@ -1,0 +1,5 @@
+Event is tagged union pressed as string, released as string, cleared as null
+e1 is "enter" as Event named pressed
+e2 is null as Event named cleared
+e1_tag is true
+e2_tag is true

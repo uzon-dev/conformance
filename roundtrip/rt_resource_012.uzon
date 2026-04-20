@@ -1,0 +1,11 @@
+// Resource #12
+@type is "cache"
+name is "cache_12"
+region is "us-east-1"
+config is {
+    @type is "cache_config"
+    backend is "local"
+    ttl_seconds is 7372 as i32
+    max_memory_mb is 2354 as u16
+}
+active is true

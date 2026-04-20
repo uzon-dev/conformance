@@ -1,0 +1,6 @@
+pair is (1, "hello")
+first is pair.0
+second is pair.1
+ord_first is pair.first
+triple is (true, 3.14, "yes")
+mid is triple.second

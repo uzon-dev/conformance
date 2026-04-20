@@ -1,0 +1,5 @@
+@type is "pageview"
+timestamp is 1751479273
+source is "debug"
+url is "https://main.example.com/upsilon"
+session_id is "lambda_2069"

@@ -1,0 +1,14 @@
+product is {
+    sku is "SKU-BOO-0183"
+    name is "Books Item 183"
+    category is "books"
+    price is 101.49
+    currency is "USD"
+    stock is 49 as u16
+    weight_g is 1930 as u32
+    dimensions is (13.0, 8.0, 5.0)
+    rating is 3.3
+    reviews is 281 as u16
+    active is true
+    tags is [ "books", "sale" ]
+}

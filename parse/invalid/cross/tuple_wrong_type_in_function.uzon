@@ -1,0 +1,4 @@
+// §3.3 + §3.8
+// function expects tuple type, receives wrong shape
+process is function p as (f64, f64) returns f64 { p.0 + p.1 }
+bad is process((1.0, 2.0, 3.0))   // 3 elements, expects 2

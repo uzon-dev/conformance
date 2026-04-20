@@ -1,0 +1,9 @@
+// Service configuration #145
+@type is "grpc"
+name is "path_145"
+port is 21507 as u16
+enabled is false
+max_connections is 4186 as i32
+timeout_ms is 12365 as i32
+retry_count is 10 as u8
+tls is false

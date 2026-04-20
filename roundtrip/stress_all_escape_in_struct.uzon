@@ -1,0 +1,12 @@
+escapes is {
+    nl is "\n"
+    tab is "\t"
+    cr is "\r"
+    @null is "\0"
+    bs is "\\"
+    qt is "\""
+    brace is "\{"
+    combo is "\\\"\n\t\r\0\{"
+    hex is "\x41\x42\x43"
+    uni is "\u{1F600}\u{2764}\u{2713}"
+}

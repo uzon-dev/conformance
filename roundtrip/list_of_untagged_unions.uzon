@@ -1,0 +1,4 @@
+// Roundtrip: untagged union values in a list
+str_val is "hello" from union string, i32
+int_val is 42 from union string, i32
+another is "world" from union string, i32

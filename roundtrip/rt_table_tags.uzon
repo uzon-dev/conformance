@@ -1,0 +1,16 @@
+table is {
+    name is "tags"
+    schema is "public"
+    columns is [
+        { name is "id", @type is "bigint", nullable is false, primary is true },
+        { name is "created_at", @type is "timestamptz", nullable is false, primary is false },
+        { name is "updated_at", @type is "timestamptz", nullable is true, primary is false },
+        { name is "data_tag", @type is "jsonb", nullable is true, primary is false }
+    ]
+    row_count is 8000 as u64
+    size_mb is 40.7
+    indexes is [
+        { name is "idx_tags_id", columns is [ "id" ], unique is true },
+        { name is "idx_tags_created", columns is [ "created_at" ], unique is false }
+    ]
+}

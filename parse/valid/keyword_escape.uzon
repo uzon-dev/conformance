@@ -1,0 +1,4 @@
+// §2.3 Keyword escape
+@type is "config"
+@default is true
+@null is "not actually null"

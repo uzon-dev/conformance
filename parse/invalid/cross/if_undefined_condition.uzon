@@ -1,0 +1,2 @@
+// §5.9 + §3.1: undefined as condition — not bool
+bad is if nonexistent then "yes" else "no"

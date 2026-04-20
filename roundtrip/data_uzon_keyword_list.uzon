@@ -1,0 +1,11 @@
+// All 32 UZON keywords as string data
+keywords are
+    "true", "false", "null", "inf", "nan", "undefined",
+    "is", "are",
+    "from", "called", "as", "named", "with", "union", "plus", "type",
+    "to", "of",
+    "and", "or", "not",
+    "if", "then", "else", "case", "when",
+    "env", "struct", "in",
+    "function", "returns", "default"
+reserved are "lazy"

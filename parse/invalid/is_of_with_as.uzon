@@ -1,0 +1,3 @@
+// §5.14 is of and as cannot be combined
+_config is { port is 8080 }
+bad is of _config as u16

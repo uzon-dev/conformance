@@ -1,0 +1,9 @@
+lines is [
+    "first\nsecond\nthird",
+    "col1\tcol2\tcol3",
+    "path: C:\\Users\\test",
+    "quote: \"hello\"",
+    "brace: \{value}",
+    "null: \0end",
+    "cr: line1\rline2"
+]

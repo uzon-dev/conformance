@@ -1,0 +1,49 @@
+_access is deny from deny, read, write, admin called Access
+
+policies is [
+    {
+        resource is "/"
+        rules is [
+            { principal is "*", access is read as Access }
+        ]
+        children is [
+            {
+                resource is "/admin"
+                rules is [
+                    { principal is "*", access is deny as Access },
+                    { principal is "role:admin", access is admin as Access }
+                ]
+                children is [
+                    {
+                        resource is "/admin/users"
+                        rules is [
+                            { principal is "role:user-manager", access is write as Access }
+                        ]
+                        children is [] as [string]
+                    },
+                    {
+                        resource is "/admin/settings"
+                        rules is [] as [string]
+                        children is [] as [string]
+                    }
+                ]
+            },
+            {
+                resource is "/api"
+                rules is [
+                    { principal is "role:api-user", access is read as Access },
+                    { principal is "role:api-admin", access is admin as Access }
+                ]
+                children is [
+                    {
+                        resource is "/api/public"
+                        rules is [
+                            { principal is "*", access is read as Access }
+                        ]
+                        children is [] as [string]
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,2 @@
+_x is a from a, b called X
+data is (a as X, b as X, "label", 42)

@@ -1,0 +1,27 @@
+// §5.13 + §5.16.4 + §5.16.2 + §5.16.1 + §3.8 + §5.9 + §4.4.1 + §5.7
+// Full processing pipeline: env → split → trim → lower → filter → sort → join
+raw is env.ITEMS or else "  Zebra ,, Apple , banana ,  Cherry  "
+
+cleaned is std.map(
+    std.split(raw, ","),
+    function s as string returns string { std.lower(std.trim(s)) }
+)
+
+non_empty is std.filter(
+    cleaned,
+    function s as string returns bool { std.len(s) > 0 }
+)
+
+sorted is std.sort(
+    non_empty,
+    function a as string, b as string returns bool { a < b }
+)
+
+count is std.len(sorted)
+listing is std.join(sorted, ", ")
+display is std.replace(listing, ",", " |")
+report is "Items ({count}): {display}"
+
+// conditional output
+is_empty is count is 0
+final is if is_empty then "No items found." else report

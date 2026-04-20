@@ -1,0 +1,8 @@
+// Service configuration #199
+@type is "http"
+name is "value_199"
+port is 5941 as u16
+enabled is false
+max_connections is 2631 as i32
+timeout_ms is 1120 as i32
+tls is true

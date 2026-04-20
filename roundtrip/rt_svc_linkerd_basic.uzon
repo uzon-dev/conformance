@@ -1,0 +1,9 @@
+service is {
+    name is "linkerd"
+    version is "5.4.2"
+    port is 8014 as u16
+    health is "/health"
+    replicas is 3 as u8
+    resources is { cpu_m is 500 as u16, memory_mb is 384 as u16 }
+    labels is { app is "linkerd", tier is "infrastructure" }
+}

@@ -1,0 +1,19 @@
+// §3.5 L866 — "The ambiguity case appears when the inferred type is a
+// union containing multiple enums that share a variant name."
+//
+// Both Color and Fruit have a `red` variant. Mixed is a union of both.
+// When the rule-4 context (struct field with declared type Mixed) is
+// union-of-enums with shared variants, bare `red` is ambiguous — use
+// `as Color` or `as Fruit` to disambiguate.
+Color is enum red, green, blue
+Fruit is enum apple, banana, red
+Mixed is union Color, Fruit
+
+// Explicit (blue as Color) activates rule 2 cleanly (Color is enum);
+// the outer `as Mixed` then adopts the Color value into Mixed per §6.3.
+// This keeps the Container declaration itself unambiguous.
+Container is struct { item is (blue as Color) as Mixed }
+
+// Rule-4 context: `item`'s declared type is Mixed (union of Color, Fruit).
+// Both Color.red and Fruit.red match → AMBIGUOUS → syntax error.
+bad is { item is red } as Container

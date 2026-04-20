@@ -1,0 +1,7 @@
+// §3.5 — standalone enum type declaration
+RGB is enum red, green, blue
+Direction is enum forward, reverse
+
+// Reuse via as
+color is blue as RGB
+heading is forward as Direction

@@ -1,0 +1,5 @@
+@type is "pageview"
+timestamp is 1751996696
+source is "backup"
+url is "https://backup.example.com/config"
+session_id is "debug_7302"

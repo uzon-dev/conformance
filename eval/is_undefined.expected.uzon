@@ -1,0 +1,5 @@
+// missing evaluates to undefined — cannot be expressed as literal
+a is true
+b is false
+c is false
+d is false

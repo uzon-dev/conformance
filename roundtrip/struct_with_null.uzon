@@ -1,0 +1,8 @@
+// Roundtrip: struct fields with null
+user is {
+    name is "Alice"
+    email is "alice@example.com"
+    phone is null
+    bio is null
+    verified is true
+}

@@ -1,0 +1,11 @@
+// Resource #74
+@type is "network"
+name is "network_74"
+region is "us-east-1"
+config is {
+    @type is "network_config"
+    capacity is 6377 as i32
+    priority is 3 as u8
+}
+tags are "sigma"
+active is true

@@ -1,0 +1,8 @@
+// Service configuration #194
+@type is "mqtt"
+name is "theta_194"
+port is 18929 as u16
+enabled is true
+max_connections is 7169 as i32
+timeout_ms is 29246 as i32
+tls is true

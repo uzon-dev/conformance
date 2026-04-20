@@ -1,0 +1,11 @@
+// Resource #177
+@type is "monitor"
+name is "monitor_177"
+region is "us-west-2"
+config is {
+    @type is "monitor_config"
+    capacity is 8602 as i32
+    priority is 4 as u8
+}
+tags are "omicron", "server"
+active is false

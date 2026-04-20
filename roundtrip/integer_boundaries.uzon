@@ -1,0 +1,13 @@
+i8_min is -128 as i8
+i8_max is 127 as i8
+u8_max is 255 as u8
+i16_min is -32768 as i16
+i16_max is 32767 as i16
+u16_max is 65535 as u16
+i32_min is -2147483648 as i32
+i32_max is 2147483647 as i32
+u32_max is 4294967295 as u32
+zero_i8 is 0 as i8
+zero_u8 is 0 as u8
+one_i8 is 1 as i8
+neg_one_i8 is -1 as i8

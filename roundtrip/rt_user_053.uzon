@@ -1,0 +1,16 @@
+user is {
+    id is 10053 as u32
+    username is "nancy053"
+    email is "nancy53@sample.io"
+    display_name is "Nancy #53"
+    city is "Toronto"
+    age is 21 as u8
+    verified is true
+    created is "2026-06-26T12:00:00Z"
+    login_count is 689 as u32
+    preferences is {
+        theme is "light"
+        language is "ko"
+        notifications is false
+    }
+}

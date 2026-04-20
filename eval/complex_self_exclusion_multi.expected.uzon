@@ -1,0 +1,10 @@
+// a: a → undefined → 1
+// b: b → undefined → 1 + 1 = 2
+// c: c → undefined → 2 * 1 = 2
+// d: d → undefined → 1 + 2 + 2 = 5
+// total: 1 + 2 + 2 + 5 = 10
+a is 1
+b is 2
+c is 2
+d is 5
+total is 10

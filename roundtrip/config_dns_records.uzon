@@ -1,0 +1,12 @@
+zone is "example.com"
+ttl is 3600 as u32
+records is [
+    { name is "@", @type is "A", value is "93.184.216.34", ttl is 300 as u32 },
+    { name is "@", @type is "AAAA", value is "2606:2800:220:1:248:1893:25c8:1946", ttl is 300 as u32 },
+    { name is "www", @type is "CNAME", value is "example.com", ttl is 3600 as u32 },
+    { name is "@", @type is "MX", value is "10 mail.example.com", ttl is 3600 as u32 },
+    { name is "@", @type is "TXT", value is "v=spf1 include:_spf.example.com ~all", ttl is 3600 as u32 },
+    { name is "_dmarc", @type is "TXT", value is "v=DMARC1; p=reject; rua=mailto:dmarc@example.com", ttl is 3600 as u32 },
+    { name is "api", @type is "A", value is "93.184.216.35", ttl is 60 as u32 },
+    { name is "staging", @type is "CNAME", value is "staging-lb.example.internal", ttl is 300 as u32 }
+]

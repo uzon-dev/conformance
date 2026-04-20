@@ -1,0 +1,6 @@
+// §4.5 + §5.9 + §5.16.2
+// null as condition inside std.filter function
+items are 1, 2, 3
+bad is std.filter(items, function n as i64 returns bool {
+    if null then true else false
+})

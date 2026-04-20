@@ -1,0 +1,10 @@
+elements is [
+    { symbol is "H", name is "Hydrogen", number is 1 as u8, mass is 1.008, group is 1 as u8 },
+    { symbol is "He", name is "Helium", number is 2 as u8, mass is 4.0026, group is 18 as u8 },
+    { symbol is "Li", name is "Lithium", number is 3 as u8, mass is 6.941, group is 1 as u8 },
+    { symbol is "Be", name is "Beryllium", number is 4 as u8, mass is 9.0122, group is 2 as u8 },
+    { symbol is "B", name is "Boron", number is 5 as u8, mass is 10.81, group is 13 as u8 },
+    { symbol is "C", name is "Carbon", number is 6 as u8, mass is 12.011, group is 14 as u8 },
+    { symbol is "N", name is "Nitrogen", number is 7 as u8, mass is 14.007, group is 15 as u8 },
+    { symbol is "O", name is "Oxygen", number is 8 as u8, mass is 15.999, group is 16 as u8 }
+]

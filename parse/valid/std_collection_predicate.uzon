@@ -1,0 +1,13 @@
+// §5.16.3 Collection Predicate
+numbers are 1, 2, 3, 4, 5
+
+all_positive is std.all(numbers, function n as i64 returns bool { n > 0 })
+any_even is std.any(numbers, function n as i64 returns bool { n % 2 is 0 })
+
+// empty list edge cases
+vacuous is std.all([] as [i64], function n as i64 returns bool { n > 100 })
+none is std.any([] as [i64], function n as i64 returns bool { n > 0 })
+
+// with named function type
+_pred is function n as i64 returns bool { n > 0 } called IntPred
+check is std.all(numbers, function n as i64 returns bool { n > 0 } as IntPred)

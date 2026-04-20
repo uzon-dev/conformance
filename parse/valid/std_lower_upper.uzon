@@ -1,0 +1,7 @@
+// §5.16.4 std.lower, std.upper
+lo is std.lower("Hello, World!")       // "hello, world!"
+up is std.upper("hello, world!")       // "HELLO, WORLD!"
+roundtrip is std.lower(std.upper("test"))  // "test"
+no_change is std.lower("already")     // "already"
+numbers is std.lower("ABC123")        // "abc123"
+mixed is std.upper("café")            // "CAFÉ"

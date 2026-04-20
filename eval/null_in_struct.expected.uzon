@@ -1,0 +1,3 @@
+base is { x is 1 as i32, y is null }
+filled is { x is 1 as i32, y is 42 as i32 }
+cleared is { x is 1 as i32, y is null }

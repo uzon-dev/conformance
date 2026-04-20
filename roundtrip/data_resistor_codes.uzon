@@ -1,0 +1,13 @@
+bands is {
+    black is { value is 0 as u8, multiplier is 1.0 }
+    brown is { value is 1 as u8, multiplier is 10.0 }
+    red is { value is 2 as u8, multiplier is 100.0 }
+    orange is { value is 3 as u8, multiplier is 1000.0 }
+    yellow is { value is 4 as u8, multiplier is 10000.0 }
+    green is { value is 5 as u8, multiplier is 100000.0 }
+    blue is { value is 6 as u8, multiplier is 1000000.0 }
+    violet is { value is 7 as u8, multiplier is 10000000.0 }
+    grey is { value is 8 as u8, multiplier is 100000000.0 }
+    white is { value is 9 as u8, multiplier is 1000000000.0 }
+}
+tolerances is { gold is 5.0, silver is 10.0, none is 20.0 }

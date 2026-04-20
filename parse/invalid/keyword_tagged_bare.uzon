@@ -1,0 +1,2 @@
+// §2.5 — tagged is now a keyword, cannot be used as bare binding name
+tagged is "v1"

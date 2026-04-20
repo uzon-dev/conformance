@@ -1,0 +1,2 @@
+// §3.6 + §6.2 — cannot combine standalone union with called
+Flexible is union i32, string called FlexType

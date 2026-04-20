@@ -1,0 +1,6 @@
+@type is "deploy"
+timestamp is 1733922427
+source is "nu"
+version is "2.23.687"
+environment is "dev"
+rollback is true

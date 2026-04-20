@@ -1,0 +1,15 @@
+// §5.10: Branch narrowing — all branches return string, scrutinee consistent
+u_int is 42 from union i32, f64, string
+u_str is "hello" from union i32, f64, string
+
+r1 is case type u_int
+    when i32 then "int:" ++ (u_int to string)
+    when f64 then "flt:" ++ (u_int to string)
+    when string then "str:" ++ u_int
+    else "other"
+
+r2 is case type u_str
+    when i32 then "int:" ++ (u_str to string)
+    when f64 then "flt:" ++ (u_str to string)
+    when string then "str:" ++ u_str
+    else "other"

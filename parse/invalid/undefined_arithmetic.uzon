@@ -1,0 +1,2 @@
+// §5.3 undefined in arithmetic is runtime error
+x is nonexistent + 1

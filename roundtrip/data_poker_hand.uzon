@@ -1,0 +1,10 @@
+_suit is hearts from hearts, diamonds, clubs, spades called Suit
+hand is [
+    { rank is "A", suit is spades as Suit },
+    { rank is "K", suit is spades as Suit },
+    { rank is "Q", suit is spades as Suit },
+    { rank is "J", suit is spades as Suit },
+    { rank is "10", suit is spades as Suit }
+]
+name is "Royal Flush"
+probability is "1 in 649,740"

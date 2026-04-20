@@ -1,0 +1,35 @@
+_status is resolved from resolved, conflicting, missing called DepStatus
+
+lockfile is {
+    version is 3 as u8
+    packages is [
+        {
+            name is "uzon-core"
+            version is (0, 5, 0)
+            status is resolved as DepStatus
+            integrity is "sha256-abc123"
+            source is "https://registry.uzon.dev/uzon-core-0.5.0.tar.gz"
+            deps is [] as [string]
+            dev_deps is [ "uzon-test-utils" ]
+        },
+        {
+            name is "uzon-cli"
+            version is (0, 3, 0)
+            status is resolved as DepStatus
+            integrity is "sha256-def456"
+            source is "https://registry.uzon.dev/uzon-cli-0.3.0.tar.gz"
+            deps is [ "uzon-core" ]
+            dev_deps is [] as [string]
+        },
+        {
+            name is "uzon-test-utils"
+            version is (0, 1, 0)
+            status is resolved as DepStatus
+            integrity is "sha256-ghi789"
+            source is "https://registry.uzon.dev/uzon-test-utils-0.1.0.tar.gz"
+            deps is [ "uzon-core" ]
+            dev_deps is [] as [string]
+        }
+    ]
+    resolution_time_ms is 342 as u32
+}

@@ -1,0 +1,5 @@
+endpoints is [
+    { path is "/postgres/api/v1/status", method is "GET", timeout_ms is 1200 as u32, auth is true },
+    { path is "/postgres/api/v1/config", method is "GET", timeout_ms is 2200 as u32, auth is true },
+    { path is "/postgres/api/v1/metrics", method is "GET", timeout_ms is 600 as u32, auth is false }
+]

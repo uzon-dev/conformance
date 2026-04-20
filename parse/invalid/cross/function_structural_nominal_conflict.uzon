@@ -1,0 +1,5 @@
+// §3.8 + §6.3: named function types — nominal mismatch
+isEven is function n as i32 returns bool { n % 2 is 0 } called CheckA
+isPos is function n as i32 returns bool { n > 0 } called CheckB
+// same signature but different names — not compatible
+bad is [ isEven, isPos ] as [CheckA]

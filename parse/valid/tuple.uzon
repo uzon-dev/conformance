@@ -1,0 +1,7 @@
+// §3.3 Tuple
+pair is (1, "hello")
+triple is (true, 3.14, "yes")
+access_first is pair.0
+access_ordinal is triple.first
+nested is ((1, 2), (3, 4))
+inner is nested.first.1

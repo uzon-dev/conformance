@@ -1,0 +1,21 @@
+// §5.16.2 + §5.16.4 + §4.4.1
+// sort → map → join → interpolation
+_entry is { name is "", score is 0 as i32 } called Entry
+
+entries are
+    _entry with { name is "Charlie", score is 70 as i32 },
+    _entry with { name is "Alice", score is 95 as i32 },
+    _entry with { name is "Bob", score is 85 as i32 }
+
+sorted is std.sort(
+    entries,
+    function a as Entry, b as Entry returns bool { a.score > b.score }
+)
+
+labels is std.map(
+    sorted,
+    function e as Entry returns string { "{e.name}({e.score})" }
+)
+
+leaderboard is std.join(labels, " > ")
+report is "Ranking: {leaderboard}"

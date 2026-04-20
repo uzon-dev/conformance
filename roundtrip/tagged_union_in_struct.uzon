@@ -1,0 +1,11 @@
+// Roundtrip: tagged unions as struct fields
+_payload is "none" named text from
+    text as string, number as i32, flag as bool, empty as null
+    called Payload
+
+messages is {
+    greeting is "hello world" as Payload named text
+    count is 42 as Payload named number
+    enabled is true as Payload named flag
+    nothing is null as Payload named empty
+}

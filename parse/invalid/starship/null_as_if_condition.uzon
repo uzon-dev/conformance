@@ -1,0 +1,6 @@
+// ERROR: §5.9 + §4.5 + §5.7
+// null passes through or else, then used as condition — not bool
+value is null
+recovered is value or else null
+
+bad is if recovered then "yes" else "no"

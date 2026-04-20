@@ -1,0 +1,8 @@
+int_to_float is 42.0
+float_to_int is 3
+bool_to_str is "true"
+int_to_str is "42"
+float_to_str is "3.14"
+null_to_str is "null"
+neg_to_int is -3
+widen is 100 as u16

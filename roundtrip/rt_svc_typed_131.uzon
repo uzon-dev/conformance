@@ -1,0 +1,7 @@
+// Service configuration #131
+@type is "redis"
+name is "staging_131"
+port is 25338 as u16
+enabled is false
+max_connections is 2541 as i32
+timeout_ms is 29113 as i32

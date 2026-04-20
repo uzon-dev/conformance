@@ -1,0 +1,9 @@
+_addressing is immediate from immediate, register, direct, indirect, indexed called AddressingMode
+
+instructions is [
+    { mnemonic is "MOV", encoding is [ 0x88, 0x89, 0x8A, 0x8B ] as [u8], modes is [ register, register ] as [AddressingMode], size_bytes is 2 as u8 },
+    { mnemonic is "ADD", encoding is [ 0x00, 0x01, 0x02, 0x03 ] as [u8], modes is [ register, immediate ] as [AddressingMode], size_bytes is 3 as u8 },
+    { mnemonic is "JMP", encoding is [ 0xEB, 0xE9 ] as [u8], modes is [ direct ] as [AddressingMode], size_bytes is 2 as u8 },
+    { mnemonic is "PUSH", encoding is [ 0x50 ] as [u8], modes is [ register ] as [AddressingMode], size_bytes is 1 as u8 },
+    { mnemonic is "RET", encoding is [ 0xC3 ] as [u8], modes is [] as [AddressingMode], size_bytes is 1 as u8 }
+]

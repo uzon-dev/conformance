@@ -1,0 +1,9 @@
+service is {
+    name is "envoy"
+    version is "5.2.0"
+    port is 8012 as u16
+    health is "/health"
+    replicas is 1 as u8
+    resources is { cpu_m is 300 as u16, memory_mb is 128 as u16 }
+    labels is { app is "envoy", tier is "frontend" }
+}

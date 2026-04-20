@@ -1,0 +1,22 @@
+git is {
+    user is { name is "UZON Developer", email is "dev@uzon.dev", signingkey is "GPG_KEY_ID" }
+    core is { editor is "nvim", autocrlf is "input", whitespace is "fix", pager is "delta" }
+    init is { 'default-branch' is "main" }
+    pull is { rebase is true }
+    push is { @default is "current", 'auto-setup-remote' is true }
+    merge is { conflictstyle is "diff3", tool is "vimdiff" }
+    diff is { algorithm is "histogram", tool is "delta", 'color-moved' is "default" }
+    alias is {
+        co is "checkout"
+        br is "branch"
+        ci is "commit"
+        st is "status -sb"
+        lg is "log --oneline --graph --decorate --all"
+        undo is "reset HEAD~1 --mixed"
+        amend is "commit --amend --no-edit"
+    }
+    url is {
+        'gh:' is { 'instead-of' is "https://github.com/" }
+        'gl:' is { 'instead-of' is "https://gitlab.com/" }
+    }
+}

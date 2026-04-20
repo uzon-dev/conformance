@@ -1,0 +1,12 @@
+t is (
+    42 as i32,
+    "hello\nworld",
+    true,
+    null,
+    [ 1, 2, 3 ],
+    { x is 1, y is 2 },
+    (10, 20),
+    inf,
+    nan,
+    [ null, "a", null ] as [string]
+)

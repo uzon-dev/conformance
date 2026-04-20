@@ -1,0 +1,11 @@
+// Resource #145
+@type is "queue"
+name is "queue_145"
+region is "us-west-2"
+config is {
+    @type is "queue_config"
+    broker is "rabbitmq"
+    max_retries is 9 as u8
+    batch_size is 262 as u16
+}
+active is true

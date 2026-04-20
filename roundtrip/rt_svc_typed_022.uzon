@@ -1,0 +1,7 @@
+// Service configuration #22
+@type is "graphql"
+name is "active_22"
+port is 38786 as u16
+enabled is false
+max_connections is 7759 as i32
+timeout_ms is 26560 as i32

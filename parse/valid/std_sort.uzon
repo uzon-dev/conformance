@@ -1,0 +1,11 @@
+// §5.16.2 std.sort
+numbers are 5, 2, 8, 1, 9, 3
+ascending is std.sort(numbers, function a as i64, b as i64 returns bool { a < b })
+descending is std.sort(numbers, function a as i64, b as i64 returns bool { a > b })
+
+// sort strings alphabetically
+words are "banana", "apple", "cherry"
+alpha is std.sort(words, function a as string, b as string returns bool { a < b })
+
+// already sorted — stable sort preserves order
+same is std.sort(ascending, function a as i64, b as i64 returns bool { a < b })

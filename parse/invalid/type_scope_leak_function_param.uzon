@@ -1,0 +1,6 @@
+// §6.2: Type inside struct not visible in outer function parameter
+config is {
+    entry is { host is "", port is 0 as u16 } called Entry
+}
+// Entry is scoped to config — bare reference in function param is a type error
+format is function e as Entry returns string { e.host }

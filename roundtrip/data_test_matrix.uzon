@@ -1,0 +1,11 @@
+matrix is [
+    { os is "ubuntu-22.04", lang_version is "1.18", db is "postgres-14", result is "pass" },
+    { os is "ubuntu-22.04", lang_version is "1.20", db is "postgres-14", result is "pass" },
+    { os is "ubuntu-22.04", lang_version is "1.22", db is "postgres-16", result is "pass" },
+    { os is "macos-14", lang_version is "1.18", db is "postgres-14", result is "fail" },
+    { os is "macos-14", lang_version is "1.20", db is "postgres-16", result is "pass" },
+    { os is "macos-14", lang_version is "1.22", db is "postgres-16", result is "pass" },
+    { os is "windows-2022", lang_version is "1.20", db is "postgres-14", result is "skip" },
+    { os is "windows-2022", lang_version is "1.22", db is "postgres-16", result is "pass" }
+]
+total is { pass is 6 as u8, fail is 1 as u8, skip is 1 as u8 }

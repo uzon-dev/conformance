@@ -1,0 +1,9 @@
+// Service configuration #161
+@type is "udp"
+name is "server_161"
+port is 49901 as u16
+enabled is false
+max_connections is 2764 as i32
+timeout_ms is 2602 as i32
+retry_count is 1 as u8
+tls is false

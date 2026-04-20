@@ -1,0 +1,6 @@
+x is 99
+f is function n as i32 returns i32 {
+    offset is 10
+    n + offset + x
+}
+result is f(1)

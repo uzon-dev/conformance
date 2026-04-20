@@ -1,0 +1,20 @@
+comma_style is { a is 1, b is 2, c is 3 }
+newline_style is {
+    x is 4
+    y is 5
+    z is 6
+}
+trailing_comma_style is {
+    p is 7,
+    q is 8,
+    r is 9,
+}
+single_line_list is [ 1, 2, 3, 4, 5 ]
+multi_line_list is [
+    10,
+    20,
+    30
+]
+mixed_struct is { a is 1, b is 2
+    c is 3
+    d is 4, e is 5 }

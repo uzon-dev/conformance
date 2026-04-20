@@ -1,0 +1,11 @@
+// Different enums with overlapping variant names
+_http_status is ok from ok, error called HttpStatus
+_health_status is ok from ok, degraded, down called HealthStatus
+_build_status is ok from ok, failed, pending called BuildStatus
+
+report is {
+    http is ok as HttpStatus
+    health is degraded as HealthStatus
+    build is pending as BuildStatus
+    all_ok is false
+}

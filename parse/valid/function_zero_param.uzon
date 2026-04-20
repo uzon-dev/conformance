@@ -1,0 +1,3 @@
+// §3.8 Function — zero parameters
+getVersion is function returns string { "1.0" }
+version is getVersion()

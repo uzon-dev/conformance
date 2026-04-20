@@ -1,0 +1,5 @@
+// §5.10: case type works on tagged unions too
+_h is "ok" named ok from ok as string, err as string called Health
+result is case type _h
+    when string then "it's a string"
+    else "other"

@@ -1,0 +1,32 @@
+_blood is A_pos from A_pos, A_neg, B_pos, B_neg, AB_pos, AB_neg, O_pos, O_neg called BloodType
+_status is active from active, resolved, chronic called ConditionStatus
+
+patient is {
+    id is "PAT-2026-001234"
+    demographics is {
+        age is 45 as u8
+        blood_type is A_pos as BloodType
+        height_cm is 175.5
+        weight_kg is 78.2
+        bmi is 25.4
+    }
+    conditions is [
+        { code is "E11", name is "Type 2 Diabetes", onset is "2020-03", status is chronic as ConditionStatus },
+        { code is "I10", name is "Essential Hypertension", onset is "2018-06", status is active as ConditionStatus },
+        { code is "J06.9", name is "Acute Upper Respiratory Infection", onset is "2026-04-05", status is resolved as ConditionStatus }
+    ]
+    medications is [
+        { name is "Metformin", dose is "500mg", frequency is "twice daily", start is "2020-04" },
+        { name is "Lisinopril", dose is "10mg", frequency is "once daily", start is "2018-07" }
+    ]
+    vitals is {
+        bp_systolic is 128 as u8
+        bp_diastolic is 82 as u8
+        heart_rate is 72 as u8
+        temperature_c is 36.8
+        oxygen_saturation is 98 as u8
+        recorded_at is "2026-04-11T09:30:00Z"
+    }
+    allergies is [ { substance is "Penicillin", severity is "moderate", reaction is "rash" } ]
+    emergency_contact is { name is "Jane Doe", relationship is "spouse", phone is "+1-555-0123" }
+}

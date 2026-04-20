@@ -1,0 +1,24 @@
+metrics is [
+    {
+        name is "http_requests_total"
+        @type is "counter"
+        help is "Total number of HTTP requests"
+        samples is [
+            { labels is { method is "GET", path is "/api/users", status is "200" }, value is 15234.0, ts is "2026-04-11T08:00:00Z" },
+            { labels is { method is "GET", path is "/api/users", status is "404" }, value is 42.0, ts is "2026-04-11T08:00:00Z" },
+            { labels is { method is "POST", path is "/api/users", status is "201" }, value is 891.0, ts is "2026-04-11T08:00:00Z" },
+            { labels is { method is "POST", path is "/api/users", status is "400" }, value is 156.0, ts is "2026-04-11T08:00:00Z" }
+        ]
+    },
+    {
+        name is "http_request_duration_seconds"
+        @type is "histogram"
+        help is "HTTP request latency in seconds"
+        samples is [
+            { labels is { method is "GET", le is "0.01" }, value is 8234.0, ts is "2026-04-11T08:00:00Z" },
+            { labels is { method is "GET", le is "0.05" }, value is 12456.0, ts is "2026-04-11T08:00:00Z" },
+            { labels is { method is "GET", le is "0.1" }, value is 14890.0, ts is "2026-04-11T08:00:00Z" },
+            { labels is { method is "GET", le is "+Inf" }, value is 15234.0, ts is "2026-04-11T08:00:00Z" }
+        ]
+    }
+]

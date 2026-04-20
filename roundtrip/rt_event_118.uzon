@@ -1,0 +1,5 @@
+@type is "click"
+timestamp is 1776868988
+source is "backup"
+url is "https://value.example.com/staging"
+session_id is "dev_2394"

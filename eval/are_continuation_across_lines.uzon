@@ -1,0 +1,3 @@
+// §8: are binding — + on next line continues the expression
+items are 1, 2
+    + 3

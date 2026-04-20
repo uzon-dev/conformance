@@ -1,0 +1,9 @@
+ingredients are
+    { name is "flour", qty is 2.0, unit is "cups" },
+    { name is "sugar", qty is 0.5, unit is "cups" },
+    { name is "butter", qty is 0.25, unit is "cups" },
+    { name is "eggs", qty is 2.0, unit is "large" },
+    { name is "milk", qty is 1.0, unit is "cup" },
+    { name is "vanilla", qty is 1.0, unit is "tsp" },
+    { name is "baking powder", qty is 2.0, unit is "tsp" },
+    { name is "salt", qty is 0.5, unit is "tsp" }

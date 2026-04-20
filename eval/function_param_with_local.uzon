@@ -1,0 +1,10 @@
+// §3.8: Parameter and local binding both visible in nested struct
+compute is function n as i32 returns i32 {
+    doubled is n * 2
+    record is {
+        original is n
+        computed is doubled
+    }
+    record.original + record.computed
+}
+result is compute(5)

@@ -1,0 +1,19 @@
+// §3.8 + §5.13 + §5.16: function using env and std
+default_separator is ","
+
+parseTags is function raw as string returns [string] {
+    sep is env.TAG_SEPARATOR or else default_separator
+    std.split(std.trim(raw), sep)
+}
+
+tags is parseTags("  alpha,beta,gamma  ")
+tag_count is std.len(tags)
+
+// function with default, env, and std.join
+formatTags is function items as [string],
+    wrapper as string default "[]" returns string {
+    inner is std.join(items, ", ")
+    std.replace(wrapper, "[]", inner)
+}
+
+formatted is formatTags(tags)

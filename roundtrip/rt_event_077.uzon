@@ -1,0 +1,5 @@
+@type is "pageview"
+timestamp is 1747276557
+source is "dev"
+url is "https://active.example.com/main"
+session_id is "test_7839"

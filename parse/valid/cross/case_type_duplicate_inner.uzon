@@ -1,0 +1,8 @@
+// §5.10 case type on tagged union with duplicate inner types
+// Both variants have string type — case type matches first when string branch
+// Implementations SHOULD warn; prefer case named for tagged unions with duplicate types
+R is tagged union ok as string, err as string
+r is "hello" as R named ok
+msg is case type r
+    when string then "matched"
+    else "other"

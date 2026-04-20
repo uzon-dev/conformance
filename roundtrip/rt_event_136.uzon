@@ -1,0 +1,5 @@
+@type is "pageview"
+timestamp is 1753255602
+source is "host"
+url is "https://debug.example.com/alpha"
+session_id is "pi_3717"

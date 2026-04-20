@@ -1,0 +1,5 @@
+departments is [
+    { name is "Engineering", members is [ "Alice", "Bob", "Charlie" ], budget is 500000 as i32 },
+    { name is "Design", members is [ "Diana", "Eve" ], budget is 200000 as i32 },
+    { name is "Marketing", members is [ "Frank", "Grace", "Heidi", "Ivan" ], budget is 350000 as i32 }
+]

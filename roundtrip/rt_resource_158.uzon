@@ -1,0 +1,12 @@
+// Resource #158
+@type is "cache"
+name is "cache_158"
+region is "eu-west-1"
+config is {
+    @type is "cache_config"
+    backend is "local"
+    ttl_seconds is 7585 as i32
+    max_memory_mb is 410 as u16
+}
+tags are "alpha", "path", "debug", "iota"
+active is false

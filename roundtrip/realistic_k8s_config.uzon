@@ -1,0 +1,53 @@
+// Roundtrip: Kubernetes-style deployment config
+deployment is {
+    'api-version' is "apps/v1"
+    kind is "Deployment"
+    metadata is {
+        name is "web-server"
+        namespace is "production"
+        labels is {
+            app is "web"
+            tier is "frontend"
+            version is "3.2.1"
+        }
+    }
+    spec is {
+        replicas is 3 as u8
+        selector is {
+            'match-labels' is {
+                app is "web"
+            }
+        }
+        template is {
+            containers is [
+                {
+                    name is "nginx"
+                    image is "nginx:1.25-alpine"
+                    ports is [
+                        { 'container-port' is 80 as u16, protocol is "TCP" },
+                        { 'container-port' is 443 as u16, protocol is "TCP" }
+                    ]
+                    resources is {
+                        limits is { cpu is "500m", memory is "256Mi" }
+                        requests is { cpu is "100m", memory is "64Mi" }
+                    }
+                    env_vars is [
+                        { name is "NODE_ENV", value is "production" },
+                        { name is "LOG_LEVEL", value is "warn" }
+                    ]
+                    health is {
+                        path is "/healthz"
+                        port is 80 as u16
+                        interval_sec is 30 as u16
+                        timeout_sec is 5 as u16
+                    }
+                    read_only is true
+                }
+            ]
+            volumes is [
+                { name is "config", mount is "/etc/nginx/conf.d", read_only is true },
+                { name is "logs", mount is "/var/log/nginx", read_only is false }
+            ]
+        }
+    }
+}

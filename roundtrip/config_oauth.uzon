@@ -1,0 +1,33 @@
+oauth is {
+    providers is {
+        google is {
+            client_id is "GOOGLE_CLIENT_ID"
+            auth_url is "https://accounts.google.com/o/oauth2/v2/auth"
+            token_url is "https://oauth2.googleapis.com/token"
+            scopes is [ "openid", "email", "profile" ]
+            enabled is true
+        }
+        github is {
+            client_id is "GITHUB_CLIENT_ID"
+            auth_url is "https://github.com/login/oauth/authorize"
+            token_url is "https://github.com/login/oauth/access_token"
+            scopes is [ "user:email", "read:org" ]
+            enabled is true
+        }
+        microsoft is {
+            client_id is "MS_CLIENT_ID"
+            auth_url is "https://login.microsoftonline.com/common/oauth2/v2.0/authorize"
+            token_url is "https://login.microsoftonline.com/common/oauth2/v2.0/token"
+            scopes is [ "openid", "email", "profile", "User.Read" ]
+            enabled is false
+        }
+    }
+    session is {
+        cookie_name is "__session"
+        max_age_sec is 86400 as u32
+        secure is true
+        http_only is true
+        same_site is "lax"
+    }
+    redirect_uri is "https://example.com/auth/callback"
+}

@@ -1,0 +1,42 @@
+version is "3.8"
+services is {
+    web is {
+        image is "myapp:latest"
+        ports is [ "8080:80", "8443:443" ]
+        environment is {
+            NODE_ENV is "production"
+            DB_HOST is "postgres"
+            REDIS_URL is "redis://cache:6379"
+        }
+        volumes is [ "./data:/app/data", "./logs:/var/log" ]
+        depends_on is [ "postgres", "cache" ]
+        deploy is {
+            replicas is 3 as u8
+            resources is {
+                limits is { cpus is "0.5", memory is "512M" }
+                reservations is { cpus is "0.1", memory is "128M" }
+            }
+        }
+        healthcheck is {
+            test is "curl -f http://localhost/health"
+            interval is "30s"
+            timeout is "10s"
+            retries is 3 as u8
+        }
+    }
+    postgres is {
+        image is "postgres:16-alpine"
+        ports is [ "5432:5432" ]
+        environment is {
+            POSTGRES_DB is "myapp"
+            POSTGRES_USER is "app"
+            POSTGRES_PASSWORD is "secret"
+        }
+        volumes is [ "pgdata:/var/lib/postgresql/data" ]
+    }
+    cache is {
+        image is "redis:7-alpine"
+        ports is [ "6379:6379" ]
+        command is "redis-server --maxmemory 256mb"
+    }
+}

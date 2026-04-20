@@ -1,0 +1,9 @@
+// Service configuration #139
+@type is "amqp"
+name is "theta_139"
+port is 35501 as u16
+enabled is true
+max_connections is 7812 as i32
+timeout_ms is 14789 as i32
+retry_count is 8 as u8
+tls is false

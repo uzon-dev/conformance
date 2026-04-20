@@ -1,0 +1,14 @@
+brackets is {
+    year is 2026 as u16
+    filing_status is "single"
+    rates is [
+        { min is 0 as u32, max is 11600 as u32, rate is 10.0 },
+        { min is 11601 as u32, max is 47150 as u32, rate is 12.0 },
+        { min is 47151 as u32, max is 100525 as u32, rate is 22.0 },
+        { min is 100526 as u32, max is 191950 as u32, rate is 24.0 },
+        { min is 191951 as u32, max is 243725 as u32, rate is 32.0 },
+        { min is 243726 as u32, max is 609350 as u32, rate is 35.0 },
+        { min is 609351 as u32, max is 4294967295 as u32, rate is 37.0 }
+    ]
+    standard_deduction is 14600 as u32
+}

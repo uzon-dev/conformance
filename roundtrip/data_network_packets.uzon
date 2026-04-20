@@ -1,0 +1,9 @@
+capture is {
+    interface is "eth0"
+    packets is [
+        { id is 1 as u32, ts is "00:00:01.234", src is "192.168.1.100", dst is "10.0.0.1", protocol is "TCP", port is 443 as u16, size is 1460 as u16, flags is [ "SYN" ] },
+        { id is 2 as u32, ts is "00:00:01.235", src is "10.0.0.1", dst is "192.168.1.100", protocol is "TCP", port is 443 as u16, size is 64 as u16, flags is [ "SYN", "ACK" ] },
+        { id is 3 as u32, ts is "00:00:01.236", src is "192.168.1.100", dst is "10.0.0.1", protocol is "TCP", port is 443 as u16, size is 64 as u16, flags is [ "ACK" ] },
+        { id is 4 as u32, ts is "00:00:01.240", src is "192.168.1.100", dst is "10.0.0.1", protocol is "TLS", port is 443 as u16, size is 517 as u16, flags is [ "PSH", "ACK" ] }
+    ]
+}

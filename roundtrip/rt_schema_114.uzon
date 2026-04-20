@@ -1,0 +1,10 @@
+// Schema definition #114
+@type is "schema"
+version is 3 as u8
+name is "zeta_schema_114"
+fields are
+        { name is "field_0", @type is "string", required is true },
+        { name is "field_1", @type is "u8", required is false },
+        { name is "field_2", @type is "f64", required is true },
+        { name is "field_3", @type is "f64", required is false },
+        { name is "field_4", @type is "bool", required is true }

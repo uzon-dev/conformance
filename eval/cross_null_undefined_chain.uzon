@@ -1,0 +1,16 @@
+// null vs undefined behavior chain
+config is { host is "localhost", port is null }
+
+// null passes through or else
+port_val is config.port or else 8080          // null
+
+// undefined caught by or else
+missing_val is config.timeout or else 30      // 30
+
+// null comparisons
+port_is_null is config.port is null            // true
+missing_is_undef is config.timeout is undefined // true
+
+// with: null → i32, i32 → null
+filled is config with { port is 3000 as i32 }
+cleared is filled with { port is null }

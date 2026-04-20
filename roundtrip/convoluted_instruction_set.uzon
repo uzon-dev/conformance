@@ -1,0 +1,19 @@
+instructions is [
+    { opcode is 0x00, mnemonic is "NOP", operands is 0 as u8, cycles is 1 as u8, flags is "" },
+    { opcode is 0x01, mnemonic is "LOAD", operands is 2 as u8, cycles is 2 as u8, flags is "Z" },
+    { opcode is 0x02, mnemonic is "STORE", operands is 2 as u8, cycles is 3 as u8, flags is "" },
+    { opcode is 0x03, mnemonic is "ADD", operands is 3 as u8, cycles is 1 as u8, flags is "ZCO" },
+    { opcode is 0x04, mnemonic is "SUB", operands is 3 as u8, cycles is 1 as u8, flags is "ZCO" },
+    { opcode is 0x05, mnemonic is "MUL", operands is 3 as u8, cycles is 4 as u8, flags is "ZO" },
+    { opcode is 0x06, mnemonic is "DIV", operands is 3 as u8, cycles is 12 as u8, flags is "Z" },
+    { opcode is 0x07, mnemonic is "AND", operands is 3 as u8, cycles is 1 as u8, flags is "Z" },
+    { opcode is 0x08, mnemonic is "OR", operands is 3 as u8, cycles is 1 as u8, flags is "Z" },
+    { opcode is 0x09, mnemonic is "XOR", operands is 3 as u8, cycles is 1 as u8, flags is "Z" },
+    { opcode is 0x0A, mnemonic is "JMP", operands is 1 as u8, cycles is 1 as u8, flags is "" },
+    { opcode is 0x0B, mnemonic is "JZ", operands is 1 as u8, cycles is 1 as u8, flags is "" },
+    { opcode is 0x0C, mnemonic is "CALL", operands is 1 as u8, cycles is 3 as u8, flags is "" },
+    { opcode is 0x0D, mnemonic is "RET", operands is 0 as u8, cycles is 2 as u8, flags is "" },
+    { opcode is 0x0E, mnemonic is "PUSH", operands is 1 as u8, cycles is 2 as u8, flags is "" },
+    { opcode is 0x0F, mnemonic is "POP", operands is 1 as u8, cycles is 2 as u8, flags is "" },
+    { opcode is 0xFF, mnemonic is "HALT", operands is 0 as u8, cycles is 1 as u8, flags is "" }
+]

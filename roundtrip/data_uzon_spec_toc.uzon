@@ -1,0 +1,17 @@
+spec is {
+    title is "UZON Specification"
+    version is (0, 6, 0)
+    sections is [
+        { number is 1, title is "Introduction", subsections is [] as [string] },
+        { number is 2, title is "Lexical Structure", subsections is [ "Character Set", "Identifiers", "Keywords", "Operators", "Comments" ] },
+        { number is 3, title is "Data Types", subsections is [ "Struct", "Tuple", "List", "Enum", "Tagged Union", "Function" ] },
+        { number is 4, title is "Literals", subsections is [ "Boolean", "Integer", "Float", "String", "Null", "Inf", "NaN" ] },
+        { number is 5, title is "Expressions", subsections is [ "Equality", "Arithmetic", "Comparison", "Logical", "Or Else", "Membership", "Conditional", "Case", "Conversion", "Self", "Env", "Of", "Function Call", "Std Library" ] },
+        { number is 6, title is "Type System", subsections is [ "Structural Conformance", "Nominal Identity" ] },
+        { number is 7, title is "Imports", subsections is [] as [string] },
+        { number is 8, title is "Syntax Details", subsections is [] as [string] },
+        { number is 9, title is "Grammar", subsections is [] as [string] },
+        { number is 10, title is "Interoperability", subsections is [] as [string] },
+        { number is 11, title is "Conformance", subsections is [ "Levels", "Errors", "Test Suite" ] }
+    ]
+}

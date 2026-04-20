@@ -1,0 +1,8 @@
+// Service configuration #192
+@type is "redis"
+name is "tau_192"
+port is 3447 as u16
+enabled is false
+max_connections is 3278 as i32
+timeout_ms is 29125 as i32
+tls is true

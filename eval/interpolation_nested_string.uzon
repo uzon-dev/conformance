@@ -1,0 +1,6 @@
+// §4.4.1 lexer algorithm: struct literal inside interpolation with
+// nested string literal. Tests brace-depth tracking + nested STRING
+// context.
+name is "UZON"
+inner is { tag is name }
+msg is "start: {{tag is "inner-string"}.tag}, name: {name}, end"

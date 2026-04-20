@@ -1,0 +1,6 @@
+// §4.3 Float literals
+simple is 3.14
+negative is -0.5
+scientific is 6.626e-34
+typed is 1.0 as f32
+underscore is 1_000.000_1

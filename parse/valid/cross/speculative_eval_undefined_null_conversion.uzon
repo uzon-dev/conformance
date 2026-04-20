@@ -1,0 +1,27 @@
+// §5.9 + §3.1 + §4.5 + §5.11 + §5.7
+// speculative eval suppresses errors in non-taken branches across multiple features
+x is env.X or else "fallback"
+
+// undefined in else branch — suppressed because condition is true-path
+safe1 is if x is "fallback"
+    then 1
+    else nonexistent + 1                          // runtime error suppressed
+
+// null to string is "null" (not error)
+safe2 is null to string                                // "null"
+
+// undefined to string propagates (not error for to, but error for interpolation)
+safe3 is nonexistent to string or else "recovered"
+
+// speculative eval in case — all branches type-checked, errors suppressed in non-taken
+y is 1 as i32
+safe4 is case y
+    when 1 then "one"
+    when 2 then "two"
+    else "other"
+
+// nested: if inside case inside or else
+z is env.Z to i32 or else 0
+safe5 is case z
+    when 0 then if true then "zero-true" else "zero-false"
+    else "nonzero"

@@ -1,0 +1,29 @@
+experiments is [
+    {
+        id is "exp-001"
+        name is "New Checkout Flow"
+        status is "running"
+        start_date is "2026-04-01"
+        end_date is null
+        variants is [
+            { name is "control", weight is 50 as u8, description is "Current checkout" },
+            { name is "treatment_a", weight is 25 as u8, description is "Simplified flow" },
+            { name is "treatment_b", weight is 25 as u8, description is "Express checkout" }
+        ]
+        metrics is [ "conversion_rate", "cart_abandonment", "time_to_purchase" ]
+        min_sample_size is 10000 as u32
+    },
+    {
+        id is "exp-002"
+        name is "Search Algorithm"
+        status is "completed"
+        start_date is "2026-03-01"
+        end_date is "2026-03-31"
+        variants is [
+            { name is "control", weight is 50 as u8, description is "BM25" },
+            { name is "treatment", weight is 50 as u8, description is "Neural ranking" }
+        ]
+        metrics is [ "click_through_rate", "mean_reciprocal_rank" ]
+        min_sample_size is 50000 as u32
+    }
+]

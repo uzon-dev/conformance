@@ -1,0 +1,9 @@
+service is {
+    name is "rabbit"
+    version is "4.2.1"
+    port is 8007 as u16
+    health is "/health"
+    replicas is 4 as u8
+    resources is { cpu_m is 300 as u16, memory_mb is 512 as u16 }
+    labels is { app is "rabbit", tier is "backend" }
+}

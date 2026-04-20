@@ -1,0 +1,4 @@
+// §3.2 Parenthesized grouping creates new expression level
+base is { x is 1, y is 2, z is 3 }
+step1 is (base with { x is 10 }) plus { w is 4 }
+step2 is (base with { x is 10 }) with { y is 20 }

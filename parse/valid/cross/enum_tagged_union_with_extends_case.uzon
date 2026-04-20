@@ -1,0 +1,33 @@
+// §3.5 + §3.7 + §3.2.1 + §3.2.2 + §5.10
+// enum + tagged union + with + plus + case
+_priority is medium from low, medium, high, critical called Priority
+
+base_ticket is {
+    id is 0 as i32
+    title is "untitled"
+    priority is medium as Priority
+} called Ticket
+
+bug is base_ticket with {
+    id is 1 as i32
+    title is "Login fails"
+    priority is high as Priority
+}
+
+detailed_bug is bug plus {
+    assignee is "alice"
+    component is "auth"
+}
+
+resolution is "fixed in v2.1" named resolved from
+    resolved as string, wontfix as null, duplicate as i32
+    called Resolution
+
+status is case bug.priority
+    when low then "backlog"
+    when medium then "planned"
+    when high then "in-progress"
+    when critical then "emergency"
+    else "unknown"
+
+label is "{bug.title} [{status}]"

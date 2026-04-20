@@ -1,0 +1,16 @@
+user is {
+    id is 10064 as u32
+    username is "eve064"
+    email is "eve64@mock.dev"
+    display_name is "Eve #64"
+    city is "Paris"
+    age is 32 as u8
+    verified is true
+    created is "2026-05-09T12:00:00Z"
+    login_count is 832 as u32
+    preferences is {
+        theme is "dark"
+        language is "en"
+        notifications is true
+    }
+}

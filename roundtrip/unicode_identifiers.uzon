@@ -1,0 +1,10 @@
+// Roundtrip: Unicode identifiers
+名前 is "太郎"
+이름 is "민수"
+café is "latte"
+π is 3.14159
+données is {
+    α is 1
+    β is 2
+    γ is 3
+}

@@ -1,0 +1,2 @@
+// §4.5 null with repetition is type error
+bad is null ** 3

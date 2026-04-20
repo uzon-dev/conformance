@@ -1,0 +1,5 @@
+_r is "x" named a from a as string, b as i32, c as bool, d as null called Multi
+v1 is "hello" as Multi named a
+v2 is 42 as Multi named b
+v3 is true as Multi named c
+v4 is null as Multi named d

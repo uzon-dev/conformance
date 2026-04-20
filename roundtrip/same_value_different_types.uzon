@@ -1,0 +1,10 @@
+as_i8 is 42 as i8
+as_i16 is 42 as i16
+as_i32 is 42 as i32
+as_i64 is 42
+as_u8 is 42 as u8
+as_u16 is 42 as u16
+as_u32 is 42 as u32
+as_f32 is 42.0 as f32
+as_f64 is 42.0 as f64
+as_string is "42"

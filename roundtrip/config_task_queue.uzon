@@ -1,0 +1,9 @@
+_priority is low from low, normal, high, critical called Priority
+_status is pending from pending, running, completed, failed, cancelled called TaskStatus
+
+tasks is [
+    { id is "task-001", name is "Generate report", priority is normal as Priority, status is completed as TaskStatus, retries is 0 as u8, created is "2026-04-11T08:00:00Z", started is "2026-04-11T08:00:05Z", finished is "2026-04-11T08:01:23Z" },
+    { id is "task-002", name is "Send notifications", priority is high as Priority, status is running as TaskStatus, retries is 0 as u8, created is "2026-04-11T08:01:00Z", started is "2026-04-11T08:01:02Z", finished is null },
+    { id is "task-003", name is "Sync inventory", priority is low as Priority, status is pending as TaskStatus, retries is 0 as u8, created is "2026-04-11T08:02:00Z", started is null, finished is null },
+    { id is "task-004", name is "Process payment", priority is critical as Priority, status is failed as TaskStatus, retries is 3 as u8, created is "2026-04-11T07:50:00Z", started is "2026-04-11T07:50:01Z", finished is "2026-04-11T07:55:00Z" }
+]

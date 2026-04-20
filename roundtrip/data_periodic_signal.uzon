@@ -1,0 +1,7 @@
+// Sampled sine wave values
+waveform is {
+    frequency_hz is 440.0
+    amplitude is 1.0
+    phase is 0.0
+    samples is [ 0.0, 0.309, 0.588, 0.809, 0.951, 1.0, 0.951, 0.809, 0.588, 0.309, 0.0, -0.309, -0.588, -0.809, -0.951, -1.0, -0.951, -0.809, -0.588, -0.309 ]
+}

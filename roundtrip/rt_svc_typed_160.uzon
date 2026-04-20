@@ -1,0 +1,8 @@
+// Service configuration #160
+@type is "mqtt"
+name is "path_160"
+port is 6799 as u16
+enabled is true
+max_connections is 3996 as i32
+timeout_ms is 14376 as i32
+retry_count is 8 as u8

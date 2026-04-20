@@ -1,0 +1,6 @@
+@type is "error"
+timestamp is 1718026223
+source is "server"
+code is 522 as u16
+message is "level failed"
+fatal is false

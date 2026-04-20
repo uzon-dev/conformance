@@ -1,0 +1,14 @@
+product is {
+    sku is "SKU-PET-0044"
+    name is "Pets Item 44"
+    category is "pets"
+    price is 31.99
+    currency is "USD"
+    stock is 132 as u16
+    weight_g is 540 as u32
+    dimensions is (14.0, 19.0, 6.0)
+    rating is 3.4
+    reviews is 308 as u16
+    active is true
+    tags is [ "pets", "featured" ]
+}

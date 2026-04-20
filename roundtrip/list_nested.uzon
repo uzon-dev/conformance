@@ -1,0 +1,6 @@
+// Roundtrip: list of structs
+entries is [
+    { name is "alfa", value is 1 },
+    { name is "bravo", value is 2 },
+    { name is "charlie", value is 3 }
+]

@@ -1,0 +1,9 @@
+// ERROR: §3.8 + §5.9
+// function body evaluates to string, declared return is i32
+_shared is struct "./shared"
+
+getStatus is function returns i32 {
+    if _shared.operational then "online" else "offline"
+}
+
+bad is getStatus()

@@ -1,0 +1,4 @@
+// §3.8 Function body ends with binding, not expression
+bad is function n as i32 returns i32 {
+    x is n + 1
+}

@@ -1,0 +1,11 @@
+// Resource #44
+@type is "storage"
+name is "storage_44"
+region is "us-west-2"
+config is {
+    @type is "storage_config"
+    capacity is 3830 as i32
+    priority is 8 as u8
+}
+tags are "level", "server", "zeta", "config"
+active is true

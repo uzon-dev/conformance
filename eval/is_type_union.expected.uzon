@@ -1,0 +1,7 @@
+u_int is 42 from union i32, f64, string
+u_str is "hello" from union i32, f64, string
+
+int_check is true
+float_check is false
+str_check is true
+str_not_int is true

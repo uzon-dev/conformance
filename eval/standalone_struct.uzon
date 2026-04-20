@@ -1,0 +1,7 @@
+// §3.2 — standalone struct: binding value is the struct itself
+Point is struct { x is 0 as i32, y is 0 as i32 }
+origin_x is Point.x
+origin_y is Point.y
+moved is Point with { x is 5 as i32 }
+moved_x is moved.x
+moved_y is moved.y

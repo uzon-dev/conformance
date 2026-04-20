@@ -1,0 +1,6 @@
+// ( on next line is tuple return, not function call
+make_pair is function n as i32 returns (i32, i32) {
+    a is n
+    (a, a)
+}
+result is make_pair(5)

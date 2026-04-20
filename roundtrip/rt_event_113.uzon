@@ -1,0 +1,4 @@
+@type is "heartbeat"
+timestamp is 1714245271
+source is "tau"
+detail is "upsilon_621"

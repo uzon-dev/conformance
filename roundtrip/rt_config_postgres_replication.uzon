@@ -1,0 +1,21 @@
+primary is {
+    host is "pg-primary.internal"
+    port is 5432 as u16
+    max_connections is 200 as u16
+    shared_buffers is "4GB"
+    wal_level is "replica"
+    max_wal_senders is 10 as u8
+    synchronous_standby_names is "replica1,replica2"
+}
+replicas is [
+    { name is "replica1", host is "pg-replica1.internal", port is 5432 as u16, synchronous is true, lag_bytes is 0 as u64 },
+    { name is "replica2", host is "pg-replica2.internal", port is 5432 as u16, synchronous is true, lag_bytes is 1024 as u64 },
+    { name is "replica3", host is "pg-replica3.internal", port is 5432 as u16, synchronous is false, lag_bytes is 524288 as u64 }
+]
+backup is {
+    method is "pg_basebackup"
+    schedule is "0 2 * * *"
+    retention_days is 14 as u16
+    compression is "zstd"
+    target is "s3://backups/postgres/"
+}

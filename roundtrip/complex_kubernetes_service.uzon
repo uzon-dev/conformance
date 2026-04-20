@@ -1,0 +1,68 @@
+_protocol is TCP from TCP, UDP, SCTP called Protocol
+_policy is ClusterFirst from ClusterFirst, Default, None called DnsPolicy
+_restart is Always from Always, OnFailure, Never called RestartPolicy
+
+pod is {
+    metadata is {
+        name is "api-server-7f8b9c"
+        namespace is "production"
+        labels is { app is "api-server", version is "3.2.1", 'pod-template-hash' is "7f8b9c" }
+        annotations is { 'prometheus.io/scrape' is "true", 'prometheus.io/port' is "9090" }
+    }
+    spec is {
+        containers is [
+            {
+                name is "api"
+                image is "registry.example.com/api-server:3.2.1"
+                ports is [
+                    { name is "http", container_port is 8080 as u16, protocol is TCP as Protocol },
+                    { name is "metrics", container_port is 9090 as u16, protocol is TCP as Protocol }
+                ]
+                env_vars is [
+                    { name is "DB_URL", value is "postgres://db-primary:5432/myapp" },
+                    { name is "REDIS_URL", value is "redis://cache:6379/0" },
+                    { name is "LOG_LEVEL", value is "info" }
+                ]
+                resources is {
+                    requests is { cpu is "250m", memory is "256Mi" }
+                    limits is { cpu is "1000m", memory is "1Gi" }
+                }
+                probes is {
+                    liveness is { path is "/healthz", port is 8080 as u16, initial_delay_sec is 10 as u16, period_sec is 30 as u16 }
+                    readiness is { path is "/ready", port is 8080 as u16, initial_delay_sec is 5 as u16, period_sec is 10 as u16 }
+                }
+                volume_mounts is [
+                    { name is "config", mount_path is "/etc/api/config", read_only is true },
+                    { name is "tls", mount_path is "/etc/tls", read_only is true }
+                ]
+            }
+        ]
+        _volume is {
+            name is ""
+            config_map is null
+            secret is null
+        } called Volume
+        volumes is [
+            _volume with { name is "config", config_map is "api-config" },
+            _volume with { name is "tls", secret is "api-tls-cert" }
+        ] as [Volume]
+        dns_policy is ClusterFirst as DnsPolicy
+        restart_policy is Always as RestartPolicy
+    }
+}
+
+service is {
+    metadata is {
+        name is "api-server"
+        namespace is "production"
+        labels is { app is "api-server" }
+    }
+    spec is {
+        @type is "ClusterIP"
+        selector is { app is "api-server" }
+        ports is [
+            { name is "http", port is 80 as u16, target_port is 8080 as u16, protocol is TCP as Protocol },
+            { name is "metrics", port is 9090 as u16, target_port is 9090 as u16, protocol is TCP as Protocol }
+        ]
+    }
+}

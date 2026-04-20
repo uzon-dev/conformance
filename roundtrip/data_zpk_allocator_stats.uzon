@@ -1,0 +1,17 @@
+allocator is {
+    name is "GeneralPurposeAllocator"
+    page_size is 4096 as u32
+    buckets is [
+        { size is 8 as u32, pages is 2 as u32, used is 340 as u32, free is 682 as u32 },
+        { size is 16 as u32, pages is 4 as u32, used is 890 as u32, free is 134 as u32 },
+        { size is 32 as u32, pages is 3 as u32, used is 234 as u32, free is 150 as u32 },
+        { size is 64 as u32, pages is 2 as u32, used is 89 as u32, free is 39 as u32 },
+        { size is 128 as u32, pages is 1 as u32, used is 12 as u32, free is 20 as u32 },
+        { size is 256 as u32, pages is 1 as u32, used is 5 as u32, free is 11 as u32 }
+    ]
+    large_allocations is 3 as u32
+    total_allocated is 458752 as u64
+    total_freed is 421888 as u64
+    peak is 524288 as u64
+    current is 36864 as u64
+}

@@ -1,0 +1,7 @@
+// in on tuples — value membership, type-mismatched elements skipped
+a is 42 in (1, "hello", 42)
+b is "hello" in (1, "hello", true)
+c is 99 in (1, "hello", true)
+d is null in (1, "hello", null)
+e is null in (1, "hello", true)
+f is true in (1, "hello", true)

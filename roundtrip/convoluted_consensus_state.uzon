@@ -1,0 +1,17 @@
+_phase is prepare from prepare, promise, accept, accepted, decided called Phase
+
+paxos is {
+    round is 5 as u32
+    proposer is "node-1"
+    phase is accepted as Phase
+    proposal is { number is 5 as u32, value is "commit tx-42" }
+    acceptors is [
+        { id is "node-1", promised is 5 as u32, accepted is { number is 5 as u32, value is "commit tx-42" } },
+        { id is "node-2", promised is 5 as u32, accepted is { number is 5 as u32, value is "commit tx-42" } },
+        { id is "node-3", promised is 5 as u32, accepted is null },
+        { id is "node-4", promised is 3 as u32, accepted is { number is 3 as u32, value is "commit tx-41" } },
+        { id is "node-5", promised is 5 as u32, accepted is { number is 5 as u32, value is "commit tx-42" } }
+    ]
+    quorum is 3 as u8
+    decided is true
+}

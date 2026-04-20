@@ -1,0 +1,40 @@
+workspace is {
+    name is "uzon-dev"
+    settings is {
+        editor is {
+            'font-family' is "JetBrains Mono, Fira Code, monospace"
+            'font-size' is 14 as u8
+            'tab-size' is 4 as u8
+            'insert-spaces' is true
+            'word-wrap' is "off"
+            'minimap-enabled' is false
+            'bracket-pair-colorization' is true
+            'format-on-save' is true
+            rulers is [ 80 as u16, 120 as u16 ]
+        }
+        files is {
+            exclude is [ "**/.git", "**/node_modules", "**/zig-cache", "**/zig-out", "**/*.o" ]
+            associations is { '*.uzon' is "uzon", '*.zon' is "zon" }
+            'auto-save' is "afterDelay"
+            'auto-save-delay' is 1000 as u16
+            'trim-trailing-whitespace' is true
+            'insert-final-newline' is true
+        }
+        terminal is {
+            'default-shell' is "/bin/zsh"
+            'font-size' is 13 as u8
+            'cursor-style' is "block"
+        }
+    }
+    extensions is [
+        { id is "uzon.uzon-lang", name is "UZON Language Support", enabled is true },
+        { id is "ziglang.vscode-zig", name is "Zig Language", enabled is true },
+        { id is "vscodevim.vim", name is "Vim", enabled is true },
+        { id is "github.copilot", name is "GitHub Copilot", enabled is false }
+    ]
+    tasks is [
+        { label is "Build", command is "zig build", group is "build", matcher is "$zig" },
+        { label is "Test", command is "zig build test", group is "test", matcher is "$zig" },
+        { label is "Format", command is "zig fmt src/", group is "none", matcher is "none" }
+    ]
+}

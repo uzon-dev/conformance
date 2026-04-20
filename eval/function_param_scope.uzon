@@ -1,0 +1,9 @@
+// §3.8: Parameters in scope chain — nested struct accesses parameter directly
+make_point is function x as i32, y as i32 returns (i32, i32) {
+    point is {
+        px is x
+        py is y
+    }
+    (point.px, point.py)
+}
+result is make_point(10, 20)

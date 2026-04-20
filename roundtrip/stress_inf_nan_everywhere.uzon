@@ -1,0 +1,8 @@
+top_inf is inf
+top_nan is nan
+top_neg_inf is -inf
+in_struct is { a is inf, b is nan, c is -inf, d is 0.0 }
+in_list is [ inf, nan, -inf, 1.0, -1.0 ]
+in_tuple is (inf, nan, -inf)
+in_nested is { x is { y is { z is nan } } }
+in_list_struct is [ { v is inf }, { v is nan }, { v is -inf } ]

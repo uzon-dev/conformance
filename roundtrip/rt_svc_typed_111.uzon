@@ -1,0 +1,8 @@
+// Service configuration #111
+@type is "redis"
+name is "prod_111"
+port is 7558 as u16
+enabled is true
+max_connections is 261 as i32
+timeout_ms is 23773 as i32
+tls is true

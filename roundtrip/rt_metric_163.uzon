@@ -1,0 +1,12 @@
+metric is {
+    name is "open_files"
+    host is "server-03"
+    timestamp is 1712809780 as u64
+    value is 77.1
+    unit is "count"
+    tags is {
+        environment is "staging"
+        region is "ap-east"
+        service is "svc-03"
+    }
+}

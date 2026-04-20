@@ -1,0 +1,2 @@
+add is function a as i32, b as i32 returns i32 { a + b }
+result is add(3, 4)

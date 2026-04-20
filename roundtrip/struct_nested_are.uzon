@@ -1,0 +1,6 @@
+config is {
+    primary_hosts are "host1.internal", "host2.internal", "host3.internal"
+    backup_hosts are "backup1.internal", "backup2.internal"
+    ports are 8080, 8081, 8082 as [u16]
+    enabled are true, true, false
+}

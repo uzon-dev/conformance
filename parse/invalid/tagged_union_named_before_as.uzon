@@ -1,0 +1,3 @@
+// §6.3 — as Type MUST precede named variant; reverse order is a syntax error
+_r is "ok" named ok from ok as string, err as string called Result
+bad is "fail" named err as Result

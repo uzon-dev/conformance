@@ -1,0 +1,7 @@
+// Service configuration #33
+@type is "redis"
+name is "test_33"
+port is 41732 as u16
+enabled is true
+max_connections is 1210 as i32
+timeout_ms is 17717 as i32

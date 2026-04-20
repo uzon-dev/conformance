@@ -1,0 +1,7 @@
+lt is true
+le_eq is true
+le_lt is true
+gt is true
+ge_eq is true
+ge_gt is true
+not_lt is false

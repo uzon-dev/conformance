@@ -1,0 +1,3 @@
+// §5.13 env.@keyword for keyword-named env vars (with fallback)
+t is env.@type or else "missing"
+d is env.@default or else "none"

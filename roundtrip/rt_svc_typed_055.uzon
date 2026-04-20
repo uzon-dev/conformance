@@ -1,0 +1,7 @@
+// Service configuration #55
+@type is "tcp"
+name is "upsilon_55"
+port is 45116 as u16
+enabled is false
+max_connections is 3272 as i32
+timeout_ms is 4928 as i32

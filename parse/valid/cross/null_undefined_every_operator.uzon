@@ -1,0 +1,32 @@
+// §4.5 + §3.1 + §5.2 + §5.7: null and undefined with every valid operator
+val is null
+miss is nonexistent
+
+// equality
+null_eq_null is null is null                       // true
+null_neq is null is not null                       // false
+undef_check is miss is undefined              // true
+undef_neq is miss is not undefined            // false
+
+// or else
+null_or is null or else "fallback"                 // null
+undef_or is miss or else "fallback"           // "fallback"
+chain is miss or else null or else "last"     // null
+
+// in list
+null_in is null in [ 1, null, 3 ]                  // true
+
+// in tuple
+null_in_tuple is null in (1, null, "x")            // true
+
+// in struct
+null_in_struct is null in { a is null, b is 1 }    // true
+
+// with (bidirectional null)
+base is { x is 1 as i32, y is null }
+fill is base with { y is 42 as i32 }
+clear is fill with { y is null }
+
+// to
+null_str is null to string                          // "null"
+undef_to is miss to string or else "default"   // "default"

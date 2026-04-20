@@ -1,0 +1,126 @@
+// ══════════════════════════════════════════════════════════════════════
+//   shared.uzon — Comprehensive keyword & std coverage: shared layer
+//   Keywords covered: true, false, null, inf, nan, undefined, is, are,
+//     from, called, as, named, with, union, plus, to, of, and, or,
+//     not, if, then, else, case, when, env, in,
+//     function, returns, default
+//   Note: struct keyword is exercised by files that import this one
+// ══════════════════════════════════════════════════════════════════════
+
+// ── Values: true, false, null, inf, nan ─────────────────────────────
+
+operational is true
+decommissioned is false
+unknown_field is null
+sensor_ceiling is inf
+bad_reading is nan
+
+// ── Binding: is, are ────────────────────────────────────────────────
+
+ship_name is "DSV Wanderer"
+crew_names are "Sunshin", "Chen", "Okafor" as [string]
+
+// ── Type system: from, called (enum) ────────────────────────────────
+
+_alert is green from green, yellow, red called AlertLevel
+_status is docked from docked, orbiting, cruising, emergency called ShipStatus
+_role is captain from captain, engineer, scientist, medic, pilot called Role
+
+// ── Type system: as ─────────────────────────────────────────────────
+
+typed_speed is 299_792_458 as i64
+typed_float is 3.14 as f64
+
+// ── Type system: union ──────────────────────────────────────────────
+
+flexible_id is "SH-001" from union string, i32
+
+// ── Type system: named, from (tagged union) ─────────────────────────
+
+scan_result is "signal detected" named found from
+    found as string, empty as null
+    called ScanResult
+
+// ── Type system: with ───────────────────────────────────────────────
+
+base_module is {
+    power_kw is 100 as u16
+    capacity is 4 as u8
+    shielded is false
+    online is true
+    purpose is general from general, science, defense called ModulePurpose
+} called BaseModule
+
+bridge is base_module with {
+    power_kw is 500 as u16
+    capacity is 12 as u8
+    purpose is defense as base_module.ModulePurpose
+}
+
+// ── Type system: plus ────────────────────────────────────────────
+
+sensor_array is base_module plus {
+    range_km is 50000 as u32
+    resolution is 0.01 as f64
+}
+
+// ── Conversion: to ──────────────────────────────────────────────────
+
+speed_as_float is typed_speed to f64
+power_label is bridge.power_kw to string
+
+// ── Field extraction: of ────────────────────────────────────────────
+
+_inner is { separator is "═" ** 40, divider is "─" ** 40 }
+separator is of _inner
+divider is of _inner
+
+// ── Logic: and, or, not ─────────────────────────────────────────────
+
+ready is operational and not decommissioned
+alert_or_down is decommissioned or not operational
+
+// ── Control: if, then, else ─────────────────────────────────────────
+
+status_label is if operational then "ONLINE" else "OFFLINE"
+
+// ── Control: case, when ─────────────────────────────────────────────
+
+alert_msg is case _alert
+    when green then "nominal"
+    when yellow then "caution"
+    when red then "danger"
+    else "unknown"
+
+// ── References: env ───────────────────────────────────────────
+
+derived is typed_speed / 2
+region is env.REGION or else "sol-sector"
+
+// ── State: undefined ────────────────────────────────────────────────
+
+env_check is env.NONEXISTENT is undefined
+missing is base_module.nonexistent or else "safe"
+
+// ── Membership: in ──────────────────────────────────────────────────
+
+has_sunshin is "Sunshin" in crew_names
+
+// ── Function: function, returns, default ────────────────────────────
+
+clampPower is function kw as u16,
+    lo as u16 default 50 as u16,
+    hi as u16 default 900 as u16 returns u16 {
+    clamped is if kw to i32 < lo to i32 then lo else kw
+    if clamped to i32 > hi to i32 then hi else clamped
+}
+
+getRegion is function returns string {
+    env.REGION or else region
+}
+
+isPositive is function n as i32 returns bool { n > 0 } called I32Predicate
+
+// ── or else (two-keyword compound operator) ─────────────────────────
+
+fallback_port is env.PORT to u16 or else 8080

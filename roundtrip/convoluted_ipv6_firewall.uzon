@@ -1,0 +1,7 @@
+rules is [
+    { id is 1 as u16, action is "allow", src is "::/0", dst is "2001:db8::1/128", ports is [ 80 as u16, 443 as u16 ], protocol is "tcp", log is false },
+    { id is 2 as u16, action is "allow", src is "2001:db8:1::/48", dst is "2001:db8::1/128", ports is [ 22 as u16 ], protocol is "tcp", log is true },
+    { id is 3 as u16, action is "deny", src is "fe80::/10", dst is "::/0", ports is [] as [u16], protocol is "any", log is true },
+    { id is 4 as u16, action is "allow", src is "::/0", dst is "ff02::1/128", ports is [] as [u16], protocol is "icmpv6", log is false },
+    { id is 65535 as u16, action is "deny", src is "::/0", dst is "::/0", ports is [] as [u16], protocol is "any", log is true }
+]

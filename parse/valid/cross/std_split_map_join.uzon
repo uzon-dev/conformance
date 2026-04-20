@@ -1,0 +1,19 @@
+// §5.16.4 + §5.16.2: split → map → join roundtrip
+csv_line is "alice,bob,charlie"
+
+// split → transform → join
+names is std.split(csv_line, ",")
+upper_names is std.map(
+    names,
+    function name as string returns string { "[" ++ name ++ "]" }
+)
+result is std.join(upper_names, " | ")
+// "[alice] | [bob] | [charlie]"
+
+// trim each element after split
+raw is "  x  ,  y  ,  z  "
+parts is std.map(
+    std.split(raw, ","),
+    function s as string returns string { std.trim(s) }
+)
+clean is std.join(parts, ",")    // "x,y,z"

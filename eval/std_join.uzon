@@ -1,0 +1,4 @@
+a is std.join([ "a", "b", "c" ], ":")
+b is std.join([ "hello" ], ":")
+c is std.join([] as [string], ":")
+d is std.join([ "one", "two" ], "--")

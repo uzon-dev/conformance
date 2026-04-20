@@ -1,0 +1,10 @@
+// Resource #47
+@type is "monitor"
+name is "monitor_47"
+region is "ap-northeast-1"
+config is {
+    @type is "monitor_config"
+    capacity is 5343 as i32
+    priority is 9 as u8
+}
+active is true

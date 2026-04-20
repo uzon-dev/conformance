@@ -1,0 +1,6 @@
+concat is "hello world"
+repeat is "*****"
+repeat_zero is ""
+list_concat is [ 1, 2, 3, 4 ]
+list_repeat is [ 0, 0, 0 ]
+list_repeat_zero is [] as [i64]

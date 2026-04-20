@@ -1,0 +1,33 @@
+// §7 + §5.14 + §3.2.2 + §3.8 + §5.16 + §4.4.1
+// (simulated import via nested struct) → of extraction → plus → function → std → interpolation
+_shared is {
+    separator is "═" ** 40
+    base is { name is "default", level is 1 as u8, active is true } called Item
+    formatItem is function item as Item returns string {
+        status is if item.active then "ON" else "OFF"
+        "{item.name} (L{item.level}) [{status}]"
+    }
+}
+
+separator is of _shared
+
+alpha is _shared.base with { name is "Alpha", level is 3 as u8 }
+beta is _shared.base with { name is "Beta", level is 5 as u8 }
+
+// plus from with result
+alpha_ext is alpha plus { tag is "primary", priority is 1 as u8 }
+
+items are alpha, beta
+
+labels is std.map(items, _shared.formatItem)
+listing is std.join(labels, " | ")
+
+high_level is std.filter(
+    items,
+    function i as _shared.Item returns bool { i.level to i32 > 2 }
+)
+
+report is "{separator}"
+          "Items: {listing}"
+          "High-level: {std.len(high_level)}"
+          "{separator}"

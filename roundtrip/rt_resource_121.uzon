@@ -1,0 +1,12 @@
+// Resource #121
+@type is "cache"
+name is "cache_121"
+region is "us-west-2"
+config is {
+    @type is "cache_config"
+    backend is "redis"
+    ttl_seconds is 70615 as i32
+    max_memory_mb is 3555 as u16
+}
+tags are "tau", "omicron"
+active is false

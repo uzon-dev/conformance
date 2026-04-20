@@ -1,0 +1,16 @@
+strings is {
+    ascii_only is "Hello, World!"
+    latin_supplement is "àáâãäåæçèéêë"
+    greek is "αβγδεζηθικλμνξοπρστυφχψω"
+    cyrillic is "абвгдежзийклмнопрстуфхцчшщъыьэюя"
+    cjk_unified is "一二三四五六七八九十百千万億兆"
+    hangul is "가나다라마바사아자차카타파하"
+    thai is "กขฃคฅฆงจฉชซฌญฎฏ"
+    arabic is "ابتثجحخدذرزسشصضطظعغفقكلمنهوي"
+    devanagari is "अआइईउऊऋएऐओऔ"
+    emoji_basic is "😀😃😄😁😆😅🤣😂"
+    emoji_skin is "👋🏻👋🏼👋🏽👋🏾👋🏿"
+    emoji_zwj is "👨‍💻👩‍🔬👨‍🍳👩‍🎤"
+    special is "​"
+    bidi is "Hello مرحبا World"
+}

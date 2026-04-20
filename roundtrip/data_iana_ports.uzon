@@ -1,0 +1,18 @@
+well_known is [
+    { port is 20 as u16, name is "FTP Data", protocol is "TCP" },
+    { port is 21 as u16, name is "FTP Control", protocol is "TCP" },
+    { port is 22 as u16, name is "SSH", protocol is "TCP" },
+    { port is 25 as u16, name is "SMTP", protocol is "TCP" },
+    { port is 53 as u16, name is "DNS", protocol is "TCP/UDP" },
+    { port is 80 as u16, name is "HTTP", protocol is "TCP" },
+    { port is 110 as u16, name is "POP3", protocol is "TCP" },
+    { port is 143 as u16, name is "IMAP", protocol is "TCP" },
+    { port is 443 as u16, name is "HTTPS", protocol is "TCP" },
+    { port is 993 as u16, name is "IMAPS", protocol is "TCP" },
+    { port is 3306 as u16, name is "MySQL", protocol is "TCP" },
+    { port is 5432 as u16, name is "PostgreSQL", protocol is "TCP" },
+    { port is 6379 as u16, name is "Redis", protocol is "TCP" },
+    { port is 8080 as u16, name is "HTTP Alt", protocol is "TCP" },
+    { port is 8443 as u16, name is "HTTPS Alt", protocol is "TCP" },
+    { port is 27017 as u16, name is "MongoDB", protocol is "TCP" }
+]

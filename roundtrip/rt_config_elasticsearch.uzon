@@ -1,0 +1,22 @@
+cluster is {
+    name is "production"
+    nodes is [
+        { name is "es-master-1", roles is [ "master" ], heap is "2g" },
+        { name is "es-master-2", roles is [ "master" ], heap is "2g" },
+        { name is "es-master-3", roles is [ "master" ], heap is "2g" },
+        { name is "es-data-1", roles is [ "data", "ingest" ], heap is "16g" },
+        { name is "es-data-2", roles is [ "data", "ingest" ], heap is "16g" },
+        { name is "es-data-3", roles is [ "data", "ingest" ], heap is "16g" }
+    ]
+    settings is {
+        number_of_replicas is 1 as u8
+        refresh_interval is "5s"
+        max_result_window is 10000 as u32
+        field_data_cache_size is "20%"
+    }
+}
+indices is [
+    { name is "logs-2026.04", docs is 15234567 as u64, size_gb is 42.5, shards is 5 as u8 },
+    { name is "metrics-2026.04", docs is 89012345 as u64, size_gb is 120.3, shards is 10 as u8 },
+    { name is "traces-2026.04", docs is 5678901 as u64, size_gb is 18.7, shards is 3 as u8 }
+]

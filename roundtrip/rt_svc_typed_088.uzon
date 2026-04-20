@@ -1,0 +1,8 @@
+// Service configuration #88
+@type is "websocket"
+name is "test_88"
+port is 10801 as u16
+enabled is true
+max_connections is 1405 as i32
+timeout_ms is 8232 as i32
+tls is true

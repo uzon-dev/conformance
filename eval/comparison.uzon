@@ -1,0 +1,7 @@
+lt is 1 < 2
+le_eq is 2 <= 2
+le_lt is 1 <= 2
+gt is 3 > 1
+ge_eq is 3 >= 3
+ge_gt is 4 >= 3
+not_lt is 5 < 3

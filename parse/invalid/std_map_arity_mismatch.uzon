@@ -1,0 +1,3 @@
+// §5.16.4 std.map requires 1-parameter function; 0-param is type error
+items are 1, 2, 3
+bad is std.map(items, function returns i64 { 42 })

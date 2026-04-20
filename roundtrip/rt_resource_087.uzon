@@ -1,0 +1,11 @@
+// Resource #87
+@type is "storage"
+name is "storage_87"
+region is "ap-northeast-1"
+config is {
+    @type is "storage_config"
+    capacity is 7884 as i32
+    priority is 1 as u8
+}
+tags are "value", "name", "lambda"
+active is false

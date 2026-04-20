@@ -1,0 +1,16 @@
+length is {
+    m_to_ft is 3.28084
+    km_to_mi is 0.621371
+    in_to_cm is 2.54
+    nm_to_km is 1.852
+}
+mass is {
+    kg_to_lb is 2.20462
+    oz_to_g is 28.3495
+    ton_to_kg is 907.185
+}
+temperature is {
+    c_to_f_mult is 1.8
+    c_to_f_add is 32.0
+    k_offset is 273.15
+}

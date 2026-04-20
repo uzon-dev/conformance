@@ -1,0 +1,8 @@
+// Service configuration #67
+@type is "amqp"
+name is "level_67"
+port is 9917 as u16
+enabled is false
+max_connections is 4272 as i32
+timeout_ms is 12522 as i32
+tls is false

@@ -1,0 +1,2 @@
+msg is "line1\nline2\nline3"
+with_empty is "a\n\nb"

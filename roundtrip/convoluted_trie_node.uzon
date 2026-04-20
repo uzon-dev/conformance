@@ -1,0 +1,24 @@
+trie is {
+    char is null
+    terminal is false
+    children is [
+        { char is "a", terminal is false, children is [
+            { char is "p", terminal is false, children is [
+                { char is "p", terminal is false, children is [
+                    { char is "l", terminal is false, children is [
+                        { char is "e", terminal is true, children is [] as [string] }
+                    ] }
+                ] }
+            ] },
+            { char is "n", terminal is false, children is [
+                { char is "t", terminal is true, children is [] as [string] }
+            ] }
+        ] },
+        { char is "b", terminal is false, children is [
+            { char is "a", terminal is false, children is [
+                { char is "t", terminal is true, children is [] as [string] }
+            ] }
+        ] }
+    ]
+}
+// Words: apple, ant, bat

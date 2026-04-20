@@ -1,0 +1,6 @@
+root is {
+    a is [ (1, "x", true), (2, "y", false) ]
+    b is { inner is [ { p is (3.14, [ 1, 2 ]), q is null }, { p is (2.71, [ 3 ]), q is "val" } ] }
+    c is ([ { m is 1 } ], "text", (true, [ null, 42 ]))
+    d is { e is { f is { g is ([ [ 1, 2 ], [ 3, 4 ] ], { h is null }) } } }
+}

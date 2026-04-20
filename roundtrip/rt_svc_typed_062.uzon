@@ -1,0 +1,8 @@
+// Service configuration #62
+@type is "websocket"
+name is "xi_62"
+port is 47319 as u16
+enabled is false
+max_connections is 6688 as i32
+timeout_ms is 10942 as i32
+retry_count is 6 as u8

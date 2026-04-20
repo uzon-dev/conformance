@@ -1,0 +1,6 @@
+a is { only is 42 }
+b is { only is "text" }
+c is { only is null }
+d is { only is true }
+e is { only is [ 1, 2, 3 ] }
+f is { only is (1, "two") }

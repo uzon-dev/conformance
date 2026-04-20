@@ -1,0 +1,16 @@
+user is {
+    id is 10072 as u32
+    username is "mike072"
+    email is "mike72@demo.net"
+    display_name is "Mike #72"
+    city is "Stockholm"
+    age is 40 as u8
+    verified is false
+    created is "2026-01-17T12:00:00Z"
+    login_count is 936 as u32
+    preferences is {
+        theme is "dark"
+        language is "en"
+        notifications is true
+    }
+}

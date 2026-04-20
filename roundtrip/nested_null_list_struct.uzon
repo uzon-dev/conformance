@@ -1,0 +1,6 @@
+data is {
+    items is [ null, { inner is [ null, null ] as [string] }, null ]
+    meta is null
+    tags is [ null ] as [string]
+    nested is { deep is { deeper is null } }
+}

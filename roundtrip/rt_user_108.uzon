@@ -1,0 +1,16 @@
+user is {
+    id is 10108 as u32
+    username is "ivan108"
+    email is "ivan108@sample.io"
+    display_name is "Ivan #108"
+    city is "Berlin"
+    age is 26 as u8
+    verified is false
+    created is "2026-01-25T12:00:00Z"
+    login_count is 1404 as u32
+    preferences is {
+        theme is "dark"
+        language is "en"
+        notifications is true
+    }
+}

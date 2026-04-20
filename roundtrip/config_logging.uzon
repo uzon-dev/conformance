@@ -1,0 +1,32 @@
+_output is {
+    @type is ""
+    level is ""
+    format is null
+    path is null
+    max_size_mb is null
+    max_backups is null
+    address is null
+    facility is null
+} called LogOutput
+
+logging is {
+    root_level is "info"
+    format is "json"
+    outputs is [
+        _output with { @type is "stdout", level is "debug", format is "text" },
+        _output with { @type is "file", level is "info", path is "/var/log/app.log", max_size_mb is 100 as u16, max_backups is 5 as u8 },
+        _output with { @type is "syslog", level is "warn", address is "logs.internal:514", facility is "local0" }
+    ] as [LogOutput]
+    filters is [
+        { logger is "http.access", level is "info" },
+        { logger is "db.query", level is "debug" },
+        { logger is "auth", level is "warn" },
+        { logger is "grpc.health", level is "error" }
+    ]
+    sampling is {
+        enabled is true
+        initial is 100 as u32
+        thereafter is 10 as u32
+    }
+    sensitive_fields is [ "password", "token", "secret", "api_key", "authorization" ]
+}

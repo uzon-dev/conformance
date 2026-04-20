@@ -1,0 +1,25 @@
+_scope is global from global, org, project, resource called Scope
+
+permissions is [
+    { id is "users:read", scope is org as Scope, description is "View users in organization" },
+    { id is "users:write", scope is org as Scope, description is "Create/update users" },
+    { id is "users:delete", scope is org as Scope, description is "Delete users" },
+    { id is "projects:read", scope is project as Scope, description is "View project" },
+    { id is "projects:write", scope is project as Scope, description is "Edit project settings" },
+    { id is "billing:read", scope is org as Scope, description is "View billing info" },
+    { id is "billing:write", scope is org as Scope, description is "Manage billing" },
+    { id is "admin:*", scope is global as Scope, description is "Full admin access" }
+]
+
+roles is [
+    { name is "viewer", permissions is [ "users:read", "projects:read" ] },
+    { name is "editor", permissions is [ "users:read", "projects:read", "projects:write" ] },
+    { name is "admin", permissions is [ "users:read", "users:write", "users:delete", "projects:read", "projects:write", "billing:read" ] },
+    { name is "super-admin", permissions is [ "admin:*" ] }
+]
+
+assignments is [
+    { user is "usr_001", role is "admin", scope is org as Scope, target is "org_acme" },
+    { user is "usr_002", role is "editor", scope is project as Scope, target is "proj_uzon" },
+    { user is "usr_003", role is "viewer", scope is org as Scope, target is "org_acme" }
+]

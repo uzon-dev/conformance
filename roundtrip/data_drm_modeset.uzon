@@ -1,0 +1,31 @@
+_connector_type is HDMI from HDMI, DP, eDP, VGA, DVI called ConnectorType
+_encoder_type is TMDS from TMDS, DAC, LVDS, DSI called EncoderType
+
+drm is {
+    card is "/dev/dri/card0"
+    driver is "amdgpu"
+    connectors is [
+        {
+            id is 42 as u32
+            @type is eDP as ConnectorType
+            status is "connected"
+            encoder is { id is 50 as u32, @type is LVDS as EncoderType, crtc_id is 60 as u32 }
+            modes is [
+                { name is "2560x1440", clock is 241500 as u32, hdisplay is 2560 as u16, vdisplay is 1440 as u16, vrefresh is 165 as u8, preferred is true },
+                { name is "1920x1080", clock is 148500 as u32, hdisplay is 1920 as u16, vdisplay is 1080 as u16, vrefresh is 60 as u8, preferred is false }
+            ]
+        },
+        {
+            id is 43 as u32
+            @type is DP as ConnectorType
+            status is "disconnected"
+            encoder is null
+            modes is [] as [string]
+        }
+    ]
+    planes is [
+        { id is 70 as u32, @type is "primary", formats is [ "AR24", "XR24", "AB24" ], crtc_id is 60 as u32 },
+        { id is 71 as u32, @type is "cursor", formats is [ "AR24" ], crtc_id is 60 as u32 },
+        { id is 72 as u32, @type is "overlay", formats is [ "NV12", "YU12" ], crtc_id is 60 as u32 }
+    ]
+}

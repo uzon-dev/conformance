@@ -1,0 +1,4 @@
+@type is "logout"
+timestamp is 1781987136
+source is "nu"
+detail is "nu_123"

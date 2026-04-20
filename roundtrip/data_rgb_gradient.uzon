@@ -1,0 +1,12 @@
+gradient is {
+    name is "sunset"
+    stops is [
+        { position is 0.0, color is (255 as u8, 94 as u8, 77 as u8) },
+        { position is 0.25, color is (255 as u8, 154 as u8, 0 as u8) },
+        { position is 0.5, color is (255 as u8, 206 as u8, 0 as u8) },
+        { position is 0.75, color is (41 as u8, 128 as u8, 185 as u8) },
+        { position is 1.0, color is (44 as u8, 62 as u8, 80 as u8) }
+    ]
+    direction is "to bottom"
+    repeat is false
+}

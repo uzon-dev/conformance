@@ -1,0 +1,2 @@
+// §3.4.1 + §8: are does not permit trailing comma
+bad are 1, 2, 3,

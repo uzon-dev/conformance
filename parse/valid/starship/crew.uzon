@@ -1,0 +1,207 @@
+// ══════════════════════════════════════════════════════════════════════
+//   crew.uzon — Comprehensive std coverage: all 15 std functions
+//   std functions covered: get, has, keys, len, values,
+//     filter, map, reduce, isFinite, isInf, isNan,
+//     join, replace, split, trim
+//   Keywords: struct (import)
+// ══════════════════════════════════════════════════════════════════════
+
+_shared is struct "./shared"                               // struct keyword
+
+// ── crew data ───────────────────────────────────────────────────────
+
+base_crew is {
+    name is "unnamed"
+    age is 30 as u8
+    clearance is null
+    role is pilot as _shared.Role
+    active is true
+} called CrewMember
+
+captain is base_crew with {
+    name is env.CAPTAIN or else "Sunshin"
+    age is 42 as u8
+    clearance is "omega"
+    role is captain as _shared.Role
+}
+
+engineer is base_crew with {
+    name is "Chen"
+    age is 37 as u8
+    clearance is "delta"
+    role is engineer as _shared.Role
+}
+
+medic is base_crew with {
+    name is "Okafor"
+    age is 29 as u8
+    role is medic as _shared.Role
+}
+
+scientist is base_crew with {
+    name is "Lindqvist"
+    age is 55 as u8
+    clearance is "sigma"
+    role is scientist as _shared.Role
+}
+
+crew_list are captain, engineer, medic, scientist
+
+// ── std.len ─────────────────────────────────────────────────────────
+
+crew_count is std.len(crew_list)                      // 4
+name_count is std.len(_shared.crew_names)             // 3
+
+// ── in operator (value membership) ──────────────────────────────
+
+has_sunshin is "Sunshin" in _shared.crew_names       // true
+has_nobody is "Nobody" in _shared.crew_names   // false
+
+// ── std.get ─────────────────────────────────────────────────────────
+
+first_name is std.get(_shared.crew_names, 0)          // "Sunshin"
+out_of_bounds is std.get(_shared.crew_names, 99) or else "N/A"
+captain_name is std.get(captain, "name")              // "Sunshin" (struct access)
+
+// ── std.keys ────────────────────────────────────────────────────────
+
+captain_fields is std.keys(captain)                   // [ "name", "age", ... ]
+field_count is std.len(captain_fields)
+
+// ── std.values ──────────────────────────────────────────────────────
+
+captain_snapshot is std.values(captain)                // tuple of all field values
+_clearances is { c is "omega", e is "delta", s is "sigma" }
+clearance_tuple is std.values(_clearances)            // ("omega", "delta", "sigma")
+
+// ── std.map ─────────────────────────────────────────────────────────
+
+crew_names is std.map(
+    crew_list,
+    function m as CrewMember returns string { m.name }
+)
+
+ages_as_i32 is std.map(
+    crew_list,
+    function m as CrewMember returns i32 { m.age to i32 }
+)
+
+// ── std.filter ──────────────────────────────────────────────────────
+
+seniors is std.filter(
+    crew_list,
+    function m as CrewMember returns bool { m.age to i32 > 40 }
+)
+
+active_crew is std.filter(
+    crew_list,
+    function m as CrewMember returns bool { m.active }
+)
+
+// ── std.reduce ──────────────────────────────────────────────────────
+
+total_age is std.reduce(
+    ages_as_i32,
+    0 as i32,
+    function acc as i32, age as i32 returns i32 { acc + age }
+)
+
+average_age is total_age / std.len(crew_list) to i32
+
+// ── std.split ───────────────────────────────────────────────────────
+
+role_tags is std.split("captain:engineer:medic:scientist:pilot", ":")
+raw_csv is env.CREW_CSV or else "alpha,  beta  ,gamma"
+csv_parts is std.split(raw_csv, ",")
+
+// ── std.trim ────────────────────────────────────────────────────────
+
+clean_captain is std.trim(env.CAPTAIN or else "  Sunshin  ")
+trimmed_parts is std.map(
+    csv_parts,
+    function s as string returns string { std.trim(s) }
+)
+
+// ── std.replace ─────────────────────────────────────────────────────
+
+duty_log is std.replace("bridge watch", " ", "_")
+sanitized is std.replace(clean_captain, "'", "")
+
+// std.lower, std.upper — case conversion
+lower_name is std.lower(captain_name)
+upper_roster is std.upper(crew_roster)
+
+// ── std.join ────────────────────────────────────────────────────────
+
+crew_roster is std.join(crew_names, ", ")
+tag_line is std.join(role_tags, " | ")
+clean_csv is std.join(trimmed_parts, ",")
+
+// roundtrip: split → join
+roundtrip is std.join(std.split("a:b:c", ":"), ":")        // "a:b:c"
+
+// ── std.isNan ───────────────────────────────────────────────────────
+
+reading is nan
+is_nan is std.isNan(reading)                          // true
+not_nan is std.isNan(3.14)                                 // false
+
+// ── std.isInf ───────────────────────────────────────────────────────
+
+horizon is inf
+is_inf is std.isInf(horizon)                          // true
+neg_inf_check is std.isInf(-inf)                           // true
+not_inf is std.isInf(42.0)                                 // false
+
+// ── std.isFinite ────────────────────────────────────────────────────
+
+velocity is 44968868.7 as f64
+is_finite is std.isFinite(velocity)                   // true
+nan_not_finite is std.isFinite(nan)                        // false
+inf_not_finite is std.isFinite(inf)                        // false
+
+// ── combined std chains ─────────────────────────────────────────────
+
+// split → trim each → filter empty → join
+raw_tags is env.TAGS or else "  x  , , y ,  z  "
+parsed_tags is std.split(raw_tags, ",")
+trimmed_tags is std.map(
+    parsed_tags,
+    function s as string returns string { std.trim(s) }
+)
+non_empty_tags is std.filter(
+    trimmed_tags,
+    function s as string returns bool { std.len(s) > 0 }
+)
+normalized_tags is std.join(non_empty_tags, ",")
+
+// std.sort — sort crew by age
+sorted_by_age is std.sort(
+    crew_list,
+    function a as CrewMember, b as CrewMember returns bool {
+        a.age to i32 < b.age to i32
+    }
+)
+youngest is std.get(sorted_by_age, 0)
+
+// map → filter → reduce
+senior_total_age is std.reduce(
+    std.map(
+        std.filter(
+            crew_list,
+            function m as CrewMember returns bool { m.age to i32 > 35 }
+        ),
+        function m as CrewMember returns i32 { m.age to i32 }
+    ),
+    0 as i32,
+    function acc as i32, age as i32 returns i32 { acc + age }
+)
+
+// ── manifest ────────────────────────────────────────────────────────
+
+manifest is "{_shared.separator}"
+            "CREW: {crew_roster}"
+            "Count: {crew_count} | Avg age: {average_age}"
+            "Seniors: {std.len(seniors)}"
+            "Tags: {normalized_tags}"
+            "{_shared.separator}"

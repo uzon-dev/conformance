@@ -1,0 +1,4 @@
+// Roundtrip: string list
+names is [ "Alice", "Bob", "Charlie" ]
+empty is [] as [string]
+with_escapes is [ "hello\nworld", "tab\there", "quote\"inside" ]

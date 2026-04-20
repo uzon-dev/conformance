@@ -1,0 +1,12 @@
+// Resource #182
+@type is "cache"
+name is "cache_182"
+region is "us-east-1"
+config is {
+    @type is "cache_config"
+    backend is "local"
+    ttl_seconds is 72381 as i32
+    max_memory_mb is 3219 as u16
+}
+tags are "host", "host", "main"
+active is true

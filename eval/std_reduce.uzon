@@ -1,0 +1,2 @@
+numbers are 1, 2, 3, 4, 5
+total is std.reduce(numbers, 0, function acc as i64, n as i64 returns i64 { acc + n })

@@ -1,0 +1,1 @@
+items is [ { name is "name_3_0_0", value is 31 as i32, active is false, score is 3.3, label is "label_3_0_4" }, { name is "name_3_1_0", value is 31 as i32, active is false, score is 3.3, label is "label_3_1_4" }, { name is "name_3_2_0", value is 31 as i32, active is false, score is 3.3, label is "label_3_2_4" } ]

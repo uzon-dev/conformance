@@ -1,0 +1,14 @@
+// §5.2: is type / is not type — runtime type checking
+x is 42
+check1 is x is type i64             // true
+check2 is x is not type string      // true
+
+name is "hello"
+check3 is name is type string       // true
+check4 is name is not type i64      // true
+
+flag is true
+check5 is flag is type bool         // true
+
+n is null
+check6 is n is type null            // true

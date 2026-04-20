@@ -1,0 +1,9 @@
+// Schema definition #37
+@type is "schema"
+version is 4 as u8
+name is "debug_schema_37"
+fields are
+        { name is "field_0", @type is "bool", required is false },
+        { name is "field_1", @type is "f64", required is true },
+        { name is "field_2", @type is "i32", required is true },
+        { name is "field_3", @type is "f64", required is true }

@@ -1,0 +1,4 @@
+// §5.3 Type mismatch in arithmetic
+x is 1 as i32
+y is 2 as u8
+bad is x + y

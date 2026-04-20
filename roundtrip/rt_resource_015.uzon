@@ -1,0 +1,11 @@
+// Resource #15
+@type is "scheduler"
+name is "scheduler_15"
+region is "us-east-1"
+config is {
+    @type is "scheduler_config"
+    capacity is 9714 as i32
+    priority is 3 as u8
+}
+tags are "debug", "rho"
+active is false

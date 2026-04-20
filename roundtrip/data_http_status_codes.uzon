@@ -1,0 +1,15 @@
+statuses is [
+    { code is 200 as u16, text is "OK", category is "success" },
+    { code is 201 as u16, text is "Created", category is "success" },
+    { code is 204 as u16, text is "No Content", category is "success" },
+    { code is 301 as u16, text is "Moved Permanently", category is "redirect" },
+    { code is 304 as u16, text is "Not Modified", category is "redirect" },
+    { code is 400 as u16, text is "Bad Request", category is "client_error" },
+    { code is 401 as u16, text is "Unauthorized", category is "client_error" },
+    { code is 403 as u16, text is "Forbidden", category is "client_error" },
+    { code is 404 as u16, text is "Not Found", category is "client_error" },
+    { code is 429 as u16, text is "Too Many Requests", category is "client_error" },
+    { code is 500 as u16, text is "Internal Server Error", category is "server_error" },
+    { code is 502 as u16, text is "Bad Gateway", category is "server_error" },
+    { code is 503 as u16, text is "Service Unavailable", category is "server_error" }
+]

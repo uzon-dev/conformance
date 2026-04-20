@@ -1,0 +1,16 @@
+user is {
+    id is 10047 as u32
+    username is "heidi047"
+    email is "heidi47@demo.net"
+    display_name is "Heidi #47"
+    city is "London"
+    age is 65 as u8
+    verified is true
+    created is "2026-12-20T12:00:00Z"
+    login_count is 611 as u32
+    preferences is {
+        theme is "light"
+        language is "de"
+        notifications is false
+    }
+}

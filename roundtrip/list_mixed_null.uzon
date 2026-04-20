@@ -1,0 +1,3 @@
+// Roundtrip: list with null elements
+data is [ 1, null, 3, null, 5 ]
+all_null is [ null, null ] as [i32]

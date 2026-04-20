@@ -1,0 +1,5 @@
+// §3.2.1 as T adoption counts for with type preservation
+Point is struct { x is 0 as i32, y is 0 as i32 }
+p is { x is 1, y is 2 } as Point
+q is p with { x is 10 }
+// q is still Point type

@@ -1,0 +1,3 @@
+// A file with only comments is a valid UZON document
+// It evaluates to an empty anonymous struct: { }
+// This is the simplest possible valid UZON file

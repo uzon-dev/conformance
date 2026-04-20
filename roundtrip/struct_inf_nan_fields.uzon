@@ -1,0 +1,7 @@
+sensor is {
+    temperature is nan
+    pressure is inf
+    altitude is -inf
+    speed is 0.0
+    heading is 270.5
+}

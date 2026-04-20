@@ -1,0 +1,7 @@
+// Service configuration #75
+@type is "grpc"
+name is "host_75"
+port is 29435 as u16
+enabled is true
+max_connections is 7542 as i32
+timeout_ms is 23277 as i32

@@ -1,0 +1,6 @@
+json_like is "\{\"key\": \"value\"}"
+template is "Hello, \{name}!"
+curly is "\{}"
+nested_curly is "\{\{deep}}"
+only_close is "closing } brace"
+all_escaped is "before \{one} middle \{two} after"

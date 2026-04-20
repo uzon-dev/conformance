@@ -1,0 +1,4 @@
+// §2.3: control characters U+0000-U+001F (except LF/CR/HT) and U+007F
+// are syntax errors in UTF-8 source. This test embeds U+0001 (Start of
+// Header) which MUST be rejected.
+x is "hello"

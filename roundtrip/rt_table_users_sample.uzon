@@ -1,0 +1,5 @@
+sample is [
+    { id is 1 as u64, value is "row_1_users", active is true, score is 50.0 },
+    { id is 2 as u64, value is "row_2_users", active is true, score is 60.1 },
+    { id is 3 as u64, value is "row_3_users", active is true, score is 70.2 }
+]

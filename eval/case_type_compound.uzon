@@ -1,0 +1,21 @@
+// §5.10 case type with compound types
+a is [ 1, 2, 3 ] from union [i32], [string], i32
+label_a is case type a
+    when [i32] then "int list"
+    when [string] then "str list"
+    when i32 then "int"
+    else "other"
+
+b is [ "hello", "world" ] from union [i32], [string], i32
+label_b is case type b
+    when [i32] then "int list"
+    when [string] then "str list"
+    when i32 then "int"
+    else "other"
+
+c is 7 from union [i32], [string], i32
+label_c is case type c
+    when [i32] then "int list"
+    when [string] then "str list"
+    when i32 then "int"
+    else "other"

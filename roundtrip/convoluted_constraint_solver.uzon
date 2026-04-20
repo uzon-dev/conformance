@@ -1,0 +1,23 @@
+_constraint is {
+    @type is ""
+    vars is [] as [string]
+    target is null
+} called Constraint
+
+variables is [
+    { name is "x", domain is [ 1, 2, 3, 4, 5 ], assigned is null },
+    { name is "y", domain is [ 1, 2, 3, 4, 5 ], assigned is null },
+    { name is "z", domain is [ 1, 2, 3, 4, 5 ], assigned is null }
+]
+constraints is [
+    _constraint with { @type is "not_equal", vars is [ "x", "y" ] },
+    _constraint with { @type is "not_equal", vars is [ "y", "z" ] },
+    _constraint with { @type is "less_than", vars is [ "x", "z" ] },
+    _constraint with { @type is "sum_equals", vars is [ "x", "y", "z" ], target is 9 }
+] as [Constraint]
+solutions is [
+    { x is 1, y is 3, z is 5 },
+    { x is 2, y is 3, z is 4 },
+    { x is 1, y is 4, z is 4 },
+    { x is 2, y is 4, z is 3 }
+]

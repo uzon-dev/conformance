@@ -1,0 +1,9 @@
+_action is created from created, updated, deleted, archived, restored called Action
+_entity is user from user, post, comment, tag called EntityType
+
+events is [
+    { id is "evt_001", ts is "2026-04-11T08:00:00.123Z", actor is "usr_admin", action is created as Action, entity is user as EntityType, target is "usr_new01", payload is { name is "Alice", email is "alice@example.com" }, ip is "10.0.1.50", 'user-agent' is "Mozilla/5.0" },
+    { id is "evt_002", ts is "2026-04-11T08:00:01.456Z", actor is "usr_new01", action is created as Action, entity is post as EntityType, target is "post_001", payload is { title is "Hello World", draft is true }, ip is "10.0.1.51", 'user-agent' is "UZON-Client/1.0" },
+    { id is "evt_003", ts is "2026-04-11T08:00:05.789Z", actor is "usr_new01", action is updated as Action, entity is post as EntityType, target is "post_001", payload is { title is "Hello World!", draft is false }, ip is "10.0.1.51", 'user-agent' is "UZON-Client/1.0" },
+    { id is "evt_004", ts is "2026-04-11T08:01:00.000Z", actor is "usr_admin", action is deleted as Action, entity is comment as EntityType, target is "cmt_spam", payload is { reason is "spam" }, ip is "10.0.1.50", 'user-agent' is "Mozilla/5.0" }
+]

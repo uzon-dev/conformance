@@ -1,0 +1,16 @@
+_kind is file from file, directory, symlink called EntryKind
+fs is [
+    { path is "/", kind is directory as EntryKind, size is 0 as u64, children is [
+        { path is "/etc", kind is directory as EntryKind, size is 0 as u64, children is [
+            { path is "/etc/hosts", kind is file as EntryKind, size is 234 as u64, children is [] as [string] },
+            { path is "/etc/nginx", kind is directory as EntryKind, size is 0 as u64, children is [
+                { path is "/etc/nginx/nginx.conf", kind is file as EntryKind, size is 1024 as u64, children is [] as [string] }
+            ] }
+        ] },
+        { path is "/var", kind is directory as EntryKind, size is 0 as u64, children is [
+            { path is "/var/log", kind is directory as EntryKind, size is 0 as u64, children is [
+                { path is "/var/log/syslog", kind is file as EntryKind, size is 524288 as u64, children is [] as [string] }
+            ] }
+        ] }
+    ] }
+]

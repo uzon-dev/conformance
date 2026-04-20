@@ -1,0 +1,10 @@
+chords is [
+    { name is "C", notes is [ "C4", "E4", "G4" ], @type is "major" },
+    { name is "Dm", notes is [ "D4", "F4", "A4" ], @type is "minor" },
+    { name is "Em", notes is [ "E4", "G4", "B4" ], @type is "minor" },
+    { name is "F", notes is [ "F4", "A4", "C5" ], @type is "major" },
+    { name is "G", notes is [ "G4", "B4", "D5" ], @type is "major" },
+    { name is "Am", notes is [ "A4", "C5", "E5" ], @type is "minor" },
+    { name is "Bdim", notes is [ "B4", "D5", "F5" ], @type is "diminished" }
+]
+progression is [ "C", "G", "Am", "F" ]

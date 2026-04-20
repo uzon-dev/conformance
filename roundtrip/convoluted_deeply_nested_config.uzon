@@ -1,0 +1,4 @@
+root is {
+    a is { b is { c is { d is { e is { f is { g is { h is { i is { j is 42 } } } } } } } } }
+    x is { y is { z is { w is [ { v is [ { u is (1, 2, 3) } ] } ] } } }
+}

@@ -1,0 +1,3 @@
+// §5.16.1: std.keys requires struct
+numbers are 1, 2, 3
+bad is std.keys(numbers)      // list, not struct

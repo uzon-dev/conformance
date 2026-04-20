@@ -1,0 +1,10 @@
+// Resource #2
+@type is "scheduler"
+name is "scheduler_2"
+region is "eu-west-1"
+config is {
+    @type is "scheduler_config"
+    capacity is 1071 as i32
+    priority is 9 as u8
+}
+active is false

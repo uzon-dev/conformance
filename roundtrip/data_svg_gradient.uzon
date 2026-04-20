@@ -1,0 +1,36 @@
+_stop is {
+    offset is 0.0
+    color is ""
+    opacity is 0.0
+} called Stop
+
+_gradient is {
+    id is ""
+    @type is ""
+    x1 is null, y1 is null, x2 is null, y2 is null
+    cx is null, cy is null, r is null
+    stops is [] as [Stop]
+} called Gradient
+
+gradients is [
+    _gradient with {
+        id is "sunset-linear"
+        @type is "linear"
+        x1 is 0.0, y1 is 0.0, x2 is 1.0, y2 is 1.0
+        stops is [
+            { offset is 0.0, color is "#FF6B6B", opacity is 1.0 },
+            { offset is 0.5, color is "#FECA57", opacity is 1.0 },
+            { offset is 1.0, color is "#48DBFB", opacity is 0.8 }
+        ] as [Stop]
+    },
+    _gradient with {
+        id is "glow-radial"
+        @type is "radial"
+        cx is 0.5, cy is 0.5, r is 0.5
+        stops is [
+            { offset is 0.0, color is "#FFFFFF", opacity is 0.9 },
+            { offset is 0.5, color is "#A29BFE", opacity is 0.5 },
+            { offset is 1.0, color is "#6C5CE7", opacity is 0.0 }
+        ] as [Stop]
+    }
+] as [Gradient]

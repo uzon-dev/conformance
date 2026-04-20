@@ -1,0 +1,13 @@
+root is {
+    a is [
+        (
+            { b is [
+                (
+                    { c is "leaf" },
+                    42
+                )
+            ] },
+            "mid"
+        )
+    ]
+}

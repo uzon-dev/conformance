@@ -1,0 +1,5 @@
+// §3.5 Enum
+color is red from red, green, blue called Color
+season is spring from spring, summer, autumn, winter called Season
+typed is green as Color
+in_check is color in [ red, green ] as [Color]

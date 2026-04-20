@@ -1,0 +1,11 @@
+disk is {
+    device is "/dev/nvme0n1"
+    model is "Samsung 990 PRO"
+    size_gb is 2000 as u16
+    partitions is [
+        { name is "/dev/nvme0n1p1", mount is "/boot/efi", fs is "vfat", size_mb is 512 as u32, used_pct is 15 as u8 },
+        { name is "/dev/nvme0n1p2", mount is "/", fs is "ext4", size_mb is 102400 as u32, used_pct is 45 as u8 },
+        { name is "/dev/nvme0n1p3", mount is "/home", fs is "ext4", size_mb is 921600 as u32, used_pct is 62 as u8 },
+        { name is "/dev/nvme0n1p4", mount is "swap", fs is "swap", size_mb is 32768 as u32, used_pct is 0 as u8 }
+    ]
+}

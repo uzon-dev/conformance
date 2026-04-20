@@ -1,0 +1,4 @@
+// §5.8.1 in applies to structs — value membership
+s is { a is 1, b is 2 }
+found is 1 in s
+not_found is 3 in s

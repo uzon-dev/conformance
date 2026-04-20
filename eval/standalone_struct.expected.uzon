@@ -1,0 +1,4 @@
+origin_x is 0 as i32
+origin_y is 0 as i32
+moved_x is 5 as i32
+moved_y is 0 as i32

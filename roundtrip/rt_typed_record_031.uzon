@@ -1,0 +1,8 @@
+// Typed record #31
+id is 340465
+enabled_0 is 731629
+test_1 is true
+backup_2 is 4921 as u16
+test_3 is -7429 as i64
+delta_4 is null
+server_5 is null

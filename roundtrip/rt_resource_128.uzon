@@ -1,0 +1,13 @@
+// Resource #128
+@type is "database"
+name is "database_128"
+region is "ap-northeast-1"
+config is {
+    @type is "database_config"
+    engine is "mongo"
+    port is 27017 as u16
+    pool_size is 25 as u8
+    ssl is true
+}
+tags are "tau", "kappa", "xi", "xi"
+active is true

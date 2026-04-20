@@ -1,0 +1,15 @@
+prefixes is [
+    { symbol is "Y", name is "yotta", factor is 1.0e24 },
+    { symbol is "Z", name is "zetta", factor is 1.0e21 },
+    { symbol is "E", name is "exa", factor is 1.0e18 },
+    { symbol is "P", name is "peta", factor is 1.0e15 },
+    { symbol is "T", name is "tera", factor is 1.0e12 },
+    { symbol is "G", name is "giga", factor is 1.0e9 },
+    { symbol is "M", name is "mega", factor is 1.0e6 },
+    { symbol is "k", name is "kilo", factor is 1.0e3 },
+    { symbol is "m", name is "milli", factor is 1.0e-3 },
+    { symbol is "μ", name is "micro", factor is 1.0e-6 },
+    { symbol is "n", name is "nano", factor is 1.0e-9 },
+    { symbol is "p", name is "pico", factor is 1.0e-12 },
+    { symbol is "f", name is "femto", factor is 1.0e-15 }
+]

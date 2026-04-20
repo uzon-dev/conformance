@@ -1,0 +1,13 @@
+module is {
+    path is "github.com/uzon-dev/uzon-go"
+    go_version is "1.22"
+    require is [
+        { path is "github.com/stretchr/testify", version is "v1.9.0" },
+        { path is "golang.org/x/text", version is "v0.14.0" },
+        { path is "github.com/spf13/cobra", version is "v1.8.0" }
+    ]
+    replace is [] as [string]
+    exclude is [] as [string]
+    retract is [] as [string]
+    toolchain is "go1.22.2"
+}

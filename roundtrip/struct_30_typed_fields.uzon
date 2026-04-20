@@ -1,0 +1,14 @@
+data is {
+    f01 is 1 as i8, f02 is 2 as i16, f03 is 3 as i32, f04 is 4 as i64,
+    f05 is 5 as u8, f06 is 6 as u16, f07 is 7 as u32, f08 is 8 as u64,
+    f09 is 1.0 as f32, f10 is 2.0 as f64,
+    f11 is true, f12 is false,
+    f13 is "hello", f14 is "",
+    f15 is null,
+    f16 is inf, f17 is -inf, f18 is nan,
+    f19 is [ 1, 2 ], f20 is [] as [i32],
+    f21 is (1, "a"), f22 is (true, null),
+    f23 is { x is 1 }, f24 is { },
+    f25 is 0 as i8, f26 is 0 as u8, f27 is 0.0 as f32,
+    f28 is -128 as i8, f29 is 255 as u8, f30 is -1
+}

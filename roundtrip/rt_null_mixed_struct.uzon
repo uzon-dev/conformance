@@ -1,0 +1,7 @@
+data is {
+    name is null
+    age is null
+    score is 100 as i32
+    active is null
+    tags is [ null, "visible" ] as [string]
+}

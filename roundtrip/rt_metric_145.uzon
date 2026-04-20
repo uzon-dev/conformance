@@ -1,0 +1,12 @@
+metric is {
+    name is "connection_pool"
+    host is "server-05"
+    timestamp is 1712808700 as u64
+    value is 46.5
+    unit is "bytes"
+    tags is {
+        environment is "staging"
+        region is "us-west"
+        service is "svc-05"
+    }
+}

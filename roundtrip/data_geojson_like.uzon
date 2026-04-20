@@ -1,0 +1,18 @@
+@type is "FeatureCollection"
+features is [
+    {
+        @type is "Feature"
+        geometry is { @type is "Point", coordinates is (37.7749, -122.4194) }
+        properties is { name is "San Francisco", population is 873965 as i32 }
+    },
+    {
+        @type is "Feature"
+        geometry is { @type is "Point", coordinates is (40.7128, -74.0060) }
+        properties is { name is "New York", population is 8336817 as i32 }
+    },
+    {
+        @type is "Feature"
+        geometry is { @type is "Point", coordinates is (35.6762, 139.6503) }
+        properties is { name is "Tokyo", population is 13960000 as i32 }
+    }
+]

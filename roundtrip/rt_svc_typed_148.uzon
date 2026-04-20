@@ -1,0 +1,8 @@
+// Service configuration #148
+@type is "udp"
+name is "upsilon_148"
+port is 40372 as u16
+enabled is false
+max_connections is 9478 as i32
+timeout_ms is 16726 as i32
+tls is false

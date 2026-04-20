@@ -1,0 +1,52 @@
+_light is {
+    @type is ""
+    direction is null
+    position is null
+    color is (0 as u8, 0 as u8, 0 as u8)
+    intensity is 0.0
+    attenuation is null
+}
+
+_obj is {
+    name is ""
+    mesh is ""
+    transform is { pos is (0.0, 0.0, 0.0), rot is (0.0, 0.0, 0.0), scale is (1.0, 1.0, 1.0) }
+    material is { diffuse is (0 as u8, 0 as u8, 0 as u8), specular is 0.0, roughness is 0.0 }
+    children is null
+}
+
+scene is {
+    camera is {
+        position is (0.0, 5.0, -10.0)
+        target is (0.0, 0.0, 0.0)
+        fov is 60.0
+        near is 0.1
+        far is 1000.0
+    }
+    lights is [
+        _light with { @type is "directional", direction is (0.5, -1.0, 0.3), color is (255 as u8, 255 as u8, 230 as u8), intensity is 0.8 },
+        _light with { @type is "point", position is (5.0, 10.0, -5.0), color is (200 as u8, 200 as u8, 255 as u8), intensity is 1.0, attenuation is (1.0, 0.09, 0.032) }
+    ]
+    objects is [
+        _obj with {
+            name is "floor"
+            mesh is "plane"
+            transform is { pos is (0.0, 0.0, 0.0), rot is (0.0, 0.0, 0.0), scale is (50.0, 1.0, 50.0) }
+            material is { diffuse is (128 as u8, 128 as u8, 128 as u8), specular is 0.1, roughness is 0.9 }
+        },
+        _obj with {
+            name is "building"
+            mesh is "cube"
+            transform is { pos is (0.0, 5.0, 0.0), rot is (0.0, 45.0, 0.0), scale is (4.0, 10.0, 4.0) }
+            material is { diffuse is (200 as u8, 180 as u8, 160 as u8), specular is 0.3, roughness is 0.6 }
+            children is [
+                _obj with {
+                    name is "antenna"
+                    mesh is "cylinder"
+                    transform is { pos is (0.0, 6.0, 0.0), rot is (0.0, 0.0, 0.0), scale is (0.1, 3.0, 0.1) }
+                    material is { diffuse is (100 as u8, 100 as u8, 100 as u8), specular is 0.8, roughness is 0.2 }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,4 @@
+@type is "logout"
+timestamp is 1722815223
+source is "dev"
+detail is "mu_300"

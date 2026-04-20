@@ -1,0 +1,8 @@
+// Schema definition #136
+@type is "schema"
+version is 3 as u8
+name is "upsilon_schema_136"
+fields are
+        { name is "field_0", @type is "bool", required is true },
+        { name is "field_1", @type is "string", required is true },
+        { name is "field_2", @type is "string", required is true }

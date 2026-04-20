@@ -1,0 +1,2 @@
+// §5.16.4: std.split requires string arguments
+bad is std.split(123, ",")

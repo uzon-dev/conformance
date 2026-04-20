@@ -1,0 +1,7 @@
+results is [
+    { algorithm is "gzip", level is 6 as u8, original_bytes is 1048576 as u64, compressed_bytes is 312845 as u64, ratio is 0.2984, compress_ms is 45 as u32, decompress_ms is 12 as u32 },
+    { algorithm is "zstd", level is 3 as u8, original_bytes is 1048576 as u64, compressed_bytes is 287654 as u64, ratio is 0.2744, compress_ms is 25 as u32, decompress_ms is 8 as u32 },
+    { algorithm is "lz4", level is 1 as u8, original_bytes is 1048576 as u64, compressed_bytes is 456789 as u64, ratio is 0.4357, compress_ms is 5 as u32, decompress_ms is 3 as u32 },
+    { algorithm is "brotli", level is 11 as u8, original_bytes is 1048576 as u64, compressed_bytes is 245678 as u64, ratio is 0.2344, compress_ms is 890 as u32, decompress_ms is 15 as u32 },
+    { algorithm is "snappy", level is 0 as u8, original_bytes is 1048576 as u64, compressed_bytes is 523456 as u64, ratio is 0.4993, compress_ms is 3 as u32, decompress_ms is 2 as u32 }
+]

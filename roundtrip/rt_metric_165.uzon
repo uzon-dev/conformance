@@ -1,0 +1,12 @@
+metric is {
+    name is "cpu_usage"
+    host is "server-05"
+    timestamp is 1712809900 as u64
+    value is 80.5
+    unit is "percent"
+    tags is {
+        environment is "production"
+        region is "us-west"
+        service is "svc-05"
+    }
+}

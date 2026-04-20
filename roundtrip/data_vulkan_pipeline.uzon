@@ -1,0 +1,18 @@
+pipeline is {
+    stages is [
+        { stage is "vertex", module is "vert.spv", entry_point is "main" },
+        { stage is "fragment", module is "frag.spv", entry_point is "main" }
+    ]
+    vertex_input is {
+        bindings is [ { binding is 0 as u32, stride is 32 as u32, rate is "vertex" } ]
+        attributes is [
+            { location is 0 as u32, binding is 0 as u32, format is "R32G32B32_SFLOAT", offset is 0 as u32 },
+            { location is 1 as u32, binding is 0 as u32, format is "R32G32B32_SFLOAT", offset is 12 as u32 },
+            { location is 2 as u32, binding is 0 as u32, format is "R32G32_SFLOAT", offset is 24 as u32 }
+        ]
+    }
+    rasterizer is { polygon_mode is "fill", cull_mode is "back", front_face is "counter_clockwise", line_width is 1.0 }
+    multisample is { count is 4 as u8, alpha_to_coverage is false }
+    depth_stencil is { depth_test is true, depth_write is true, compare_op is "less", stencil_test is false }
+    color_blend is { logic_op_enabled is false, attachments is [ { blend_enabled is true, src_color is "src_alpha", dst_color is "one_minus_src_alpha" } ] }
+}

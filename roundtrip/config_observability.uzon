@@ -1,0 +1,25 @@
+observability is {
+    tracing is {
+        enabled is true
+        exporter is "otlp"
+        endpoint is "https://otel.internal:4317"
+        sampling is 0.1
+        propagation is [ "tracecontext", "baggage" ]
+        resource is { 'service.name' is "api-server", 'deployment.environment' is "production", 'service.version' is "3.2.1" }
+    }
+    metrics is {
+        enabled is true
+        exporter is "prometheus"
+        port is 9090 as u16
+        path is "/metrics"
+        histograms is [
+            { name is "http_request_duration_seconds", buckets is [ 0.005, 0.01, 0.025, 0.05, 0.1, 0.25, 0.5, 1.0, 2.5, 5.0, 10.0 ] },
+            { name is "db_query_duration_seconds", buckets is [ 0.001, 0.005, 0.01, 0.05, 0.1, 0.5, 1.0 ] }
+        ]
+    }
+    logging is {
+        level is "info"
+        format is "json"
+        fields is [ "timestamp", "level", "message", "trace_id", "span_id" ]
+    }
+}

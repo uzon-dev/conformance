@@ -1,0 +1,15 @@
+_e1 is a1 from a1, b1 called E1
+_e2 is a2 from a2, b2, c2 called E2
+_e3 is a3 from a3, b3 called E3
+_e4 is a4 from a4, b4, c4, d4 called E4
+_e5 is a5 from a5, b5 called E5
+_e6 is a6 from a6, b6, c6 called E6
+_e7 is a7 from a7, b7 called E7
+_e8 is a8 from a8, b8, c8 called E8
+_e9 is a9 from a9, b9 called E9
+_e10 is a10 from a10, b10, c10, d10, e10 called E10
+
+combo is {
+    v1 is b1 as E1, v2 is c2 as E2, v3 is a3 as E3, v4 is d4 as E4, v5 is b5 as E5,
+    v6 is a6 as E6, v7 is b7 as E7, v8 is c8 as E8, v9 is a9 as E9, v10 is e10 as E10
+}

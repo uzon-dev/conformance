@@ -1,0 +1,9 @@
+d0 is null
+d1 is { v is null }
+d2 is { a is { v is null } }
+d3 is { a is { b is { v is null } } }
+d4 is { a is { b is { c is { v is null } } } }
+d5_list is [ null, null, null ] as [i32]
+d5_struct is { x is null }
+d5_tuple is (null, null)
+d5_nested is { y is { z is null } }

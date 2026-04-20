@@ -1,0 +1,2 @@
+// §5.3 Bool in arithmetic is type error
+bad is true + 1

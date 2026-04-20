@@ -1,0 +1,10 @@
+codes is [
+    { decimal is 0 as u8, hex is "00", abbr is "NUL", name is "Null" },
+    { decimal is 7 as u8, hex is "07", abbr is "BEL", name is "Bell" },
+    { decimal is 8 as u8, hex is "08", abbr is "BS", name is "Backspace" },
+    { decimal is 9 as u8, hex is "09", abbr is "HT", name is "Horizontal Tab" },
+    { decimal is 10 as u8, hex is "0A", abbr is "LF", name is "Line Feed" },
+    { decimal is 13 as u8, hex is "0D", abbr is "CR", name is "Carriage Return" },
+    { decimal is 27 as u8, hex is "1B", abbr is "ESC", name is "Escape" },
+    { decimal is 127 as u8, hex is "7F", abbr is "DEL", name is "Delete" }
+]

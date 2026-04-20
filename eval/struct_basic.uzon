@@ -1,0 +1,4 @@
+empty is { }
+point is { x is 1, y is 2 }
+nested is { outer is { inner is 42 } }
+access is nested.outer.inner

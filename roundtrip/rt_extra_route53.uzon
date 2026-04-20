@@ -1,0 +1,11 @@
+zone is {
+    id is "Z1234567890"
+    name is "example.com."
+    records is [
+        { name is "example.com.", @type is "A", ttl is 300 as u32, values is [ "1.2.3.4", "5.6.7.8" ] },
+        { name is "www.example.com.", @type is "CNAME", ttl is 3600 as u32, values is [ "example.com." ] },
+        { name is "api.example.com.", @type is "A", ttl is 60 as u32, values is [ "10.0.1.100" ] },
+        { name is "example.com.", @type is "MX", ttl is 3600 as u32, values is [ "10 mail.example.com." ] },
+        { name is "example.com.", @type is "TXT", ttl is 300 as u32, values is [ "v=spf1 include:_spf.example.com -all" ] }
+    ]
+}

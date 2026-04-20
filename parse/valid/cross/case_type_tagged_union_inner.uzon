@@ -1,0 +1,7 @@
+// §5.10: case type on tagged union dispatches on inner value's type
+_h is "all good" named ok from ok as string, code as i32 called Status
+
+msg is case type _h
+    when string then "text status"
+    when i32 then "numeric status"
+    else "other"

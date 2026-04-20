@@ -1,0 +1,8 @@
+// Service configuration #40
+@type is "graphql"
+name is "kappa_40"
+port is 37234 as u16
+enabled is false
+max_connections is 695 as i32
+timeout_ms is 10201 as i32
+tls is true

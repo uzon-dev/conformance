@@ -1,0 +1,2 @@
+// §5.9 null is not bool
+bad is if null then "yes" else "no"

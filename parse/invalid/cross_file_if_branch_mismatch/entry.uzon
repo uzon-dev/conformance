@@ -1,0 +1,5 @@
+// §5.9 + §7.3: if branches with different nominal types from different
+// files are type errors even if structurally identical.
+a is struct "./a"
+b is struct "./b"
+bad is if true then a.val else b.val

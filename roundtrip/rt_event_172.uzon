@@ -1,0 +1,5 @@
+@type is "pageview"
+timestamp is 1720774029
+source is "path"
+url is "https://main.example.com/rho"
+session_id is "rho_9783"

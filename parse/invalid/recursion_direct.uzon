@@ -1,0 +1,4 @@
+// §3.8 Direct recursion forbidden
+factorial is function n as i32 returns i32 {
+    if n is 0 then 1 else n * factorial(n - 1)
+}

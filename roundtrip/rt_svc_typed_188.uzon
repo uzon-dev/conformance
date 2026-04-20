@@ -1,0 +1,8 @@
+// Service configuration #188
+@type is "mqtt"
+name is "prod_188"
+port is 5459 as u16
+enabled is true
+max_connections is 8326 as i32
+timeout_ms is 18258 as i32
+tls is false

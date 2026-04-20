@@ -1,0 +1,12 @@
+// §5.13 + §5.11 + §5.10 + §3.5: env → to enum → case
+_level is info from trace, debug, info, warn, error called LogLevel
+
+level is env.LOG_LEVEL to LogLevel or else info as LogLevel
+
+message is case level
+    when trace then "TRACE: verbose output"
+    when debug then "DEBUG: diagnostic info"
+    when info then "INFO: normal operation"
+    when warn then "WARN: attention needed"
+    when error then "ERROR: failure detected"
+    else "UNKNOWN"

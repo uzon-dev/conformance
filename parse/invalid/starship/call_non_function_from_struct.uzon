@@ -1,0 +1,5 @@
+// ERROR: §5.15 + §3.2
+// calling struct field that is not a function
+vessel is { name is "Wanderer", epoch is 7 }
+
+bad is vessel.epoch(42)

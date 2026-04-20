@@ -1,0 +1,4 @@
+// §3.6 + §5.4 — ordered comparison on untagged union is a type error
+a is 42 from union i32, string
+b is 10 from union i32, string
+bad is a < b

@@ -1,0 +1,11 @@
+// Resource #117
+@type is "scheduler"
+name is "scheduler_117"
+region is "us-east-1"
+config is {
+    @type is "scheduler_config"
+    capacity is 5624 as i32
+    priority is 6 as u8
+}
+tags are "dev", "path", "omicron", "omicron"
+active is false

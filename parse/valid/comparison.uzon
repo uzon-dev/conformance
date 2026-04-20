@@ -1,0 +1,5 @@
+// §5.4 Ordered comparison
+lt is 1 < 2
+le is 2 <= 2
+gt is 3 > 1
+ge is 3 >= 3

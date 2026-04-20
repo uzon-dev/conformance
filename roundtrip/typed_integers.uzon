@@ -1,0 +1,6 @@
+// Roundtrip: typed integers — type annotations must survive
+a is 42 as u8
+b is 1000 as u16
+c is -50 as i32
+d is 0 as i64
+e is 255 as u8

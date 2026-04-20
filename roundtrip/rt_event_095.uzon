@@ -1,0 +1,5 @@
+@type is "pageview"
+timestamp is 1794983411
+source is "config"
+url is "https://prod.example.com/omicron"
+session_id is "mu_9529"

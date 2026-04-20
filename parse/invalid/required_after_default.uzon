@@ -1,0 +1,2 @@
+// §3.8 Required parameter after defaulted parameter
+bad is function a as i32 default 0, b as i32 returns i32 { a + b }

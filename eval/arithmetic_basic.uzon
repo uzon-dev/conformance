@@ -1,0 +1,7 @@
+add is 1 + 2
+sub is 10 - 3
+mul is 4 * 5
+div is 10 / 3
+mod is 10 % 3
+neg_div is -10 / 3
+neg_mod is -10 % 3

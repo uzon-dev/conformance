@@ -1,0 +1,5 @@
+endpoints is [
+    { path is "/nginx/api/v1/status", method is "GET", timeout_ms is 1000 as u32, auth is true },
+    { path is "/nginx/api/v1/config", method is "GET", timeout_ms is 2000 as u32, auth is true },
+    { path is "/nginx/api/v1/metrics", method is "GET", timeout_ms is 500 as u32, auth is false }
+]

@@ -1,0 +1,55 @@
+_pass_type is transform from transform, analysis, optimization, lowering called PassType
+_ir is source from source, tokens, ast, hir, mir, lir, machine called IR
+
+pipeline is {
+    name is "uzon-compiler"
+    stages is [
+        {
+            name is "lexer"
+            input is source as IR
+            output is tokens as IR
+            passes is [
+                { name is "tokenize", @type is transform as PassType, time_budget_ms is 10 as u32 }
+            ]
+        },
+        {
+            name is "parser"
+            input is tokens as IR
+            output is ast as IR
+            passes is [
+                { name is "parse", @type is transform as PassType, time_budget_ms is 50 as u32 },
+                { name is "desugar", @type is transform as PassType, time_budget_ms is 5 as u32 }
+            ]
+        },
+        {
+            name is "analyzer"
+            input is ast as IR
+            output is hir as IR
+            passes is [
+                { name is "resolve_names", @type is analysis as PassType, time_budget_ms is 20 as u32 },
+                { name is "type_check", @type is analysis as PassType, time_budget_ms is 100 as u32 },
+                { name is "borrow_check", @type is analysis as PassType, time_budget_ms is 50 as u32 }
+            ]
+        },
+        {
+            name is "optimizer"
+            input is hir as IR
+            output is mir as IR
+            passes is [
+                { name is "inline", @type is optimization as PassType, time_budget_ms is 200 as u32 },
+                { name is "dead_code", @type is optimization as PassType, time_budget_ms is 30 as u32 },
+                { name is "constant_fold", @type is optimization as PassType, time_budget_ms is 20 as u32 }
+            ]
+        },
+        {
+            name is "codegen"
+            input is mir as IR
+            output is machine as IR
+            passes is [
+                { name is "lower", @type is lowering as PassType, time_budget_ms is 100 as u32 },
+                { name is "register_alloc", @type is lowering as PassType, time_budget_ms is 150 as u32 },
+                { name is "emit", @type is lowering as PassType, time_budget_ms is 50 as u32 }
+            ]
+        }
+    ]
+}

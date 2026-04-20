@@ -1,0 +1,6 @@
+// Roundtrip: list of tuples containing structs
+entries is [
+    ({ name is "alfa", active is true }, 100 as i32, "primary"),
+    ({ name is "bravo", active is false }, 50 as i32, "backup"),
+    ({ name is "charlie", active is true }, 75 as i32, "secondary")
+]

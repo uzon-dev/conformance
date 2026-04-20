@@ -1,0 +1,5 @@
+is_ok is true
+is_err is false
+not_err is true
+reuse_is_err is true
+reuse_is_ok is false

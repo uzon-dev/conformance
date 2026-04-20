@@ -1,0 +1,8 @@
+// Service configuration #34
+@type is "mqtt"
+name is "epsilon_34"
+port is 58752 as u16
+enabled is true
+max_connections is 6064 as i32
+timeout_ms is 9438 as i32
+tls is true

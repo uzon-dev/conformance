@@ -1,0 +1,8 @@
+// Service configuration #51
+@type is "udp"
+name is "upsilon_51"
+port is 34258 as u16
+enabled is true
+max_connections is 5354 as i32
+timeout_ms is 13285 as i32
+retry_count is 8 as u8

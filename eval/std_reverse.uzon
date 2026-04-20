@@ -1,0 +1,8 @@
+a is std.reverse([ 1, 2, 3 ])
+b is std.reverse([ "a", "b", "c" ])
+c is std.reverse("hello")
+d is std.reverse("한글")
+e is std.reverse([] as [i32])
+f is std.reverse("")
+g is std.reverse([ 42 ])
+h is std.reverse("x")

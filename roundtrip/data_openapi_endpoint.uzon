@@ -1,0 +1,16 @@
+endpoint is {
+    path is "/api/users/\{userId}"
+    method is "GET"
+    summary is "Get user by ID"
+    parameters is [
+        { name is "userId", @in is "path", required is true, schema is { @type is "integer", format is "int64" } },
+        { name is "fields", @in is "query", required is false, schema is { @type is "string" } }
+    ]
+    responses is {
+        ok is { status is 200 as u16, description is "Successful response", content_type is "application/json" }
+        not_found is { status is 404 as u16, description is "User not found", content_type is "application/json" }
+        error is { status is 500 as u16, description is "Internal server error", content_type is "application/json" }
+    }
+    security is [ "bearerAuth" ]
+    tags is [ "users" ]
+}

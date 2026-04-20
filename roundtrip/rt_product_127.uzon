@@ -1,0 +1,14 @@
+product is {
+    sku is "SKU-AUT-0127"
+    name is "Automotive Item 127"
+    category is "automotive"
+    price is 73.49
+    currency is "USD"
+    stock is 381 as u16
+    weight_g is 1370 as u32
+    dimensions is (17.0, 12.0, 9.0)
+    rating is 3.7
+    reviews is 889 as u16
+    active is true
+    tags is [ "automotive", "new" ]
+}

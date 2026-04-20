@@ -1,0 +1,4 @@
+floats is [ inf, -inf, nan, 0.0, -0.0 ]
+all_inf is [ inf, inf, inf ]
+all_nan is [ nan, nan ]
+mixed is [ 1.0, inf, 2.0, nan, 3.0, -inf ]

@@ -1,0 +1,14 @@
+product is {
+    sku is "SKU-ELE-0120"
+    name is "Electronics Item 120"
+    category is "electronics"
+    price is 69.99
+    currency is "USD"
+    stock is 360 as u16
+    weight_g is 1300 as u32
+    dimensions is (10.0, 5.0, 2.0)
+    rating is 3.0
+    reviews is 840 as u16
+    active is false
+    tags is [ "electronics", "sale" ]
+}

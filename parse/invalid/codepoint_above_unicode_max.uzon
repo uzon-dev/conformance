@@ -1,0 +1,2 @@
+// §2.3 / §4.4: code points above U+10FFFF are rejected.
+s is "\u{110000}"

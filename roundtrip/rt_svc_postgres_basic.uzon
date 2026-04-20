@@ -1,0 +1,9 @@
+service is {
+    name is "postgres"
+    version is "3.2.2"
+    port is 8002 as u16
+    health is "/health"
+    replicas is 3 as u8
+    resources is { cpu_m is 300 as u16, memory_mb is 384 as u16 }
+    labels is { app is "postgres", tier is "infrastructure" }
+}

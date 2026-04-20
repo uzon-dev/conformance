@@ -1,0 +1,5 @@
+@type is "pageview"
+timestamp is 1722467350
+source is "staging"
+url is "https://staging.example.com/alpha"
+session_id is "epsilon_4453"

@@ -1,0 +1,2 @@
+// §3.7 + §6.2 — cannot combine standalone tagged union with called
+Result is tagged union ok as string, err as string called Outcome

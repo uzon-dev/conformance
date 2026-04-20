@@ -1,0 +1,12 @@
+_os is linux from linux, macos, windows called OS
+_arch is x86_64 from x86_64, aarch64, wasm called Arch
+_channel is stable from stable, beta, nightly called Channel
+
+targets is [
+    { os is linux as OS, arch is x86_64 as Arch, channel is stable as Channel, tier is 1 as u8 },
+    { os is linux as OS, arch is aarch64 as Arch, channel is stable as Channel, tier is 1 as u8 },
+    { os is macos as OS, arch is x86_64 as Arch, channel is stable as Channel, tier is 1 as u8 },
+    { os is macos as OS, arch is aarch64 as Arch, channel is stable as Channel, tier is 1 as u8 },
+    { os is windows as OS, arch is x86_64 as Arch, channel is stable as Channel, tier is 1 as u8 },
+    { os is linux as OS, arch is wasm as Arch, channel is nightly as Channel, tier is 2 as u8 }
+]

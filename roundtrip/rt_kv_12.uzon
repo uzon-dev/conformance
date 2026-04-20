@@ -1,0 +1,10 @@
+config is {
+    app_name is "service-12"
+    port is 3012 as u16
+    debug is true
+    log_level is "debug"
+    max_connections is 170 as u16
+    timeout_sec is 90 as u16
+    version is "2.2.0"
+    region is "us-east"
+}

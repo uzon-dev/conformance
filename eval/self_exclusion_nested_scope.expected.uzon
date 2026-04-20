@@ -1,0 +1,7 @@
+x is 1
+inner is {
+    x is 2
+    deeper is {
+        x is 12
+    }
+}

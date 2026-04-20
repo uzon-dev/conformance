@@ -1,0 +1,5 @@
+_color is red from red, green, blue called Color
+selected is green as Color
+is_red is selected is red as Color
+is_green is selected is green as Color
+in_warm is selected in [ red ] as [Color]

@@ -1,0 +1,8 @@
+// §5.16.2 + §3.8
+// indirect recursion through std.map calling self
+items are 1, 2, 3
+process is function n as i64 returns i64 {
+    nested is std.map(items, process)
+    n
+}
+bad is process(1)

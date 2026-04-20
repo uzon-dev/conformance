@@ -1,0 +1,5 @@
+data is [
+    { name is "A", values is [ 1, 2, 3 ] },
+    { name is "B", values is [ 4, 5, 6 ] },
+    { name is "C", values is [ 7, 8, 9 ] }
+]

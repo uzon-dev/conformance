@@ -1,0 +1,6 @@
+// Roundtrip: keyword escape and quoted identifiers
+@type is "config"
+@default is true
+@null is "not null"
+'Content-Type' is "application/json"
+'X-Request-ID' is "abc-123"

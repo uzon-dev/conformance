@@ -1,0 +1,11 @@
+// Resource #55
+@type is "gateway"
+name is "gateway_55"
+region is "eu-west-1"
+config is {
+    @type is "gateway_config"
+    capacity is 9892 as i32
+    priority is 9 as u8
+}
+tags are "debug", "level"
+active is false

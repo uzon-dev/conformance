@@ -1,0 +1,12 @@
+// Resource #28
+@type is "compute"
+name is "compute_28"
+region is "us-west-2"
+config is {
+    @type is "compute_config"
+    cpu_cores is 2 as u8
+    memory_gb is 4 as u8
+    gpu is true
+}
+tags are "epsilon", "theta", "kappa", "iota"
+active is true

@@ -1,0 +1,10 @@
+// ERROR: §3.8 + §5.16.2
+// indirect recursion: function references itself through std.map
+items are 1, 2, 3
+
+process is function n as i64 returns i64 {
+    inner is std.map(items, process)
+    n + std.len(inner)
+}
+
+bad is process(1)

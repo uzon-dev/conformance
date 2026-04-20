@@ -1,0 +1,7 @@
+foods is [
+    { name is "Apple", calories is 95 as u16, protein is 0.5, fat is 0.3, carbs is 25.1, fiber is 4.4, serving is "1 medium (182g)" },
+    { name is "Chicken Breast", calories is 165 as u16, protein is 31.0, fat is 3.6, carbs is 0.0, fiber is 0.0, serving is "100g cooked" },
+    { name is "Brown Rice", calories is 216 as u16, protein is 5.0, fat is 1.8, carbs is 44.8, fiber is 3.5, serving is "1 cup cooked" },
+    { name is "Broccoli", calories is 55 as u16, protein is 3.7, fat is 0.6, carbs is 11.2, fiber is 5.1, serving is "1 cup chopped" },
+    { name is "Salmon", calories is 208 as u16, protein is 20.4, fat is 13.4, carbs is 0.0, fiber is 0.0, serving is "100g cooked" }
+]

@@ -1,0 +1,7 @@
+// Schema definition #66
+@type is "schema"
+version is 3 as u8
+name is "staging_schema_66"
+fields are
+        { name is "field_0", @type is "u16", required is true },
+        { name is "field_1", @type is "string", required is false }

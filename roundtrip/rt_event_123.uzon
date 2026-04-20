@@ -1,0 +1,5 @@
+@type is "pageview"
+timestamp is 1733646722
+source is "eta"
+url is "https://nu.example.com/main"
+session_id is "enabled_6420"

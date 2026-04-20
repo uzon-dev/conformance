@@ -1,0 +1,8 @@
+// §5.11.0 — integer → float precision behavior
+// Small values exact, large values round silently
+small is 1000 as i64
+exact is small to f64
+
+// i32 exactly 2^24 is still representable in f32
+at_limit is 16777216 as i32
+ok is at_limit to f32

@@ -1,0 +1,8 @@
+// Service configuration #3
+@type is "websocket"
+name is "server_3"
+port is 15134 as u16
+enabled is false
+max_connections is 6234 as i32
+timeout_ms is 3269 as i32
+tls is false

@@ -1,0 +1,6 @@
+// §3.7 — standalone tagged union type declaration
+Result is tagged union ok as string, err as string
+
+// Reuse
+success is "data" as Result named ok
+failure is "not found" as Result named err

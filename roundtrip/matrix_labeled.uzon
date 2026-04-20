@@ -1,0 +1,9 @@
+confusion_matrix is {
+    labels is [ "cat", "dog", "bird" ]
+    data is [
+        [ 85 as i32, 10 as i32, 5 as i32 ],
+        [ 8 as i32, 88 as i32, 4 as i32 ],
+        [ 3 as i32, 7 as i32, 90 as i32 ]
+    ]
+    accuracy is 0.877
+}

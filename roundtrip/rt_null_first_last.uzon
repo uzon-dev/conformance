@@ -1,0 +1,4 @@
+first_null is [ null, 1, 2, 3 ] as [i64]
+last_null is [ 1, 2, 3, null ] as [i64]
+both_null is [ null, 1, 2, null ] as [i64]
+all_null is [ null, null, null ] as [i64]

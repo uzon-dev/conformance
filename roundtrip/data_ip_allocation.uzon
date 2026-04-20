@@ -1,0 +1,5 @@
+subnets is [
+    { cidr is "10.0.0.0/24", gateway is "10.0.0.1", dns is [ "10.0.0.2", "10.0.0.3" ], dhcp is { start is "10.0.0.100", end is "10.0.0.200", lease_hours is 24 as u16 }, vlan is 100 as u16 },
+    { cidr is "10.0.1.0/24", gateway is "10.0.1.1", dns is [ "10.0.0.2" ], dhcp is { start is "10.0.1.50", end is "10.0.1.150", lease_hours is 12 as u16 }, vlan is 200 as u16 },
+    { cidr is "10.0.2.0/24", gateway is "10.0.2.1", dns is [ "10.0.0.2", "10.0.0.3" ], dhcp is { start is "10.0.2.10", end is "10.0.2.250", lease_hours is 48 as u16 }, vlan is 300 as u16 }
+]

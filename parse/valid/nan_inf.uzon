@@ -1,0 +1,7 @@
+// §4.6, §4.7 Special float values
+pos_inf is inf
+neg_inf is -inf
+not_a_number is nan
+nan_neq is not_a_number is not nan           // true (IEEE 754)
+nan_eq is not_a_number is nan                // false (IEEE 754)
+inf_compare is pos_inf > 1000.0              // true

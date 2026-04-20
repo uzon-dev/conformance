@@ -1,0 +1,4 @@
+// §9: - after comma is unary (negative literal or negation)
+f is function a as i32, b as i32 returns i32 { a + b }
+r1 is f(1, -2)       // -2 is negative literal
+r2 is f(1, -1 * 2)   // -1 is negative literal, then * 2

@@ -1,0 +1,12 @@
+// ERROR: §5.16.2 + §3.8
+// std.map passes one element — function has two required params
+_shared is struct "./shared"
+
+modules are _shared.bridge, _shared.base_module
+
+bad is std.map(
+    modules,
+    function m as _shared.BaseModule, factor as i32 returns i32 {
+        m.power_kw to i32 * factor
+    }
+)

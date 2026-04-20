@@ -1,0 +1,11 @@
+// Resource #125
+@type is "monitor"
+name is "monitor_125"
+region is "ap-northeast-1"
+config is {
+    @type is "monitor_config"
+    capacity is 2609 as i32
+    priority is 0 as u8
+}
+tags are "path", "active", "port"
+active is true

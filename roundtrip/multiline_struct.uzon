@@ -1,0 +1,7 @@
+// Roundtrip: struct with both comma and newline separation
+comma_style is { a is 1, b is 2, c is 3 }
+newline_style is {
+    x is "hello"
+    y is true
+    z is null
+}

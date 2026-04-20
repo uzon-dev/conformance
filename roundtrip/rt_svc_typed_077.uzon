@@ -1,0 +1,9 @@
+// Service configuration #77
+@type is "udp"
+name is "pi_77"
+port is 22146 as u16
+enabled is true
+max_connections is 1429 as i32
+timeout_ms is 9239 as i32
+retry_count is 3 as u8
+tls is true

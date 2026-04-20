@@ -1,0 +1,8 @@
+// Service configuration #50
+@type is "tcp"
+name is "path_50"
+port is 24893 as u16
+enabled is false
+max_connections is 5419 as i32
+timeout_ms is 20519 as i32
+tls is true

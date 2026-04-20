@@ -1,0 +1,13 @@
+airports is {
+    ICN is { name is "Incheon International", city is "Seoul", country is "KR", lat is 37.4602, lon is 126.4407 }
+    NRT is { name is "Narita International", city is "Tokyo", country is "JP", lat is 35.7647, lon is 140.3864 }
+    LAX is { name is "Los Angeles International", city is "Los Angeles", country is "US", lat is 33.9425, lon is -118.4081 }
+    LHR is { name is "Heathrow", city is "London", country is "GB", lat is 51.4700, lon is -0.4543 }
+}
+routes is [
+    { @from is "ICN", @to is "NRT", distance_km is 1267 as u16, flight_hours is 2.5 },
+    { @from is "ICN", @to is "LAX", distance_km is 9593 as u16, flight_hours is 11.5 },
+    { @from is "ICN", @to is "LHR", distance_km is 8869 as u16, flight_hours is 12.0 },
+    { @from is "NRT", @to is "LAX", distance_km is 8815 as u16, flight_hours is 10.5 },
+    { @from is "LAX", @to is "LHR", distance_km is 8780 as u16, flight_hours is 10.0 }
+]

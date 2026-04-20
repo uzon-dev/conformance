@@ -1,0 +1,13 @@
+// §3.7 + §5.10 + §4.4.1: tagged union + case named + interpolation
+response is "data loaded" named success from
+    success as string, error as string, pending as null
+    called ApiResult
+
+display is case named response
+    when success then "✓ {response}"
+    when error then "✗ {response}"
+    when pending then "⏳ waiting..."
+    else "? unknown"
+
+is_ok is response is named success
+reuse is "timeout" as ApiResult named error

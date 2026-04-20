@@ -1,0 +1,19 @@
+// Nested structs with overlapping names — self resolution chain
+x is 1
+y is 2
+
+outer is {
+    x is 10
+    y is 20
+    inner is {
+        x is 100
+        // x → inner scope → 100
+        // y → inner scope? No y here → outer scope → 20
+        sum is x + y
+        // outer? No — inner is inside outer, self walks up
+        // actually from inner: x = 100, y = 20 (outer), self walks file scope after outer
+    }
+    total is inner.sum + x
+}
+
+result is outer.total

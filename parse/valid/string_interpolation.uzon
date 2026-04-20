@@ -1,0 +1,5 @@
+// §4.4.1 String interpolation
+name is "world"
+greeting is "hello, {name}!"
+nested is "value: {name ++ \"!\"}"
+with_expr is "sum: {1 + 2}"

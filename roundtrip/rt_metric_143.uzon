@@ -1,0 +1,12 @@
+metric is {
+    name is "latency_p99"
+    host is "server-03"
+    timestamp is 1712808580 as u64
+    value is 43.1
+    unit is "milliseconds"
+    tags is {
+        environment is "development"
+        region is "ap-east"
+        service is "svc-03"
+    }
+}

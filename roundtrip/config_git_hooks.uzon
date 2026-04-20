@@ -1,0 +1,20 @@
+hooks is {
+    'pre-commit' is {
+        commands is [ "npm run lint", "npm run typecheck" ]
+        parallel is true
+        pass_filenames is true
+        file_types is [ ".ts", ".tsx", ".js" ]
+    }
+    'commit-msg' is {
+        commands is [ "commitlint --edit" ]
+        parallel is false
+        pass_filenames is false
+        file_types is [] as [string]
+    }
+    'pre-push' is {
+        commands is [ "npm test -- --bail", "npm run build" ]
+        parallel is false
+        pass_filenames is false
+        file_types is [] as [string]
+    }
+}

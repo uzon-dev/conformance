@@ -1,0 +1,10 @@
+tests is [
+    { pattern is "^\\d+$", input is "12345", expected is true },
+    { pattern is "^\\d+$", input is "abc", expected is false },
+    { pattern is "^[a-z]+$", input is "hello", expected is true },
+    { pattern is "^[a-z]+$", input is "Hello", expected is false },
+    { pattern is "\\w+@\\w+\\.\\w+", input is "user@example.com", expected is true },
+    { pattern is "\\w+@\\w+\\.\\w+", input is "not-an-email", expected is false },
+    { pattern is "^https?://", input is "https://example.com", expected is true },
+    { pattern is "^https?://", input is "ftp://example.com", expected is false }
+]

@@ -1,0 +1,12 @@
+// Same struct shape repeated many times
+rows is [
+    { x is 0 as i32, y is 0 as i32, label is "origin" },
+    { x is 1 as i32, y is 0 as i32, label is "right" },
+    { x is 0 as i32, y is 1 as i32, label is "up" },
+    { x is -1 as i32, y is 0 as i32, label is "left" },
+    { x is 0 as i32, y is -1 as i32, label is "down" },
+    { x is 1 as i32, y is 1 as i32, label is "up-right" },
+    { x is -1 as i32, y is 1 as i32, label is "up-left" },
+    { x is 1 as i32, y is -1 as i32, label is "down-right" },
+    { x is -1 as i32, y is -1 as i32, label is "down-left" }
+]

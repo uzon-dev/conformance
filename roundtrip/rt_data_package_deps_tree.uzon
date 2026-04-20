@@ -1,0 +1,13 @@
+root is {
+    name is "my-app"
+    version is "1.0.0"
+    deps is [
+        { name is "express", version is "4.18.2", deps is [
+            { name is "body-parser", version is "1.20.1", deps is [] as [string] },
+            { name is "cookie", version is "0.6.0", deps is [] as [string] }
+        ] },
+        { name is "pg", version is "8.11.3", deps is [
+            { name is "pg-pool", version is "3.6.1", deps is [] as [string] }
+        ] }
+    ]
+}

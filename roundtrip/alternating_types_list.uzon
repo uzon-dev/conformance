@@ -1,0 +1,5 @@
+all_true is [ true, true, true, true ]
+all_false is [ false, false, false ]
+all_null_i32 is [ null, null, null ] as [i32]
+all_zero is [ 0, 0, 0, 0, 0 ]
+all_empty_str is [ "", "", "" ]

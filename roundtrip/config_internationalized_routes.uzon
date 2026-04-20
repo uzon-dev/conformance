@@ -1,0 +1,8 @@
+routes is [
+    { path is "/", page is "home", titles is { en is "Home", ko is "홈", ja is "ホーム" } },
+    { path is "/about", page is "about", titles is { en is "About Us", ko is "소개", ja is "会社概要" } },
+    { path is "/products", page is "products", titles is { en is "Products", ko is "제품", ja is "製品" } },
+    { path is "/contact", page is "contact", titles is { en is "Contact", ko is "연락처", ja is "お問い合わせ" } }
+]
+default_locale is "en"
+supported is [ "en", "ko", "ja" ]

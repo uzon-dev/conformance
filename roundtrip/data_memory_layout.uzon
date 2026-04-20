@@ -1,0 +1,12 @@
+layout is {
+    sections is [
+        { name is ".text", start is 0x00400000, size is 0x1000, permissions is "r-x" },
+        { name is ".rodata", start is 0x00401000, size is 0x0200, permissions is "r--" },
+        { name is ".data", start is 0x00402000, size is 0x0100, permissions is "rw-" },
+        { name is ".bss", start is 0x00403000, size is 0x0400, permissions is "rw-" },
+        { name is ".stack", start is 0x7FFE0000, size is 0x10000, permissions is "rw-" }
+    ]
+    word_size is 64 as u8
+    endian is "little"
+    page_size is 4096 as u32
+}

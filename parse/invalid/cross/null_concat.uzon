@@ -1,0 +1,2 @@
+// §4.5 + §5.8.2: null in concatenation is type error
+bad is "hello" ++ null

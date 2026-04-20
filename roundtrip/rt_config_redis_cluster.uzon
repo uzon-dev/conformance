@@ -1,0 +1,18 @@
+cluster is {
+    name is "prod-cache"
+    nodes is [
+        { host is "redis-1.internal", port is 6379 as u16, role is "master", slots is "0-5460" },
+        { host is "redis-2.internal", port is 6379 as u16, role is "master", slots is "5461-10922" },
+        { host is "redis-3.internal", port is 6379 as u16, role is "master", slots is "10923-16383" },
+        { host is "redis-4.internal", port is 6379 as u16, role is "replica", slots is "" },
+        { host is "redis-5.internal", port is 6379 as u16, role is "replica", slots is "" },
+        { host is "redis-6.internal", port is 6379 as u16, role is "replica", slots is "" }
+    ]
+    settings is {
+        maxmemory is "4gb"
+        maxmemory_policy is "allkeys-lru"
+        timeout is 300 as u32
+        tcp_keepalive is 60 as u16
+        databases is 16 as u8
+    }
+}

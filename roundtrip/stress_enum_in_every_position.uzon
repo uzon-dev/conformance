@@ -1,0 +1,12 @@
+_c is red from red, green, blue called Color
+
+top is red as Color
+in_struct is { fg is blue as Color, bg is green as Color }
+in_list is [ red, green, blue ] as [Color]
+in_tuple is (red as Color, "label", 42)
+in_list_struct is [
+    { name is "warm", color is red as Color },
+    { name is "cool", color is blue as Color }
+]
+in_tuple_list is [ (red as Color, 1), (green as Color, 2), (blue as Color, 3) ]
+in_nested is { outer is { inner is { deep is green as Color } } }

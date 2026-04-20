@@ -1,0 +1,4 @@
+// §7.3 + §5.2: distinct nominal types cannot be compared with is.
+a is struct "./a"
+b is struct "./b"
+bad is a.val is b.val

@@ -1,0 +1,2 @@
+_r is null named n from y as i32, n as null called MaybeInt
+data is { a is 1 as MaybeInt named y, b is null as MaybeInt named n, c is 99 as MaybeInt named y }

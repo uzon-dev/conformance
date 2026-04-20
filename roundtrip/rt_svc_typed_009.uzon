@@ -1,0 +1,9 @@
+// Service configuration #9
+@type is "graphql"
+name is "config_9"
+port is 58457 as u16
+enabled is false
+max_connections is 8189 as i32
+timeout_ms is 13064 as i32
+retry_count is 10 as u8
+tls is false

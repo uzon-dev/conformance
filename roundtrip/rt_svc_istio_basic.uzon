@@ -1,0 +1,9 @@
+service is {
+    name is "istio"
+    version is "5.3.1"
+    port is 8013 as u16
+    health is "/health"
+    replicas is 2 as u8
+    resources is { cpu_m is 400 as u16, memory_mb is 256 as u16 }
+    labels is { app is "istio", tier is "backend" }
+}

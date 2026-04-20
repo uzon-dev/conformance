@@ -1,0 +1,12 @@
+metric is {
+    name is "latency_p50"
+    host is "server-17"
+    timestamp is 1712802220 as u64
+    value is 62.9
+    unit is "milliseconds"
+    tags is {
+        environment is "staging"
+        region is "us-west"
+        service is "svc-07"
+    }
+}

@@ -1,0 +1,14 @@
+// §5.8.1 Membership — all collection types
+// list
+found is 2 in [ 1, 2, 3 ]
+not_found is 4 in [ 1, 2, 3 ]
+null_in is null in [ 1, null, 3 ]
+empty is 1 in []
+
+// tuple
+tuple_found is 42 in (1, "hello", 42)
+tuple_miss is 99 in (1, "hello", true)
+
+// struct
+struct_found is 8080 in { port is 8080, host is "localhost" }
+struct_miss is 9090 in { port is 8080, host is "localhost" }

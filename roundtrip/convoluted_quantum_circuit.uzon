@@ -1,0 +1,14 @@
+circuit is {
+    qubits is 4 as u8
+    classical_bits is 4 as u8
+    gates is [
+        { @type is "H", targets is [ 0 as u8 ], controls is [] as [u8], params is [] as [f64] },
+        { @type is "CNOT", targets is [ 1 as u8 ], controls is [ 0 as u8 ], params is [] as [f64] },
+        { @type is "CNOT", targets is [ 2 as u8 ], controls is [ 0 as u8 ], params is [] as [f64] },
+        { @type is "CNOT", targets is [ 3 as u8 ], controls is [ 0 as u8 ], params is [] as [f64] },
+        { @type is "RZ", targets is [ 0 as u8 ], controls is [] as [u8], params is [ 1.5707963267948966 ] as [f64] },
+        { @type is "Measure", targets is [ 0 as u8, 1 as u8, 2 as u8, 3 as u8 ], controls is [] as [u8], params is [] as [f64] }
+    ]
+    depth is 5 as u8
+    description is "4-qubit GHZ state preparation with phase rotation"
+}

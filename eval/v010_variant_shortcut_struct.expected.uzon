@@ -1,0 +1,4 @@
+Color is enum red, green, blue
+Config is struct { bg is red as Color, fg is green as Color }
+active is { bg is blue as Color, fg is red as Color } as Config
+is_bg_blue is true

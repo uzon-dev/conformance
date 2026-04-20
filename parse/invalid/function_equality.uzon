@@ -1,0 +1,4 @@
+// §3.8 Function equality is type error
+a is function n as i32 returns i32 { n }
+b is function n as i32 returns i32 { n }
+bad is a is b

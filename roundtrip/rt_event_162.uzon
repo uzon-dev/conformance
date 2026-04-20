@@ -1,0 +1,4 @@
+@type is "heartbeat"
+timestamp is 1715772785
+source is "zeta"
+detail is "active_675"

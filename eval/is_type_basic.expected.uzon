@@ -1,0 +1,15 @@
+x is 42
+is_int is true
+is_str is false
+not_str is true
+not_int is false
+
+name is "hello"
+name_is_str is true
+name_is_int is false
+
+flag is true
+flag_is_bool is true
+
+n is null
+n_is_null is true

@@ -1,0 +1,4 @@
+name is "world"
+greeting is "hello, world!"
+nested is "val: 3"
+multi is "a=1, b=2, c=3"

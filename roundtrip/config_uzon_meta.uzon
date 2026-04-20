@@ -1,0 +1,17 @@
+// UZON describing itself
+uzon is {
+    version is (0, 7, 0)
+    name is "Universal ZON"
+    spec_url is "https://uzon.dev/spec"
+    keywords is 32 as u8
+    reserved is 1 as u8
+    std_functions is 18 as u8
+    types is [ "bool", "integer", "float", "string", "null", "struct", "list", "tuple", "enum", "tagged union", "untagged union", "function" ]
+    features is [ "env", "with", "plus", "of", "called", "or else", "case when", "to", "type", "interpolation", "are", "std" ]
+    philosophy is [
+        "Everything is a value",
+        "No side effects",
+        "Declarative evaluation order",
+        "Structural conformance with nominal identity"
+    ]
+}

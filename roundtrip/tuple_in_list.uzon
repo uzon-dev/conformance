@@ -1,0 +1,6 @@
+// Roundtrip: list of tuples
+coordinates is [
+    (0.0, 0.0),
+    (1.5, 2.5),
+    (10.0, -3.0)
+]

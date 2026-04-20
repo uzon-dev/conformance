@@ -1,0 +1,13 @@
+// Same numeric value in different types — all must preserve type
+config is {
+    as_i8 is 100 as i8
+    as_i16 is 100 as i16
+    as_i32 is 100 as i32
+    as_i64 is 100
+    as_u8 is 100 as u8
+    as_u16 is 100 as u16
+    as_u32 is 100 as u32
+    as_f32 is 100.0 as f32
+    as_f64 is 100.0 as f64
+    as_str is "100"
+}

@@ -1,0 +1,5 @@
+@type is "click"
+timestamp is 1779147232
+source is "debug"
+url is "https://lambda.example.com/theta"
+session_id is "host_1612"

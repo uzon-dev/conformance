@@ -1,0 +1,3 @@
+// §3.2 Parenthesized with/plus creates new expression level
+base is { x is 1, y is 2, z is 3 }
+result is (base with { x is 10 }) with { y is 20 }

@@ -1,0 +1,14 @@
+// struct → list → tuple → struct → list → tuple → value
+root is {
+    items is [
+        (
+            { inner is [
+                (
+                    { leaf is [ 1, 2, 3 ] },
+                    "end"
+                )
+            ] },
+            true
+        )
+    ]
+}

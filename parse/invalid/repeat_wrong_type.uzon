@@ -1,0 +1,2 @@
+// §5.8.3 Repetition only applies to string and list
+bad is 42 ** 3

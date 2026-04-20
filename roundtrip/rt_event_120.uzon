@@ -1,0 +1,4 @@
+@type is "heartbeat"
+timestamp is 1719120002
+source is "lambda"
+detail is "mu_226"

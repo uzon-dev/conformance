@@ -1,0 +1,37 @@
+// Roundtrip: realistic configuration
+database is {
+    primary is {
+        host is "db-primary.internal"
+        port is 5432 as u16
+        name is "myapp_production"
+        pool_size is 20 as u8
+        ssl is true
+    }
+    replica is {
+        host is "db-replica.internal"
+        port is 5432 as u16
+        name is "myapp_production"
+        pool_size is 10 as u8
+        ssl is true
+    }
+    timeouts is {
+        connect_ms is 5000 as u32
+        read_ms is 30000 as u32
+        write_ms is 10000 as u32
+    }
+}
+
+cache is {
+    host is "redis.internal"
+    port is 6379 as u16
+    db is 0 as u8
+    ttl_seconds is 3600 as u32
+    prefix is "myapp:"
+}
+
+features is {
+    dark_mode is true
+    beta_access is false
+    max_upload_mb is 50 as u16
+    allowed_origins is [ "https://example.com", "https://app.example.com" ]
+}

@@ -1,0 +1,27 @@
+_node is {
+    id is 0 as u32
+    @type is ""
+    name is ""
+    input_channels is null
+    output_channels is null
+    sample_rate is null
+    params is null
+} called AudioNode
+
+graph is {
+    nodes is [
+        _node with { id is 1 as u32, @type is "source", name is "Microphone", output_channels is 1 as u8, sample_rate is 48000 as u32 },
+        _node with { id is 2 as u32, @type is "effect", name is "Noise Gate", input_channels is 1 as u8, output_channels is 1 as u8, params is { threshold_db is -40.0, attack_ms is 1.0, release_ms is 50.0 } },
+        _node with { id is 3 as u32, @type is "effect", name is "Compressor", input_channels is 1 as u8, output_channels is 1 as u8, params is { threshold_db is -20.0, ratio is 4.0, attack_ms is 5.0, release_ms is 100.0, makeup_db is 6.0 } },
+        _node with { id is 4 as u32, @type is "effect", name is "EQ", input_channels is 1 as u8, output_channels is 1 as u8, params is { low_hz is 80.0, low_gain_db is -3.0, mid_hz is 1000.0, mid_gain_db is 2.0, high_hz is 8000.0, high_gain_db is 1.5 } },
+        _node with { id is 5 as u32, @type is "sink", name is "Output", input_channels is 2 as u8, sample_rate is 48000 as u32 }
+    ] as [AudioNode]
+    connections is [
+        { @from is 1 as u32, @to is 2 as u32, from_port is 0 as u8, to_port is 0 as u8 },
+        { @from is 2 as u32, @to is 3 as u32, from_port is 0 as u8, to_port is 0 as u8 },
+        { @from is 3 as u32, @to is 4 as u32, from_port is 0 as u8, to_port is 0 as u8 },
+        { @from is 4 as u32, @to is 5 as u32, from_port is 0 as u8, to_port is 0 as u8 }
+    ]
+    buffer_size is 256 as u32
+    latency_ms is 5.3
+}

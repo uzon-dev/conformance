@@ -1,0 +1,8 @@
+// Service configuration #11
+@type is "websocket"
+name is "enabled_11"
+port is 34416 as u16
+enabled is false
+max_connections is 781 as i32
+timeout_ms is 28316 as i32
+tls is true

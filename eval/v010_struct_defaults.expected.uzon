@@ -1,0 +1,8 @@
+Modifiers is struct {
+    mod4 is false
+    shift is false
+    ctrl is false
+}
+plain is { mod4 is false, shift is false, ctrl is false } as Modifiers
+super is { mod4 is true, shift is false, ctrl is false } as Modifiers
+super_shift is { mod4 is true, shift is true, ctrl is false } as Modifiers

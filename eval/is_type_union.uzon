@@ -1,0 +1,8 @@
+// Untagged union type discrimination
+u_int is 42 from union i32, f64, string
+u_str is "hello" from union i32, f64, string
+
+int_check is u_int is type i32
+float_check is u_int is type f64
+str_check is u_str is type string
+str_not_int is u_str is not type i32

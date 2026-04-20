@@ -1,0 +1,4 @@
+// §3.2.2 Struct extension (plus)
+base is { x is 1 as i32, y is 2 as i32 } called Point
+extended is base plus { z is 3 as i32 }
+with_override is base plus { x is 10 as i32, z is 3 as i32 }

@@ -1,0 +1,2 @@
+// §11.2: this file produces an import error (target file does not exist).
+missing is struct "./definitely_not_present_file_987654321"

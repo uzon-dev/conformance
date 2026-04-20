@@ -1,0 +1,32 @@
+_rule is {
+    alert is ""
+    expr is ""
+    duration is ""
+    severity is ""
+} called AlertRule
+
+_group is {
+    name is ""
+    interval is null
+    rules is [] as [AlertRule]
+} called AlertGroup
+
+groups is [
+    _group with {
+        name is "node-alerts"
+        interval is "30s"
+        rules is [
+            { alert is "NodeDown", expr is "up == 0", duration is "5m", severity is "critical" },
+            { alert is "HighMemory", expr is "node_memory_pct > 90", duration is "10m", severity is "warning" },
+            { alert is "DiskFull", expr is "node_disk_pct > 85", duration is "5m", severity is "critical" },
+            { alert is "HighLoad", expr is "node_load5 > 8", duration is "15m", severity is "warning" }
+        ] as [AlertRule]
+    },
+    _group with {
+        name is "app-alerts"
+        rules is [
+            { alert is "HighErrorRate", expr is "error_rate > 0.05", duration is "5m", severity is "critical" },
+            { alert is "SlowResponses", expr is "p99_latency > 2", duration is "10m", severity is "warning" }
+        ] as [AlertRule]
+    }
+] as [AlertGroup]

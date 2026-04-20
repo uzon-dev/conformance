@@ -1,0 +1,38 @@
+_method is GET from GET, POST, PUT, DELETE, PATCH, OPTIONS called HttpMethod
+
+gateway is {
+    port is 8443 as u16
+    tls is { cert is "/etc/tls/gateway.pem", key is "/etc/tls/gateway-key.pem" }
+    routes is [
+        {
+            path is "/api/v3/users"
+            methods is [ GET, POST ] as [HttpMethod]
+            upstream is "user-service:8080"
+            middleware is [ "auth", "rate-limit", "cors" ]
+            timeout_ms is 30000 as u32
+            cache is { enabled is true, ttl_sec is 300 as u32, vary is [ "Authorization" ] }
+        },
+        {
+            path is "/api/v3/products"
+            methods is [ GET ] as [HttpMethod]
+            upstream is "product-service:8080"
+            middleware is [ "rate-limit", "cors" ]
+            timeout_ms is 15000 as u32
+            cache is { enabled is true, ttl_sec is 3600 as u32, vary is [ "Accept-Language" ] }
+        },
+        {
+            path is "/api/v3/orders"
+            methods is [ GET, POST, PUT ] as [HttpMethod]
+            upstream is "order-service:8080"
+            middleware is [ "auth", "rate-limit", "cors", "audit" ]
+            timeout_ms is 60000 as u32
+            cache is { enabled is false, ttl_sec is 0 as u32, vary is [] as [string] }
+        }
+    ]
+    middleware_config is {
+        auth is { provider is "jwt", issuer is "https://auth.example.com" }
+        'rate-limit' is { window_sec is 60 as u32, max_requests is 1000 as u32 }
+        cors is { origins is [ "https://app.example.com" ], credentials is true }
+        audit is { log_body is false, log_headers is [ "Authorization", "X-Request-ID" ] }
+    }
+}

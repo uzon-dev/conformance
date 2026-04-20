@@ -1,0 +1,14 @@
+product is {
+    sku is "SKU-GAR-0173"
+    name is "Garden Item 173"
+    category is "garden"
+    price is 96.49
+    currency is "USD"
+    stock is 19 as u16
+    weight_g is 1830 as u32
+    dimensions is (23.0, 13.0, 5.0)
+    rating is 4.3
+    reviews is 211 as u16
+    active is true
+    tags is [ "garden", "featured" ]
+}

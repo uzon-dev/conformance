@@ -1,0 +1,4 @@
+@type is "logout"
+timestamp is 1729319229
+source is "node"
+detail is "prod_486"

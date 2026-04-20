@@ -1,0 +1,6 @@
+// §3.5 Rule 4 — `as RGB` forces variant resolution even with a
+// same-name binding in scope.
+RGB is enum red, green, blue
+red is 99
+Palette is struct { accent is green as RGB }
+p is { accent is red as RGB } as Palette

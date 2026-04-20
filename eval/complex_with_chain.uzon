@@ -1,0 +1,12 @@
+// Chained with overrides — each step builds on previous
+base is { host is "localhost", port is 80 as u16, tls is false, debug is false }
+
+step1 is base with { port is 443 as u16 }
+step2 is step1 with { tls is true }
+step3 is step2 with { debug is true }
+step4 is step3 with { host is "prod.example.com" }
+
+final_host is step4.host
+final_port is step4.port
+final_tls is step4.tls
+final_debug is step4.debug

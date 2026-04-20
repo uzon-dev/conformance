@@ -1,0 +1,8 @@
+policy is {
+    version is "2012-10-17"
+    statements is [
+        { effect is "Allow", actions is [ "s3:GetObject", "s3:PutObject" ], resources is [ "arn:aws:s3:::my-bucket/*" ], conditions is [] as [string] },
+        { effect is "Allow", actions is [ "dynamodb:GetItem", "dynamodb:PutItem", "dynamodb:Query" ], resources is [ "arn:aws:dynamodb:us-east-1:123:table/orders" ], conditions is [ "aws:SourceIp=10.0.0.0/8" ] },
+        { effect is "Deny", actions is [ "s3:DeleteBucket" ], resources is [ "*" ], conditions is [] as [string] }
+    ]
+}

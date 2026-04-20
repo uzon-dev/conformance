@@ -1,0 +1,6 @@
+// §3.7 v0.10 — variant_name inner_value shorthand
+Event is tagged union pressed as string, released as string, cleared as null
+e1 is pressed "enter" as Event
+e2 is cleared as Event
+e1_tag is e1 is named pressed
+e2_tag is e2 is named cleared

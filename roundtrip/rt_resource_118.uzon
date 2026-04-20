@@ -1,0 +1,12 @@
+// Resource #118
+@type is "compute"
+name is "compute_118"
+region is "us-east-1"
+config is {
+    @type is "compute_config"
+    cpu_cores is 1 as u8
+    memory_gb is 1 as u8
+    gpu is false
+}
+tags are "theta", "test"
+active is false

@@ -1,0 +1,17 @@
+// Roundtrip: all scalar types in canonical form
+bool_true is true
+bool_false is false
+int_pos is 42
+int_neg is -17
+int_zero is 0
+float_simple is 3.14
+float_neg is -0.5
+float_zero is 0.0
+str_simple is "hello"
+str_empty is ""
+str_escape is "line1\nline2"
+str_unicode is "café ☕"
+n is null
+pos_inf is inf
+neg_inf is -inf
+not_num is nan

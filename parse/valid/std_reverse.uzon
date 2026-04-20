@@ -1,0 +1,8 @@
+// §5.16.1 Collection & String — reverse
+nums are 1, 2, 3
+rev_list is std.reverse(nums)
+rev_str is std.reverse("hello")
+rev_empty_list is std.reverse([] as [i32])
+rev_empty_str is std.reverse("")
+rev_single is std.reverse([ 42 ])
+rev_unicode is std.reverse("한글")

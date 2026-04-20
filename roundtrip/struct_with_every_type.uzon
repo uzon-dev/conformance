@@ -1,0 +1,21 @@
+_role is admin from admin, user called Role
+_result is "ok" named ok from ok as string, err as null called Result
+
+record is {
+    b is true
+    i is 42 as i32
+    f is 3.14 as f64
+    s is "hello"
+    n is null
+    pos_inf is inf
+    neg_inf is -inf
+    nan_val is nan
+    list is [ 1, 2, 3 ]
+    tuple is ("a", 1, true)
+    inner is { x is 0, y is 0 }
+    role is admin as Role
+    result is "success" as Result named ok
+    flex is "data" from union string, i32
+    empty_list is [] as [string]
+    empty_struct is { }
+}

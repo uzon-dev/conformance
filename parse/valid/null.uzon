@@ -1,0 +1,6 @@
+// §4.5 Null
+empty is null
+or_else_null is empty or else "fallback"    // null (not undefined)
+is_null is empty is null                     // true
+is_not_null is empty is not null             // false
+null_to_string is null to string                  // "null"

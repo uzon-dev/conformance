@@ -1,0 +1,4 @@
+@type is "heartbeat"
+timestamp is 1716019397
+source is "name"
+detail is "gamma_438"

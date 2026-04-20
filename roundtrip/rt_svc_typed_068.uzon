@@ -1,0 +1,8 @@
+// Service configuration #68
+@type is "amqp"
+name is "key_68"
+port is 19259 as u16
+enabled is false
+max_connections is 1351 as i32
+timeout_ms is 15511 as i32
+tls is true

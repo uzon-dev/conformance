@@ -1,0 +1,9 @@
+// §4.4 All escape sequences
+newline is "line1\nline2"
+tab is "col1\tcol2"
+carriage is "line1\rline2"
+backslash is "path\\to\\file"
+quote is "she said \"hello\""
+null_char is "before\0after"
+hex is "\x41\x42\x43"                // "ABC"
+unicode is "\u{1F600}"               // 😀

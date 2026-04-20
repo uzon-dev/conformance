@@ -1,0 +1,19 @@
+module is {
+    magic is [ 0x00, 0x61, 0x73, 0x6D ]
+    version is 1 as u32
+    types is [
+        { params is [ "i32", "i32" ], results is [ "i32" ] },
+        { params is [ "i32" ], results is [] as [string] },
+        { params is [] as [string], results is [ "i32" ] }
+    ]
+    functions is [
+        { name is "add", type_idx is 0 as u32, export is true, locals is [ "i32" ] },
+        { name is "print", type_idx is 1 as u32, export is true, locals is [] as [string] },
+        { name is "_start", type_idx is 2 as u32, export is true, locals is [ "i32", "i32" ] }
+    ]
+    memory is { initial_pages is 1 as u32, max_pages is 256 as u32, export_name is "memory" }
+    globals is [
+        { name is "__stack_pointer", @type is "i32", mutable is true, init is 65536 as u32 },
+        { name is "__heap_base", @type is "i32", mutable is false, init is 66560 as u32 }
+    ]
+}

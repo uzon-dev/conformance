@@ -1,0 +1,48 @@
+// §3.2 + §3.2.1 + §3.2.2 + §3.5 + §3.8 + §5.7 + §5.9 + §5.10 + §5.13 + §5.16 + §4.4.1
+// Realistic config builder using nearly every feature
+
+_env is debug from debug, staging, production called Environment
+
+defaults is {
+    host is "localhost"
+    port is 8080 as u16
+    workers is 4 as u8
+    environment is production as Environment
+    tls is false
+} called ServerConfig
+
+// env overrides
+active is defaults with {
+    host is std.trim(env.HOST or else "localhost")
+    port is env.PORT to u16 or else 8080 as u16
+    environment is env.ENV to Environment or else production as Environment
+}
+
+// plus for detailed config
+detailed is active plus {
+    log_level is case active.environment
+        when debug then "trace"
+        when staging then "info"
+        else "warn"
+    max_connections is if active.workers to i32 > 4 then 1000 as u16 else 500 as u16
+}
+
+// function to format
+formatConfig is function cfg as ServerConfig returns string {
+    tls_label is if cfg.tls then "https" else "http"
+    "{tls_label}://{cfg.host}:{cfg.port}"
+}
+
+url is formatConfig(active)
+workers_label is std.join(
+    std.map(
+        [ 1, 2, 3, 4 ],
+        function n as i64 returns string { "worker-{n}" }
+    ),
+    ", "
+)
+
+report is "URL: {url}"
+          "Env: {active.environment}"
+          "Log: {detailed.log_level}"
+          "Workers: {workers_label}"

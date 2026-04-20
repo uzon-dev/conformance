@@ -1,0 +1,41 @@
+// §3.2 + §3.5 + §3.7 v0.10 — Full context inference through list element
+// as [ObservationEntry] establishes outer context; everything inside inferred.
+Constellation is enum andromeda, orion, taurus, ursa_major, lyra
+
+Coordinates is struct {
+    ra_hours is 0.0 as f64
+    dec_degrees is 0.0 as f64
+}
+
+Target is tagged union
+    single as string,
+    binary as (string, string),
+    cluster as [string]
+
+ObservationEntry is struct {
+    target is single "" as Target
+    location is {} as Coordinates
+    magnitude is 0.0 as f64
+    constellation is andromeda as Constellation
+}
+
+catalog are
+    {
+        target is single "M31",
+        location is { ra_hours is 0.712, dec_degrees is 41.27 },
+        magnitude is 3.4,
+        constellation is andromeda
+    },
+    {
+        target is binary ("Mizar", "Alcor"),
+        location is { ra_hours is 13.42, dec_degrees is 54.93 },
+        magnitude is 2.0,
+        constellation is ursa_major
+    },
+    {
+        target is cluster ["epsilon Lyr A", "epsilon Lyr B"],
+        location is { ra_hours is 18.74, dec_degrees is 39.67 },
+        magnitude is 4.7,
+        constellation is lyra
+    }
+    as [ObservationEntry]

@@ -1,0 +1,18 @@
+queues is [
+    {
+        name is "orders"
+        @type is "fifo"
+        max_size is 100000 as u32
+        retention_hours is 168 as u16
+        dead_letter is { queue is "orders-dlq", max_retries is 3 as u8 }
+        consumers is [ { group is "order-processor", concurrency is 8 as u8 }, { group is "analytics", concurrency is 2 as u8 } ]
+    },
+    {
+        name is "notifications"
+        @type is "topic"
+        max_size is 500000 as u32
+        retention_hours is 24 as u16
+        dead_letter is { queue is "notifications-dlq", max_retries is 5 as u8 }
+        consumers is [ { group is "email-sender", concurrency is 4 as u8 }, { group is "push-sender", concurrency is 4 as u8 }, { group is "sms-sender", concurrency is 2 as u8 } ]
+    }
+]

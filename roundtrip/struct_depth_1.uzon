@@ -1,0 +1,2 @@
+// Roundtrip: struct nested to depth 1
+root is { level1 is "leaf" }

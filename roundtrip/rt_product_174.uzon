@@ -1,0 +1,14 @@
+product is {
+    sku is "SKU-HEA-0174"
+    name is "Health Item 174"
+    category is "health"
+    price is 96.99
+    currency is "USD"
+    stock is 22 as u16
+    weight_g is 1840 as u32
+    dimensions is (24.0, 14.0, 6.0)
+    rating is 4.4
+    reviews is 218 as u16
+    active is true
+    tags is [ "health", "sale" ]
+}

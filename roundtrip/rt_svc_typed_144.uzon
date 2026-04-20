@@ -1,0 +1,8 @@
+// Service configuration #144
+@type is "postgres"
+name is "xi_144"
+port is 48264 as u16
+enabled is false
+max_connections is 3753 as i32
+timeout_ms is 13659 as i32
+tls is false

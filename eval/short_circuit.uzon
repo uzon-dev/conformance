@@ -1,0 +1,3 @@
+// right side not evaluated
+a is false and (1 / 0 is 0)
+b is true or (1 / 0 is 0)

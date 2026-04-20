@@ -1,0 +1,9 @@
+// Linked list in flat representation
+nodes is [
+    { id is 0 as u32, value is "head", next is 1 as u32 },
+    { id is 1 as u32, value is "second", next is 2 as u32 },
+    { id is 2 as u32, value is "third", next is 3 as u32 },
+    { id is 3 as u32, value is "tail", next is null }
+]
+head_id is 0 as u32
+length is 4 as u32

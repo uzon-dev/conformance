@@ -1,0 +1,25 @@
+// §4.2 + §5.3 + §5.4 + §5.9 + §5.11
+// numeric bases + arithmetic + comparison + if + to conversion
+hex_r is 0xFF
+hex_g is 0x80
+hex_b is 0x00
+
+total is hex_r + hex_g + hex_b
+brightness is total / 3
+
+is_bright is brightness > 0x7F
+is_dark is brightness < 0x40
+
+category is if is_bright then "bright"
+    else if is_dark then "dark"
+    else "medium"
+
+binary_mask is 0b1111_0000
+masked is hex_r % 256
+has_high_bits is masked > 127
+
+octal_perms is 0o755
+is_executable is octal_perms % 2 is 1
+
+report is "RGB({hex_r},{hex_g},{hex_b})"
+          " brightness={brightness} ({category})"

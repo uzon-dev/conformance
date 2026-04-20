@@ -1,0 +1,3 @@
+// §5.7 or else: if both sides are undefined, result is undefined
+// Must use or else chain to guarantee a value
+safe is env.A or else env.B or else "default"

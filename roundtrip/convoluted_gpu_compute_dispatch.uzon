@@ -1,0 +1,12 @@
+dispatch is {
+    shader is "compute.wgsl"
+    workgroup_size is (256 as u32, 1 as u32, 1 as u32)
+    dispatch_size is (1024 as u32, 1 as u32, 1 as u32)
+    bindings is [
+        { group is 0 as u32, binding is 0 as u32, @type is "storage", access is "read", buffer is "input_data", size is 1048576 as u64 },
+        { group is 0 as u32, binding is 1 as u32, @type is "storage", access is "write", buffer is "output_data", size is 1048576 as u64 },
+        { group is 0 as u32, binding is 2 as u32, @type is "uniform", access is "read", buffer is "params", size is 64 as u64 }
+    ]
+    push_constants is { offset is 0 as u32, size is 16 as u32 }
+    pipeline_stats is { invocations is 262144 as u64, time_us is 450 as u32, memory_mb is 2 as u32 }
+}

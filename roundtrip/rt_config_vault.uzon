@@ -1,0 +1,16 @@
+storage is { backend is "raft", path is "/opt/vault/data", node_id is "vault-1" }
+listener is {
+    tcp is {
+        address is "0.0.0.0:8200"
+        tls_cert_file is "/opt/vault/tls/cert.pem"
+        tls_key_file is "/opt/vault/tls/key.pem"
+        tls_min_version is "tls12"
+    }
+}
+seal is { awskms is { region is "us-east-1", kms_key_id is "alias/vault-unseal" } }
+telemetry is {
+    prometheus_retention_time is "30s"
+    disable_hostname is true
+}
+api_addr is "https://vault.internal:8200"
+cluster_addr is "https://vault.internal:8201"

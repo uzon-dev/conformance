@@ -1,0 +1,2 @@
+// §5.9: both branches must have compatible types — even speculatively
+bad is if true then 1 else "string"

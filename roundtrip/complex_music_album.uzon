@@ -1,0 +1,22 @@
+album is {
+    title is "The Dark Side of the Moon"
+    artist is "Pink Floyd"
+    year is 1973 as u16
+    genre is [ "progressive rock", "art rock" ]
+    label is "Harvest Records"
+    tracks is [
+        { number is 1 as u8, title is "Speak to Me", duration is (1 as u8, 5 as u8), side is "A" },
+        { number is 2 as u8, title is "Breathe (In the Air)", duration is (2 as u8, 50 as u8), side is "A" },
+        { number is 3 as u8, title is "On the Run", duration is (3 as u8, 36 as u8), side is "A" },
+        { number is 4 as u8, title is "Time", duration is (7 as u8, 1 as u8), side is "A" },
+        { number is 5 as u8, title is "The Great Gig in the Sky", duration is (4 as u8, 47 as u8), side is "A" },
+        { number is 6 as u8, title is "Money", duration is (6 as u8, 22 as u8), side is "B" },
+        { number is 7 as u8, title is "Us and Them", duration is (7 as u8, 49 as u8), side is "B" },
+        { number is 8 as u8, title is "Any Colour You Like", duration is (3 as u8, 26 as u8), side is "B" },
+        { number is 9 as u8, title is "Brain Damage", duration is (3 as u8, 48 as u8), side is "B" },
+        { number is 10 as u8, title is "Eclipse", duration is (2 as u8, 3 as u8), side is "B" }
+    ]
+    total_duration is (42 as u8, 57 as u8)
+    chart_positions is { US is 1 as u8, UK is 2 as u8, FR is 1 as u8, DE is 1 as u8, AU is 1 as u8 }
+    certifications is { US is "23x Platinum", UK is "13x Platinum" }
+}

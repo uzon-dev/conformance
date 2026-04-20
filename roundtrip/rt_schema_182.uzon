@@ -1,0 +1,7 @@
+// Schema definition #182
+@type is "schema"
+version is 5 as u8
+name is "port_schema_182"
+fields are
+        { name is "field_0", @type is "u16", required is true },
+        { name is "field_1", @type is "bool", required is false }

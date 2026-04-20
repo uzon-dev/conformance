@@ -1,0 +1,12 @@
+_h1 is "all good" named ok from ok as string, code as i32 called Status
+_h2 is 404 as Status named code
+
+r1 is case type _h1
+    when string then "text"
+    when i32 then "numeric"
+    else "other"
+
+r2 is case type _h2
+    when string then "text"
+    when i32 then "numeric"
+    else "other"

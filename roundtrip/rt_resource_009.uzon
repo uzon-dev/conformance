@@ -1,0 +1,11 @@
+// Resource #9
+@type is "network"
+name is "network_9"
+region is "us-east-1"
+config is {
+    @type is "network_config"
+    capacity is 5466 as i32
+    priority is 8 as u8
+}
+tags are "backup"
+active is true

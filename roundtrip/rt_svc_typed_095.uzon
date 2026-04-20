@@ -1,0 +1,7 @@
+// Service configuration #95
+@type is "amqp"
+name is "sigma_95"
+port is 62803 as u16
+enabled is true
+max_connections is 8100 as i32
+timeout_ms is 14444 as i32

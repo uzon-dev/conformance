@@ -1,0 +1,5 @@
+@type is "pageview"
+timestamp is 1797633380
+source is "epsilon"
+url is "https://beta.example.com/debug"
+session_id is "beta_7637"

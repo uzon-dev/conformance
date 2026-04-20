@@ -1,0 +1,7 @@
+// Typed record #136
+id is 564571
+level_0 is 6921 as u16
+debug_1 is "key"
+beta_2 is 175.978 as f64
+test_3 is -219.39842
+enabled_4 is -23 as i8

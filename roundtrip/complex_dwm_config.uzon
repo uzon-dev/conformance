@@ -1,0 +1,32 @@
+config is {
+    border_px is 2 as u8
+    snap_px is 32 as u8
+    show_bar is true
+    top_bar is true
+    fonts is [ "JetBrains Mono:size=10", "Symbols Nerd Font:size=10" ]
+    colors is {
+        normal is { fg is "#bbbbbb", bg is "#222222", border is "#444444" }
+        selected is { fg is "#eeeeee", bg is "#005577", border is "#005577" }
+    }
+    tags is [ "1", "2", "3", "4", "5", "6", "7", "8", "9" ]
+    rules is [
+        { class is "Firefox", tag is 2 as u8, floating is false },
+        { class is "Gimp", tag is 0 as u8, floating is true },
+        { class is "mpv", tag is 0 as u8, floating is true }
+    ]
+    layouts is [
+        { symbol is "[]=", name is "tile" },
+        { symbol is "><>", name is "floating" },
+        { symbol is "[M]", name is "monocle" }
+    ]
+    keys is [
+        { mod is "Mod4", key is "p", action is "spawn dmenu_run" },
+        { mod is "Mod4|Shift", key is "Return", action is "spawn st" },
+        { mod is "Mod4", key is "j", action is "focusstack +1" },
+        { mod is "Mod4", key is "k", action is "focusstack -1" },
+        { mod is "Mod4|Shift", key is "c", action is "killclient" },
+        { mod is "Mod4|Shift", key is "q", action is "quit" }
+    ]
+    master_factor is 0.55
+    num_masters is 1 as u8
+}

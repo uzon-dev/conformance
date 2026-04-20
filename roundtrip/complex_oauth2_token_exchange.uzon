@@ -1,0 +1,26 @@
+_grant is authorization_code from authorization_code, client_credentials, refresh_token, device_code called GrantType
+_token_type is Bearer from Bearer, DPoP called TokenType
+
+exchange is {
+    request is {
+        grant_type is authorization_code as GrantType
+        code is "SplxlOBeZQQYbYS6WxSbIA"
+        redirect_uri is "https://app.example.com/callback"
+        code_verifier is "dBjftJeZ4CVP-mB92K27uhbUJU1p1r_wW1gFWFOEjXk"
+        client_id is "s6BhdRkqt3"
+        scope is "openid email profile"
+    }
+    response is {
+        access_token is "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9..."
+        token_type is Bearer as TokenType
+        expires_in is 3600 as u32
+        refresh_token is "tGzv3JOkF0XG5Qx2TlKWIA"
+        id_token is "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9..."
+        scope is "openid email profile"
+    }
+    metadata is {
+        issued_at is "2026-04-11T12:00:00Z"
+        client_ip is "203.0.113.42"
+        user_agent is "UZON-OAuth/1.0"
+    }
+}

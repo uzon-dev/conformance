@@ -1,0 +1,6 @@
+@type is "purchase"
+timestamp is 1765709924
+source is "zeta"
+amount is 130.15
+currency is "USD"
+item_count is 14 as u8

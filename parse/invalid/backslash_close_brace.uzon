@@ -1,0 +1,2 @@
+// §4.4 \} is not a recognized escape — use bare } instead
+bad is "hello \} world"

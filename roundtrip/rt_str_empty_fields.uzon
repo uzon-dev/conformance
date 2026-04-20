@@ -1,0 +1,7 @@
+data is {
+    a is ""
+    b is ""
+    c is ""
+    d is ""
+    list is [ "", "", "", "" ]
+}

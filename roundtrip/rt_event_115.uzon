@@ -1,0 +1,6 @@
+@type is "purchase"
+timestamp is 1771600831
+source is "omicron"
+amount is 137.11
+currency is "USD"
+item_count is 13 as u8

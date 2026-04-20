@@ -1,0 +1,8 @@
+// Service configuration #165
+@type is "http"
+name is "debug_165"
+port is 24088 as u16
+enabled is false
+max_connections is 7575 as i32
+timeout_ms is 14908 as i32
+tls is false

@@ -1,0 +1,2 @@
+// §2.3 / §4.4: U+10FFFF is the maximum valid code point.
+s is "\u{10FFFF}"

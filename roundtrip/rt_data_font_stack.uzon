@@ -1,0 +1,7 @@
+stacks is {
+    sans is [ "Inter", "Helvetica Neue", "Arial", "Noto Sans", "sans-serif" ]
+    serif is [ "Georgia", "Times New Roman", "Noto Serif", "serif" ]
+    mono is [ "JetBrains Mono", "Fira Code", "Cascadia Code", "Consolas", "monospace" ]
+    cjk is [ "Noto Sans CJK KR", "Malgun Gothic", "Apple SD Gothic Neo", "sans-serif" ]
+    emoji is [ "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji" ]
+}

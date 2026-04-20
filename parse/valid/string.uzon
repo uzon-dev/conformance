@@ -1,0 +1,8 @@
+// §4.4 String literals
+simple is "hello"
+empty is ""
+escape_newline is "line1\nline2"
+escape_tab is "col1\tcol2"
+escape_quote is "she said \"hello\""
+escape_backslash is "path\\to\\file"
+unicode is "café ☕ 你好"

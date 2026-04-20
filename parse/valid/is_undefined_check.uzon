@@ -1,0 +1,7 @@
+// §5.2 + §3.1 is undefined / is not undefined
+missing is nonexistent
+check_undef is missing is undefined          // true
+check_not_undef is missing is not undefined  // false
+present is 42
+check_present is present is undefined        // false
+check_present_not is present is not undefined // true

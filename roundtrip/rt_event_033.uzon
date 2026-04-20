@@ -1,0 +1,5 @@
+@type is "pageview"
+timestamp is 1714821786
+source is "test"
+url is "https://enabled.example.com/kappa"
+session_id is "zeta_9383"

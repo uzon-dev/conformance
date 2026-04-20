@@ -1,0 +1,9 @@
+// Service configuration #110
+@type is "amqp"
+name is "kappa_110"
+port is 26326 as u16
+enabled is false
+max_connections is 616 as i32
+timeout_ms is 4236 as i32
+retry_count is 9 as u8
+tls is false

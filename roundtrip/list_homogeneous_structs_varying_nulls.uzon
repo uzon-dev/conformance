@@ -1,0 +1,6 @@
+rows is [
+    { a is 1, b is "x", c is true, d is null },
+    { a is null, b is "y", c is false, d is 10.0 },
+    { a is 3, b is null, c is null, d is 30.0 },
+    { a is null, b is null, c is null, d is null }
+]

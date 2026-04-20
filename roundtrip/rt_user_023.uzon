@@ -1,0 +1,16 @@
+user is {
+    id is 10023 as u32
+    username is "diana023"
+    email is "diana23@sample.io"
+    display_name is "Diana #23"
+    city is "Toronto"
+    age is 41 as u8
+    verified is true
+    created is "2026-12-24T12:00:00Z"
+    login_count is 299 as u32
+    preferences is {
+        theme is "light"
+        language is "de"
+        notifications is false
+    }
+}

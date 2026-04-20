@@ -1,0 +1,3 @@
+// §3.5: Keywords are valid enum variant names after comma
+x is named from true, false, named, from, type, null
+y is type from type, named, from

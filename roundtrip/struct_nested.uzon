@@ -1,0 +1,15 @@
+// Roundtrip: nested structs
+server is {
+    network is {
+        host is "0.0.0.0"
+        port is 443 as u16
+    }
+    logging is {
+        level is "info"
+        file is "/var/log/app.log"
+    }
+    features is {
+        tls is true
+        compression is false
+    }
+}

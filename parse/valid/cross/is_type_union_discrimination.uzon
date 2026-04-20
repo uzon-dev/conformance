@@ -1,0 +1,16 @@
+// §3.6 + §5.2 + §5.10: untagged union with is type and case type
+_val is { n is 0 as i32, s is "" } called Entry
+port is 8080 from union i32, string
+
+is_int is port is type i32
+is_str is port is type string
+is_not_float is port is not type f64
+
+display is case type port
+    when i32 then "numeric port"
+    when string then "named port"
+    else "unknown"
+
+// is type on non-union values
+x is 42
+x_check is x is type i64

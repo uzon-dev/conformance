@@ -1,0 +1,5 @@
+@type is "click"
+timestamp is 1740415166
+source is "key"
+url is "https://eta.example.com/prod"
+session_id is "sigma_3247"

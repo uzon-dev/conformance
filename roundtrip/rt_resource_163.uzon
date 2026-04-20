@@ -1,0 +1,12 @@
+// Resource #163
+@type is "compute"
+name is "compute_163"
+region is "ap-northeast-1"
+config is {
+    @type is "compute_config"
+    cpu_cores is 2 as u8
+    memory_gb is 1 as u8
+    gpu is true
+}
+tags are "upsilon", "debug"
+active is true

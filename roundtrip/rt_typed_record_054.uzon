@@ -1,0 +1,9 @@
+// Typed record #54
+id is 433857
+xi_0 is 283569
+eta_1 is 44 as u8
+backup_2 is 867.78335
+path_3 is -480.67992 as f64
+port_4 is "iota"
+test_5 is "enabled"
+enabled_6 is "enabled"

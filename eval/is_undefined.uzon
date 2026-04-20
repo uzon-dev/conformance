@@ -1,0 +1,5 @@
+missing is nonexistent
+a is missing is undefined
+b is missing is not undefined
+c is 42 is undefined
+d is null is undefined

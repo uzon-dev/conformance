@@ -1,0 +1,9 @@
+// Service configuration #114
+@type is "udp"
+name is "zeta_114"
+port is 15932 as u16
+enabled is false
+max_connections is 1622 as i32
+timeout_ms is 25015 as i32
+retry_count is 1 as u8
+tls is true

@@ -1,0 +1,2 @@
+// §3.5: Duplicate variant names in from clause are a type error
+x is red from red, green, blue, red

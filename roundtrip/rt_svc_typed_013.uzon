@@ -1,0 +1,7 @@
+// Service configuration #13
+@type is "grpc"
+name is "staging_13"
+port is 45700 as u16
+enabled is true
+max_connections is 5583 as i32
+timeout_ms is 3755 as i32

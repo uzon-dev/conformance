@@ -1,0 +1,21 @@
+// §5.16.2: chained std operations
+numbers are 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+
+// filter then map
+even_doubled is std.map(
+    std.filter(numbers, function n as i64 returns bool { n % 2 is 0 }),
+    function n as i64 returns i64 { n * 2 }
+)
+// [ 4, 8, 12, 16, 20 ]
+
+// map then reduce
+sum_of_squares is std.reduce(
+    std.map(numbers, function n as i64 returns i64 { n * n }),
+    0,
+    function acc as i64, n as i64 returns i64 { acc + n }
+)
+
+// len on filtered result
+even_count is std.len(
+    std.filter(numbers, function n as i64 returns bool { n % 2 is 0 })
+)

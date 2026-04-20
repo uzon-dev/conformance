@@ -1,0 +1,13 @@
+// §3.2.1 — Deferred-null fields in a named struct type can be
+// overridden by different types at different use sites.
+Rule is struct {
+    name is ""
+    flag is null
+    data is null
+}
+
+rules is [
+    { name is "a", flag is true },
+    { name is "b", data is { key is 1 } },
+    { name is "c", flag is 42, data is "text" },
+] as [Rule]

@@ -1,0 +1,1 @@
+t is (1, "two", 3.0, true, null, 6 as u8, 7 as i16, 8 as u32, "nine", 10.0 as f32, false, null, 13 as i8, "fourteen", 15.0, 16 as u16, true, "eighteen", nan, inf)

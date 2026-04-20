@@ -1,0 +1,4 @@
+// §3.5 v0.10 — Bare variant name as function return value
+Status is enum active, inactive
+get_default is function returns Status { active }
+s is get_default()

@@ -1,0 +1,33 @@
+span is {
+    'trace-id' is "4bf92f3577b34da6a3ce929d0e0e4736"
+    'span-id' is "00f067aa0ba902b7"
+    'parent-span-id' is "b7ad6b7169203331"
+    name is "HTTP POST /api/users"
+    kind is "SERVER"
+    start_time is "2026-04-11T08:00:01.234567Z"
+    end_time is "2026-04-11T08:00:01.567890Z"
+    status is { code is "OK", message is "" }
+    attributes is {
+        'http.method' is "POST"
+        'http.url' is "https://api.example.com/api/users"
+        'http.status_code' is 201
+        'http.request.body.size' is 256
+        'http.response.body.size' is 512
+        'net.peer.ip' is "10.0.1.50"
+        'net.peer.port' is 443
+        'db.system' is "postgresql"
+        'db.statement' is "INSERT INTO users (name, email) VALUES ($1, $2)"
+        'db.operation' is "INSERT"
+    }
+    events is [
+        { time is "2026-04-11T08:00:01.300000Z", name is "db.query.start", attributes is { 'db.statement' is "INSERT INTO users..." } },
+        { time is "2026-04-11T08:00:01.450000Z", name is "db.query.end", attributes is { 'db.rows_affected' is 1 } },
+        { time is "2026-04-11T08:00:01.500000Z", name is "cache.invalidate", attributes is { 'cache.key' is "users:list" } }
+    ]
+    resource is {
+        'service.name' is "user-service"
+        'service.version' is "3.2.1"
+        'deployment.environment' is "production"
+        'host.name' is "api-pod-7f8b9c"
+    }
+}

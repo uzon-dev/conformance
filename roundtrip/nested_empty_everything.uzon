@@ -1,0 +1,5 @@
+a is { inner is { } }
+b is { items is [] as [i32] }
+c is { nested is { deep is { } } }
+d is { list_of_empty is [ { }, { } ] }
+e is { strings is [] as [string], bools is [] as [bool] }

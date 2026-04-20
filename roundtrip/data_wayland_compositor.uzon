@@ -1,0 +1,43 @@
+compositor is {
+    backend is "drm"
+    outputs is [
+        {
+            name is "eDP-1"
+            resolution is (2560 as u16, 1440 as u16)
+            refresh_hz is 165 as u8
+            scale is 1.5
+            position is (0 as i32, 0 as i32)
+            transform is "normal"
+            adaptive_sync is true
+        },
+        {
+            name is "HDMI-A-1"
+            resolution is (3840 as u16, 2160 as u16)
+            refresh_hz is 60 as u8
+            scale is 2.0
+            position is (2560 as i32, 0 as i32)
+            transform is "normal"
+            adaptive_sync is false
+        }
+    ]
+    input is {
+        keyboard is { layout is "us", variant is "", repeat_rate is 40 as u16, repeat_delay is 300 as u16 }
+        trackpad is { natural_scroll is true, tap_to_click is true, accel_speed is 0.3 }
+        mouse is { natural_scroll is false, accel_speed is 0.0 }
+    }
+    keybindings is [
+        { mods is [ "Super" ], key is "Return", action is "spawn_terminal" },
+        { mods is [ "Super" ], key is "d", action is "launcher" },
+        { mods is [ "Super", "Shift" ], key is "q", action is "close_window" },
+        { mods is [ "Super" ], key is "f", action is "fullscreen" },
+        { mods is [ "Super", "Shift" ], key is "e", action is "exit" }
+    ]
+    appearance is {
+        border_width is 2 as u8
+        gap_inner is 8 as u8
+        gap_outer is 12 as u8
+        border_active is "#5e81ac"
+        border_inactive is "#4c566a"
+        font is "JetBrains Mono 10"
+    }
+}

@@ -1,0 +1,14 @@
+distribution is {
+    domain is "d123.cloudfront.net"
+    origins is [
+        { id is "s3", domain is "my-app-assets.s3.amazonaws.com", protocol is "https-only" },
+        { id is "api", domain is "api.example.com", protocol is "https-only" }
+    ]
+    behaviors is [
+        { path is "/api/*", origin is "api", cache_policy is "Disabled", viewer_protocol is "https-only" },
+        { path is "/static/*", origin is "s3", cache_policy is "CachingOptimized", viewer_protocol is "redirect-to-https" },
+        { path is "/*", origin is "s3", cache_policy is "CachingOptimized", viewer_protocol is "redirect-to-https" }
+    ]
+    price_class is "PriceClass_100"
+    enabled is true
+}

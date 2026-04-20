@@ -1,0 +1,9 @@
+empty_str is ""
+empty_struct is { }
+empty_i32 is [] as [i32]
+empty_str_list is [] as [string]
+empty_bool_list is [] as [bool]
+struct_of_empty is { a is "", b is { }, c is [] as [i32] }
+list_of_empty_struct is [ { }, { }, { } ]
+nested_empty is { x is { y is { z is { } } } }
+tuple_with_empty is ("", { }, [] as [i32])

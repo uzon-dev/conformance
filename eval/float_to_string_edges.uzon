@@ -1,0 +1,11 @@
+// §5.11.2 Float to string edge cases - A3 spec update makes these
+// byte-identical at conformance level Full.
+
+neg_zero is -0.0 to string
+pos_zero is 0.0 to string
+infty is (1.0 / 0.0) to string
+neg_infty is (-1.0 / 0.0) to string
+nan_val is (0.0 / 0.0) to string
+plain is 3.14 to string
+tiny is 1.0e-6 to string
+sci_large is 1.0e100 to string

@@ -1,0 +1,8 @@
+// Schema definition #73
+@type is "schema"
+version is 3 as u8
+name is "lambda_schema_73"
+fields are
+        { name is "field_0", @type is "u16", required is false },
+        { name is "field_1", @type is "bool", required is true },
+        { name is "field_2", @type is "u8", required is true }

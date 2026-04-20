@@ -1,0 +1,13 @@
+// §4.4.2 + §3.8 — Multiline string concatenation is suppressed inside function bodies
+// Each string literal on its own line is a separate expression
+
+greet is function name as string returns string {
+    prefix is "Hello, "
+    // This is NOT merged with the prefix — it's the return value
+    "Welcome!"
+}
+
+// Concatenation must be explicit inside function bodies
+compose is function a as string, b as string returns string {
+    a ++ "\n" ++ b
+}

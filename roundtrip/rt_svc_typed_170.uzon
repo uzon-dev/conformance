@@ -1,0 +1,7 @@
+// Service configuration #170
+@type is "grpc"
+name is "name_170"
+port is 37590 as u16
+enabled is false
+max_connections is 9884 as i32
+timeout_ms is 28715 as i32

@@ -1,0 +1,6 @@
+// ERROR: §5.8.1 + §3.5 + §6.3
+// in with different named enum types
+_shared is struct "./shared"
+
+bad is green as _shared.AlertLevel
+    in [ docked, cruising ] as [_shared.ShipStatus]

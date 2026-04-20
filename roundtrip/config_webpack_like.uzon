@@ -1,0 +1,23 @@
+_rule is {
+    test is ""
+    loader is null
+    use is null
+    @type is null
+    exclude is null
+} called Rule
+
+build is {
+    entry is "./src/index.ts"
+    output is { path is "./dist", filename is "[name].[contenthash].js", clean is true }
+    resolve is { extensions is [ ".ts", ".tsx", ".js", ".jsx" ], alias is { '@' is "./src", '@components' is "./src/components" } }
+    module is {
+        rules is [
+            _rule with { test is "\\.tsx?$", loader is "ts-loader", exclude is "node_modules" },
+            _rule with { test is "\\.css$", use is [ "style-loader", "css-loader" ] },
+            _rule with { test is "\\.svg$", @type is "asset/resource" }
+        ] as [Rule]
+    }
+    plugins is [ "HtmlWebpackPlugin", "MiniCssExtractPlugin", "BundleAnalyzerPlugin" ]
+    optimization is { split_chunks is true, minimize is true, tree_shake is true }
+    dev_server is { port is 3000 as u16, hot is true, open is true, proxy is { '/api' is "http://localhost:8080" } }
+}

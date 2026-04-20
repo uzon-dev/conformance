@@ -1,0 +1,12 @@
+// §3.8 + §5.13 + §5.16.4 + §5.7 + §4.4.1
+// zero-param function → env → std.trim → std.split → or else → interpolation
+getConfig is function returns string {
+    host is std.trim(env.HOST or else "  localhost  ")
+    port is env.PORT to u16 or else 8080
+    paths is std.split(env.PATH or else "/usr/bin:/bin", ":")
+    path_count is std.len(paths)
+    "{host}:{port} ({path_count} paths)"
+}
+
+status is getConfig()
+display is "Server: {status}"

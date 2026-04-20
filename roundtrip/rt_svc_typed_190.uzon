@@ -1,0 +1,8 @@
+// Service configuration #190
+@type is "grpc"
+name is "main_190"
+port is 51585 as u16
+enabled is true
+max_connections is 5457 as i32
+timeout_ms is 4471 as i32
+tls is true

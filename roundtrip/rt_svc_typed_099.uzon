@@ -1,0 +1,8 @@
+// Service configuration #99
+@type is "amqp"
+name is "config_99"
+port is 22867 as u16
+enabled is true
+max_connections is 2644 as i32
+timeout_ms is 10907 as i32
+tls is true

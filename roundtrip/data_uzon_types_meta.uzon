@@ -1,0 +1,21 @@
+// UZON's own type system described as data
+_typedef is {
+    name is ""
+    values is null
+    range is null
+    size is ""
+} called TypeDef
+
+types is [
+    _typedef with { name is "bool", values is [ "true", "false" ], size is "1 bit" },
+    _typedef with { name is "i8", range is (-128, 127), size is "1 byte" },
+    _typedef with { name is "u8", range is (0, 255), size is "1 byte" },
+    _typedef with { name is "i16", range is (-32768, 32767), size is "2 bytes" },
+    _typedef with { name is "u16", range is (0, 65535), size is "2 bytes" },
+    _typedef with { name is "i32", range is (-2147483648, 2147483647), size is "4 bytes" },
+    _typedef with { name is "u32", range is (0, 4294967295), size is "4 bytes" },
+    _typedef with { name is "f32", range is (-3.4e38, 3.4e38), size is "4 bytes" },
+    _typedef with { name is "f64", range is (-1.8e308, 1.8e308), size is "8 bytes" },
+    _typedef with { name is "string", range is (0, 0), size is "variable" },
+    _typedef with { name is "null", range is (0, 0), size is "0 bytes" }
+] as [TypeDef]

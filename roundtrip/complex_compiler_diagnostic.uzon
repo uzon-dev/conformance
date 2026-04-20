@@ -1,0 +1,40 @@
+_severity is hint from hint, info, warning, error called Severity
+
+diagnostics is [
+    {
+        file is "src/parser.zig"
+        span is { line is 42 as u32, col is 15 as u32, len is 8 as u32 }
+        severity is error as Severity
+        code is "E0308"
+        message is "mismatched types: expected 'u32', found 'i32'"
+        notes is [
+            { span is { line is 10 as u32, col is 5 as u32, len is 12 as u32 }, message is "expected due to this binding" },
+            { span is null, message is "consider using 'to u32' for explicit conversion" }
+        ]
+        related is [ "E0277" ]
+        fixable is true
+    },
+    {
+        file is "src/eval.zig"
+        span is { line is 187 as u32, col is 1 as u32, len is 45 as u32 }
+        severity is warning as Severity
+        code is "W0612"
+        message is "unused variable 'temp_result'"
+        notes is [] as [string]
+        related is [] as [string]
+        fixable is true
+    },
+    {
+        file is "src/std.zig"
+        span is { line is 305 as u32, col is 20 as u32, len is 3 as u32 }
+        severity is hint as Severity
+        code is "H0001"
+        message is "this branch is always taken — consider simplifying"
+        notes is [
+            { span is { line is 300 as u32, col is 5 as u32, len is 30 as u32 }, message is "condition is always true because 'len >= 0' for unsigned types" }
+        ]
+        related is [] as [string]
+        fixable is false
+    }
+]
+summary is { errors is 1 as u32, warnings is 1 as u32, hints is 1 as u32, total is 3 as u32 }

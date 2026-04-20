@@ -1,0 +1,10 @@
+// Resource #180
+@type is "network"
+name is "network_180"
+region is "eu-west-1"
+config is {
+    @type is "network_config"
+    capacity is 4675 as i32
+    priority is 7 as u8
+}
+active is true

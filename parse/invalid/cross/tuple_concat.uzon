@@ -1,0 +1,4 @@
+// §5.8.2 + §3.3: concatenation only on string/list — not tuple
+a is (1, 2)
+b is (3, 4)
+bad is a ++ b

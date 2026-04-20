@@ -1,0 +1,39 @@
+// Complex std chaining: filter → sort → map → reduce
+_entry is { name is "", value is 0 as i32, active is true } called Item
+
+inventory are
+    _entry with { name is "Widget", value is 25 as i32 },
+    _entry with { name is "Gadget", value is 75 as i32, active is false },
+    _entry with { name is "Doohickey", value is 50 as i32 },
+    _entry with { name is "Thingamajig", value is 10 as i32 },
+    _entry with { name is "Gizmo", value is 100 as i32 }
+
+// step 1: filter active only (Gadget excluded)
+active_items is std.filter(
+    inventory,
+    function i as Item returns bool { i.active }
+)
+
+// step 2: sort by value descending
+sorted is std.sort(
+    active_items,
+    function a as Item, b as Item returns bool { a.value > b.value }
+)
+
+// step 3: take names
+names is std.map(
+    sorted,
+    function i as Item returns string { i.name }
+)
+
+// step 4: total value
+total_value is std.reduce(
+    active_items,
+    0 as i32,
+    function acc as i32, i as Item returns i32 { acc + i.value }
+)
+
+// step 5: compose report
+listing is std.join(names, ", ")
+count is std.len(active_items)
+report is "{count} items: {listing} (total: {total_value})"

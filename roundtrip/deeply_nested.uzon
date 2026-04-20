@@ -1,0 +1,14 @@
+// Roundtrip: deeply nested structure
+root is {
+    a is {
+        b is {
+            c is {
+                d is {
+                    value is 42
+                    label is "deep"
+                    items is [ 1, 2, 3 ]
+                }
+            }
+        }
+    }
+}

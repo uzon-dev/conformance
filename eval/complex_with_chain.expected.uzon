@@ -1,0 +1,9 @@
+// Each with copies and overrides one field
+// step1: { localhost, 443, false, false }
+// step2: { localhost, 443, true, false }
+// step3: { localhost, 443, true, true }
+// step4: { prod.example.com, 443, true, true }
+final_host is "prod.example.com"
+final_port is 443 as u16
+final_tls is true
+final_debug is true

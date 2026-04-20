@@ -1,0 +1,10 @@
+// Typed record #69
+id is 694800
+test_0 is 7972 as u32
+main_1 is 237 as u8
+dev_2 is 644.05 as f32
+value_3 is 196.518363 as f32
+backup_4 is null
+name_5 is null
+enabled_6 is -818.93 as f32
+alpha_7 is "kappa"

@@ -1,0 +1,25 @@
+warehouse is {
+    id is "WH-EAST-001"
+    location is { city is "Seoul", district is "Gangnam", zip is "06123" }
+    zones is [
+        {
+            code is "A"
+            @type is "ambient"
+            temperature_range is (15.0, 25.0)
+            shelves is [
+                { id is "A-01", capacity is 100 as u16, used is 87 as u16, items is [ { sku is "SKU-001", qty is 45 as u16, lot is "L2026-001" }, { sku is "SKU-002", qty is 42 as u16, lot is "L2026-003" } ] },
+                { id is "A-02", capacity is 100 as u16, used is 23 as u16, items is [ { sku is "SKU-003", qty is 23 as u16, lot is "L2026-002" } ] }
+            ]
+        },
+        {
+            code is "C"
+            @type is "cold"
+            temperature_range is (2.0, 8.0)
+            shelves is [
+                { id is "C-01", capacity is 50 as u16, used is 50 as u16, items is [ { sku is "SKU-100", qty is 30 as u16, lot is "L2026-010" }, { sku is "SKU-101", qty is 20 as u16, lot is "L2026-011" } ] }
+            ]
+        }
+    ]
+    dock_doors is 4 as u8
+    operating_hours is { open is "06:00", close is "22:00", timezone is "KST" }
+}

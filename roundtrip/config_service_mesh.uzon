@@ -1,0 +1,27 @@
+mesh is {
+    name is "production"
+    services is [
+        {
+            name is "api-gateway"
+            port is 8080 as u16
+            protocol is "http"
+            routes is [ { prefix is "/api", upstream is "backend-api" }, { prefix is "/ws", upstream is "websocket-server" } ]
+            rate_limit is { rps is 10000 as u32, burst is 500 as u32 }
+            timeout_ms is 30000 as u32
+            retries is 3 as u8
+            circuit_breaker is { threshold is 50 as u8, window_sec is 60 as u16 }
+        },
+        {
+            name is "backend-api"
+            port is 3000 as u16
+            protocol is "grpc"
+            routes is [] as [string]
+            rate_limit is { rps is 5000 as u32, burst is 200 as u32 }
+            timeout_ms is 10000 as u32
+            retries is 2 as u8
+            circuit_breaker is { threshold is 30 as u8, window_sec is 30 as u16 }
+        }
+    ]
+    tls is { mode is "mutual", cert_rotation_hours is 24 as u16 }
+    tracing is { enabled is true, sampling_rate is 0.01, exporter is "jaeger" }
+}

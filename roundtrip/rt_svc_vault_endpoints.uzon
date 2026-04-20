@@ -1,0 +1,5 @@
+endpoints is [
+    { path is "/vault/api/v1/status", method is "GET", timeout_ms is 1900 as u32, auth is false },
+    { path is "/vault/api/v1/config", method is "GET", timeout_ms is 2900 as u32, auth is true },
+    { path is "/vault/api/v1/metrics", method is "GET", timeout_ms is 950 as u32, auth is false }
+]

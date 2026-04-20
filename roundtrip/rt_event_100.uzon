@@ -1,0 +1,6 @@
+@type is "error"
+timestamp is 1759816445
+source is "pi"
+code is 564 as u16
+message is "node failed"
+fatal is true

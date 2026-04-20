@@ -1,0 +1,6 @@
+// ERROR: §5.8.2 + §3.4
+// list concat where element types differ
+names are "Sunshin", "Chen" as [string]
+ids are 1, 2 as [i32]
+
+bad is names ++ ids

@@ -1,0 +1,19 @@
+// Relational data with foreign keys represented as flat structures
+users is [
+    { id is 1 as u32, name is "Alice", dept_id is 10 as u32 },
+    { id is 2 as u32, name is "Bob", dept_id is 10 as u32 },
+    { id is 3 as u32, name is "Charlie", dept_id is 20 as u32 }
+]
+departments is [
+    { id is 10 as u32, name is "Engineering", head_id is 1 as u32 },
+    { id is 20 as u32, name is "Marketing", head_id is 3 as u32 }
+]
+projects is [
+    { id is 100 as u32, name is "UZON", dept_id is 10 as u32, members is [ 1, 2 ] as [u32] },
+    { id is 101 as u32, name is "Campaign", dept_id is 20 as u32, members is [ 3 ] as [u32] }
+]
+assignments is [
+    { user_id is 1 as u32, project_id is 100 as u32, role is "lead", hours_per_week is 30 as u8 },
+    { user_id is 2 as u32, project_id is 100 as u32, role is "member", hours_per_week is 40 as u8 },
+    { user_id is 3 as u32, project_id is 101 as u32, role is "lead", hours_per_week is 20 as u8 }
+]

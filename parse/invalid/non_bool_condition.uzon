@@ -1,0 +1,2 @@
+// §5.9 Non-bool condition
+bad is if 0 then "yes" else "no"

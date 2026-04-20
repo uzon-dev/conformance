@@ -1,0 +1,11 @@
+// §7.1 + §7.3: Diamond imports deduplicate, and Status is the same
+// nominal type whether reached via ./shared directly or via ./mid.
+_direct is struct "./shared"
+_mid is struct "./mid"
+
+// Both should refer to the same Status type.
+s1 is _direct.state
+s2 is _mid._shared.state
+
+// Nominal identity preserved across diamond
+combined are s1, s2 as [_direct.Status]

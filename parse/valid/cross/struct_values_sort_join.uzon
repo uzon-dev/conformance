@@ -1,0 +1,14 @@
+// §5.16.1 + §5.16.2 + §5.16.4: keys → sort → join
+config is { zebra is 1, alpha is 2, middle is 3 }
+
+// keys returns declaration order
+raw_keys is std.keys(config)
+
+// sort alphabetically
+sorted_keys is std.sort(
+    raw_keys,
+    function a as string, b as string returns bool { a < b }
+)
+
+key_list is std.join(sorted_keys, ", ")
+// "alpha, middle, zebra"

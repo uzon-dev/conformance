@@ -1,0 +1,11 @@
+// Schema definition #104
+@type is "schema"
+version is 1 as u8
+name is "pi_schema_104"
+fields are
+        { name is "field_0", @type is "string", required is false },
+        { name is "field_1", @type is "u16", required is true },
+        { name is "field_2", @type is "i64", required is true },
+        { name is "field_3", @type is "bool", required is false },
+        { name is "field_4", @type is "f64", required is false },
+        { name is "field_5", @type is "i32", required is true }

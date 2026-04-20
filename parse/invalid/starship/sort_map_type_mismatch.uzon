@@ -1,0 +1,18 @@
+// ERROR: §5.16.2 + §3.4 + §3.8 + §5.16.4
+// sort produces [Entry], map returns [i32], then join expects [string]
+_shared is struct "./shared"
+
+_entry is { name is "", score is 0 as i32 } called Entry
+
+entries are
+    _entry with { name is "A", score is 1 as i32 },
+    _entry with { name is "B", score is 2 as i32 }
+
+sorted is std.sort(
+    entries,
+    function a as Entry, b as Entry returns bool { a.score > b.score }
+)
+
+scores is std.map(sorted, function e as Entry returns i32 { e.score })
+// [i32] passed to std.join which expects [string]
+bad is std.join(scores, ", ")

@@ -1,0 +1,29 @@
+log is {
+    timestamp is "2026-04-11T08:00:01.234Z"
+    level is "ERROR"
+    logger is "api.handler.users"
+    message is "Failed to process request"
+    context is {
+        request_id is "req-abc-123"
+        trace_id is "4bf92f3577b34da6"
+        span_id is "00f067aa0ba902b7"
+        method is "POST"
+        path is "/api/v3/users"
+        status is 500 as u16
+        duration_ms is 1234.56
+        user_id is "usr_001"
+        ip is "203.0.113.42"
+    }
+    error is {
+        @type is "DatabaseError"
+        message is "connection refused"
+        stack is [
+            "at Database.query (src/db.zig:42)",
+            "at UserRepo.create (src/repos/user.zig:15)",
+            "at UserHandler.handlePost (src/handlers/user.zig:78)",
+            "at Router.dispatch (src/router.zig:120)"
+        ]
+        cause is { @type is "ConnectionError", message is "ECONNREFUSED 10.0.1.50:5432" }
+    }
+    tags is { service is "user-api", environment is "production", version is "3.2.1" }
+}

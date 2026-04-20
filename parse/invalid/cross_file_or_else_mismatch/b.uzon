@@ -1,0 +1,2 @@
+P is struct { x is 0 as i32 }
+val is { x is 2 as i32 } as P

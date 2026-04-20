@@ -1,0 +1,2 @@
+// §5.16.4: std.trim requires string
+bad is std.trim([ 1, 2, 3 ])

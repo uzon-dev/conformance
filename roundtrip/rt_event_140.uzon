@@ -1,0 +1,5 @@
+@type is "click"
+timestamp is 1789736040
+source is "xi"
+url is "https://prod.example.com/host"
+session_id is "name_8695"

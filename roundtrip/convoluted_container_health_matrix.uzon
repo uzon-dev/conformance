@@ -1,0 +1,20 @@
+_health is healthy from healthy, degraded, unhealthy, unknown called Health
+
+clusters is [
+    {
+        name is "production"
+        nodes is [
+            { id is "node-1", health is healthy as Health, pods_running is 42 as u16, cpu_pct is 65.3, mem_pct is 72.1, disk_pct is 45.0 },
+            { id is "node-2", health is healthy as Health, pods_running is 38 as u16, cpu_pct is 58.7, mem_pct is 68.5, disk_pct is 43.2 },
+            { id is "node-3", health is degraded as Health, pods_running is 35 as u16, cpu_pct is 89.2, mem_pct is 91.0, disk_pct is 78.5 }
+        ]
+        overall is degraded as Health
+    },
+    {
+        name is "staging"
+        nodes is [
+            { id is "stg-1", health is healthy as Health, pods_running is 15 as u16, cpu_pct is 25.0, mem_pct is 30.0, disk_pct is 20.0 }
+        ]
+        overall is healthy as Health
+    }
+]

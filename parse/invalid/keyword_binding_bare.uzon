@@ -1,0 +1,3 @@
+// §2.5: Keywords cannot be bare binding names — use @
+x is 1
+to is 2

@@ -1,0 +1,8 @@
+// Service configuration #135
+@type is "mqtt"
+name is "iota_135"
+port is 16986 as u16
+enabled is true
+max_connections is 3372 as i32
+timeout_ms is 2348 as i32
+retry_count is 8 as u8

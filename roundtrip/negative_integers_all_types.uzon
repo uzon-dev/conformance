@@ -1,0 +1,8 @@
+a is -1 as i8
+b is -1 as i16
+c is -1 as i32
+d is -1 as i64
+e is -127 as i8
+f is -32767 as i16
+g is -100 as i32
+h is -999999999 as i64

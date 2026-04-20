@@ -1,0 +1,10 @@
+table is {
+    name is "results"
+    columns is [ "id", "name", "score" ]
+    rows is [
+        [ "1", "Alice", "95" ],
+        [ "2", "Bob", "85" ],
+        [ "3", "Charlie", "70" ]
+    ]
+    types is [ "int", "text", "int" ]
+}

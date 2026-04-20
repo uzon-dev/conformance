@@ -1,0 +1,16 @@
+tokens is [
+    { @type is "identifier", value is "server", line is 1 as u32, col is 1 as u32 },
+    { @type is "keyword", value is "is", line is 1 as u32, col is 8 as u32 },
+    { @type is "lbrace", value is "\{", line is 1 as u32, col is 11 as u32 },
+    { @type is "newline", value is null, line is 1 as u32, col is 12 as u32 },
+    { @type is "identifier", value is "host", line is 2 as u32, col is 5 as u32 },
+    { @type is "keyword", value is "is", line is 2 as u32, col is 10 as u32 },
+    { @type is "string", value is "localhost", line is 2 as u32, col is 13 as u32 },
+    { @type is "newline", value is null, line is 2 as u32, col is 24 as u32 },
+    { @type is "identifier", value is "port", line is 3 as u32, col is 5 as u32 },
+    { @type is "keyword", value is "is", line is 3 as u32, col is 10 as u32 },
+    { @type is "integer", value is "8080", line is 3 as u32, col is 13 as u32 },
+    { @type is "newline", value is null, line is 3 as u32, col is 17 as u32 },
+    { @type is "rbrace", value is "}", line is 4 as u32, col is 1 as u32 },
+    { @type is "eof", value is null, line is 4 as u32, col is 2 as u32 }
+]

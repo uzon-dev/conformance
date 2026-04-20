@@ -1,0 +1,12 @@
+// §5.11.0 — Explicit case mapping between two nominal enum types
+Color is enum red, green, blue
+Paint is enum red, green, blue
+
+c is red as Color
+
+// Convert via explicit case — each variant mapped to target type's variant
+p is case c
+    when red then red as Paint
+    when green then green as Paint
+    when blue then blue as Paint
+    else red as Paint

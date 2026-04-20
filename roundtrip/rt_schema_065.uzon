@@ -1,0 +1,7 @@
+// Schema definition #65
+@type is "schema"
+version is 4 as u8
+name is "beta_schema_65"
+fields are
+        { name is "field_0", @type is "u16", required is true },
+        { name is "field_1", @type is "u16", required is true }

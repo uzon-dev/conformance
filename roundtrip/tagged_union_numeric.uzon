@@ -1,0 +1,7 @@
+_num is 0 named integer from
+    integer as i32, floating as f64, text as string
+    called NumericValue
+a is 42 as NumericValue named integer
+b is 3.14 as NumericValue named floating
+c is "NaN" as NumericValue named text
+items is [ 1 as NumericValue named integer, 2.0 as NumericValue named floating ]

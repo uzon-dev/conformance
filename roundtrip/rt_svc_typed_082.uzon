@@ -1,0 +1,7 @@
+// Service configuration #82
+@type is "postgres"
+name is "port_82"
+port is 22702 as u16
+enabled is true
+max_connections is 4448 as i32
+timeout_ms is 10147 as i32

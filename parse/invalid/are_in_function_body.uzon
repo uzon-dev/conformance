@@ -1,0 +1,5 @@
+// §3.8 Only "is" bindings permitted in function bodies; "are" is forbidden
+f is function returns [i64] {
+    items are 1, 2, 3
+    items
+}

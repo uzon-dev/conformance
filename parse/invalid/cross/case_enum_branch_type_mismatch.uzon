@@ -1,0 +1,8 @@
+// §5.10 + §3.5 + §5.9
+// case branches must have same type — mismatch across enum-driven case
+_level is low from low, high called Level
+x is low as Level
+bad is case x
+    when low then "string result"
+    when high then 42
+    else true

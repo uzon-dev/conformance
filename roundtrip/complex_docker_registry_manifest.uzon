@@ -1,0 +1,24 @@
+manifest_list is {
+    schema_version is 2 as u8
+    media_type is "application/vnd.docker.distribution.manifest.list.v2+json"
+    manifests is [
+        {
+            media_type is "application/vnd.docker.distribution.manifest.v2+json"
+            digest is "sha256:abc123..."
+            size is 7682 as u32
+            platform is { architecture is "amd64", os is "linux", variant is null }
+        },
+        {
+            media_type is "application/vnd.docker.distribution.manifest.v2+json"
+            digest is "sha256:def456..."
+            size is 7143 as u32
+            platform is { architecture is "arm64", os is "linux", variant is "v8" }
+        },
+        {
+            media_type is "application/vnd.docker.distribution.manifest.v2+json"
+            digest is "sha256:ghi789..."
+            size is 6891 as u32
+            platform is { architecture is "arm", os is "linux", variant is "v7" }
+        }
+    ]
+}

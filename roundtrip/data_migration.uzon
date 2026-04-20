@@ -1,0 +1,6 @@
+migrations is [
+    { version is 1 as u32, name is "create_users", up is "CREATE TABLE users (id SERIAL PRIMARY KEY, email TEXT NOT NULL)", down is "DROP TABLE users", applied is true },
+    { version is 2 as u32, name is "add_name_column", up is "ALTER TABLE users ADD COLUMN name TEXT", down is "ALTER TABLE users DROP COLUMN name", applied is true },
+    { version is 3 as u32, name is "create_posts", up is "CREATE TABLE posts (id SERIAL PRIMARY KEY, user_id INT REFERENCES users(id))", down is "DROP TABLE posts", applied is true },
+    { version is 4 as u32, name is "add_timestamps", up is "ALTER TABLE posts ADD COLUMN created_at TIMESTAMPTZ DEFAULT NOW()", down is "ALTER TABLE posts DROP COLUMN created_at", applied is false }
+]

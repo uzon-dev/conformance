@@ -1,0 +1,8 @@
+// §5.12: declarative order — bindings can reference forward
+report is "total={total}, avg={avg}"
+total is a + b + c
+avg is total / 3
+c is base * 3
+b is base * 2
+a is base
+base is 10

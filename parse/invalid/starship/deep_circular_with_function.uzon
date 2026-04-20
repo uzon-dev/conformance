@@ -1,0 +1,8 @@
+// ERROR: §11.2.1 + §3.8 + §5.12
+// circular: a → function body references b → b depends on a
+_shared is struct "./shared"
+
+a is compute(b)
+b is a + 1
+
+compute is function n as i64 returns i64 { n * 2 }

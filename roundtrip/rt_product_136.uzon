@@ -1,0 +1,14 @@
+product is {
+    sku is "SKU-CLO-0136"
+    name is "Clothing Item 136"
+    category is "clothing"
+    price is 77.99
+    currency is "USD"
+    stock is 408 as u16
+    weight_g is 1460 as u32
+    dimensions is (26.0, 6.0, 8.0)
+    rating is 4.6
+    reviews is 952 as u16
+    active is true
+    tags is [ "clothing", "new" ]
+}

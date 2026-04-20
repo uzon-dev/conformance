@@ -1,0 +1,11 @@
+outer is {
+    @type is "outer"
+    inner is {
+        @type is "inner"
+        @from is "nested"
+        deep is {
+            @type is "deep"
+            @default is true
+        }
+    }
+}

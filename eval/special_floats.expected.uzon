@@ -1,0 +1,6 @@
+pos_inf is inf
+neg_inf is -inf
+not_num is nan
+nan_neq is false
+nan_not is true
+inf_gt is true

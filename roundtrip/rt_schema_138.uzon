@@ -1,0 +1,9 @@
+// Schema definition #138
+@type is "schema"
+version is 2 as u8
+name is "alpha_schema_138"
+fields are
+        { name is "field_0", @type is "u16", required is true },
+        { name is "field_1", @type is "bool", required is true },
+        { name is "field_2", @type is "f64", required is true },
+        { name is "field_3", @type is "bool", required is true }

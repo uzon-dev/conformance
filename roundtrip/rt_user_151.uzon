@@ -1,0 +1,16 @@
+user is {
+    id is 10151 as u32
+    username is "laura151"
+    email is "laura151@test.org"
+    display_name is "Laura #151"
+    city is "Tokyo"
+    age is 19 as u8
+    verified is true
+    created is "2026-08-12T12:00:00Z"
+    login_count is 1963 as u32
+    preferences is {
+        theme is "light"
+        language is "de"
+        notifications is false
+    }
+}

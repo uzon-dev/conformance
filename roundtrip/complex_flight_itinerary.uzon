@@ -1,0 +1,35 @@
+itinerary is {
+    pnr is "ABC123"
+    passengers is [
+        { name is "Kim Minsu", seat_pref is "window", meal is "vegetarian", frequent_flyer is "KE-12345678" },
+        { name is "Lee Jieun", seat_pref is "aisle", meal is "standard", frequent_flyer is null }
+    ]
+    segments is [
+        {
+            flight is "KE001"
+            @from is { code is "ICN", city is "Seoul", terminal is "2" }
+            @to is { code is "LAX", city is "Los Angeles", terminal is "B" }
+            departure is "2026-06-15T10:30:00+09:00"
+            arrival is "2026-06-15T07:00:00-07:00"
+            aircraft is "B777-300ER"
+            class is "economy"
+            seats is [ "42A", "42C" ]
+            duration_min is 630 as u16
+            status is "confirmed"
+        },
+        {
+            flight is "UA456"
+            @from is { code is "LAX", city is "Los Angeles", terminal is "7" }
+            @to is { code is "SFO", city is "San Francisco", terminal is "1" }
+            departure is "2026-06-15T12:00:00-07:00"
+            arrival is "2026-06-15T13:30:00-07:00"
+            aircraft is "A320neo"
+            class is "economy"
+            seats is [ "15A", "15B" ]
+            duration_min is 90 as u16
+            status is "confirmed"
+        }
+    ]
+    total_price is { amount is 2450.00, currency is "USD" }
+    baggage is { checked is 2 as u8, carry_on is 1 as u8, weight_limit_kg is 23 as u8 }
+}

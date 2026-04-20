@@ -1,0 +1,7 @@
+dict is [
+    ("name", "Alice"),
+    ("age", "30"),
+    ("city", "Seoul"),
+    ("role", "engineer"),
+    ("team", "platform")
+]

@@ -1,0 +1,12 @@
+_ is 1
+__ is 2
+___ is 3
+a1 is 4
+_a is 5
+a_ is 6
+_1 is 7
+very_long_identifier_name_that_goes_on_and_on_and_on is 8
+UPPER is 9
+camelCase is 10
+PascalCase is 11
+snake_case is 12

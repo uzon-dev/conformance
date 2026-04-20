@@ -1,0 +1,9 @@
+registry is {
+    i8_store is { min is -128 as i8, max is 127 as i8, zero is 0 as i8 }
+    u16_store is { min is 0 as u16, max is 65535 as u16, mid is 32768 as u16 }
+    f32_store is { min is -3.4e38 as f32, max is 3.4e38 as f32, epsilon is 1.19e-7 as f32 }
+    mixed_list is [
+        (1 as i8, 1 as i16, 1 as i32, 1, 1 as u8, 1 as u16, 1 as u32, 1 as u64),
+        (0 as i8, 0 as i16, 0 as i32, 0, 0 as u8, 0 as u16, 0 as u32, 0 as u64)
+    ]
+}

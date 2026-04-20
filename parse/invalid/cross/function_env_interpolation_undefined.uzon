@@ -1,0 +1,5 @@
+// §3.8 + §5.13 + §5.11.2: undefined in interpolation inside function
+format is function returns string {
+    "value: {env.CERTAINLY_MISSING}"
+}
+bad is format()

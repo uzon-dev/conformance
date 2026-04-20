@@ -1,0 +1,8 @@
+// Service configuration #59
+@type is "postgres"
+name is "dev_59"
+port is 28990 as u16
+enabled is false
+max_connections is 2617 as i32
+timeout_ms is 24468 as i32
+retry_count is 7 as u8

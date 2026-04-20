@@ -1,0 +1,10 @@
+// §3.8: Parameters visible through multiple nesting levels
+f is function x as i32 returns i32 {
+    outer is {
+        inner is {
+            val is x
+        }
+    }
+    outer.inner.val
+}
+result is f(99)

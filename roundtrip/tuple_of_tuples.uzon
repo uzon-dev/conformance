@@ -1,0 +1,5 @@
+// Roundtrip: nested tuples
+pair_of_pairs is ((1, 2), (3, 4))
+triple_nested is (("a", "b"), (1, 2, 3), (true, false))
+mixed_depth is (1, (2, (3, (4, 5))))
+with_null is ((null, 1), ("text", null))

@@ -1,0 +1,4 @@
+// §5.14 + §5.12: of on member that evaluates to non-struct
+config is { name is "test", port is 8080 }
+// config.name is a string, not a struct
+name is of config.name

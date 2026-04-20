@@ -1,0 +1,11 @@
+// Resource #174
+@type is "proxy"
+name is "proxy_174"
+region is "eu-west-1"
+config is {
+    @type is "proxy_config"
+    capacity is 4088 as i32
+    priority is 4 as u8
+}
+tags are "pi", "path", "nu"
+active is false

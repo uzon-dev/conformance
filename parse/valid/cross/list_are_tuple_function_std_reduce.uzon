@@ -1,0 +1,43 @@
+// §3.4.1 + §3.3 + §3.8 + §5.16.2 + §5.16.1 + §5.3
+// are list + tuple elements + function + std.reduce + std.map + arithmetic
+students are
+    ("Alice", 92 as i32),
+    ("Bob", 85 as i32),
+    ("Charlie", 97 as i32),
+    ("Diana", 88 as i32)
+
+// extract scores via map
+scores is std.map(
+    students,
+    function s as (string, i32) returns i32 { s.1 }
+)
+
+// sum via reduce
+total is std.reduce(
+    scores,
+    0 as i32,
+    function acc as i32, n as i32 returns i32 { acc + n }
+)
+
+count is std.len(students)
+average is total / count to i32
+
+// extract names
+names is std.map(
+    students,
+    function s as (string, i32) returns string { s.0 }
+)
+
+roster is std.join(names, ", ")
+summary is "{roster} — avg: {average}"
+
+// filter high scorers
+honor_roll is std.filter(
+    students,
+    function s as (string, i32) returns bool { s.1 > 90 }
+)
+honor_names is std.map(
+    honor_roll,
+    function s as (string, i32) returns string { s.0 }
+)
+honors is std.join(honor_names, ", ")

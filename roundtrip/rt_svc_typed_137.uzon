@@ -1,0 +1,8 @@
+// Service configuration #137
+@type is "websocket"
+name is "staging_137"
+port is 9543 as u16
+enabled is false
+max_connections is 2868 as i32
+timeout_ms is 3702 as i32
+retry_count is 0 as u8

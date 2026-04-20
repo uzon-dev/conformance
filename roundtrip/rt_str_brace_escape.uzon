@@ -1,0 +1,7 @@
+text is {
+    open is "\{"
+    close is "}"
+    both is "\{}"
+    multiple is "a \{b} c \{d} e"
+    nested is "\{\{deep}}"
+}

@@ -1,0 +1,15 @@
+// ERROR: §3.2.2 + §3.8 + §6.3
+// plus produces new type → function expects base → type mismatch
+_shared is struct "./shared"
+
+sensor is _shared.base_module plus {
+    range_km is 50000 as u32
+    band is optical from optical, infrared called SensorBand
+}
+
+describeMod is function m as _shared.BaseModule returns string {
+    "power: {m.power_kw}kW, crew: {m.capacity}"
+}
+
+// sensor is NOT BaseModule — plus always produces new type
+bad is describeMod(sensor)

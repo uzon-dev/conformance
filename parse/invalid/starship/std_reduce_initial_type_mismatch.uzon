@@ -1,0 +1,13 @@
+// ERROR: §5.16.2 + §3.8
+// initial is string, function returns i32 — type mismatch
+_shared is struct "./shared"
+
+modules are _shared.bridge, _shared.base_module
+
+bad is std.reduce(
+    modules,
+    "",
+    function acc as string, m as _shared.BaseModule returns i32 {
+        m.power_kw to i32
+    }
+)

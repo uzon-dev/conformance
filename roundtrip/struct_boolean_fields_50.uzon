@@ -1,0 +1,12 @@
+flags is {
+    f01 is true, f02 is false, f03 is true, f04 is false, f05 is true,
+    f06 is false, f07 is true, f08 is false, f09 is true, f10 is false,
+    f11 is true, f12 is true, f13 is false, f14 is false, f15 is true,
+    f16 is false, f17 is true, f18 is true, f19 is false, f20 is true,
+    f21 is false, f22 is false, f23 is true, f24 is true, f25 is false,
+    f26 is true, f27 is false, f28 is true, f29 is false, f30 is false,
+    f31 is true, f32 is true, f33 is true, f34 is false, f35 is true,
+    f36 is false, f37 is false, f38 is true, f39 is false, f40 is true,
+    f41 is true, f42 is false, f43 is true, f44 is true, f45 is false,
+    f46 is false, f47 is true, f48 is false, f49 is true, f50 is false
+}

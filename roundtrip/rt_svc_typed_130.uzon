@@ -1,0 +1,8 @@
+// Service configuration #130
+@type is "http"
+name is "gamma_130"
+port is 63038 as u16
+enabled is false
+max_connections is 8081 as i32
+timeout_ms is 3905 as i32
+tls is false

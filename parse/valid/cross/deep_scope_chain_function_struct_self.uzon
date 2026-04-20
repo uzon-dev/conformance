@@ -1,0 +1,25 @@
+// §3.8 + §5.12 + §3.2 + §5.14 + §4.4.1
+// deep scope chain: file → struct → function body → nested struct → self resolution
+global_prefix is "GLOBAL"
+multiplier is 10 as i32
+
+config is {
+    prefix is "LOCAL"
+    scale is 5 as i32
+}
+
+compute is function n as i32 returns i32 {
+    local_offset is 100 as i32
+    inner is {
+        // self walks: struct → function body → file scope
+        a is local_offset       // function body → 100
+        b is multiplier         // file scope → 10
+        c is global_prefix      // file scope → "GLOBAL"
+    }
+    n * inner.b + inner.a
+}
+
+result is compute(3)            // 3 * 10 + 100 = 130
+
+// of extraction from config
+prefix is of config             // "LOCAL"

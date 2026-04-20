@@ -1,0 +1,7 @@
+// Service configuration #84
+@type is "postgres"
+name is "tau_84"
+port is 40135 as u16
+enabled is true
+max_connections is 3190 as i32
+timeout_ms is 9807 as i32

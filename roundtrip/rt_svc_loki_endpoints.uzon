@@ -1,0 +1,5 @@
+endpoints is [
+    { path is "/loki/api/v1/status", method is "GET", timeout_ms is 2700 as u32, auth is false },
+    { path is "/loki/api/v1/config", method is "GET", timeout_ms is 3700 as u32, auth is true },
+    { path is "/loki/api/v1/metrics", method is "GET", timeout_ms is 1350 as u32, auth is false }
+]

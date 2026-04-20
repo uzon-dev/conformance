@@ -1,0 +1,13 @@
+quadtree is {
+    bounds is { x is 0.0, y is 0.0, w is 100.0, h is 100.0 }
+    max_objects is 4 as u8
+    max_depth is 5 as u8
+    root is {
+        objects is [] as [string]
+        divided is true
+        nw is { objects is [ { id is 1 as u32, x is 10.0, y is 10.0 }, { id is 2 as u32, x is 20.0, y is 15.0 } ], divided is false, nw is null, ne is null, sw is null, se is null }
+        ne is { objects is [ { id is 3 as u32, x is 60.0, y is 20.0 } ], divided is false, nw is null, ne is null, sw is null, se is null }
+        sw is { objects is [ { id is 4 as u32, x is 30.0, y is 70.0 }, { id is 5 as u32, x is 10.0, y is 80.0 }, { id is 6 as u32, x is 40.0, y is 90.0 } ], divided is false, nw is null, ne is null, sw is null, se is null }
+        se is { objects is [] as [string], divided is false, nw is null, ne is null, sw is null, se is null }
+    }
+}

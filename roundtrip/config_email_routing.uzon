@@ -1,0 +1,13 @@
+routing is [
+    { pattern is "*@support.example.com", destination is "support-queue", priority is 1 as u8, auto_reply is true },
+    { pattern is "*@billing.example.com", destination is "billing-queue", priority is 2 as u8, auto_reply is true },
+    { pattern is "admin@*", destination is "admin-inbox", priority is 1 as u8, auto_reply is false },
+    { pattern is "*", destination is "general-inbox", priority is 10 as u8, auto_reply is false }
+]
+spam_filter is {
+    enabled is true
+    threshold is 0.85
+    quarantine_days is 30 as u16
+    whitelist is [ "trusted.example.com", "partner.example.com" ]
+    blacklist is [ "spam.example.com" ]
+}

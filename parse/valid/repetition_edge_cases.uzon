@@ -1,0 +1,6 @@
+// §5.8.3 Repetition edge cases
+once is "x" ** 1                       // "x"
+empty is "x" ** 0                      // ""
+list_once is [ 1 ] ** 1               // [ 1 ]
+list_empty is [ 1 ] ** 0              // []
+large is "ab" ** 10                    // "abababababababababab"

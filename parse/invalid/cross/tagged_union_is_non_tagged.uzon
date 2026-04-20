@@ -1,0 +1,6 @@
+// §3.7.1 + §5.2: comparing a tagged union to a non-tagged-union value
+// with `is` is a type error (except when RHS is null or undefined).
+Event is tagged union pressed as string, released as string
+ev is "enter" as Event named pressed
+// 'x' is a plain string, not a tagged union → type error
+bad is ev is "enter"

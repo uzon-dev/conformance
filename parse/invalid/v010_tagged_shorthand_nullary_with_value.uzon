@@ -1,0 +1,3 @@
+// §3.7 v0.10 — Nullary variant shouldn't take an inner value
+Event is tagged union pressed as string, cleared as null
+bad is cleared "something" as Event

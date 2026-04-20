@@ -1,0 +1,9 @@
+// Schema definition #165
+@type is "schema"
+version is 5 as u8
+name is "gamma_schema_165"
+fields are
+        { name is "field_0", @type is "f64", required is true },
+        { name is "field_1", @type is "i32", required is false },
+        { name is "field_2", @type is "string", required is true },
+        { name is "field_3", @type is "u16", required is false }

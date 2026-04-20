@@ -1,0 +1,14 @@
+playlist is {
+    name is "Road Trip Mix"
+    description is "Songs for the highway"
+    'created-by' is "dj_uzon"
+    tracks is [
+        { title is "Highway Star", artist is "Deep Purple", duration_sec is 367 as u16, bpm is 170 as u8 },
+        { title is "Born to Run", artist is "Bruce Springsteen", duration_sec is 270 as u16, bpm is 148 as u8 },
+        { title is "Radar Love", artist is "Golden Earring", duration_sec is 384 as u16, bpm is 116 as u8 },
+        { title is "Take Me Home, Country Roads", artist is "John Denver", duration_sec is 193 as u16, bpm is 82 as u8 },
+        { title is "Life is a Highway", artist is "Tom Cochrane", duration_sec is 268 as u16, bpm is 118 as u8 }
+    ]
+    shuffle is false
+    repeat_mode is "none"
+}

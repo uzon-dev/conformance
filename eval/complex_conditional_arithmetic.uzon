@@ -1,0 +1,27 @@
+// Nested conditionals + arithmetic + comparison
+base_price is 100 as i32
+quantity is 15 as i32
+is_member is true
+
+// tiered discount
+discount_pct is if quantity > 20 then 20 as i32
+    else if quantity > 10 then 15 as i32
+    else if quantity > 5 then 10 as i32
+    else 0 as i32
+
+// member bonus
+member_bonus is if is_member then 5 as i32 else 0 as i32
+
+total_discount is discount_pct + member_bonus
+subtotal is base_price * quantity
+discount_amount is subtotal * total_discount / 100
+final_price is subtotal - discount_amount
+
+tier is if total_discount > 20 then "platinum"
+    else if total_discount > 15 then "gold"
+    else if total_discount > 10 then "silver"
+    else "bronze"
+
+receipt is "qty={quantity} × {base_price} = {subtotal}"
+           " discount={total_discount}% ({discount_amount})"
+           " total={final_price} [{tier}]"

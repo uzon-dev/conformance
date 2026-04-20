@@ -1,0 +1,3 @@
+// §5.13 + §5.11 + §5.3
+// env.X to bool is not a valid conversion, then arithmetic on it
+bad is env.VALUE to bool + 1

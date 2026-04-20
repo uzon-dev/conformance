@@ -1,0 +1,8 @@
+// §3.8 + §5.12 Self-exclusion in functions
+// Function body references x — enclosing scope has x = 99
+x is 99
+f is function n as i32 returns i32 { n + x }
+result is f(1)                    // 1 + 99 = 100
+
+// Standard self-exclusion at binding level
+default_val is default_val or else 42

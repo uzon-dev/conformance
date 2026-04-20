@@ -1,0 +1,3 @@
+// §2.3: RTL/bidi marks (U+200E/U+200F/U+202A-E) outside strings are
+// syntax errors to prevent spoofing.
+ident‎name is 1

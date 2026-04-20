@@ -1,0 +1,15 @@
+collections is {
+    empty_list is [] as [i32]
+    one_list is [ 42 ]
+    many_list is [ 1, 2, 3, 4, 5 ]
+    empty_struct is { }
+    one_struct is { only is true }
+    many_struct is { a is 1, b is 2, c is 3 }
+    pair_tuple is (1, 2)
+    big_tuple is (1, "two", true, null, 5.0)
+    nested is {
+        inner_list is [ [ 1, 2 ], [ 3, 4 ] ]
+        inner_tuple is ((1, 2), (3, 4))
+        inner_struct is { a is { b is { c is 1 } } }
+    }
+}

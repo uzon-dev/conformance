@@ -1,0 +1,14 @@
+grammar is {
+    name is "UZON"
+    rules is [
+        { name is "document", production is "binding*", @type is "root" },
+        { name is "binding", production is "name 'is' expression | name 'are' expression (',' expression)*", @type is "statement" },
+        { name is "expression", production is "or_else_expr", @type is "expression" },
+        { name is "or_else_expr", production is "or_expr ('or' 'else' or_expr)*", @type is "expression" },
+        { name is "or_expr", production is "and_expr ('or' and_expr)*", @type is "expression" },
+        { name is "and_expr", production is "not_expr ('and' not_expr)*", @type is "expression" },
+        { name is "primary", production is "literal | struct | list | tuple | function | '(' expression ')'", @type is "expression" }
+    ]
+    terminals is [ "true", "false", "null", "inf", "nan", "INTEGER", "FLOAT", "STRING", "IDENTIFIER" ]
+    precedence_levels is 18 as u8
+}

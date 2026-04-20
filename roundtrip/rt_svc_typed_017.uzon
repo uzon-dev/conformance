@@ -1,0 +1,8 @@
+// Service configuration #17
+@type is "grpc"
+name is "enabled_17"
+port is 48990 as u16
+enabled is true
+max_connections is 8737 as i32
+timeout_ms is 25194 as i32
+tls is true

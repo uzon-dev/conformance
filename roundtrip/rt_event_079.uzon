@@ -1,0 +1,5 @@
+@type is "pageview"
+timestamp is 1703391969
+source is "name"
+url is "https://kappa.example.com/delta"
+session_id is "delta_4275"

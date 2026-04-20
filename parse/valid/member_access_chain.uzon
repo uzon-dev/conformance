@@ -1,0 +1,11 @@
+// §5.12 Deep member access chains
+root is {
+    level1 is {
+        level2 is {
+            level3 is {
+                value is 42
+            }
+        }
+    }
+}
+deep is root.level1.level2.level3.value    // 42

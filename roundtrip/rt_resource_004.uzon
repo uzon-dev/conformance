@@ -1,0 +1,10 @@
+// Resource #4
+@type is "proxy"
+name is "proxy_4"
+region is "ap-northeast-1"
+config is {
+    @type is "proxy_config"
+    capacity is 9177 as i32
+    priority is 7 as u8
+}
+active is false

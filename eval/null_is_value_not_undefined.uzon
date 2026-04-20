@@ -1,0 +1,4 @@
+// §3.1 null is a value; or else only triggers on undefined
+x is null or else "fallback"
+check_null is x is null
+check_not_undef is x is not undefined

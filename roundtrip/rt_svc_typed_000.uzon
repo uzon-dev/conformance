@@ -1,0 +1,8 @@
+// Service configuration #0
+@type is "grpc"
+name is "sigma_0"
+port is 2663 as u16
+enabled is false
+max_connections is 2296 as i32
+timeout_ms is 24232 as i32
+tls is true

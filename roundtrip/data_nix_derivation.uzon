@@ -1,0 +1,18 @@
+derivation is {
+    name is "uzon-0.5.0"
+    system is "x86_64-linux"
+    builder is "/nix/store/abc123-bash-5.2/bin/bash"
+    args is [ "-e", "/nix/store/def456-builder.sh" ]
+    @env is {
+        src is "/nix/store/ghi789-source"
+        buildInputs is "/nix/store/jkl012-zig-0.13 /nix/store/mno345-zls"
+        out is "/nix/store/pqr678-uzon-0.5.0"
+        pname is "uzon"
+        version is "0.6.0"
+    }
+    outputs is [ "out" ]
+    input_derivations is [
+        { path is "/nix/store/abc-zig.drv", outputs is [ "out" ] },
+        { path is "/nix/store/def-bash.drv", outputs is [ "out" ] }
+    ]
+}

@@ -1,0 +1,14 @@
+_rollout is disabled from disabled, percentage, enabled called Rollout
+
+features is {
+    dark_mode is { rollout is enabled as Rollout, percentage is 100 as u8 }
+    new_checkout is { rollout is percentage as Rollout, percentage is 25 as u8 }
+    beta_search is { rollout is percentage as Rollout, percentage is 5 as u8 }
+    legacy_api is { rollout is disabled as Rollout, percentage is 0 as u8 }
+    ai_assist is { rollout is enabled as Rollout, percentage is 100 as u8 }
+}
+overrides is [
+    { user_id is "admin-001", feature is "new_checkout", force is true },
+    { user_id is "tester-042", feature is "beta_search", force is true },
+    { user_id is "legacy-099", feature is "legacy_api", force is true }
+]

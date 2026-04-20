@@ -1,0 +1,8 @@
+// §3.7 v0.10 — shorthand when field type is tagged union
+Event is tagged union pressed as string, cleared as null
+Config is struct {
+    action is cleared as Event
+}
+c is {
+    action is pressed "ctrl"
+} as Config

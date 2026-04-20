@@ -1,0 +1,6 @@
+@type is "deploy"
+timestamp is 1728556255
+source is "gamma"
+version is "9.33.556"
+environment is "dev"
+rollback is false

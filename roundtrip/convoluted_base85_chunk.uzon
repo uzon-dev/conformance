@@ -1,0 +1,10 @@
+encoded is {
+    input_bytes is 4 as u8
+    output_chars is 5 as u8
+    alphabet is "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!#$%&()*+-;<=>?@^_`\{|}~"
+    samples is [
+        { raw is [ 0x00, 0x00, 0x00, 0x00 ], encoded is "00000" },
+        { raw is [ 0xFF, 0xFF, 0xFF, 0xFF ], encoded is "s8W-!" },
+        { raw is [ 0x48, 0x65, 0x6C, 0x6C ], encoded is "BOu!r" }
+    ]
+}

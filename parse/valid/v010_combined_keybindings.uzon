@@ -1,0 +1,25 @@
+// §3.2 + §3.5 + §3.7 v0.10 — Realistic keybinding config combining all three
+// Shows how context inference eliminates most `as TypeName` annotations
+Modifiers is struct {
+    mod4 is false
+    shift is false
+    ctrl is false
+}
+Direction is enum forward, reverse
+Action is tagged union move as string, focus as Direction, close as null
+
+Binding is struct {
+    keysym is "" as string
+    mods is {} as Modifiers
+    action is close as Action
+}
+
+// NOTE: Per §3.4.1 lift rule, a trailing `as Binding` on the final
+// element would be extracted to the are_binding's list-level
+// annotation, producing `[...] as Binding` — annotating a list with a
+// struct type (a §6.1 type error). Wrap the final element in
+// parentheses to keep the `as Binding` element-local.
+bindings are
+    { keysym is "h", mods is { mod4 is true }, action is focus reverse } as Binding,
+    { keysym is "l", mods is { mod4 is true }, action is focus forward } as Binding,
+    ({ keysym is "q", mods is { mod4 is true, shift is true }, action is close } as Binding)

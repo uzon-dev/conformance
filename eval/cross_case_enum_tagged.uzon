@@ -1,0 +1,16 @@
+// enum + tagged union + case + interpolation
+_level is low from low, medium, high called Level
+
+alert is medium as Level
+label is case alert
+    when low then "OK"
+    when medium then "WARN"
+    when high then "CRITICAL"
+    else "?"
+
+result is "anomaly detected" named found from
+    found as string, clear as null called Scan
+
+report is if result is named found
+    then "SCAN: {result} [{label}]"
+    else "CLEAR"

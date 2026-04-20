@@ -1,0 +1,18 @@
+// §2.3 + §3.2 + §3.2.1 + §5.12 + §4.4.1
+// keyword escape + quoted identifiers + struct + with + self + interpolation
+headers is {
+    'Content-Type' is "text/html"
+    'X-Request-ID' is "abc-123"
+    @type is "response"
+    @default is false
+}
+
+json_headers is headers with {
+    'Content-Type' is "application/json"
+}
+
+content_type is json_headers.'Content-Type'
+request_id is headers.'X-Request-ID'
+doc_type is headers.@type
+
+summary is "Type: {content_type}, ID: {request_id}, Doc: {doc_type}"

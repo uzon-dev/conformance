@@ -1,0 +1,2 @@
+homo is std.values({ a is 1, b is 2, c is 3 })
+mixed is std.values({ name is "test", count is 42 })

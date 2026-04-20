@@ -1,0 +1,9 @@
+// Service configuration #18
+@type is "websocket"
+name is "prod_18"
+port is 18394 as u16
+enabled is true
+max_connections is 6942 as i32
+timeout_ms is 7040 as i32
+retry_count is 3 as u8
+tls is false

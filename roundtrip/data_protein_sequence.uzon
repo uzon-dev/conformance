@@ -1,0 +1,17 @@
+protein is {
+    name is "Insulin (human)"
+    accession is "P01308"
+    chain_a is "GIVEQCCTSICSLYQLENYCN"
+    chain_b is "FVNQHLCGSHLVEALYLVCGERGFFYTPKT"
+    length is 51 as u16
+    molecular_weight is 5808.0
+    disulfide_bonds is [
+        (7 as u8, 7 as u8),
+        (6 as u8, 11 as u8),
+        (20 as u8, 19 as u8)
+    ]
+    annotations is [
+        { start is 1 as u8, end is 21 as u8, @type is "chain", name is "A chain" },
+        { start is 1 as u8, end is 30 as u8, @type is "chain", name is "B chain" }
+    ]
+}

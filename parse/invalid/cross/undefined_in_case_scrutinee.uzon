@@ -1,0 +1,5 @@
+// §5.10 + §3.1: undefined as case scrutinee
+missing is nonexistent
+bad is case missing
+    when 1 then "one"
+    else "other"

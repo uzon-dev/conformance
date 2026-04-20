@@ -1,0 +1,5 @@
+colors is [
+    { name is "red", hex is "#FF0000", rgb is (255 as u8, 0 as u8, 0 as u8), hsl is (0.0, 100.0, 50.0), cmyk is (0.0, 100.0, 100.0, 0.0) },
+    { name is "lime", hex is "#00FF00", rgb is (0 as u8, 255 as u8, 0 as u8), hsl is (120.0, 100.0, 50.0), cmyk is (100.0, 0.0, 100.0, 0.0) },
+    { name is "blue", hex is "#0000FF", rgb is (0 as u8, 0 as u8, 255 as u8), hsl is (240.0, 100.0, 50.0), cmyk is (100.0, 100.0, 0.0, 0.0) }
+]

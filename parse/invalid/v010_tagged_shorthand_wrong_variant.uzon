@@ -1,0 +1,3 @@
+// §3.7 v0.10 — Using variant name that doesn't exist in target type
+Event is tagged union pressed as string, released as string
+bad is clicked "button" as Event

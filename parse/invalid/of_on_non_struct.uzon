@@ -1,0 +1,3 @@
+// §5.14 of requires struct
+num is 42
+val is of num                     // error: not a struct

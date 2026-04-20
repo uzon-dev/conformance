@@ -1,0 +1,9 @@
+// §3.8 + §5.12: function self-exclusion within function body
+x is 100 as i32
+
+// function references outer x via self — no exclusion (binding name is f, not x)
+f is function n as i32 returns i32 { n + x }
+result_f is f(5)          // 105
+
+// self-exclusion at binding level, not inside function
+default_val is default_val or else 42

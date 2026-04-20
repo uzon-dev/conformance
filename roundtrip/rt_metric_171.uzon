@@ -1,0 +1,12 @@
+metric is {
+    name is "error_rate"
+    host is "server-11"
+    timestamp is 1712810260 as u64
+    value is 90.7
+    unit is "percent"
+    tags is {
+        environment is "production"
+        region is "ap-east"
+        service is "svc-01"
+    }
+}

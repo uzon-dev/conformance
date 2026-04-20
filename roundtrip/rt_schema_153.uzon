@@ -1,0 +1,8 @@
+// Schema definition #153
+@type is "schema"
+version is 4 as u8
+name is "mu_schema_153"
+fields are
+        { name is "field_0", @type is "u16", required is false },
+        { name is "field_1", @type is "f64", required is false },
+        { name is "field_2", @type is "string", required is false }

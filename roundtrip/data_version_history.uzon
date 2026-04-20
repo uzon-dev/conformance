@@ -1,0 +1,7 @@
+versions is [
+    { version is (0, 1, 0), date is "2025-01-15", changes is [ "Initial prototype", "Basic parsing" ], breaking is true },
+    { version is (0, 2, 0), date is "2025-03-01", changes is [ "Type system", "Struct support" ], breaking is true },
+    { version is (0, 3, 0), date is "2025-06-15", changes is [ "Functions", "Pattern matching" ], breaking is true },
+    { version is (0, 4, 0), date is "2025-09-01", changes is [ "Standard library", "Imports" ], breaking is false },
+    { version is (0, 5, 0), date is "2026-01-01", changes is [ "Sort", "Lower/upper", "Conformance suite" ], breaking is false }
+]

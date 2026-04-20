@@ -1,0 +1,10 @@
+qwerty is {
+    row1 is [ "q", "w", "e", "r", "t", "y", "u", "i", "o", "p" ]
+    row2 is [ "a", "s", "d", "f", "g", "h", "j", "k", "l" ]
+    row3 is [ "z", "x", "c", "v", "b", "n", "m" ]
+    modifiers is {
+        left is [ "shift", "ctrl", "alt", "super" ]
+        right is [ "shift", "ctrl", "alt" ]
+    }
+    special is { space is " ", enter is "\n", tab is "\t", backspace is "del" }
+}

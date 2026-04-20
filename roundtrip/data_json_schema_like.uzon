@@ -1,0 +1,18 @@
+schema is {
+    @type is "object"
+    required is [ "name", "email" ]
+    properties is {
+        name is { @type is "string", 'min-length' is 1 as u8, 'max-length' is 100 as u8 }
+        email is { @type is "string", format is "email" }
+        age is { @type is "integer", minimum is 0, maximum is 150 }
+        tags is { @type is "array", items is { @type is "string" }, 'max-items' is 10 as u8 }
+        address is {
+            @type is "object"
+            properties is {
+                street is { @type is "string" }
+                city is { @type is "string" }
+                zip is { @type is "string", pattern is "^\\d\{5}$" }
+            }
+        }
+    }
+}

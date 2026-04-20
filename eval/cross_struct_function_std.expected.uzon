@@ -1,0 +1,2 @@
+leaderboard is "Alice > Bob > Charlie"
+top is { name is "Alice", score is 95 as i32 }

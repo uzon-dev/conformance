@@ -1,0 +1,8 @@
+// Service configuration #105
+@type is "websocket"
+name is "tau_105"
+port is 33685 as u16
+enabled is true
+max_connections is 4489 as i32
+timeout_ms is 13714 as i32
+retry_count is 7 as u8

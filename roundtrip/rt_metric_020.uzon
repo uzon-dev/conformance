@@ -1,0 +1,12 @@
+metric is {
+    name is "request_count"
+    host is "server-00"
+    timestamp is 1712801200 as u64
+    value is 34.0
+    unit is "count"
+    tags is {
+        environment is "development"
+        region is "us-east"
+        service is "svc-00"
+    }
+}

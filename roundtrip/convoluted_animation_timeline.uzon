@@ -1,0 +1,33 @@
+timeline is {
+    duration_ms is 5000 as u32
+    fps is 60 as u8
+    tracks is [
+        {
+            target is "player.position.x"
+            keyframes is [
+                { t is 0 as u32, value is 0.0, easing is "linear" },
+                { t is 1000 as u32, value is 100.0, easing is "ease-out" },
+                { t is 2000 as u32, value is 150.0, easing is "ease-in-out" },
+                { t is 3000 as u32, value is 50.0, easing is "ease-in" },
+                { t is 5000 as u32, value is 200.0, easing is "linear" }
+            ]
+        },
+        {
+            target is "player.opacity"
+            keyframes is [
+                { t is 0 as u32, value is 0.0, easing is "ease-in" },
+                { t is 500 as u32, value is 1.0, easing is "linear" },
+                { t is 4500 as u32, value is 1.0, easing is "linear" },
+                { t is 5000 as u32, value is 0.0, easing is "ease-out" }
+            ]
+        },
+        {
+            target is "player.scale"
+            keyframes is [
+                { t is 0 as u32, value is 0.5, easing is "ease-out" },
+                { t is 1000 as u32, value is 1.0, easing is "linear" },
+                { t is 5000 as u32, value is 1.0, easing is "linear" }
+            ]
+        }
+    ]
+}

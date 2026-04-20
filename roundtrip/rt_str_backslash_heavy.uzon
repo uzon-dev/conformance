@@ -1,0 +1,6 @@
+paths is {
+    win is "C:\\Windows\\System32\\cmd.exe"
+    unc is "\\\\server\\share\\folder"
+    regex is "\\d+\\.\\d+"
+    escape is "\\\\"
+}

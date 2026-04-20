@@ -1,0 +1,2 @@
+// §5.3 String in arithmetic is type error
+bad is "hello" + 1

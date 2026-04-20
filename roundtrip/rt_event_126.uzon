@@ -1,0 +1,6 @@
+@type is "deploy"
+timestamp is 1788506156
+source is "upsilon"
+version is "3.72.580"
+environment is "staging"
+rollback is true

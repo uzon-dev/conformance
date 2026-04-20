@@ -1,0 +1,53 @@
+_sort is asc from asc, desc called SortOrder
+
+response is {
+    data is [
+        {
+            id is "usr_a1b2c3" 
+            profile is {
+                name is "김민수"
+                avatar is "https://cdn.example.com/avatars/a1b2c3.webp"
+                bio is "풀스택 개발자 | Zig \u{2764} UZON"
+                links is {
+                    github is "https://github.com/minsoo"
+                    website is "https://minsoo.dev"
+                    twitter is null
+                }
+            }
+            stats is { repos is 47 as u32, stars is 1234 as u32, followers is 891 as u32 }
+            tags is [ "zig", "systems", "open-source" ]
+            joined is "2023-06-15T09:30:00Z"
+            verified is true
+        },
+        {
+            id is "usr_d4e5f6"
+            profile is {
+                name is "田中太郎"
+                avatar is null
+                bio is ""
+                links is {
+                    github is "https://github.com/tanaka"
+                    website is null
+                    twitter is null
+                }
+            }
+            stats is { repos is 12 as u32, stars is 89 as u32, followers is 34 as u32 }
+            tags is [ "rust", "wasm" ]
+            joined is "2024-01-20T14:00:00Z"
+            verified is false
+        }
+    ]
+    pagination is {
+        cursor is "eyJpZCI6ImQ0ZTVmNiJ9"
+        has_more is true
+        total is 1547 as u32
+        per_page is 20 as u8
+        sort_field is "joined"
+        sort_order is desc as SortOrder
+    }
+    rate_limit is {
+        remaining is 98 as u16
+        limit is 100 as u16
+        reset_at is "2026-04-11T12:05:00Z"
+    }
+}

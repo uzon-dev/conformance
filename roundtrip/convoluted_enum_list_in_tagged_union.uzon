@@ -1,0 +1,5 @@
+_role is viewer from viewer, editor, admin called Role
+
+roles is [ viewer, editor, admin ] as [Role]
+selected is admin as Role
+in_list is admin as Role in [ viewer, admin ] as [Role]

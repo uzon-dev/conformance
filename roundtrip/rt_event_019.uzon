@@ -1,0 +1,6 @@
+@type is "error"
+timestamp is 1758205561
+source is "iota"
+code is 487 as u16
+message is "enabled failed"
+fatal is false

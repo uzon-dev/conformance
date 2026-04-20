@@ -1,0 +1,30 @@
+_mapping is {
+    field is ""
+    @type is ""
+    analyzer is null
+    index is null
+    boost is null
+} called Mapping
+
+index is {
+    name is "products"
+    settings is {
+        number_of_shards is 3 as u8
+        number_of_replicas is 1 as u8
+        refresh_interval is "5s"
+    }
+    mappings is [
+        _mapping with { field is "title", @type is "text", analyzer is "standard", boost is 2.0 },
+        _mapping with { field is "description", @type is "text", analyzer is "english", boost is 1.0 },
+        _mapping with { field is "price", @type is "float", index is true },
+        _mapping with { field is "category", @type is "keyword", index is true, boost is 1.5 },
+        _mapping with { field is "tags", @type is "keyword", index is true, boost is 1.0 },
+        _mapping with { field is "created_at", @type is "date", index is true },
+        _mapping with { field is "in_stock", @type is "boolean", index is true }
+    ] as [Mapping]
+    synonyms is [
+        [ "laptop", "notebook", "portable computer" ],
+        [ "phone", "mobile", "smartphone", "cellphone" ],
+        [ "tv", "television", "display", "monitor" ]
+    ]
+}

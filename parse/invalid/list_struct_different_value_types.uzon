@@ -1,0 +1,5 @@
+// §3.4 + §3.2.1: Same field name, different value types — type error
+items is [
+    { data is 42 },
+    { data is "hello" }
+]

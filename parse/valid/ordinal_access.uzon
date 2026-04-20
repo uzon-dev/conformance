@@ -1,0 +1,13 @@
+// §3.3 Tuple ordinal access (.first through .tenth)
+t is (10, 20, 30, 40, 50, 60, 70, 80, 90, 100)
+a is t.first                     // 10
+b is t.second                    // 20
+c is t.third                     // 30
+d is t.fourth                    // 40
+e is t.fifth                     // 50
+f is t.sixth                     // 60
+g is t.seventh                   // 70
+h is t.eighth                    // 80
+i is t.ninth                     // 90
+j is t.tenth                     // 100
+also_first is t.0                // 10 (numeric index)

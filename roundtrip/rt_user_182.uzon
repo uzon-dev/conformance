@@ -1,0 +1,16 @@
+user is {
+    id is 10182 as u32
+    username is "charlie182"
+    email is "charlie182@demo.net"
+    display_name is "Charlie #182"
+    city is "London"
+    age is 50 as u8
+    verified is true
+    created is "2026-03-15T12:00:00Z"
+    login_count is 2366 as u32
+    preferences is {
+        theme is "dark"
+        language is "ja"
+        notifications is true
+    }
+}

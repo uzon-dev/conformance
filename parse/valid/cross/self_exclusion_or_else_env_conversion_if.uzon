@@ -1,0 +1,18 @@
+// §5.12 + §5.7 + §5.13 + §5.11 + §5.9
+// self-exclusion + or else + env + to conversion + if
+// all interacting in the same binding chain
+
+// self-exclusion: port skips this binding → undefined → or else chain
+port is port or else env.PORT to u16 or else 8080
+
+// self-exclusion with env fallback and conditional
+debug is debug or else env.DEBUG is "true"
+
+mode is if debug
+    then "development"
+    else "production"
+
+timeout is timeout or else env.TIMEOUT to i32 or else 30
+adjusted is if timeout > 60 then 60 else timeout
+
+config_line is "{mode}:{port} (timeout={adjusted})"

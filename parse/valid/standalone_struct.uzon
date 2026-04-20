@@ -1,0 +1,7 @@
+// §3.2 — standalone struct type declaration
+Point is struct { x is 0 as i32, y is 0 as i32 }
+
+// Reuse
+origin is Point
+offset is Point with { x is 10 as i32 }
+points is [ Point, offset ] as [Point]

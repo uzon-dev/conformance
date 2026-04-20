@@ -1,0 +1,39 @@
+// §4.5 + §3.1 + §5.7 + §5.9 + §5.10 + §4.4.1
+// null vs undefined distinction across all contexts
+config is { host is "localhost", port is null, timeout is 30 as i32 }
+
+// null passes through or else
+port_value is config.port or else 8080            // null (not 8080)
+
+// undefined caught by or else
+missing is config.nonexistent or else "default"   // "default"
+
+// null in equality
+port_is_null is config.port is null               // true
+port_is_not_null is config.port is not null       // false
+
+// undefined in equality
+miss_is_undef is config.nonexistent is undefined  // true
+
+// null in if condition — must use is null, not direct
+port_check is if config.port is null
+    then "no port configured"
+    else "port: {config.port}"
+
+// null in case
+categorize is case config.port
+    when null then "unset"
+    else "set"
+
+// null in list
+mixed is [ 1, null, 3 ]
+has_null is null in mixed                         // true
+
+// null in with (bidirectional)
+with_port is config with { port is 8080 as i32 }  // null → i32 OK
+clear_port is with_port with { port is null }      // i32 → null OK
+
+report is "host={config.host}"
+          " port={categorize}"
+          " timeout={config.timeout}"
+          " missing={missing}"

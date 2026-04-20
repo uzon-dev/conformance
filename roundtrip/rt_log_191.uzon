@@ -1,0 +1,14 @@
+entry is {
+    id is 100191 as u64
+    timestamp is "2026-04-11T23:11:17.493Z"
+    level is "ERROR"
+    component is "proxy"
+    message is "Event 191: proxy error condition detected"
+    context is {
+        request_id is "req-000191"
+        duration_ms is 574 as u32
+        status_code is 500 as u16
+        user_id is "usr_0191"
+    }
+    tags is [ "proxy", "error" ]
+}

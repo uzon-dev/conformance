@@ -1,0 +1,1 @@
+data is { a is { x is inf }, b is { x is nan }, c is { x is -inf } }

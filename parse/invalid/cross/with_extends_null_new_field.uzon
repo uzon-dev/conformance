@@ -1,0 +1,4 @@
+// §3.2.1 + §3.2.2 + §4.5
+// with cannot add fields, even null ones
+base is { x is 1 as i32 }
+bad is base with { y is null }

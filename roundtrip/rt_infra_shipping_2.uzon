@@ -1,0 +1,12 @@
+service is {
+    name is "shipping-2"
+    host is "10.0.1.30"
+    port is 3202 as u16
+    workers is 6 as u8
+    max_conn is 1500 as u16
+    tls is true
+    log_level is "warn"
+    health is { path is "/health", interval_sec is 15 as u16, timeout_sec is 4 as u16 }
+    tags is [ "shipping", "v3.0", "prod" ]
+    limits is { cpu_m is 750 as u16, memory_mb is 384 as u16 }
+}

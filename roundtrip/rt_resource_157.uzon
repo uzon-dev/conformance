@@ -1,0 +1,11 @@
+// Resource #157
+@type is "monitor"
+name is "monitor_157"
+region is "eu-west-1"
+config is {
+    @type is "monitor_config"
+    capacity is 5001 as i32
+    priority is 1 as u8
+}
+tags are "config", "zeta", "zeta", "epsilon"
+active is true

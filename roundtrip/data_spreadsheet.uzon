@@ -1,0 +1,10 @@
+sheet is {
+    name is "Q1 Revenue"
+    headers is [ "Month", "Revenue", "Expenses", "Profit", "Margin" ]
+    rows is [
+        [ "January", "125000", "98000", "27000", "21.6%" ],
+        [ "February", "132000", "101000", "31000", "23.5%" ],
+        [ "March", "148000", "105000", "43000", "29.1%" ]
+    ]
+    totals is [ "Q1 Total", "405000", "304000", "101000", "24.9%" ]
+}

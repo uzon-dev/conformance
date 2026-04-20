@@ -1,0 +1,4 @@
+// §3.2.1 Struct override (with)
+base is { x is 1 as i32, y is 2 as i32 }
+modified is base with { x is 10 as i32 }
+null_override is base with { x is null }

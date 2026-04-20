@@ -1,0 +1,4 @@
+double is function n as i32 returns i32 { n * 2 }
+inc is function n as i32 returns i32 { n + 1 }
+result is double(inc(3))
+chained is inc(inc(inc(0)))

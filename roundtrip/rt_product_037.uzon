@@ -1,0 +1,14 @@
+product is {
+    sku is "SKU-AUT-0037"
+    name is "Automotive Item 37"
+    category is "automotive"
+    price is 28.49
+    currency is "USD"
+    stock is 111 as u16
+    weight_g is 470 as u32
+    dimensions is (27.0, 12.0, 9.0)
+    rating is 4.7
+    reviews is 259 as u16
+    active is true
+    tags is [ "automotive", "new" ]
+}

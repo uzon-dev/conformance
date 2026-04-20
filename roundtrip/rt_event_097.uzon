@@ -1,0 +1,5 @@
+@type is "pageview"
+timestamp is 1746896070
+source is "omicron"
+url is "https://xi.example.com/server"
+session_id is "server_6911"

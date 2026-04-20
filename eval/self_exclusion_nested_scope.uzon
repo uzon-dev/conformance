@@ -1,0 +1,8 @@
+// §5.12 Self-exclusion across scope boundaries
+x is 1
+inner is {
+    x is x + 1
+    deeper is {
+        x is x + 10
+    }
+}

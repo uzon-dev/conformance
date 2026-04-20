@@ -1,0 +1,6 @@
+// ERROR: §5.3 + §3.1 + §5.12
+// undefined propagates through member access, then arithmetic fails
+vessel is { name is "Wanderer" }
+
+// vessel.power → undefined → undefined + 1 → runtime error
+bad is vessel.power + 1

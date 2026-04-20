@@ -1,0 +1,32 @@
+_node is {
+    @type is ""
+    value is null
+    children is null
+}
+
+tree is _node with {
+    @type is "concat"
+    children is [
+        _node with { @type is "literal", value is "a" },
+        _node with {
+            @type is "star"
+            children is [
+                _node with { @type is "char_class", value is "[bc]" }
+            ]
+        },
+        _node with {
+            @type is "alternation"
+            children is [
+                _node with { @type is "literal", value is "d" },
+                _node with {
+                    @type is "concat"
+                    children is [
+                        _node with { @type is "literal", value is "e" },
+                        _node with { @type is "plus", children is [ _node with { @type is "literal", value is "f" } ] }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+// Represents: a[bc]*(d|ef+)

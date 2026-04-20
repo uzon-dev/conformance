@@ -1,0 +1,3 @@
+a is std.trim("  hello  ")
+b is std.trim("hello")
+c is std.trim("  ")

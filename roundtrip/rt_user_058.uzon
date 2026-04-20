@@ -1,0 +1,16 @@
+user is {
+    id is 10058 as u32
+    username is "steve058"
+    email is "steve58@sample.io"
+    display_name is "Steve #58"
+    city is "Zurich"
+    age is 26 as u8
+    verified is true
+    created is "2026-11-03T12:00:00Z"
+    login_count is 754 as u32
+    preferences is {
+        theme is "dark"
+        language is "ja"
+        notifications is true
+    }
+}

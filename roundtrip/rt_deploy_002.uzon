@@ -1,0 +1,12 @@
+deployment is {
+    id is "deploy-002"
+    environment is "canary"
+    region is "eu-west-1"
+    version is "1.2.2"
+    replicas is 3 as u8
+    image is "registry.example.com/app:1.2.2"
+    resources is { cpu_m is 220 as u16, memory_mb is 288 as u16 }
+    rollout is { max_surge is 3 as u8, max_unavailable is 0 as u8 }
+    created_at is "2026-04-03T02:00:00Z"
+    healthy is true
+}

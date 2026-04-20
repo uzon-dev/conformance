@@ -1,0 +1,14 @@
+// ERROR: §3.8 + §6.3 + §3.4
+// separately called function types — same signature, different names
+_shared is struct "./shared"
+
+formatPower is function m as _shared.BaseModule returns string {
+    "{m.power_kw}kW"
+} called PowerFormatter
+
+formatCrew is function m as _shared.BaseModule returns string {
+    "crew: {m.capacity}"
+} called CrewFormatter
+
+// PowerFormatter ≠ CrewFormatter — nominal identity
+bad is [ formatPower, formatCrew ] as [PowerFormatter]

@@ -1,0 +1,10 @@
+config is {
+    app_name is "service-11"
+    port is 3011 as u16
+    debug is false
+    log_level is "error"
+    max_connections is 160 as u16
+    timeout_sec is 85 as u16
+    version is "2.1.0"
+    region is "eu-west"
+}

@@ -1,0 +1,6 @@
+data is {
+    list_of_list_of_tuple is [ [ (1, "a"), (2, "b") ], [ (3, "c") ] ]
+    tuple_of_list_of_struct is ([ { x is 1 }, { x is 2 } ], [ { y is "a" }, { y is "b" } ])
+    struct_of_tuple_of_list is { pair is ([ 1, 2, 3 ], [ "a", "b", "c" ]) }
+    list_of_tuple_of_list is [ ([ 1 ], [ "x" ]), ([ 2, 3 ], [ "y", "z" ]) ]
+}

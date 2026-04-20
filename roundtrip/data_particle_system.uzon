@@ -1,0 +1,17 @@
+emitter is {
+    position is (0.0, 0.0, 0.0)
+    rate is 100.0
+    lifetime is (0.5, 2.0)
+    initial_speed is (10.0, 50.0)
+    direction is { cone_angle is 30.0, base is (0.0, 1.0, 0.0) }
+    gravity is (0.0, -9.81, 0.0)
+    color_over_lifetime is [
+        { t is 0.0, color is (255 as u8, 200 as u8, 50 as u8, 255 as u8) },
+        { t is 0.3, color is (255 as u8, 100 as u8, 0 as u8, 200 as u8) },
+        { t is 0.7, color is (200 as u8, 50 as u8, 0 as u8, 100 as u8) },
+        { t is 1.0, color is (100 as u8, 20 as u8, 0 as u8, 0 as u8) }
+    ]
+    size_over_lifetime is [ { t is 0.0, size is 1.0 }, { t is 0.5, size is 2.0 }, { t is 1.0, size is 0.1 } ]
+    max_particles is 10000 as u32
+    blend_mode is "additive"
+}

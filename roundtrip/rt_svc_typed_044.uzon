@@ -1,0 +1,7 @@
+// Service configuration #44
+@type is "udp"
+name is "eta_44"
+port is 11457 as u16
+enabled is false
+max_connections is 644 as i32
+timeout_ms is 28234 as i32

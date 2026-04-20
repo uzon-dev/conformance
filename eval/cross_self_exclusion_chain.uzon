@@ -1,0 +1,4 @@
+// self-exclusion + or else + arithmetic
+a is a or else 10
+b is b or else a + 5
+c is c or else a * b

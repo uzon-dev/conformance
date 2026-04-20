@@ -1,0 +1,4 @@
+n is null
+is_null is null is null
+is_not_null is null is not null
+to_str is null to string

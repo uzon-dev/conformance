@@ -1,0 +1,11 @@
+// ERROR: §3.2.1 + §3.2.2
+// plus adds fields → with on result tries to add another
+_shared is struct "./shared"
+
+sensor is _shared.base_module plus {
+    range_km is 50000 as u32
+    resolution is 0.01 as f64
+}
+
+// sensor shape has 7 fields — "band" is not one of them
+bad is sensor with { band is "optical" }

@@ -1,0 +1,7 @@
+// Service configuration #196
+@type is "grpc"
+name is "path_196"
+port is 48674 as u16
+enabled is false
+max_connections is 9880 as i32
+timeout_ms is 27046 as i32

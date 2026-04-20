@@ -1,0 +1,5 @@
+endpoints is [
+    { path is "/tempo/api/v1/status", method is "GET", timeout_ms is 2800 as u32, auth is true },
+    { path is "/tempo/api/v1/config", method is "GET", timeout_ms is 3800 as u32, auth is true },
+    { path is "/tempo/api/v1/metrics", method is "GET", timeout_ms is 1400 as u32, auth is false }
+]

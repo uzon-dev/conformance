@@ -1,0 +1,8 @@
+empty_struct is { }
+empty_i32 is [] as [i32]
+empty_str is [] as [string]
+empty_bool is [] as [bool]
+nested_empty is {
+    items is [] as [i64]
+    config is { }
+}

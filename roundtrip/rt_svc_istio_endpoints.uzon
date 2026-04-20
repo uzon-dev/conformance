@@ -1,0 +1,5 @@
+endpoints is [
+    { path is "/istio/api/v1/status", method is "GET", timeout_ms is 2300 as u32, auth is false },
+    { path is "/istio/api/v1/config", method is "GET", timeout_ms is 3300 as u32, auth is true },
+    { path is "/istio/api/v1/metrics", method is "GET", timeout_ms is 1150 as u32, auth is false }
+]

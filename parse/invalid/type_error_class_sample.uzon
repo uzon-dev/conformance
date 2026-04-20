@@ -1,0 +1,4 @@
+// §11.2 canonical error-class prefix convention:
+// This file produces a type error (non-conformant `as`).
+// Conformant implementations SHOULD prefix the message with "TypeError:".
+bad is 42 as string

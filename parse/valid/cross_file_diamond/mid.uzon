@@ -1,0 +1,3 @@
+// Imports shared and re-exposes
+_shared is struct "./shared"
+status_copy is _shared.state

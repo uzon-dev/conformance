@@ -1,0 +1,3 @@
+// §3.2.2 plus requires struct
+x is 42
+bad is x plus { y is 1 }

@@ -1,0 +1,8 @@
+smiley is "\u{1F600}"
+heart is "\u{2764}"
+check is "\u{2713}"
+cross is "\u{2717}"
+null_char is "\u{0000}"
+max_bmp is "\u{FFFF}"
+supplementary is "\u{10000}"
+musical is "\u{1D11E}"

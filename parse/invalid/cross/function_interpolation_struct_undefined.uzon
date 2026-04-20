@@ -1,0 +1,7 @@
+// §3.8 + §4.4.1 + §5.11.2 + §3.1
+// function body produces interpolation with undefined field — runtime error
+base is { name is "test" } called Item
+format is function i as Item returns string {
+    "name={i.name}, missing={i.nonexistent}"
+}
+bad is format(base)

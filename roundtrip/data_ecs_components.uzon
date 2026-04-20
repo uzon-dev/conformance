@@ -1,0 +1,22 @@
+entities is [
+    {
+        id is 1 as u32
+        components is {
+            position is (100.0, 200.0)
+            velocity is (5.0, -3.0)
+            sprite is { texture is "player.png", width is 32 as u16, height is 32 as u16 }
+            health is { current is 80 as u16, max is 100 as u16 }
+            collider is { radius is 16.0 }
+        }
+    },
+    {
+        id is 2 as u32
+        components is {
+            position is (400.0, 300.0)
+            velocity is (-2.0, 0.0)
+            sprite is { texture is "enemy.png", width is 48 as u16, height is 48 as u16 }
+            health is { current is 50 as u16, max is 50 as u16 }
+            collider is { radius is 24.0 }
+        }
+    }
+]

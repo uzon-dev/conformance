@@ -1,0 +1,4 @@
+// §6.2 Type naming
+point is { x is 0 as i32, y is 0 as i32 } called Point
+origin is point
+cursor is { x is 100 as i32, y is 200 as i32 } as Point

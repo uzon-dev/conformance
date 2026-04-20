@@ -1,0 +1,19 @@
+// BitTorrent metainfo-like structure
+torrent is {
+    announce is "https://tracker.example.com/announce"
+    'announce-list' is [
+        [ "https://tracker1.example.com/announce", "https://tracker2.example.com/announce" ],
+        [ "udp://tracker3.example.com:6969/announce" ]
+    ]
+    'created by' is "UZON Torrent Creator 1.0"
+    'creation date' is 1712800000 as u64
+    info is {
+        name is "example-archive"
+        'piece length' is 262144 as u32
+        length is 104857600 as u64
+        files is [
+            { length is 52428800 as u64, path is [ "data", "part1.bin" ] },
+            { length is 52428800 as u64, path is [ "data", "part2.bin" ] }
+        ]
+    }
+}

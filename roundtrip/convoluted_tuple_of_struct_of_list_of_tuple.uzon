@@ -1,0 +1,6 @@
+complex is (
+    { pairs is [ (1, "a"), (2, "b"), (3, "c") ], count is 3 as u8 },
+    { pairs is [ (10, "x"), (20, "y") ], count is 2 as u8 },
+    "separator",
+    [ (100, "final") ]
+)

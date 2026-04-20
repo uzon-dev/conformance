@@ -1,0 +1,12 @@
+// Resource #178
+@type is "database"
+name is "database_178"
+region is "us-west-2"
+config is {
+    @type is "database_config"
+    engine is "postgres"
+    port is 3306 as u16
+    pool_size is 19 as u8
+    ssl is false
+}
+active is false

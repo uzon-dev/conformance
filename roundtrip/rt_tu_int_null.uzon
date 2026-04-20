@@ -1,0 +1,3 @@
+_r is null named none from some as i32, none as null called OptInt
+a is 42 as OptInt named some
+b is null as OptInt named none

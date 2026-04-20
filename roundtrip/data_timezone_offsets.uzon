@@ -1,0 +1,12 @@
+timezones is [
+    { id is "UTC", offset_min is 0 as i16, name is "Coordinated Universal Time" },
+    { id is "EST", offset_min is -300 as i16, name is "Eastern Standard Time" },
+    { id is "PST", offset_min is -480 as i16, name is "Pacific Standard Time" },
+    { id is "CET", offset_min is 60 as i16, name is "Central European Time" },
+    { id is "JST", offset_min is 540 as i16, name is "Japan Standard Time" },
+    { id is "KST", offset_min is 540 as i16, name is "Korea Standard Time" },
+    { id is "IST", offset_min is 330 as i16, name is "India Standard Time" },
+    { id is "NZST", offset_min is 720 as i16, name is "New Zealand Standard Time" },
+    { id is "HST", offset_min is -600 as i16, name is "Hawaii Standard Time" },
+    { id is "NPT", offset_min is 345 as i16, name is "Nepal Time" }
+]

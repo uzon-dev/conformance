@@ -1,0 +1,13 @@
+// plus + with + function interplay
+base is { x is 0 as i32, y is 0 as i32 } called Point
+
+p is base with { x is 3 as i32, y is 4 as i32 }
+
+extended is p plus { label is "A" }
+
+dist is function p as Point returns f64 {
+    (p.x to f64 ^ 2.0 + p.y to f64 ^ 2.0) ^ 0.5
+}
+
+d is dist(p)
+label is extended.label

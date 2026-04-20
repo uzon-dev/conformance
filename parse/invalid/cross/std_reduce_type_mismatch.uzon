@@ -1,0 +1,9 @@
+// §5.16.2 + §3.8
+// std.reduce: initial type must match function return type
+numbers are 1, 2, 3
+bad is std.reduce(
+    numbers,
+    "",
+    function acc as string, n as i64 returns i64 { n }
+)
+// initial is string, function returns i64 — type mismatch

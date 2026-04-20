@@ -1,0 +1,5 @@
+@type is "click"
+timestamp is 1713776553
+source is "value"
+url is "https://key.example.com/gamma"
+session_id is "dev_9996"

@@ -1,0 +1,3 @@
+// §2.4 — @enum and @tagged as escaped identifiers
+@enum is "keyword as identifier"
+@tagged is "also works"

@@ -1,0 +1,8 @@
+// §3.8: Parameters are part of function body scope — visible in nested structs
+f is function n as i32 returns i32 {
+    inner is {
+        x is n
+    }
+    inner.x
+}
+result is f(42)

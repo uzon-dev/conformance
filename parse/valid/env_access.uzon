@@ -1,0 +1,5 @@
+// §5.13 Environment variables
+home is env.HOME or else "/home/default"
+exists is env.HOME is not undefined
+missing is env.NONEXISTENT_VAR_12345
+fallback is missing or else "none"

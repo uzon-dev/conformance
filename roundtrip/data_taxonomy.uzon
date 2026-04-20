@@ -1,0 +1,15 @@
+taxonomy is {
+    kingdom is "Animalia"
+    phylum is "Chordata"
+    class is "Mammalia"
+    order is "Primates"
+    family is "Hominidae"
+    genus is "Homo"
+    species is "sapiens"
+    common_name is "Human"
+    characteristics is [
+        { trait is "bipedal", description is "Walks upright on two legs" },
+        { trait is "endothermic", description is "Warm-blooded" },
+        { trait is "encephalized", description is "Large brain relative to body size" }
+    ]
+}

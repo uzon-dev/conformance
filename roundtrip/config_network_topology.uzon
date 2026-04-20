@@ -1,0 +1,23 @@
+topology is {
+    datacenters is [
+        {
+            name is "dc-east"
+            region is "us-east-1"
+            racks is [
+                { id is "R1", servers is 40 as u8, capacity_pct is 85 as u8 },
+                { id is "R2", servers is 40 as u8, capacity_pct is 72 as u8 },
+                { id is "R3", servers is 40 as u8, capacity_pct is 90 as u8 }
+            ]
+            uplinks is [ { peer is "dc-west", bandwidth_gbps is 100 as u16, latency_ms is 45.2 } ]
+        },
+        {
+            name is "dc-west"
+            region is "us-west-2"
+            racks is [
+                { id is "R1", servers is 32 as u8, capacity_pct is 60 as u8 },
+                { id is "R2", servers is 32 as u8, capacity_pct is 55 as u8 }
+            ]
+            uplinks is [ { peer is "dc-east", bandwidth_gbps is 100 as u16, latency_ms is 45.2 } ]
+        }
+    ]
+}

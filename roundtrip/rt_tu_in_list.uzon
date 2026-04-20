@@ -1,0 +1,2 @@
+_r is null named n from y as string, n as null called MaybeStr
+items is [ "a" as MaybeStr named y, null as MaybeStr named n, "b" as MaybeStr named y ]

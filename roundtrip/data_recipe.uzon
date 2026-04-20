@@ -1,0 +1,28 @@
+recipe is {
+    name is "Chocolate Chip Cookies"
+    servings is 24 as u8
+    prep_time_min is 15 as u16
+    cook_time_min is 12 as u16
+    ingredients is [
+        { item is "flour", amount is 2.25, unit is "cups" },
+        { item is "butter", amount is 1.0, unit is "cup" },
+        { item is "sugar", amount is 0.75, unit is "cup" },
+        { item is "brown sugar", amount is 0.75, unit is "cup" },
+        { item is "eggs", amount is 2.0, unit is "large" },
+        { item is "vanilla", amount is 1.0, unit is "tsp" },
+        { item is "baking soda", amount is 1.0, unit is "tsp" },
+        { item is "salt", amount is 1.0, unit is "tsp" },
+        { item is "chocolate chips", amount is 2.0, unit is "cups" }
+    ]
+    steps is [
+        "Preheat oven to 375°F (190°C)",
+        "Mix flour, baking soda, and salt",
+        "Beat butter and sugars until creamy",
+        "Add eggs and vanilla to butter mixture",
+        "Gradually blend in flour mixture",
+        "Stir in chocolate chips",
+        "Drop by spoonfuls onto baking sheets",
+        "Bake 9-11 minutes or until golden brown"
+    ]
+    notes is "Let cool on baking sheet for 2 minutes before transferring"
+}

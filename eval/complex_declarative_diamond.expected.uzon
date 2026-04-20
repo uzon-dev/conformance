@@ -1,0 +1,10 @@
+// a=2, b=6, c=10, d=16, result=32
+// sum=16, product=60, ratio=10/6=1.666...
+result is 32
+d is 16
+b is 6
+c is 10
+a is 2
+sum is 16
+product is 60
+ratio is 1.6666666666666667

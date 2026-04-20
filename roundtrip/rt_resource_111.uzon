@@ -1,0 +1,11 @@
+// Resource #111
+@type is "network"
+name is "network_111"
+region is "us-east-1"
+config is {
+    @type is "network_config"
+    capacity is 5902 as i32
+    priority is 0 as u8
+}
+tags are "mode", "omicron", "backup"
+active is false

@@ -1,0 +1,5 @@
+// §5.10: case type on non-union value — statically known type
+x is 42
+result is case type x
+    when i64 then "integer"
+    else "other"

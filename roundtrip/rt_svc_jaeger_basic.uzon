@@ -1,0 +1,9 @@
+service is {
+    name is "jaeger"
+    version is "6.4.1"
+    port is 8019 as u16
+    health is "/health"
+    replicas is 4 as u8
+    resources is { cpu_m is 500 as u16, memory_mb is 512 as u16 }
+    labels is { app is "jaeger", tier is "backend" }
+}

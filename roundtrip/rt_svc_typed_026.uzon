@@ -1,0 +1,8 @@
+// Service configuration #26
+@type is "postgres"
+name is "alpha_26"
+port is 55813 as u16
+enabled is true
+max_connections is 3882 as i32
+timeout_ms is 5549 as i32
+tls is true

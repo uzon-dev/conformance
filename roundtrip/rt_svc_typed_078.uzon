@@ -1,0 +1,8 @@
+// Service configuration #78
+@type is "amqp"
+name is "beta_78"
+port is 23070 as u16
+enabled is false
+max_connections is 5335 as i32
+timeout_ms is 6058 as i32
+tls is false

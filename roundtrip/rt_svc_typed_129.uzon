@@ -1,0 +1,9 @@
+// Service configuration #129
+@type is "postgres"
+name is "node_129"
+port is 22520 as u16
+enabled is false
+max_connections is 1045 as i32
+timeout_ms is 20920 as i32
+retry_count is 4 as u8
+tls is false

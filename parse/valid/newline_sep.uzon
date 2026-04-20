@@ -1,0 +1,6 @@
+// §8 Newline as separator
+config is {
+    host is "localhost"
+    port is 8080
+    debug is true
+}

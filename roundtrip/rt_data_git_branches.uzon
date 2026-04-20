@@ -1,0 +1,7 @@
+branches is [
+    { name is "main", commit is "abc1234", behind is 0 as u32, ahead is 0 as u32, upstream is "origin/main", protected is true },
+    { name is "develop", commit is "def5678", behind is 2 as u32, ahead is 5 as u32, upstream is "origin/develop", protected is false },
+    { name is "feature/uzon-sort", commit is "ghi9012", behind is 10 as u32, ahead is 3 as u32, upstream is null, protected is false },
+    { name is "hotfix/login-bug", commit is "jkl3456", behind is 0 as u32, ahead is 1 as u32, upstream is "origin/hotfix/login-bug", protected is false }
+]
+head is "develop"

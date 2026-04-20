@@ -1,0 +1,34 @@
+locale is "en"
+fallback is "en"
+translations is {
+    en is {
+        greeting is "Hello, world!"
+        farewell is "Goodbye!"
+        errors is {
+            not_found is "Page not found"
+            unauthorized is "Access denied"
+            internal is "Something went wrong"
+        }
+        buttons is { submit is "Submit", cancel is "Cancel", retry is "Try again" }
+    }
+    ja is {
+        greeting is "こんにちは世界！"
+        farewell is "さようなら！"
+        errors is {
+            not_found is "ページが見つかりません"
+            unauthorized is "アクセスが拒否されました"
+            internal is "エラーが発生しました"
+        }
+        buttons is { submit is "送信", cancel is "キャンセル", retry is "再試行" }
+    }
+    ko is {
+        greeting is "안녕하세요!"
+        farewell is "안녕히 가세요!"
+        errors is {
+            not_found is "페이지를 찾을 수 없습니다"
+            unauthorized is "접근이 거부되었습니다"
+            internal is "문제가 발생했습니다"
+        }
+        buttons is { submit is "제출", cancel is "취소", retry is "재시도" }
+    }
+}

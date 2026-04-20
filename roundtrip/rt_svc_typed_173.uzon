@@ -1,0 +1,7 @@
+// Service configuration #173
+@type is "udp"
+name is "xi_173"
+port is 12837 as u16
+enabled is false
+max_connections is 7977 as i32
+timeout_ms is 6391 as i32

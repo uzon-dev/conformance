@@ -1,0 +1,16 @@
+user is {
+    id is 10117 as u32
+    username is "rachel117"
+    email is "rachel117@demo.net"
+    display_name is "Rachel #117"
+    city is "Stockholm"
+    age is 35 as u8
+    verified is false
+    created is "2026-10-06T12:00:00Z"
+    login_count is 1521 as u32
+    preferences is {
+        theme is "light"
+        language is "ko"
+        notifications is false
+    }
+}

@@ -1,0 +1,6 @@
+@type is "purchase"
+timestamp is 1707504382
+source is "lambda"
+amount is 258.74
+currency is "USD"
+item_count is 6 as u8

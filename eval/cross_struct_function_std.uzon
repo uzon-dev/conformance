@@ -1,0 +1,16 @@
+// struct + with + function + std.map + std.sort + join
+base is { name is "", score is 0 as i32 } called Entry
+
+entries are
+    base with { name is "Charlie", score is 70 as i32 },
+    base with { name is "Alice", score is 95 as i32 },
+    base with { name is "Bob", score is 85 as i32 }
+
+sorted is std.sort(
+    entries,
+    function a as Entry, b as Entry returns bool { a.score > b.score }
+)
+
+names is std.map(sorted, function e as Entry returns string { e.name })
+leaderboard is std.join(names, " > ")
+top is std.get(sorted, 0)

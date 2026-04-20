@@ -1,0 +1,9 @@
+// Roundtrip: inf/nan inside collections
+float_list is [ 1.0, inf, -inf, nan, 0.0 ]
+mixed_struct is {
+    reading is nan
+    limit is inf
+    floor is -inf
+    normal is 42.0
+}
+pair is (inf, nan)

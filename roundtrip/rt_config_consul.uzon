@@ -1,0 +1,12 @@
+datacenter is "us-east-1"
+node_name is "consul-server-1"
+server is true
+bootstrap_expect is 3 as u8
+bind_addr is "10.0.1.100"
+client_addr is "0.0.0.0"
+ui_config is { enabled is true, content_path is "/ui/" }
+services is [
+    { name is "web", port is 8080 as u16, tags is [ "production", "v3.2" ], check is { http is "http://localhost:8080/health", interval is "10s", timeout is "5s" } },
+    { name is "api", port is 3000 as u16, tags is [ "production", "grpc" ], check is { grpc is "localhost:3000", interval is "10s", timeout is "3s" } },
+    { name is "cache", port is 6379 as u16, tags is [ "production" ], check is { tcp is "localhost:6379", interval is "15s", timeout is "5s" } }
+]

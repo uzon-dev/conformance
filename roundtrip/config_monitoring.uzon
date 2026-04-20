@@ -1,0 +1,28 @@
+monitoring is {
+    prometheus is {
+        port is 9090 as u16
+        scrape_interval is "15s"
+        evaluation_interval is "15s"
+        targets is [
+            { job is "api", endpoints is [ "api-1:9100", "api-2:9100" ], interval is "10s" },
+            { job is "db", endpoints is [ "db-1:9187" ], interval is "30s" },
+            { job is "cache", endpoints is [ "redis:9121" ], interval is "15s" }
+        ]
+        rules is [
+            { name is "HighCPU", expr is "cpu_usage > 80", duration is "5m", severity is "warning" },
+            { name is "DiskFull", expr is "disk_usage > 90", duration is "1m", severity is "critical" },
+            { name is "HighLatency", expr is "p99_latency > 500", duration is "10m", severity is "warning" }
+        ]
+    }
+    alertmanager is {
+        port is 9093 as u16
+        routes is [
+            { match is "critical", receiver is "pagerduty" },
+            { match is "warning", receiver is "slack" }
+        ]
+        receivers is {
+            pagerduty is { key is "PD_SERVICE_KEY_HERE", url is "https://events.pagerduty.com/v2/enqueue" }
+            slack is { webhook is "https://hooks.slack.com/services/XXX", channel is "#alerts" }
+        }
+    }
+}

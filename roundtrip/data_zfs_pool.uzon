@@ -1,0 +1,29 @@
+pool is {
+    name is "tank"
+    state is "ONLINE"
+    scan is { @function is "scrub", state is "none_requested" }
+    vdevs is [
+        {
+            @type is "mirror"
+            state is "ONLINE"
+            devices is [
+                { path is "/dev/sda", state is "ONLINE", read_errors is 0 as u64, write_errors is 0 as u64, checksum_errors is 0 as u64 },
+                { path is "/dev/sdb", state is "ONLINE", read_errors is 0 as u64, write_errors is 0 as u64, checksum_errors is 0 as u64 }
+            ]
+        }
+    ]
+    properties is {
+        capacity is "62%"
+        size is "3.62T"
+        allocated is "2.25T"
+        free is "1.37T"
+        dedup_ratio is 1.0
+        compression_ratio is 1.85
+        fragmentation is "12%"
+    }
+    datasets is [
+        { name is "tank/home", used is "500G", quota is "1T", mountpoint is "/home" },
+        { name is "tank/data", used is "1.5T", quota is "none", mountpoint is "/data" },
+        { name is "tank/backup", used is "250G", quota is "500G", mountpoint is "/backup" }
+    ]
+}

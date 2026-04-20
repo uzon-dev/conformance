@@ -1,0 +1,4 @@
+// §3.8 Function — named type
+isEven is function n as i32 returns bool { n % 2 is 0 } called IntPredicate
+isPos is function n as i32 returns bool { n > 0 } as IntPredicate
+preds is [ isEven, isPos ] as [IntPredicate]

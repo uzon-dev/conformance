@@ -1,0 +1,8 @@
+_node_kind is "literal" named literal from
+    literal as i64, ident as string
+    called ASTNodeKind
+
+program is [
+    { binding_type is "binding", name is "x", value is 42 as ASTNodeKind named literal },
+    { binding_type is "binding", name is "y", value is "x" as ASTNodeKind named ident }
+]

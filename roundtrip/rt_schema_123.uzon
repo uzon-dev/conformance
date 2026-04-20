@@ -1,0 +1,8 @@
+// Schema definition #123
+@type is "schema"
+version is 2 as u8
+name is "enabled_schema_123"
+fields are
+        { name is "field_0", @type is "u16", required is true },
+        { name is "field_1", @type is "i32", required is true },
+        { name is "field_2", @type is "i64", required is true }

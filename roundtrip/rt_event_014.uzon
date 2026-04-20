@@ -1,0 +1,5 @@
+@type is "click"
+timestamp is 1705063406
+source is "staging"
+url is "https://nu.example.com/host"
+session_id is "alpha_6279"

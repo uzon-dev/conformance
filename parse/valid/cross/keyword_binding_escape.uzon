@@ -1,0 +1,11 @@
+// §2.5 + §2.3: Keywords as binding names require @ escape
+@true is 1
+@false is 2
+@type is "check"
+@from is "source"
+@to is "destination"
+@not is "negation"
+@and is "conjunction"
+@or is "disjunction"
+@in is "membership"
+@is is "equality"

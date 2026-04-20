@@ -1,0 +1,4 @@
+// §5.12: member access (.) on a function value is a type error
+// (not undefined propagation). Exception list in §5.12.
+f is function x as i32 returns i32 { x + 1 }
+bad is f.field

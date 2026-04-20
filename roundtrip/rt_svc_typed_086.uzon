@@ -1,0 +1,7 @@
+// Service configuration #86
+@type is "grpc"
+name is "alpha_86"
+port is 58218 as u16
+enabled is true
+max_connections is 7700 as i32
+timeout_ms is 15786 as i32

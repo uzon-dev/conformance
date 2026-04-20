@@ -1,0 +1,2 @@
+// §4.5 null to non-string/non-null is type error
+bad is null to i32

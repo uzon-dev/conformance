@@ -1,0 +1,24 @@
+survey is {
+    title is "Customer Satisfaction"
+    responses is 1247 as u32
+    questions is [
+        {
+            id is 1 as u8
+            text is "How satisfied are you with our service?"
+            @type is "rating"
+            results is { avg is 4.2, min is 1 as u8, max is 5 as u8, distribution is [ 23, 45, 187, 534, 458 ] }
+        },
+        {
+            id is 2 as u8
+            text is "Would you recommend us?"
+            @type is "boolean"
+            results is { yes is 987 as u32, no is 260 as u32, percentage is 79.1 }
+        },
+        {
+            id is 3 as u8
+            text is "What could we improve?"
+            @type is "text"
+            results is { total_responses is 834 as u32, top_words is [ "speed", "price", "support", "quality" ] }
+        }
+    ]
+}

@@ -1,0 +1,8 @@
+top is null
+in_struct is { a is null, b is null, c is 1 }
+in_list is [ null, null, null ] as [i32]
+in_tuple is (null, null, null)
+nested_struct is { x is { y is { z is null } } }
+in_list_struct is [ { v is null }, { v is 1 }, { v is null } ]
+in_tuple_list is [ (1, 2), (3, 4), (5, 6) ]
+deep is { a is { b is { c is { d is { e is null } } } } }

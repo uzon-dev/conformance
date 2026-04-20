@@ -1,0 +1,8 @@
+// Service configuration #180
+@type is "postgres"
+name is "theta_180"
+port is 56806 as u16
+enabled is false
+max_connections is 2636 as i32
+timeout_ms is 9038 as i32
+tls is true

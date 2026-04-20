@@ -1,0 +1,15 @@
+certificate is {
+    subject is "CN=example.com"
+    issuer is "CN=Let's Encrypt Authority X3, O=Let's Encrypt, C=US"
+    serial is "03:AB:CD:EF:12:34:56:78:9A:BC:DE:F0:12:34:56:78"
+    valid_from is "2026-01-01T00:00:00Z"
+    valid_to is "2026-04-01T00:00:00Z"
+    fingerprint_sha256 is "AB:CD:EF:01:23:45:67:89:AB:CD:EF:01:23:45:67:89:AB:CD:EF:01:23:45:67:89:AB:CD:EF:01:23:45:67:89"
+    san is [ "example.com", "*.example.com", "www.example.com" ]
+    key_algorithm is "ECDSA"
+    key_size is 256 as u16
+    signature_algorithm is "SHA256withECDSA"
+    ocsp_url is "http://ocsp.letsencrypt.org"
+    is_ca is false
+    expired is false
+}

@@ -1,0 +1,9 @@
+service is {
+    name is "tempo"
+    version is "6.3.0"
+    port is 8018 as u16
+    health is "/health"
+    replicas is 3 as u8
+    resources is { cpu_m is 400 as u16, memory_mb is 384 as u16 }
+    labels is { app is "tempo", tier is "frontend" }
+}

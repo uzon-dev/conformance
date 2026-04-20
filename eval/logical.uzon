@@ -1,0 +1,10 @@
+a is true and true
+b is true and false
+c is false and true
+d is true or false
+e is false or true
+f is false or false
+g is not true
+h is not false
+i is true and not false
+j is false or not false

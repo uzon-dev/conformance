@@ -1,0 +1,4 @@
+@type is "heartbeat"
+timestamp is 1707221208
+source is "alpha"
+detail is "rho_207"

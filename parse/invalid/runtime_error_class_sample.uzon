@@ -1,0 +1,2 @@
+// §11.2: this file produces a runtime error (overflow via `to`).
+bad is 1000000 as i32 to u8

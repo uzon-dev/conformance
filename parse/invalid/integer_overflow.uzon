@@ -1,0 +1,3 @@
+// §5.3 Integer overflow is runtime error
+x is 255 as u8
+bad is x + 1 as u8               // 256 exceeds u8 range

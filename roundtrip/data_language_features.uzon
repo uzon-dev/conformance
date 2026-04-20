@@ -1,0 +1,7 @@
+languages is [
+    { name is "Zig", paradigm is [ "imperative", "systems" ], gc is false, typing is "static", year is 2016 as u16, mascot is "Ziggy" },
+    { name is "Rust", paradigm is [ "imperative", "functional", "systems" ], gc is false, typing is "static", year is 2010 as u16, mascot is "Ferris" },
+    { name is "Go", paradigm is [ "imperative", "concurrent" ], gc is true, typing is "static", year is 2009 as u16, mascot is "Gopher" },
+    { name is "Python", paradigm is [ "imperative", "oop", "functional" ], gc is true, typing is "dynamic", year is 1991 as u16, mascot is null },
+    { name is "Haskell", paradigm is [ "functional", "lazy" ], gc is true, typing is "static", year is 1990 as u16, mascot is null }
+]

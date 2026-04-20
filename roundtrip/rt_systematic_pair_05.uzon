@@ -1,0 +1,7 @@
+pair is {
+    key is "item_05"
+    value is 542
+    weight is 1.0
+    enabled is false
+    tags is [ "tag_0", "group_2" ]
+}

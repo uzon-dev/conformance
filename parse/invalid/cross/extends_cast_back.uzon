@@ -1,0 +1,4 @@
+// §3.2.2 + §6.3: plus always produces new type — cannot cast back
+base is { x is 1 as i32, y is 2 as i32 } called Point
+extended is base plus { z is 3 as i32 }
+bad is extended as Point    // different shape — type error

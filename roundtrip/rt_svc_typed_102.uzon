@@ -1,0 +1,7 @@
+// Service configuration #102
+@type is "mqtt"
+name is "enabled_102"
+port is 41828 as u16
+enabled is true
+max_connections is 855 as i32
+timeout_ms is 6770 as i32

@@ -1,0 +1,3 @@
+// §3.6 Untagged union
+as_string is "hello" from union string, i32
+as_int is 42 from union string, i32

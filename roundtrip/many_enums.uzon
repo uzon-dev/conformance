@@ -1,0 +1,19 @@
+_http is GET from GET, POST, PUT, DELETE, PATCH, HEAD, OPTIONS called HttpMethod
+_mime is json from json, xml, html, text, binary called MimeType
+_status is ok from ok, created, bad_request, unauthorized, forbidden, not_found, internal called HttpStatus
+_log is debug from debug, info, warn, error, fatal called LogLevel
+
+endpoint is {
+    method is POST as HttpMethod
+    path is "/api/users"
+    accepts is json as MimeType
+    produces is json as MimeType
+    success is created as HttpStatus
+    log_level is info as LogLevel
+    errors is [
+        { status is bad_request as HttpStatus, reason is "Invalid input" },
+        { status is unauthorized as HttpStatus, reason is "Missing token" },
+        { status is forbidden as HttpStatus, reason is "Insufficient permissions" },
+        { status is internal as HttpStatus, reason is "Unexpected error" }
+    ]
+}

@@ -1,0 +1,35 @@
+_mode is dev from dev, staging, prod called Mode
+_result is null named none from some as string, none as null called Optional
+
+config is {
+    @type is "app_config"
+    'Content-Type' is "application/uzon"
+    mode is prod as Mode
+    version is (1, 0, 0)
+    name is "test"
+    active is true
+    timeout is null
+    max_retries is 3 as u8
+    pi is 3.14159 as f64
+    limit is inf
+    invalid is nan
+    tags are "alpha", "beta", "gamma"
+    secret is "pass\{word}" 
+    nested is {
+        deep is {
+            value is 42 as i32
+            optional is "found" as Optional named some
+            empty is null as Optional named none
+        }
+    }
+    matrix is [ [ 1, 2 ], [ 3, 4 ] ]
+    pairs is [ (1, "a"), (2, "b") ]
+    mixed_tuple is ("text", 42, true, null, [ 1 ], { x is 0 })
+    flags is {
+        @if is true
+        @else is false
+        @null is "not null"
+    }
+    empty_list is [] as [i32]
+    empty_struct is { }
+}

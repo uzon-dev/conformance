@@ -1,0 +1,4 @@
+record_count is 3
+name_list is "alice, bob, charlie"
+role_list is "admin, editor, viewer"
+rebuilt is "alice | 25 | admin\nbob | 30 | editor\ncharlie | 22 | viewer"

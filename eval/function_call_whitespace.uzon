@@ -1,0 +1,8 @@
+add is function a as i32, b as i32 returns i32 { a + b }
+
+r1 is add(1, 2)
+r2 is add (1, 2)
+r3 is add(1,
+    2
+)
+r4 is add   (   1   ,   2   )

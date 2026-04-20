@@ -1,0 +1,24 @@
+_route is {
+    match is ""
+    handler is ""
+    upstream is null
+    root is null
+} called Route
+
+sites is [
+    {
+        domain is "example.com"
+        tls is { email is "admin@example.com", dns is "cloudflare" }
+        routes is [
+            _route with { match is "/api/*", handler is "reverse_proxy", upstream is "localhost:8080" },
+            _route with { match is "/static/*", handler is "file_server", root is "/var/www/static" },
+            _route with { match is "/*", handler is "reverse_proxy", upstream is "localhost:3000" }
+        ] as [Route]
+        headers is {
+            'X-Frame-Options' is "DENY"
+            'X-Content-Type-Options' is "nosniff"
+            'Referrer-Policy' is "strict-origin-when-cross-origin"
+        }
+        encode is [ "gzip", "zstd" ]
+    }
+]

@@ -1,0 +1,9 @@
+// §3.8 + §4.4.1: Parameters visible in nested struct string interpolation
+greet is function name as string, age as i32 returns string {
+    card is {
+        line1 is "Name: {name}"
+        line2 is "Age: {age}"
+    }
+    card.line1 ++ " | " ++ card.line2
+}
+result is greet("Alice", 30)

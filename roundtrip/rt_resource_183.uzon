@@ -1,0 +1,11 @@
+// Resource #183
+@type is "network"
+name is "network_183"
+region is "eu-west-1"
+config is {
+    @type is "network_config"
+    capacity is 4522 as i32
+    priority is 3 as u8
+}
+tags are "eta"
+active is false

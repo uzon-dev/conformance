@@ -1,0 +1,4 @@
+// §5.13 env variable names that match keywords require @ escape
+t is env.@type or else "default"
+d is env.@default or else "x"
+ty is env.@from or else "y"

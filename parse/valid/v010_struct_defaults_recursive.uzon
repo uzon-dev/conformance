@@ -1,0 +1,8 @@
+// §3.2 v0.10 — Nested struct defaults apply recursively
+Point is struct { x is 0 as i32, y is 0 as i32 }
+Shape is struct {
+    origin is {} as Point
+    size is 10 as i32
+}
+default_shape is {} as Shape
+moved is { origin is { x is 5 } as Point } as Shape

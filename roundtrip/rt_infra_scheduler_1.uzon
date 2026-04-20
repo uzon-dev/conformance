@@ -1,0 +1,12 @@
+service is {
+    name is "scheduler-1"
+    host is "127.0.0.1"
+    port is 3181 as u16
+    workers is 4 as u8
+    max_conn is 1200 as u16
+    tls is true
+    log_level is "info"
+    health is { path is "/health", interval_sec is 10 as u16, timeout_sec is 3 as u16 }
+    tags is [ "scheduler", "v2.0", "staging" ]
+    limits is { cpu_m is 500 as u16, memory_mb is 256 as u16 }
+}

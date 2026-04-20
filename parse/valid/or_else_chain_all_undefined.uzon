@@ -1,0 +1,5 @@
+// §5.7: or else chain where every left-hand side is undefined produces
+// undefined as the binding value. This is valid (undefined binding);
+// attempting to use the value in a terminal context (interpolation,
+// arithmetic) would be a runtime error.
+result is env.A or else env.B or else env.C

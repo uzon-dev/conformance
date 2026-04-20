@@ -1,0 +1,5 @@
+@type is "click"
+timestamp is 1701298197
+source is "iota"
+url is "https://lambda.example.com/server"
+session_id is "port_8171"

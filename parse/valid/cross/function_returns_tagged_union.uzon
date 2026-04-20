@@ -1,0 +1,14 @@
+// §3.8 + §3.7: function returning tagged union
+_result is "ok" named ok from ok as string, err as string called Result
+
+validate is function input as string returns Result {
+    if std.len(input) > 0
+        then input as Result named ok
+        else "empty input" as Result named err
+}
+
+check is validate("hello")
+is_ok is check is named ok
+
+bad is validate("")
+is_err is bad is named err

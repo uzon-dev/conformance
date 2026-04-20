@@ -1,0 +1,8 @@
+// Service configuration #149
+@type is "grpc"
+name is "dev_149"
+port is 23969 as u16
+enabled is false
+max_connections is 4574 as i32
+timeout_ms is 18912 as i32
+tls is true

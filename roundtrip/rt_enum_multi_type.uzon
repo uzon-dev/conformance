@@ -1,0 +1,4 @@
+_a is x from x, y called TypeA
+_b is p from p, q, r called TypeB
+_c is m from m, n called TypeC
+data is { a is y as TypeA, b is r as TypeB, c is m as TypeC }

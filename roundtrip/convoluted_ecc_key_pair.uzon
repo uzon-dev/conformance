@@ -1,0 +1,26 @@
+key is {
+    algorithm is "Ed25519"
+    public is {
+        x is "base64url_encoded_x_coordinate_32_bytes_long_xxxxxxxxxxxxxxx"
+        y is "base64url_encoded_y_coordinate_32_bytes_long_yyyyyyyyyyyyyyy"
+        compressed is "base64url_encoded_compressed_33_bytes_zzzzzzzzzzzzzzzzz"
+    }
+    metadata is {
+        kid is "key-2026-04-11"
+        use is "sig"
+        alg is "EdDSA"
+        created is "2026-04-11T00:00:00Z"
+        expires is "2027-04-11T00:00:00Z"
+        revoked is false
+        fingerprint is "SHA256:abcdefghijklmnopqrstuvwxyz012345"
+    }
+    usage is {
+        sign is true
+        verify is true
+        encrypt is false
+        decrypt is false
+        derive is false
+        wrap is false
+        unwrap is false
+    }
+}

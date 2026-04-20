@@ -1,0 +1,14 @@
+product is {
+    sku is "SKU-SPO-0051"
+    name is "Sports Item 51"
+    category is "sports"
+    price is 35.49
+    currency is "USD"
+    stock is 153 as u16
+    weight_g is 610 as u32
+    dimensions is (21.0, 11.0, 3.0)
+    rating is 4.1
+    reviews is 357 as u16
+    active is true
+    tags is [ "sports", "sale" ]
+}

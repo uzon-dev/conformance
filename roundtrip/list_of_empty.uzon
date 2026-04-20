@@ -1,0 +1,3 @@
+empty_structs is [ { }, { }, { } ]
+empty_strings is [ "", "", "" ]
+empty_lists is [ [] as [i32], [] as [i32] ]

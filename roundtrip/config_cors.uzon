@@ -1,0 +1,8 @@
+cors is {
+    origins is [ "https://example.com", "https://app.example.com", "https://admin.example.com" ]
+    methods is [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
+    headers is [ "Content-Type", "Authorization", "X-Request-ID" ]
+    exposed_headers is [ "X-Total-Count", "X-Page-Count" ]
+    max_age_sec is 86400 as u32
+    credentials is true
+}

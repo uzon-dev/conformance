@@ -1,0 +1,6 @@
+// §5.10 + §5.9: all case branches must have same type
+x is 1
+bad is case x
+    when 1 then "string"
+    when 2 then 42
+    else true

@@ -1,0 +1,13 @@
+graph is {
+    nodes is [ "A", "B", "C", "D", "E", "F" ]
+    edges is {
+        A is [ "B", "C" ]
+        B is [ "A", "D", "E" ]
+        C is [ "A", "F" ]
+        D is [ "B" ]
+        E is [ "B", "F" ]
+        F is [ "C", "E" ]
+    }
+    directed is false
+    weighted is false
+}

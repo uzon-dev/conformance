@@ -1,0 +1,14 @@
+product is {
+    sku is "SKU-TOY-0125"
+    name is "Toys Item 125"
+    category is "toys"
+    price is 72.49
+    currency is "USD"
+    stock is 375 as u16
+    weight_g is 1350 as u32
+    dimensions is (15.0, 10.0, 7.0)
+    rating is 3.5
+    reviews is 875 as u16
+    active is false
+    tags is [ "toys", "featured" ]
+}

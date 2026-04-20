@@ -1,0 +1,16 @@
+// §3.8 + §5.13: zero-param function as deferred env access
+getPort is function returns u16 {
+    env.PORT to u16 or else 8080
+}
+
+getHost is function returns string {
+    std.trim(env.HOST or else "  localhost  ")
+}
+
+getUrl is function returns string {
+    host is getHost()
+    port is getPort()
+    "http://{host}:{port}"
+}
+
+server_url is getUrl()

@@ -1,0 +1,29 @@
+module is {
+    name is "main"
+    target is "x86_64-unknown-linux-gnu"
+    data_layout is "e-m:e-p270:32:32-p271:32:32-p272:64:64-i64:64-f80:128-n8:16:32:64-S128"
+    globals is [
+        { name is "@greeting", @type is "[14 x i8]", linkage is "private", constant is true, value is "Hello, UZON!\0A\00" }
+    ]
+    functions is [
+        {
+            name is "@main"
+            return_type is "i32"
+            params is [] as [string]
+            basic_blocks is [
+                { label is "entry", instructions is [
+                    "call i32 @puts(i8* getelementptr ([14 x i8], [14 x i8]* @greeting, i64 0, i64 0))",
+                    "ret i32 0"
+                ] }
+            ]
+            attributes is [ "nounwind", "uwtable" ]
+        },
+        {
+            name is "@puts"
+            return_type is "i32"
+            params is [ { name is "%str", @type is "i8*" } ]
+            basic_blocks is [] as [string]
+            attributes is [ "nounwind" ]
+        }
+    ]
+}

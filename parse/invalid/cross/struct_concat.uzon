@@ -1,0 +1,4 @@
+// §5.8.2 + §3.2: concatenation only on string/list — not struct
+a is { x is 1 }
+b is { y is 2 }
+bad is a ++ b

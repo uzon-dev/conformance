@@ -1,0 +1,12 @@
+// Resource #115
+@type is "cache"
+name is "cache_115"
+region is "us-east-1"
+config is {
+    @type is "cache_config"
+    backend is "memcached"
+    ttl_seconds is 3890 as i32
+    max_memory_mb is 720 as u16
+}
+tags are "name", "sigma", "omicron"
+active is true

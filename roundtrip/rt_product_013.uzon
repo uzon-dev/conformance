@@ -1,0 +1,14 @@
+product is {
+    sku is "SKU-ART-0013"
+    name is "Art Item 13"
+    category is "art"
+    price is 16.49
+    currency is "USD"
+    stock is 39 as u16
+    weight_g is 230 as u32
+    dimensions is (23.0, 18.0, 5.0)
+    rating is 4.3
+    reviews is 91 as u16
+    active is true
+    tags is [ "art", "new" ]
+}

@@ -1,0 +1,7 @@
+// §5.15 + §8: ( on next line is always a new expression, never a call
+// So a is n, then (a, a) is the return tuple — no ambiguity
+make_pair is function n as i32 returns (i32, i32) {
+    a is n
+    (a, a)
+}
+result is make_pair(5)

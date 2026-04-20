@@ -1,0 +1,23 @@
+loggers is [
+    {
+        name is "app"
+        file is "/var/log/app/app.log"
+        level is "info"
+        rotation is { max_size_mb is 100 as u16, max_files is 10 as u8, compress is true, max_age_days is 30 as u16 }
+        fields is [ "timestamp", "level", "logger", "message", "trace_id" ]
+    },
+    {
+        name is "access"
+        file is "/var/log/app/access.log"
+        level is "info"
+        rotation is { max_size_mb is 500 as u16, max_files is 5 as u8, compress is true, max_age_days is 7 as u16 }
+        fields is [ "timestamp", "method", "path", "status", "latency_ms", "client_ip" ]
+    },
+    {
+        name is "audit"
+        file is "/var/log/app/audit.log"
+        level is "info"
+        rotation is { max_size_mb is 50 as u16, max_files is 100 as u8, compress is true, max_age_days is 365 as u16 }
+        fields is [ "timestamp", "actor", "action", "resource", "result" ]
+    }
+]

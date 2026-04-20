@@ -1,0 +1,8 @@
+_perm is none from none, read, write, admin called Permission
+
+roles is {
+    guest is { users is read as Permission, posts is read as Permission, settings is none as Permission, admin is none as Permission }
+    user is { users is read as Permission, posts is write as Permission, settings is read as Permission, admin is none as Permission }
+    moderator is { users is read as Permission, posts is admin as Permission, settings is read as Permission, admin is none as Permission }
+    admin is { users is admin as Permission, posts is admin as Permission, settings is admin as Permission, admin is admin as Permission }
+}

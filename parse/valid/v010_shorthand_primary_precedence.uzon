@@ -1,0 +1,10 @@
+// §3.7 + §5.5 v0.10 — variant shorthand is primary level
+// pressed "enter" as Event parses as (pressed "enter") as Event
+// NOT as pressed ("enter" as Event) which would fail (string vs Event)
+Event is tagged union pressed as string, released as string
+
+e1 is pressed "enter" as Event
+// e1 = ("enter" as Event named pressed)
+
+e2 is released "ctrl" as Event
+// e2 = ("ctrl" as Event named released)

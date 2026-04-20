@@ -1,0 +1,9 @@
+// Typed record #2
+id is 801369
+active_0 is 335 as i32
+test_1 is 737.5377
+debug_2 is -412239
+omicron_3 is 500.34
+prod_4 is 6933 as u32
+staging_5 is -934.875
+mu_6 is -85.6

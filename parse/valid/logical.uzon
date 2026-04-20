@@ -1,0 +1,6 @@
+// §5.6 Logical operators
+a is true and false           // false
+o is true or false            // true
+n is not true                 // false
+combined is true and not false
+short_circuit is false and (1 / 0 is 0)   // false — right side not evaluated

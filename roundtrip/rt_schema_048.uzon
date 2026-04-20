@@ -1,0 +1,7 @@
+// Schema definition #48
+@type is "schema"
+version is 5 as u8
+name is "path_schema_48"
+fields are
+        { name is "field_0", @type is "bool", required is false },
+        { name is "field_1", @type is "i64", required is false }

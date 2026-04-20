@@ -1,0 +1,4 @@
+// §5.11.0: cross-signedness widening where all source values fit in
+// target is always valid. u64.MAX = 2^64-1 fits in i128 (signed 128-bit).
+a is 9223372036854775807 as u64
+b is a to i128

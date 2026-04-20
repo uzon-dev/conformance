@@ -1,0 +1,35 @@
+_restart is always from always, on_failure, never called RestartPolicy
+_protocol is tcp from tcp, udp, http, grpc called Protocol
+
+services is [
+    {
+        name is "frontend"
+        image is "frontend:3.2"
+        replicas is 3 as u8
+        ports is [ { container is 3000 as u16, host is 80 as u16, protocol is http as Protocol } ]
+        restart is always as RestartPolicy
+        resources is { cpu_m is 500 as u16, memory_mb is 512 as u16 }
+        @env is { API_URL is "http://backend:8080", LOG_LEVEL is "warn" }
+    },
+    {
+        name is "backend"
+        image is "backend:5.1"
+        replicas is 5 as u8
+        ports is [
+            { container is 8080 as u16, host is 8080 as u16, protocol is http as Protocol },
+            { container is 9090 as u16, host is 9090 as u16, protocol is grpc as Protocol }
+        ]
+        restart is on_failure as RestartPolicy
+        resources is { cpu_m is 1000 as u16, memory_mb is 1024 as u16 }
+        @env is { DB_URL is "postgres://db:5432/app", CACHE_URL is "redis://cache:6379" }
+    },
+    {
+        name is "worker"
+        image is "worker:5.1"
+        replicas is 2 as u8
+        ports is [] as [string]
+        restart is on_failure as RestartPolicy
+        resources is { cpu_m is 2000 as u16, memory_mb is 2048 as u16 }
+        @env is { QUEUE_URL is "amqp://rabbit:5672", CONCURRENCY is "8" }
+    }
+]

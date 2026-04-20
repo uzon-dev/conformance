@@ -1,0 +1,9 @@
+_container is null named empty from
+    single as i32, pair as (i32, i32), empty as null
+    called Container
+
+items is [
+    42 as Container named single,
+    (10, 20) as Container named pair,
+    null as Container named empty
+]

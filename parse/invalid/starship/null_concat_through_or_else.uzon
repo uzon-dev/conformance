@@ -1,0 +1,8 @@
+// ERROR: §4.5 + §5.8.2 + §5.7
+// null passes through or else (not undefined), then concat with string fails
+value is null
+recovered is value or else "fallback"
+
+// recovered is null (null passes through or else)
+// null ++ string → type error
+bad is recovered ++ " suffix"

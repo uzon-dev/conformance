@@ -1,0 +1,6 @@
+// §3.8: Multiline string suppression — strings are separate expressions
+f is function returns string {
+    prefix is "hello"
+    "world"
+}
+result is f()

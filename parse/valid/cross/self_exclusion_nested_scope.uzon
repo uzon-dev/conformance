@@ -1,0 +1,8 @@
+// §5.12 Self-exclusion with nested scopes (not same-scope duplicate)
+x is 1
+inner is {
+    x is x + 1
+    deeper is {
+        x is x + 10
+    }
+}

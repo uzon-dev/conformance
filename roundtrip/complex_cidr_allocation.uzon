@@ -1,0 +1,23 @@
+network is {
+    vpc is "10.0.0.0/16"
+    subnets is {
+        public is [
+            { cidr is "10.0.0.0/24", az is "a", available_ips is 251 as u16, used is 23 as u16 },
+            { cidr is "10.0.1.0/24", az is "b", available_ips is 251 as u16, used is 15 as u16 },
+            { cidr is "10.0.2.0/24", az is "c", available_ips is 251 as u16, used is 8 as u16 }
+        ]
+        private is [
+            { cidr is "10.0.10.0/24", az is "a", available_ips is 251 as u16, used is 45 as u16 },
+            { cidr is "10.0.11.0/24", az is "b", available_ips is 251 as u16, used is 38 as u16 },
+            { cidr is "10.0.12.0/24", az is "c", available_ips is 251 as u16, used is 12 as u16 }
+        ]
+        database is [
+            { cidr is "10.0.20.0/24", az is "a", available_ips is 251 as u16, used is 3 as u16 },
+            { cidr is "10.0.21.0/24", az is "b", available_ips is 251 as u16, used is 3 as u16 }
+        ]
+    }
+    route_tables is [
+        { name is "public-rt", routes is [ { dest is "0.0.0.0/0", target is "igw-abc123" }, { dest is "10.0.0.0/16", target is "local" } ] },
+        { name is "private-rt", routes is [ { dest is "0.0.0.0/0", target is "nat-def456" }, { dest is "10.0.0.0/16", target is "local" } ] }
+    ]
+}

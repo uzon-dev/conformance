@@ -1,0 +1,5 @@
+@type is "pageview"
+timestamp is 1729830361
+source is "port"
+url is "https://omicron.example.com/upsilon"
+session_id is "key_6428"

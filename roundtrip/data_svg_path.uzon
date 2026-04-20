@@ -1,0 +1,6 @@
+paths is [
+    { id is "triangle", d is "M 10 80 L 50 10 L 90 80 Z", fill is "#FF6B6B", stroke is "#333" },
+    { id is "circle", d is "M 50 10 A 40 40 0 1 1 50 90 A 40 40 0 1 1 50 10", fill is "#4ECDC4", stroke is "#333" },
+    { id is "star", d is "M 50 5 L 63 38 L 98 38 L 68 59 L 79 95 L 50 73 L 21 95 L 32 59 L 2 38 L 37 38 Z", fill is "#FFE66D", stroke is "#333" }
+]
+viewbox is (0, 0, 100, 100)

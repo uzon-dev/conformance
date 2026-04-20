@@ -1,0 +1,16 @@
+user is {
+    id is 10021 as u32
+    username is "bob021"
+    email is "bob21@test.org"
+    display_name is "Bob #21"
+    city is "LA"
+    age is 39 as u8
+    verified is false
+    created is "2026-10-22T12:00:00Z"
+    login_count is 273 as u32
+    preferences is {
+        theme is "light"
+        language is "ko"
+        notifications is false
+    }
+}

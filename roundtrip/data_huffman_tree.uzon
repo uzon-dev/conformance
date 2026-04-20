@@ -1,0 +1,16 @@
+tree is {
+    symbol is null
+    freq is 100 as u32
+    left is {
+        symbol is null
+        freq is 45 as u32
+        left is { symbol is "a", freq is 20 as u32, left is null, right is null }
+        right is { symbol is "b", freq is 25 as u32, left is null, right is null }
+    }
+    right is {
+        symbol is null
+        freq is 55 as u32
+        left is { symbol is "c", freq is 25 as u32, left is null, right is null }
+        right is { symbol is "d", freq is 30 as u32, left is null, right is null }
+    }
+}

@@ -1,0 +1,3 @@
+// §3.4.2: (T) is grouping, (T,) is 1-tuple type
+f1 is function returns (i32) { 42 }          // returns i32 (grouping)
+f2 is function returns (i32,) { (42,) }      // returns 1-tuple

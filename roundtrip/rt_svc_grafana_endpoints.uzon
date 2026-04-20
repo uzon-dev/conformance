@@ -1,0 +1,5 @@
+endpoints is [
+    { path is "/grafana/api/v1/status", method is "GET", timeout_ms is 2500 as u32, auth is false },
+    { path is "/grafana/api/v1/config", method is "GET", timeout_ms is 3500 as u32, auth is true },
+    { path is "/grafana/api/v1/metrics", method is "GET", timeout_ms is 1250 as u32, auth is false }
+]

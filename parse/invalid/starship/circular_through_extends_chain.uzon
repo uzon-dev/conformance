@@ -1,0 +1,4 @@
+// ERROR: §11.2.1 + §3.2.2
+// circular dependency through plus
+config_a is config_b plus { extra_a is 1 }
+config_b is config_a plus { extra_b is 2 }

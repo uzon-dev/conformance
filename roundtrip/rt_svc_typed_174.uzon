@@ -1,0 +1,8 @@
+// Service configuration #174
+@type is "grpc"
+name is "eta_174"
+port is 20409 as u16
+enabled is true
+max_connections is 8853 as i32
+timeout_ms is 27465 as i32
+retry_count is 8 as u8

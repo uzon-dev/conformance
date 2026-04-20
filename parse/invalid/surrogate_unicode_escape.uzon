@@ -1,0 +1,3 @@
+// §2.3 / §4.4: surrogate code points (U+D800 - U+DFFF) are not valid
+// Unicode scalar values and MUST be rejected in string escapes.
+s is "\u{D800}"

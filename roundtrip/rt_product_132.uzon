@@ -1,0 +1,14 @@
+product is {
+    sku is "SKU-MUS-0132"
+    name is "Music Item 132"
+    category is "music"
+    price is 75.99
+    currency is "USD"
+    stock is 396 as u16
+    weight_g is 1420 as u32
+    dimensions is (22.0, 17.0, 4.0)
+    rating is 4.2
+    reviews is 924 as u16
+    active is true
+    tags is [ "music", "sale" ]
+}

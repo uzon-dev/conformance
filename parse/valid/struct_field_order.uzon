@@ -1,0 +1,3 @@
+// §3.2 Struct field order preserved in declaration order
+config is { z is 3, a is 1, m is 2 }
+fields is std.keys(config)        // [ "z", "a", "m" ] — declaration order

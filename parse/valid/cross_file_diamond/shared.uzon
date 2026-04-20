@@ -1,0 +1,6 @@
+// Diamond: both main and mid import this.
+// §3.5 rule 2: `active as Status` forces variant resolution.
+// Without the `as Status`, `active` would be a bare binding ref
+// (unbound → undefined per §3.5 rule 4 fallback + §5.12).
+Status is enum active, inactive, pending
+state is active as Status

@@ -1,0 +1,9 @@
+// §9: Composite keyword lookahead crosses newlines
+x is env.UZON_UNSET_VAR
+r1 is x or
+    else "fallback"
+
+a is 5
+b is 3
+r2 is a is
+    not b

@@ -1,0 +1,4 @@
+// §7 Imported struct is anonymous — with/plus produces anonymous struct
+_config is { host is "localhost", port is 8080 }
+extended is _config plus { debug is true }
+overridden is _config with { port is 9090 }

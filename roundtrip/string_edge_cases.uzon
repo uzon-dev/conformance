@@ -1,0 +1,10 @@
+// Roundtrip: string edge cases
+empty is ""
+single_char is "x"
+all_escapes is "\\\"\n\t\r\0"
+braces is "literal \{braces}"
+unicode_multi is "日本語 한국어 中文"
+emoji_sequence is "👨‍👩‍👧‍👦 family"
+long_string is "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+newlines_only is "\n\n\n"
+mixed_escape is "path: C:\\Users\\test\\file.txt\nline2\ttab"

@@ -1,0 +1,8 @@
+// §5.10: case type — type dispatch on untagged union
+u is 42 from union i32, f64, string
+
+result is case type u
+    when i32 then "integer"
+    when f64 then "float"
+    when string then "text"
+    else "other"

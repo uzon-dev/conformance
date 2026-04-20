@@ -1,0 +1,17 @@
+// §6.2: Correct qualified type access through struct name
+outer is {
+    inner is green from green, red, blue called Color
+}
+x is red as outer.Color
+
+wrapper is {
+    data is {
+        item is { name is "", level is 0 as u8 } called Item
+    }
+}
+y is { name is "alpha", level is 3 as u8 } as wrapper.data.Item
+
+config is {
+    entry is { host is "", port is 0 as u16 } called Entry
+}
+format is function e as config.Entry returns string { e.host }

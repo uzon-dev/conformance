@@ -1,0 +1,8 @@
+// Service configuration #143
+@type is "graphql"
+name is "tau_143"
+port is 35794 as u16
+enabled is false
+max_connections is 9929 as i32
+timeout_ms is 14196 as i32
+tls is true

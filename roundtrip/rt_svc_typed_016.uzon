@@ -1,0 +1,8 @@
+// Service configuration #16
+@type is "redis"
+name is "theta_16"
+port is 2300 as u16
+enabled is true
+max_connections is 5048 as i32
+timeout_ms is 7946 as i32
+tls is true

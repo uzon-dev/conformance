@@ -1,0 +1,2 @@
+_status is active from active, paused, stopped called Status
+items is [ active, paused, stopped, active, paused ] as [Status]

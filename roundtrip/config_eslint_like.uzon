@@ -1,0 +1,18 @@
+linter is {
+    root is true
+    parser is "@typescript-eslint/parser"
+    plugins is [ "@typescript-eslint", "import", "react", "react-hooks" ]
+    @plus is [ "eslint:recommended", "plugin:@typescript-eslint/recommended", "plugin:react/recommended", "prettier" ]
+    rules is {
+        'no-console' is "warn"
+        'no-unused-vars' is "error"
+        'import/order' is "error"
+        'react-hooks/rules-of-hooks' is "error"
+        'react-hooks/exhaustive-deps' is "warn"
+        '@typescript-eslint/no-explicit-any' is "warn"
+        'prefer-const' is "error"
+        eqeqeq is "error"
+    }
+    settings is { react is { version is "detect" } }
+    ignore_patterns is [ "dist/", "node_modules/", "*.test.ts" ]
+}

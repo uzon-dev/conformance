@@ -1,0 +1,2 @@
+// §5.15: Struct literal is not callable — type error
+x is { a is 1 }(42)

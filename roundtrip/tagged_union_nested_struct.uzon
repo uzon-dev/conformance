@@ -1,0 +1,17 @@
+_shape is "circle" named circle from
+    circle as string, rect as string, line as string
+    called ShapeKind
+
+_base is {
+    kind is "circle" as ShapeKind named circle
+    radius is null
+    width is null
+    height is null
+    length is null
+} called Shape
+
+shapes is [
+    _base with { kind is "circle" as ShapeKind named circle, radius is 5.0 },
+    _base with { kind is "rect" as ShapeKind named rect, width is 10.0, height is 20.0 },
+    _base with { kind is "line" as ShapeKind named line, length is 15.0 }
+] as [Shape]

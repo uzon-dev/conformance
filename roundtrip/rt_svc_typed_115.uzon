@@ -1,0 +1,7 @@
+// Service configuration #115
+@type is "http"
+name is "config_115"
+port is 4038 as u16
+enabled is true
+max_connections is 4816 as i32
+timeout_ms is 11846 as i32

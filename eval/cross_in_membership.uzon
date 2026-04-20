@@ -1,0 +1,10 @@
+// in operator with various types
+a is 2 in [ 1, 2, 3 ]
+b is 4 in [ 1, 2, 3 ]
+c is "bravo" in [ "alfa", "bravo", "charlie" ]
+d is null in [ 1, null, 3 ]
+e is null in [ 1, 2, 3 ]
+
+_color is red from red, green, blue called Color
+f is green as Color in [ red, green ] as [Color]
+g is blue as Color in [ red, green ] as [Color]

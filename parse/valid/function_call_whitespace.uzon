@@ -1,0 +1,16 @@
+// §5.15: Function call — ( must be on same line as callee
+add is function a as i32, b as i32 returns i32 { a + b }
+
+// no space
+r1 is add(1, 2)
+
+// space on same line — ok
+r2 is add (1, 2)
+
+// ( on same line, args/closing on next lines — ok
+r3 is add(1,
+    2
+)
+
+// multiple spaces on same line
+r4 is add   (   1   ,   2   )

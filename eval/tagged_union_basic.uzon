@@ -1,0 +1,7 @@
+result is "success" named ok from ok as string, err as string called Result
+is_ok is result is named ok
+is_err is result is named err
+not_err is result is not named err
+reuse is "fail" as Result named err
+reuse_is_err is reuse is named err
+reuse_is_ok is reuse is named ok

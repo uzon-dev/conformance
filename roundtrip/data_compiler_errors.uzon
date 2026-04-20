@@ -1,0 +1,24 @@
+errors is [
+    {
+        code is "E0308"
+        level is "error"
+        message is "mismatched types"
+        primary_span is { file is "src/main.zig", line is 42 as u32, col is 15 as u32, text is "return value;", highlight is "^^^^^" }
+        secondary_spans is [
+            { file is "src/main.zig", line is 38 as u32, col is 1 as u32, text is "fn process() u32 \{", highlight is "   ~~~", label is "expected 'u32' because of return type" }
+        ]
+        notes is [ "expected type 'u32'", "   found type 'i32'" ]
+        suggestion is { text is "consider casting: @intCast(value)", auto_fixable is true }
+    },
+    {
+        code is "E0502"
+        level is "error"
+        message is "cannot borrow as mutable because it is also borrowed as immutable"
+        primary_span is { file is "src/eval.zig", line is 100 as u32, col is 5 as u32, text is "list.append(item);", highlight is "^^^^" }
+        secondary_spans is [
+            { file is "src/eval.zig", line is 98 as u32, col is 15 as u32, text is "for (list.items) |item| \{", highlight is "          ~~~~", label is "immutable borrow occurs here" }
+        ]
+        notes is [] as [string]
+        suggestion is null
+    }
+]

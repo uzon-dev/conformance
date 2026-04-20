@@ -1,0 +1,6 @@
+@type is "error"
+timestamp is 1737112255
+source is "omicron"
+code is 555 as u16
+message is "nu failed"
+fatal is false

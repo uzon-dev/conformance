@@ -1,0 +1,6 @@
+books is [
+    { isbn is "978-0-13-468599-1", title is "The C Programming Language", authors is [ "Kernighan", "Ritchie" ], year is 1988 as u16, pages is 272 as u16 },
+    { isbn is "978-0-201-63361-0", title is "Design Patterns", authors is [ "Gamma", "Helm", "Johnson", "Vlissides" ], year is 1994 as u16, pages is 395 as u16 },
+    { isbn is "978-0-596-51774-8", title is "JavaScript: The Good Parts", authors is [ "Crockford" ], year is 2008 as u16, pages is 176 as u16 },
+    { isbn is "978-0-13-235088-4", title is "Clean Code", authors is [ "Martin" ], year is 2008 as u16, pages is 464 as u16 }
+]

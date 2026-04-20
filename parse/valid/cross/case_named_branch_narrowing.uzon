@@ -1,0 +1,8 @@
+// §5.10: case named branch narrowing — all branches return string
+_r is 42 named ok from ok as i32, err as string, empty as null called Result
+
+msg is case named _r
+    when ok then "ok:" ++ (_r to string)      // _r narrowed to i32
+    when err then "err:" ++ _r                 // _r narrowed to string
+    when empty then "empty"                    // _r narrowed to null
+    else "unknown"

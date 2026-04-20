@@ -1,0 +1,12 @@
+// Forward and backward references in diamond pattern
+// d depends on b and c, b and c depend on a
+result is d * 2
+d is b + c
+b is a * 3
+c is a * 5
+a is 2
+
+// also: mutual references (no cycle — just shared dependency)
+sum is b + c
+product is b * c
+ratio is c to f64 / b to f64

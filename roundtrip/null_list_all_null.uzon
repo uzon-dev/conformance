@@ -1,0 +1,4 @@
+ints is [ null, null, null ] as [i32]
+strings is [ null, null ] as [string]
+bools is [ null ] as [bool]
+floats is [ null, null, null, null ] as [f64]

@@ -1,0 +1,11 @@
+// Resource #170
+@type is "network"
+name is "network_170"
+region is "us-east-1"
+config is {
+    @type is "network_config"
+    capacity is 2627 as i32
+    priority is 3 as u8
+}
+tags are "theta", "key", "enabled"
+active is true

@@ -1,0 +1,4 @@
+one_int are 42
+one_str are "solo"
+one_bool are true
+one_struct are { x is 1 }

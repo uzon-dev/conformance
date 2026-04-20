@@ -1,0 +1,7 @@
+locales is [
+    { code is "en-US", number is "1,234.56", date is "04/11/2026", time is "12:00 PM", currency is "$1,234.56", direction is "ltr" },
+    { code is "ko-KR", number is "1,234.56", date is "2026. 4. 11.", time is "오후 12:00", currency is "\{1,234", direction is "ltr" },
+    { code is "de-DE", number is "1.234,56", date is "11.04.2026", time is "12:00", currency is "1.234,56 EUR", direction is "ltr" },
+    { code is "ja-JP", number is "1,234.56", date is "2026/04/11", time is "12:00", currency is "\{1,234", direction is "ltr" },
+    { code is "ar-SA", number is "1,234.56", date is "11/04/2026", time is "12:00 م", currency is "1,234.56 ر.س", direction is "rtl" }
+]

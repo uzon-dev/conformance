@@ -1,0 +1,11 @@
+// Resource #131
+@type is "gateway"
+name is "gateway_131"
+region is "eu-west-1"
+config is {
+    @type is "gateway_config"
+    capacity is 860 as i32
+    priority is 1 as u8
+}
+tags are "main", "path", "kappa"
+active is true

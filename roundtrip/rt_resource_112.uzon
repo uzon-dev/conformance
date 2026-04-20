@@ -1,0 +1,11 @@
+// Resource #112
+@type is "scheduler"
+name is "scheduler_112"
+region is "us-east-1"
+config is {
+    @type is "scheduler_config"
+    capacity is 5708 as i32
+    priority is 6 as u8
+}
+tags are "eta", "name", "tau", "backup"
+active is false

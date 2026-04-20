@@ -1,0 +1,7 @@
+// Schema definition #30
+@type is "schema"
+version is 4 as u8
+name is "rho_schema_30"
+fields are
+        { name is "field_0", @type is "i64", required is true },
+        { name is "field_1", @type is "string", required is false }

@@ -1,0 +1,14 @@
+product is {
+    sku is "SKU-FUR-0034"
+    name is "Furniture Item 34"
+    category is "furniture"
+    price is 26.99
+    currency is "USD"
+    stock is 102 as u16
+    weight_g is 440 as u32
+    dimensions is (24.0, 9.0, 6.0)
+    rating is 4.4
+    reviews is 238 as u16
+    active is true
+    tags is [ "furniture", "new" ]
+}

@@ -1,0 +1,6 @@
+// §5.7 + §5.9
+// or else branches must have same type
+x is missing or else 42
+// x could be undefined → i64, or the missing value's type
+// but if we force mismatch:
+y is if true then "string" else 42

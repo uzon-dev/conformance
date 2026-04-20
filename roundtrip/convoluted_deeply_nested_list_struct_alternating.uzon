@@ -1,0 +1,13 @@
+data is [
+    {
+        rows is [
+            { cells is [ { value is 1, meta is { flag is true } }, { value is 2, meta is { flag is false } } ] },
+            { cells is [ { value is 3, meta is { flag is true } }, { value is 4, meta is { flag is null } } ] }
+        ]
+    },
+    {
+        rows is [
+            { cells is [ { value is 5, meta is { flag is false } } ] }
+        ]
+    }
+]

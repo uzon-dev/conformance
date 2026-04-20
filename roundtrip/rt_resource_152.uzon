@@ -1,0 +1,11 @@
+// Resource #152
+@type is "monitor"
+name is "monitor_152"
+region is "us-east-1"
+config is {
+    @type is "monitor_config"
+    capacity is 2024 as i32
+    priority is 2 as u8
+}
+tags are "main", "enabled", "eta"
+active is true

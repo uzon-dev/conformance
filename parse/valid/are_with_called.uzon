@@ -1,0 +1,4 @@
+// §3.4.1 are with called — named list type
+scores are 97, 85, 92, 88 called ScoreList
+typed is scores as ScoreList
+count is std.len(scores)

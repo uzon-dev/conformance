@@ -1,0 +1,10 @@
+// §3.5 v0.10 — Bare variant name in function argument position
+Direction is enum forward, reverse
+flip is function d as Direction returns Direction {
+    case d
+        when forward then reverse
+        when reverse then forward
+        else forward
+}
+x is flip(forward)
+y is flip(reverse)

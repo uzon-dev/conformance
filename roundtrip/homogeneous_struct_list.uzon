@@ -1,0 +1,10 @@
+users is [
+    { id is 1 as i32, name is "Alice", active is true },
+    { id is 2 as i32, name is "Bob", active is true },
+    { id is 3 as i32, name is "Charlie", active is false },
+    { id is 4 as i32, name is "Diana", active is true },
+    { id is 5 as i32, name is "Eve", active is false },
+    { id is 6 as i32, name is "Frank", active is true },
+    { id is 7 as i32, name is "Grace", active is true },
+    { id is 8 as i32, name is "Heidi", active is false }
+]

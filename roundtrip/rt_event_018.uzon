@@ -1,0 +1,5 @@
+@type is "click"
+timestamp is 1740024028
+source is "tau"
+url is "https://level.example.com/prod"
+session_id is "backup_9587"

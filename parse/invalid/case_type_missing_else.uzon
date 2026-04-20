@@ -1,0 +1,8 @@
+// §5.10: every case (including case type and case named) MUST have
+// an else branch. No exhaustiveness exemption exists. This version
+// uses a named union to avoid the inline-union-type_expr issue.
+U is union i32, string
+u is 42 as U
+label is case type u
+    when i32 then "integer"
+    when string then "string"

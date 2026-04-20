@@ -1,0 +1,10 @@
+// Resource #148
+@type is "proxy"
+name is "proxy_148"
+region is "eu-west-1"
+config is {
+    @type is "proxy_config"
+    capacity is 6877 as i32
+    priority is 2 as u8
+}
+active is true

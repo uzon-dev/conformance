@@ -1,0 +1,32 @@
+// §3.7 + §5.10 + §3.8 + §5.16 + §5.13 + §5.7 + §4.4.1
+// tagged union → case named → function → std.filter → env → or else → interpolation
+_state is "running" named running from
+    running as string, stopped as null, error as string
+    called ServiceState
+
+_svc is { name is "", state is "init" as ServiceState named running } called ServiceEntry
+
+services are
+    _svc with { name is "web", state is "running" as ServiceState named running },
+    _svc with { name is "db", state is null as ServiceState named stopped },
+    _svc with { name is "cache", state is "timeout" as ServiceState named error }
+
+isHealthy is function svc as ServiceEntry returns bool {
+    svc.state is named running
+}
+
+healthy is std.filter(services, isHealthy)
+sick is std.filter(
+    services,
+    function svc as ServiceEntry returns bool { not isHealthy(svc) }
+)
+
+healthy_names is std.map(
+    healthy,
+    function svc as ServiceEntry returns string { svc.name }
+)
+
+alert_target is env.ALERT_EMAIL or else "ops@example.com"
+report is "Healthy: {std.join(healthy_names, ", ")}"
+          " | Down: {std.len(sick)}"
+          " | Alert: {alert_target}"

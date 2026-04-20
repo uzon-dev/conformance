@@ -1,0 +1,14 @@
+product is {
+    sku is "SKU-MUS-0147"
+    name is "Music Item 147"
+    category is "music"
+    price is 83.49
+    currency is "USD"
+    stock is 441 as u16
+    weight_g is 1570 as u32
+    dimensions is (17.0, 17.0, 9.0)
+    rating is 3.7
+    reviews is 29 as u16
+    active is true
+    tags is [ "music", "sale" ]
+}

@@ -1,0 +1,2 @@
+// §5.16.4: std.upper requires string
+bad is std.upper(true)

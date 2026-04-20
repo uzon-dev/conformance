@@ -1,0 +1,3 @@
+// §3.2.2 — new field in plus that evaluates to undefined is a runtime error
+base is { port is 8080 }
+bad is base plus { host is env.MISSING_VAR }

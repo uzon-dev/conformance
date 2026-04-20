@@ -1,0 +1,3 @@
+// §5.13 + §5.11.0 — env.VAR is string; string to bool is a type error.
+// `or else` cannot catch type errors (only runtime undefined).
+bad is env.DEBUG to bool or else false

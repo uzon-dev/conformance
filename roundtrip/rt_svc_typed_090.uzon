@@ -1,0 +1,8 @@
+// Service configuration #90
+@type is "graphql"
+name is "eta_90"
+port is 63945 as u16
+enabled is true
+max_connections is 3414 as i32
+timeout_ms is 20596 as i32
+tls is false

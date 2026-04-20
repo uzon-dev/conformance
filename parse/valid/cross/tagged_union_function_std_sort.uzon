@@ -1,0 +1,28 @@
+// §3.7 + §3.8 + §5.16.2
+// tagged union in struct + function + sort by field
+_priority is low from low, medium, high called Priority
+
+_task is { title is "", priority is low as Priority } called Task
+
+tasks are
+    _task with { title is "Fix bug", priority is high as Priority },
+    _task with { title is "Write docs", priority is low as Priority },
+    _task with { title is "Deploy", priority is medium as Priority }
+
+priorityOrder is function p as Priority returns i32 {
+    case p
+        when low then 0
+        when medium then 1
+        when high then 2
+        else 0
+}
+
+sorted_tasks is std.sort(
+    tasks,
+    function a as Task, b as Task returns bool {
+        priorityOrder(a.priority) > priorityOrder(b.priority)
+    }
+)
+
+top_task is std.get(sorted_tasks, 0)
+top_title is top_task.title

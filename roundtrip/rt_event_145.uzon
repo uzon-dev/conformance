@@ -1,0 +1,4 @@
+@type is "logout"
+timestamp is 1750509993
+source is "omicron"
+detail is "prod_415"

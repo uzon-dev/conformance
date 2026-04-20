@@ -1,0 +1,9 @@
+jobs is [
+    { name is "cleanup-temp", schedule is "0 */6 * * *", command is "/usr/bin/cleanup.sh", enabled is true, timeout_sec is 300 as u32 },
+    { name is "backup-db", schedule is "0 2 * * *", command is "/usr/bin/backup.sh --full", enabled is true, timeout_sec is 3600 as u32 },
+    { name is "send-reports", schedule is "0 8 * * 1", command is "/usr/bin/report.sh", enabled is true, timeout_sec is 600 as u32 },
+    { name is "sync-cdn", schedule is "*/15 * * * *", command is "/usr/bin/cdn-sync.sh", enabled is false, timeout_sec is 120 as u32 },
+    { name is "rotate-logs", schedule is "0 0 * * *", command is "/usr/bin/logrotate -f /etc/logrotate.d/app", enabled is true, timeout_sec is 60 as u32 }
+]
+retry_policy is { max_retries is 3 as u8, delay_sec is 30 as u16, backoff is "exponential" }
+notification is { on_failure is "ops@example.com", on_success is null }

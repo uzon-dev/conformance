@@ -1,0 +1,2 @@
+// §5.16.3: std.isNan requires float
+bad is std.isNan(42)    // integer, not float

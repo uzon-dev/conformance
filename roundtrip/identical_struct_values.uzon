@@ -1,0 +1,4 @@
+a is { x is 1, y is 2 }
+b is { x is 1, y is 2 }
+c is { x is 1, y is 2 }
+wrapper is { first is { x is 1, y is 2 }, second is { x is 1, y is 2 } }

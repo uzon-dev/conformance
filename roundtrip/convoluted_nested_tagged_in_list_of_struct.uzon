@@ -1,0 +1,7 @@
+_result is null named empty from ok as string, err as string, empty as null called Result
+
+entries is [
+    { id is 1 as u32, result is "success" as Result named ok, retries is 0 as u8 },
+    { id is 2 as u32, result is "404 not found" as Result named err, retries is 3 as u8 },
+    { id is 3 as u32, result is null as Result named empty, retries is 0 as u8 }
+]

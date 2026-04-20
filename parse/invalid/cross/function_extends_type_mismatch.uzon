@@ -1,0 +1,7 @@
+// §3.8 + §3.2.2: function expects base type, extended type is different
+base is { x is 1 as i32 } called Base
+extended is base plus { y is 2 as i32 }
+
+describe is function b as Base returns string { "x={b.x}" }
+// extended is NOT Base (plus produces new type)
+bad is describe(extended)

@@ -1,0 +1,6 @@
+text is {
+    one is "\n"
+    two is "\n\n"
+    three is "\n\n\n"
+    mixed is "a\nb\nc\nd"
+}

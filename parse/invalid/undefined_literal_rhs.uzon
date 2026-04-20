@@ -1,0 +1,2 @@
+// §4.5 undefined cannot appear as literal on RHS of is (type error)
+bad is undefined

@@ -1,0 +1,12 @@
+metric is {
+    name is "memory_pct"
+    host is "server-01"
+    timestamp is 1712807260 as u64
+    value is 5.7
+    unit is "percent"
+    tags is {
+        environment is "staging"
+        region is "us-west"
+        service is "svc-01"
+    }
+}

@@ -1,0 +1,10 @@
+// §3.8 + §3.2: function returning struct
+point is { x is 0 as i32, y is 0 as i32 } called Point
+
+makePoint is function x as i32, y as i32 returns Point {
+    { x is x, y is y } as Point
+}
+
+origin is makePoint(0, 0)
+cursor is makePoint(100, 200)
+distance_x is cursor.x - origin.x

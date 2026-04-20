@@ -1,0 +1,20 @@
+// §5.14 + §7: of with nested struct access
+config is {
+    database is {
+        host is "db.example.com"
+        port is 5432 as u16
+        name is "mydb"
+    }
+    cache is {
+        host is "cache.example.com"
+        ttl is 300 as u16
+    }
+}
+
+// of extracts field matching the binding name
+database is of config
+cache is of config
+
+// access extracted struct fields
+db_host is database.host
+cache_ttl is cache.ttl

@@ -1,0 +1,7 @@
+// Service configuration #19
+@type is "mqtt"
+name is "prod_19"
+port is 29735 as u16
+enabled is false
+max_connections is 4071 as i32
+timeout_ms is 7462 as i32

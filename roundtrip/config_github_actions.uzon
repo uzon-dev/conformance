@@ -1,0 +1,34 @@
+_step is { name is "", uses is null, run is null } called Step
+
+workflow is {
+    name is "CI"
+    on is [ "push", "pull_request" ]
+    jobs is {
+        test is {
+            'runs-on' is "ubuntu-latest"
+            strategy is {
+                matrix is {
+                    'node-version' is [ "18", "20", "22" ]
+                    os is [ "ubuntu-latest", "macos-latest" ]
+                }
+            }
+            steps is [
+                _step with { name is "Checkout", uses is "actions/checkout@v4" },
+                _step with { name is "Setup Node", uses is "actions/setup-node@v4" },
+                _step with { name is "Install", run is "npm ci" },
+                _step with { name is "Lint", run is "npm run lint" },
+                _step with { name is "Test", run is "npm test" },
+                _step with { name is "Build", run is "npm run build" }
+            ] as [Step]
+        }
+        deploy is {
+            'runs-on' is "ubuntu-latest"
+            needs is [ "test" ]
+            condition is "github.ref == 'refs/heads/main'"
+            steps is [
+                _step with { name is "Checkout", uses is "actions/checkout@v4" },
+                _step with { name is "Deploy", run is "./deploy.sh" }
+            ] as [Step]
+        }
+    }
+}

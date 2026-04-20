@@ -1,0 +1,20 @@
+nfa is {
+    states is 12 as u8
+    start is 0 as u8
+    accept is [ 11 ] as [u8]
+    transitions is [
+        { @from is 0 as u8, @to is 1 as u8, input is "a", epsilon is false },
+        { @from is 1 as u8, @to is 2 as u8, input is null, epsilon is true },
+        { @from is 1 as u8, @to is 4 as u8, input is null, epsilon is true },
+        { @from is 2 as u8, @to is 3 as u8, input is "b", epsilon is false },
+        { @from is 3 as u8, @to is 1 as u8, input is null, epsilon is true },
+        { @from is 3 as u8, @to is 4 as u8, input is null, epsilon is true },
+        { @from is 4 as u8, @to is 5 as u8, input is "c", epsilon is false },
+        { @from is 5 as u8, @to is 6 as u8, input is null, epsilon is true },
+        { @from is 6 as u8, @to is 7 as u8, input is "d", epsilon is false },
+        { @from is 7 as u8, @to is 8 as u8, input is null, epsilon is true },
+        { @from is 7 as u8, @to is 6 as u8, input is null, epsilon is true },
+        { @from is 8 as u8, @to is 11 as u8, input is null, epsilon is true }
+    ]
+    pattern is "ab*cd+"
+}

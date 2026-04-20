@@ -1,0 +1,27 @@
+global is {
+    maxconn is 50000 as u32
+    log is "stdout local0"
+    stats_socket is "/var/run/haproxy.sock mode 600"
+    ssl_default_bind_ciphers is "ECDHE-ECDSA-AES128-GCM-SHA256"
+    ssl_default_bind_options is "no-sslv3 no-tlsv10 no-tlsv11"
+}
+frontend is {
+    name is "http-in"
+    bind is "*:80"
+    mode is "http"
+    redirect is "scheme https code 301"
+}
+backends is [
+    {
+        name is "web-servers"
+        mode is "http"
+        balance is "roundrobin"
+        cookie is "SERVERID insert indirect nocache"
+        servers is [
+            { name is "web1", address is "10.0.1.10:8080", weight is 100 as u8, check is true },
+            { name is "web2", address is "10.0.1.11:8080", weight is 100 as u8, check is true },
+            { name is "web3", address is "10.0.1.12:8080", weight is 50 as u8, check is true }
+        ]
+        health is { interval is "5s", fall is 3 as u8, rise is 2 as u8 }
+    }
+]

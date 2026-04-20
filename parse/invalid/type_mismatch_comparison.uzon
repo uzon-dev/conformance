@@ -1,0 +1,4 @@
+// §5.4 Type mismatch in comparison
+x is 1 as i32
+y is 2 as i64
+bad is x > y

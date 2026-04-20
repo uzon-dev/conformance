@@ -1,0 +1,10 @@
+countries is [
+    { code is "US", name is "United States", dial is "+1", currency is "USD" },
+    { code is "KR", name is "South Korea", dial is "+82", currency is "KRW" },
+    { code is "JP", name is "Japan", dial is "+81", currency is "JPY" },
+    { code is "DE", name is "Germany", dial is "+49", currency is "EUR" },
+    { code is "GB", name is "United Kingdom", dial is "+44", currency is "GBP" },
+    { code is "BR", name is "Brazil", dial is "+55", currency is "BRL" },
+    { code is "AU", name is "Australia", dial is "+61", currency is "AUD" },
+    { code is "IN", name is "India", dial is "+91", currency is "INR" }
+]

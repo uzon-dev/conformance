@@ -1,0 +1,3 @@
+// §5.7 + §5.9: or else inside if — must use parentheses
+x is env.UZON_UNSET_VAR
+result is if true then (x or else "fallback") else "other"

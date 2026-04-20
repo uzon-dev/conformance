@@ -1,0 +1,4 @@
+// ERROR: §5.16.4 + §3.4
+// std.join requires [string]
+numbers are 1, 2, 3
+bad is std.join(numbers, ",")

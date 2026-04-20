@@ -1,0 +1,11 @@
+// §3.2.1 + §4.5 + §5.7: null in with + or else behavior
+base is { name is "default", clearance is null }
+
+// null override is bidirectionally compatible
+updated is base with { clearance is "omega" }
+
+// null passes through or else (null is a value, not undefined)
+check is base.clearance or else "fallback"    // null, NOT "fallback"
+
+// undefined is caught by or else
+missing is base.nonexistent or else "safe"    // "safe"
