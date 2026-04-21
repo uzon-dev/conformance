@@ -1,0 +1,11 @@
+s is "hello"
+n is 42
+b is true
+lst is [1, 2, 3]
+nullable is null
+string_is_null is false
+number_is_null is false
+bool_is_null is false
+list_is_null is false
+nullable_is_null is true
+nullable_is_undef is false

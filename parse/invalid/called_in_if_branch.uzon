@@ -1,0 +1,5 @@
+// §11.2.1 (v0.11): `called` is forbidden inside if/case/when branches.
+// `called` is a binding-level type-naming suffix and must appear only
+// at the top of a binding's expression.
+cond is true
+x is if cond then { a is 1 } called Point else { a is 2 } called Point

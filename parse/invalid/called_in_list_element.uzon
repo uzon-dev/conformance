@@ -1,0 +1,2 @@
+// §11.2.1 (v0.11): `called` is forbidden as a list element.
+x is [ { a is 1 } called Point, { a is 2 } called Point ]

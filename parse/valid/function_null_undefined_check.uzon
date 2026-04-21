@@ -1,0 +1,14 @@
+// §3.8 + §5.2 — function values cannot be compared with `is`/`is not`
+// against each other (type error), BUT comparison against `null` or
+// `undefined` is permitted by the universal null/undefined exemption
+// (§5.2 L1637). This applies to function values just like any other.
+fn is function x as i32 returns i32 { x + 1 }
+
+// Permitted per §5.2 universal exemption
+is_null is fn is null                    // false
+is_undefined is fn is undefined          // false
+maybe is fn is not null                  // true
+
+// A function-typed binding that holds null is also comparable
+nullable is null
+check is nullable is null                // true

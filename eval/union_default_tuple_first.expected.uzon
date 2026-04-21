@@ -1,0 +1,4 @@
+Pair is (0, "") from union (i32, string), f64 called Pair
+Triple is (false, 0, "") from union (bool, i32, string), f64 called Triple
+Nested is (0, ("", false)) from union (i32, (string, bool)), f64 called Nested
+Empty is () from union (), f64 called Empty

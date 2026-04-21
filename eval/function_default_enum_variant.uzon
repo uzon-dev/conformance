@@ -1,0 +1,15 @@
+// §3.5 rule 4 (v0.11): function parameter default expression uses the
+// parameter's declared type as context — bare variant names resolve to
+// the declared enum.
+
+Color is enum red, green, blue
+
+paint is function c as Color default red returns string {
+    case c
+        when red   then "#ff0000"
+        when green then "#00ff00"
+        else            "#0000ff"
+}
+
+default_call is paint()
+green_call is paint(green)

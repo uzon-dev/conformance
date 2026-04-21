@@ -1,0 +1,13 @@
+// §5.2 — universal null/undefined comparison applies to values of any type
+s is "hello"
+n is 42
+b is true
+lst is [1, 2, 3]
+nullable is null
+
+string_is_null is s is null               // false
+number_is_null is n is null               // false
+bool_is_null is b is null                 // false
+list_is_null is lst is null               // false
+nullable_is_null is nullable is null      // true
+nullable_is_undef is nullable is undefined // false

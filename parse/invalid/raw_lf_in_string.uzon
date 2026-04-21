@@ -1,0 +1,5 @@
+// § 4.4 - Raw LF U+000A inside "..." is a syntax error per v0.11.
+// The EBNF unescaped production excludes U+0000-U+001F (including LF).
+// Use \n escape instead, or the multiline string rule (4.4.2).
+bad is "line1
+line2"

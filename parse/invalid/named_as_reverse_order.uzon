@@ -1,0 +1,11 @@
+// §6.3 + §9 — `named` must follow `as`, not precede it.
+// type_decl = type_annot_level , [ from_clause | named_clause ]
+// places `as` inside type_annot_level and admits named_clause only as
+// a trailing suffix with no further `as` allowed. The reverse ordering
+// `... named X as Type` is a syntax error regardless of §5.5
+// precedence levels (as is L4, named is L5).
+Result is tagged union ok as string, err as string
+
+// INVALID — `named err as Result` — parser consumes named_clause,
+// cannot then consume trailing `as Result`.
+bad is "fail" named err as Result

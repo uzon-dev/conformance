@@ -1,0 +1,8 @@
+// §3.6 v0.11: when the first member of a standalone union is a
+// non-empty tuple type, the default is element-wise from each tuple
+// element's default (not `()`).
+
+Pair is union (i32, string), f64
+Triple is union (bool, i32, string), f64
+Nested is union (i32, (string, bool)), f64
+Empty is union (), f64

@@ -1,0 +1,3 @@
+// §11.2.1 (v0.11): `called` is forbidden inside parenthesized
+// subexpressions. It may only appear at the top of a binding's RHS.
+x is ({ a is 1 } called Point)

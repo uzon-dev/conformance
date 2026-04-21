@@ -1,0 +1,3 @@
+// Mid-file BOM is now a syntax error (v0.10+ Issue 3 fix)
+x is 1
+y﻿z is 2

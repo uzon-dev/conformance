@@ -1,0 +1,14 @@
+// §4.5 + §3.2.2: `null` is compatible with any type in `plus`
+// override — both directions (any→null and null→any).
+
+// Override existing field: typed value → null
+base is { host is "localhost", port is 8080 }
+override_to_null is base plus { host is null, verbose is true }
+
+// Override existing field: null → typed value
+base_with_null is { host is null, port is 8080 }
+override_from_null is base_with_null plus { host is "example.com", verbose is true }
+
+// Override with null keeping same-type addition
+base_simple is { x is 1, y is 2 }
+override_null_add_null is base_simple plus { x is null, z is null }

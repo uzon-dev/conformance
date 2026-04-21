@@ -6,16 +6,16 @@ fr_up2 is "NAÏVE"
 fr_lo3 is "noël"
 fr_up3 is "CAFÉ"
 
-// German — ß → SS (one char becomes two)
+// German — simple folding: `ß` has no one-to-one uppercase and is unchanged
 de_lo is "ärger"
-de_up is "STRASSE"
+de_up is "STRAßE"
 de_lo2 is "übung"
 de_up2 is "MÜNCHEN"
 de_lo3 is "öffnung"
 
-// Roundtrip: upper then lower — ß → SS → ss (not reversible)
+// Roundtrip: upper then lower — `ß` stays `ß` through both passes
 fr_round is "château"
-de_round is "strasse"
+de_round is "straße"
 
 // Spanish, Danish, Polish
 es_up is "SEÑOR"

@@ -1,0 +1,9 @@
+classify_missing is "unset"
+some_optional is null
+classify_optional is "empty"
+U is union i32, string
+val is "hello" as U
+kind is "not integer"
+Result is tagged union ok as string, err as string
+r is "fail" as Result named err
+status is "error path"

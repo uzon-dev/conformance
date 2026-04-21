@@ -1,0 +1,3 @@
+override_to_null is { host is null, port is 8080, verbose is true }
+override_from_null is { host is "example.com", port is 8080, verbose is true }
+override_null_add_null is { x is null, y is 2, z is null }

@@ -1,0 +1,4 @@
+// §11.2.1 (v0.11): `called` is forbidden in function argument
+// positions. Type naming is a binding-level suffix only.
+f is function p as i32 returns i32 { p + 1 }
+r is f({ a is 1 } called Point)

@@ -1,0 +1,13 @@
+// §6.3 + §7.3 — re-annotating an already-tagged value with its own
+// type is a no-op. `x as Result` where x already has type Result
+// does NOT require `named`; it preserves identity (§7.3 preservation
+// table: "as T (named T adopted as the same T) — ✓ identity").
+Result is tagged union ok as string, err as string
+
+x is "hello" as Result named ok
+// Re-annotation — no `named` needed
+y is x as Result
+
+// Both bindings are the same value
+check_equal is x is y
+check_tag is x is named ok

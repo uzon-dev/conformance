@@ -1,0 +1,5 @@
+Result is tagged union ok as string, err as string
+x is "hello" as Result named ok
+y is "hello" as Result named ok
+check_equal is true
+check_tag is true

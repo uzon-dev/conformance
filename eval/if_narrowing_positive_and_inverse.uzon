@@ -1,0 +1,29 @@
+// §5.9 branch narrowing — positive (is undefined, is null) and
+// inverse (is not type T, is not named tag) forms swap then/else
+// from the base cases. Test that each form drives the correct branch.
+
+// Case 1: `is undefined` — positive form
+undef_val is nonexistent
+classify_missing is if undef_val is undefined
+    then "unset"
+    else "set"
+
+// Case 2: `is null` — positive form
+some_optional is null
+classify_optional is if some_optional is null
+    then "empty"
+    else "has value"
+
+// Case 3: `is not type T` — inverse of is type
+U is union i32, string
+val is "hello" as U
+kind is if val is not type i32
+    then "not integer"
+    else "integer"
+
+// Case 4: `is not named tag` — inverse of is named
+Result is tagged union ok as string, err as string
+r is "fail" as Result named err
+status is if r is not named ok
+    then "error path"
+    else "success path"

@@ -1,0 +1,7 @@
+// §3.4 — when all branches of an if produce empty lists and no outer
+// context supplies a list-element type, the element type is not
+// inferable. INVALID without explicit `as [T]`.
+cond is true
+
+// INVALID — neither branch has a typed element; no outer context.
+branched is if cond then [] else []
